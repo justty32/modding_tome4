@@ -1,0 +1,1 @@
+-- 營地不放怪。Zone:loadBaseLists 仍會嘗試載入這個檔，所以必須存在（缺檔會 loadfile nil→error）。

@@ -1,0 +1,1634 @@
+[
+ {
+  "file": "init.lua",
+  "line": 20,
+  "src": "Deathknight",
+  "tag": "init.lua long_name",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "init.lua",
+  "line": 27,
+  "src": "Adds the Deathknight class.",
+  "tag": "init.lua description",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 35,
+  "src": "#Target#'s soul has been claimed.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "0}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 36,
+  "src": "#Target#'s soul is free of the claim.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 69,
+  "src": "#DARK_GREEN##Source# shares damage with %s ghoul!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nil) game:delayedLogMessage(self, nil, ,"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 85,
+  "src": "#Target# seems much more resilient!.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "{}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 86,
+  "src": "#Target# no longer seems as resilient.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 96,
+  "src": "Next spell gains additional effects.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 138,
+  "src": "#Target# weapon burns with cold flames!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 139,
+  "src": "The cold fire around #Target#'s weapon dies down.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 182,
+  "src": "#Target#'s armor is covered in a thick layer of ice.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 183,
+  "src": "#Target#'s ice armor melts away.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 193,
+  "src": "[PROJECTOR] after static reduction dam",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": " * 0.5 - reduce, 0) + (dam * 0.5) print("
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 263,
+  "src": "#Target# is weakened by the necrotic aura.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 264,
+  "src": "#Target# regains their strength.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 333,
+  "src": "#Target# begins drawing in the souls of nearby foes!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "5}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 334,
+  "src": "The necrotic vortex surrounding #Target# dissipates.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 376,
+  "src": "#Target# wields a blade of pure darkness!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "0}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 377,
+  "src": "#Target#'s dark weapon fades.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 461,
+  "src": "#Target#'s soul has been rent.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "{}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 462,
+  "src": "#Target#'s soul is whole again.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 537,
+  "src": "#Target#'s mind is shattered!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 538,
+  "src": "#Target#'s mind recovers.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 591,
+  "src": "#Target# crackles with necrotic energy!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": ",}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 592,
+  "src": "The necrotic energy around #Target# fades",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 603,
+  "src": " Dirge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "function(self, eff) return eff.charges.."
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 654,
+  "src": "#PURPLE#As #Target# falls, a terrible wraith rises from their body!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 655,
+  "src": "The wraith returns to #Target#'s body",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 730,
+  "src": "#Target#'s wastes away!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 731,
+  "src": "#Target# recovers from the wasting.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 770,
+  "src": "#Target#'s becomes an undead monstrosity!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 771,
+  "src": "#Target#'s returns to their original form.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/effects.lua",
+  "line": 0,
+  "src": "freeze",
+  "tag": "effect subtype",
+  "ctor": "newEffect",
+  "prefix": "subtype-key"
+ },
+ {
+  "file": "data/talents/spells/desecration.lua",
+  "line": 23,
+  "src": "Drain Essence",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "l DamageType = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/desecration.lua",
+  "line": 72,
+  "src": "Your melee attacks have a 40%% chance to steal a soul fragment from the target, preventing you from dying until you fall below -%d life. This stacks up to 5 times, to a maximum of -%d life.\nYou can activate this ability to consume all soul fragments, restoring %d life, %d mana and %d souls.\nThe life limit, life and mana restored will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal power = t.getPower(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/desecration.lua",
+  "line": 80,
+  "src": "Pale Rider",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "8, power*3, nb) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/desecration.lua",
+  "line": 103,
+  "src": "You become as inevitable as death itself, preventing you from dying until you reach -%d life for 8 turns.\n#PURPLE#Soulforge 3: Increases your resilience, preventing any blow from dealing more than 50%% of your maximum life.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/desecration.lua",
+  "line": 110,
+  "src": "Hungering Blade",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Power(self,t) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/desecration.lua",
+  "line": 122,
+  "src": "Your weapons cut deeper into the souls of your enemies, increasing the chance for Essence Drain to trigger by an additional %d%% and causing it to deal %0.2f darkness damage. On activating Essence Drain, for the next 5 turns you gain %d%% lifesteal and your melee attacks inflict an additional %0.2f cold damage.\nThe damage dealt will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local life = t.getLife(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/desecration.lua",
+  "line": 129,
+  "src": "Undying",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", damage*1.2) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/desecration.lua",
+  "line": 171,
+  "src": "The line between life and death blurs further, increasing your healing factor by %d%% while below 0 life and granting additional effects:\n\t-On falling below 0 life, you surge with necrotic energy that extends the duration of all positive effects by %d turns.\n\t-On healing above 0 life, the necrotic energy animating you surges outwards, inflicting darkness damage equal %0.2f + %d%% of your negative life threshold (currently %0.2f) to all enemies within radius %d healing you for 50%% of the damage dealt.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local dam = t.getDamage(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 23,
+  "src": "Frostblast",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "l DamageType = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 49,
+  "src": "Fires a blast of frost doing %0.2f cold damage.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 58,
+  "src": "ghost",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": " = mod.class.NPC.new{ type = , subtype ="
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 60,
+  "src": "wraith",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "= , color=colors.WHITE, image = , name ="
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 136,
+  "src": "Necrotic Aura",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "nit(m, m) return m end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 148,
+  "src": "Noooooo!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " then return end self:doEmote(rng.table{"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 149,
+  "src": "Save me, Master, save meeee---",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "hen return end self:doEmote(rng.table{ ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 150,
+  "src": "Aaaauuuggghhh!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "n return end self:doEmote(rng.table{ , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 151,
+  "src": "Did I do good?",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "return end self:doEmote(rng.table{ , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 152,
+  "src": "Bwuh? Nwaaah!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "turn end self:doEmote(rng.table{ , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 153,
+  "src": "Why, Master, whyyyyy---?",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "rn end self:doEmote(rng.table{ , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 154,
+  "src": "I thought you loved me! I thought-",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " end self:doEmote(rng.table{ , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 155,
+  "src": "For Master's glory!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "nd self:doEmote(rng.table{ , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 156,
+  "src": "Bye... bye....",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " self:doEmote(rng.table{ , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 157,
+  "src": "We love you, Master!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "elf:doEmote(rng.table{ , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 158,
+  "src": "EeeeeeeaaaAAAAAUUUUUGGGGGHHHHH!!!!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "f:doEmote(rng.table{ , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 159,
+  "src": "The pain, the PAAAAAIN!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "doEmote(rng.table{ , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 160,
+  "src": "Please, no, nooo--",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "Emote(rng.table{ , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 161,
+  "src": "Unlife no more for this dead matter, the time comes for my flesh to splatter.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ote(rng.table{ , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 162,
+  "src": "You gave back life, you gave back dreams, but now I'm bursting at the seams...",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "e(rng.table{ , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 163,
+  "src": "Remember meeeee!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "table{ , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 164,
+  "src": "My tummy hurts...",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 165,
+  "src": "Whu..?",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 166,
+  "src": "Ahahahahaha!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 167,
+  "src": "Me go boom, me go BOOM!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 168,
+  "src": "Grave circumstances, Master....",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 169,
+  "src": "I see the light.. I see, oh.. just a wisp....",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 170,
+  "src": "Master, wait... I thought I saw a....Master? ..",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 171,
+  "src": "I'm not.. so sure my spine is supposed to bend this way....",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 172,
+  "src": "I told you I could Dash 100 yards and back in time! You owe me 10 gol....",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", , , , , , , , , , , , , , , ,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 193,
+  "src": "%s rips more animus from its victim. (+1 more soul)",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "hen self:incSoul(1) game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 206,
+  "src": "necrotic-aura",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ticle = self:addParticles(Particles.new("
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 222,
+  "src": "Emits a necrotic aura, sustaining your undead minions in a radius of %d. Minions outside the radius will lose %d%% life per turn.\n\t\tAny creature you or your minions kill within your aura will be absorbed as a soul that can be used to raise minions.\n\t\tRetch from your ghouls will also heal you, even if you are not undead.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal decay = t.getDecay(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 230,
+  "src": "Enervate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(radius, decay) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 274,
+  "src": "Enemies inside your necrotic aura become weakened and drained, reducing saves by %d, resistances by %d%%, and damage dealt by %d%%. \nStacks each turn up to 5 times.\nThe first point in this talent increases the range of your Necrotic Aura by 1.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " resists = t.getResists(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 282,
+  "src": "Shackle Soul",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "esists, damage) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 307,
+  "src": "A #WHITE##Source##LAST# rises from the corpse of #Target#!",
+  "tag": "logCombat",
+  "ctor": "newTalent",
+  "prefix": " then return nil end m:logCombat(target,"
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 313,
+  "src": "Your Enervate shackles the souls of your enemies, giving a %d%% chance per Enervate stack for them to raise as a wraith after their death, serving you for %d turns. Wraiths assault your enemies with blasts of cold that deal %0.2f cold damage each turn.\n\t\tYou cannot have more than 3 wraiths active at a time.\n\t\tThe first point in this talent increases the range of your Necrotic Aura by 1.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local dam = t.getDamage(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 321,
+  "src": "Vampiric Embrace",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ype.COLD, dam)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 329,
+  "src": "Drain the life of those you Enervate, causing the melee attacks of you and your allies against them to heal for %d per stack. This effect cannot occur more than once per turn.\n\t\tThe first point in this talent increases the range of your Necrotic Aura by 1.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local heal = t.getHeal(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 337,
+  "src": "Death Vortex",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "): format(heal) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dread.lua",
+  "line": 364,
+  "src": "Your necrotic aura becomes a vortex of pure death for %d turns, dealing %0.2f cold damage and %0.2f darkness damage each turn to all within.\n\t\tFoes closer to you take up to 50%% more damage.\n\t\tThe damage will increase with your Spellpower.\n\t\tThe first point in this talent increases the range of your Necrotic Aura by 1.\n\t\t#PURPLE#Soulforge 4: Targets are pulled towards you.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 31,
+  "src": "Enshroud",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "entLevelRaw(t) * 5 end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 45,
+  "src": "'s dark cloud",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ew{ name = summoner.name:capitalize() .."
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 113,
+  "src": "Shrouds your weapon in darkness, increasing your critical strike chance by %d%%, darkness penetration by %d%% and darkness damage by %d%%. \n\t\tYour critical strikes create living shadows on the target’s tile for 5 turns, which inflict %0.2f darkness damage each turn. \n\t\tRequires a two-handed weapon.\n\t\tThe damage of the shadows increases with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 122,
+  "src": "Duskwake",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "age(self, t)) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 204,
+  "src": "Slice through the shadows, moving to the target location and dealing %d%% weapon damage as darkness to all in your path and leaving behind living shadows on the tiles for 5 turns.\n#PURPLE#Soulforge 3: On reaching your end location, also attacks adjacent targets and leaves living shadows. Does not attack targets already hit by Duskwake.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dam = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 211,
+  "src": "Night's Edge",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "format(dam*100) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 249,
+  "src": "Each time you make a melee attack you summon shadow blades that strike up to %d targets within your living shadows for %d%% weapon damage as darkness. This can only occur once per turn, and does not hit the target you originally struck.\n\t\tIn addition, you deal %d%% increased damage and gain %d%% lifesteal against targets within your living shadows.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l life = t.getLifesteal(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 257,
+  "src": "Lightbane",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "0, bonus, life) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 274,
+  "src": "Enshroud must be sustained to cast this spell.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/spells/dusk.lua",
+  "line": 303,
+  "src": "You form and wield a blade of pure darkness for %d turns. This increases your disarm and silence immunity by 100%%, increases the bonuses from your Enshroud ability by %d%%, and causes your melee attacks to trigger shadow lightning that arcs to up to %d targets, dealing %0.2f darkness damage that leaves behind living shadows.\n\t\tThe shadow lightning cannot trigger more than once per turn.\n\t\tThe damage dealt by the shadow lightning will increase with your Spellpower.\n#PURPLE#Soulforge 5: All damage you deal is converted to darkness.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 23,
+  "src": "Rime",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "l DamageType = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 79,
+  "src": "Coats your shield in a thick layer of rime, increasing your block value by %d%% and causing it to retaliate against attackers. On taking damage from an attacker within range 5 there is a %d%% chance for your shield to shock them with frost for %d%% shield damage as cold. \n\t\tIf you are blocking, the chance is increased to 100%% and their frost resistance will be reduced by %d%% for 2 turns.\n\t\tYou get one chance to deal this damage to a particular target each turn",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al chance = t.getChance(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 87,
+  "src": "Icebound Fortitude",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "100, block*250) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 95,
+  "src": "While Rime is sustained your block ability hardens your armor with a layer of ice, reducing all damage taken by %d%% of your block value (to a minimum of 50%%) for 3 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal block = t.getBlock(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 101,
+  "src": "Hungering Cold",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "rmat(block*100) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 121,
+  "src": "You cannot use Hungering Cold without a shield!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not shield then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 161,
+  "src": "Raise your shield, granting a free block and projecting a vortex of freezing air that deals %0.2f cold damage in a radius %d cone and pulls targets towards you. Any target pulled adjacent to you will slam into your shield, taking %d%% shield damage.\n\tThe cold damage dealt will increase with your Spellpower.\n#PURPLE#Soulforge 3: After the shield slam, raise your shield for a free Block.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 169,
+  "src": "Remorseless Winter",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "us, shield*100) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/frost.lua",
+  "line": 212,
+  "src": "Surrounds you in a radius 3 storm of freezing cold for %d turns that drains the heat from those around you, dealing %0.2f cold damage over 4 turns and reducing global speed by 10%%, stacking up to 5 times. \nOn reaching 5 stacks all stacks are consumed, dealing %0.2f cold damage and freezing the target solid for 3 turns.\nThis ice block is exceptionally durable, and so ignores stun immunity and is nearly invulnerable, but damage can still pass through it as per a normal iceblock. \nThe damage will increase with your Spellpower.\n#PURPLE#Soulforge 5: While the storm persists you gain 30%% resist all.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/necrotic-might.lua",
+  "line": 23,
+  "src": "Necrotic Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "l DamageType = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/necrotic-might.lua",
+  "line": 74,
+  "src": "Channel necrotic forces through your weapon, dealing %d%% weapon damage split evenly between darkness and cold.\nThe darkness numbs the target and the cold slows the target, reducing the target's damage dealt and global speed by 20%% for %d turns.\nAll your Necrotic Might attacks also attack with your shield at 50%% damage.\n#PURPLE#Soulforge 1: Enemies within radius 2 of the target are also numbed and slowed.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/necrotic-might.lua",
+  "line": 83,
+  "src": "Soul Reaper",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ration(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/necrotic-might.lua",
+  "line": 134,
+  "src": "Warp through the darkness to the target, attacking for %d%% weapon damage and claiming their soul for 5 turns. When the claim expires they will take cold damage equal to %d%% of their missing health (to a maximum of %d). \nIf they die while marked you consume their soul, gaining %d extra souls.\n#PURPLE#Soulforge 4: Gain 50%% resistance penetration for 8 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/necrotic-might.lua",
+  "line": 142,
+  "src": "Dark Tide",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "tSouls(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/necrotic-might.lua",
+  "line": 201,
+  "src": "Sweep your weapon forward, striking targets in front of you for %d%% weapon damage as cold and projecting a radius %d wave of darkness that inflicts a bane of blindness or confusion. Banes last 5 turns and deal %0.2f darkness damage each turn.\n#PURPLE#Soulforge 3: The wave also deals %d%% weapon damage as darkness.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/necrotic-might.lua",
+  "line": 208,
+  "src": "Grim Harvest",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ge(self, t)*75) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/necrotic-might.lua",
+  "line": 268,
+  "src": "You absorb the fading lifeforce of your foes to rejuvenate yourself.\nEach time you kill or deal damage above %d%% of your target’s maximum life with darkness damage you reduce the cooldown of %d talents by 1 turn.\nEach time you kill or deal damage above %d%% of your target’s maximum life with cold damage you reduce the duration of a negative effect by %d turns.\nEach of these effects cannot occur more than once per turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 23,
+  "src": "Spirit Feed",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "l DamageType = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 83,
+  "src": "Your captured souls empower you, increasing your physical power and spell power by %0.1f, all saves by %0.1f, and your mana regeneration by %0.2f. \n\t\tFor each soul you have, the power bonus is increased by %0.2f, the saves by %0.2f, and the mana regeneration by %0.2f, to a maximum of 5 souls.\nCurrent bonuses: %0.2f power, %0.2f saves, %0.2f mana regeneration.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local mana = t.getMana(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 92,
+  "src": "Reaper's Shroud",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "r, saves, mana) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 110,
+  "src": "Each time you kill a target you form part of their soul into a protective shield for %d turns, absorbing %d damage. Kills while this talent is on cooldown reduce the cooldown by 1 turn.\n\t\tThe damage absorbed increases with your spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 117,
+  "src": "Dark Simulacrum",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Shield(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 151,
+  "src": "This target has no valid abilities to steal!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "talent=ds.id}) else game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 156,
+  "src": "You steal part of the target’s soul for %d turns. While under this effect, you are able to use one of their abilities at talent level %d, chosen at random.\nThis cannot steal sustained abilities, prodigies, inscriptions or those with equipment requirements.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 163,
+  "src": "Shadow of Death",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "alentLevel(t) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/reaping.lua",
+  "line": 193,
+  "src": "On taking fatal damage, if you have any souls active you consume them all to become a wraith for %d turns, granting you immunity to all damage and negative effects. \nWhen this effect ends, if you have any souls you consume them all to resurrect, restoring you to life with %d%% maximum life per soul. If you have no souls you die.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 26,
+  "src": "soul fragment",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= , color=colors.BLACK, image = , name ="
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 89,
+  "src": "Soul Rend",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "nit(m, m) return m end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 133,
+  "src": " Your melee attacks have a 25%% chance to rend the target’s soul for 6 turns, stunning them for %d turns and creating a soul fragment in an adjacent tile lasting %d turns.\n\t\tSoul fragments take no actions, and if struck the target will take %0.2f cold damage plus %d%% of their current health (to a maximum of %0.2f) as darkness.\n\t\tTargets already affected by Soul Rend will instead take %0.2f cold damage.\n\t\tAt talent level 4, your melee attacks also have a 25%% chance to rend the soul of those adjacent to your target.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "perc = t.getPercent(self,t)*100 return ("
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 145,
+  "src": "Devour Soul",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "pe.COLD, dam) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 217,
+  "src": "Devours the souls of targets in a radius %d cone, dealing %0.2f darkness damage. This will consume Soul Rend to remove up to %d beneficial physical or magical effects from the target.\n\t\tAgainst those unaffected by Soul Rend, this has a 50%% chance to inflict Soul Rend.\n\t\tThe damage will increase with your Spellpower.\n#PURPLE#Soulforge 2: Increase the chance of Soul Rend to 100%% and increase the number of beneficial effects removed by 1.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "us(t) local nb =t.getNb(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 226,
+  "src": "Wail of Doom",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ESS, dam), nb ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 284,
+  "src": "You let out a chilling wail that shatters the minds of enemies within radius %d, dealing %0.2f cold damage. For %d turns they have a %d%% chance to fail when using a talent.\n\t\tIf the target is affected by Soul Rend, the effect is removed to increase damage and duration by 50%%.\n\t\tThe damage will increase with your Spellpower.\n#PURPLE#Soulforge 3: Spellshocks and Brainlocks for the duration.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 293,
+  "src": "Black Mirror",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "m), dur, fail ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 329,
+  "src": "'s Dark Reflection",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "i = , ai_real = , name = ..target.name.."
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 330,
+  "src": "A blurred, shadowy copy of the original creature.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "_real = , name = ..target.name.., desc ="
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 394,
+  "src": "#F53CBE#%s's soul is drawn out and attacks!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "30, am=70, aM=180}) game.logSeen(target,"
+ },
+ {
+  "file": "data/talents/spells/soul.lua",
+  "line": 426,
+  "src": "You draw out powerful soul fragments from all targets within 10 tiles under the effect of Soul Rend, removing the effect and creating an exact duplicate of them with 30%% of their maximum life and 40%% of their damage that lasts %d turns.\n#PURPLE#Soulforge 5: Increases the life of fragments to 45%% and damage to 60%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 23,
+  "src": "Soulforge",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "l DamageType = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 67,
+  "src": "You begin forging souls into your weapon, causing your next active ability to trigger an additional effect at the cost of souls. The soul cost and effect is displayed on each individual ability tooltip.\nThis ability takes no time to activate.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 74,
+  "src": "Soul Tap",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "n (): format( ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 83,
+  "src": "Each time you trigger your soulforge ability you tap into the soul’s energy, restoring %d life and %d mana per soul.\nThe life and mana restored will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local heal = t.getHeal(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 90,
+  "src": "Dirge",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "t(heal, heal/5) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 100,
+  "src": "Each time you trigger your soulforge ability you are empowered by the soul, increasing your global speed by %d%% for %d turns. Stacks up to 5 times.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 106,
+  "src": "Endless Cycle",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "t(val*100, dur) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 114,
+  "src": "Each time you trigger your soulforge ability, you have a %d%% chance to refund 1 soul.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l chance = t.getChance(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 120,
+  "src": "Soulburn",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " format(chance) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/soulforge.lua",
+  "line": 140,
+  "src": "You draw on the power of your souls to fuel your spells, causing your next spell within 1 turn to have %d%% increased Spellpower, %d%% reduced cooldown and refund %d%% of a turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local turn = t.getTurn(self,t) return ("
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 154,
+  "src": "necrotic might",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 159,
+  "src": "undeath",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 164,
+  "src": "desecration",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 169,
+  "src": "frost",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 174,
+  "src": "dread",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 179,
+  "src": "dusk",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 184,
+  "src": "reaping",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "_regen=true, generic=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 189,
+  "src": "soul",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 194,
+  "src": "squire",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 199,
+  "src": "soulforge",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "_regen=true, generic=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 31,
+  "src": "Squire Talents:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ount = talent_count + lev end end print("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 38,
+  "src": "Shadow Assault",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "eturn talent_count end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 88,
+  "src": "Step through the shadows to your target, striking it with your shield for %d%% damage as darkness. If this attack lands, you will stun the target for %d turns and follow up with a melee attack for %d%% weapon damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 94,
+  "src": "Challenging Shout",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "self, t) * 100) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 146,
+  "src": "Leap to the targeted area and taunt all enemies within radius %d, as well as gaining a damage shield for 8 turns absorbing %d damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 152,
+  "src": "Dusk Shield",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Absorb(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 185,
+  "src": "Your block ability now grants your summoner a shield absorbing %d%% of your shield's block value, and each time you take damage from an adjacent enemy, there is a %d%% chance to retaliate with a melee attack for %d%% weapon damage as darkness. You get one chance to deal this damage to a particular target each turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 191,
+  "src": "Dark Aegis",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", damage * 100) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 214,
+  "src": "Increases your maximum life by %d%% and reduces your chance to be critically hit and the duration of negative effects by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 343,
+  "src": "Squire: Melee",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "_tactic.escape = 0 end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 373,
+  "src": "undead squire",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "NPC.new{ _no_upvalues_check=true, name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 376,
+  "src": "Clad in nigh-impenetrable armour and wielding sword and shield with great skill, this undead warrior tirelessly defends it's master.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "base = 0.8, time_factor = 4000 }, desc ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 405,
+  "src": "longsword",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": ")), }, resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 407,
+  "src": "massive",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": " not_properties = {} }, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 408,
+  "src": "hands",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": " not_properties = {} }, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 409,
+  "src": "feet",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": " not_properties = {} }, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 440,
+  "src": "Call your undead squire to your side, commanding him to defend you with sword and shield. The squire gains +%d Strength, +%d Dexterity, and +%d Constitution, and learns the Riposte, Armor Training, Weapon Mastery and Weapon Accuracy talents.\n\t\tYour squire also knows the following talents at a level equal to your Raise Dead, based off your total talent point investment in the Squire category:\n\t\t0: Shadow Assault - Teleport to a foe, striking them with all weapons and stunning them.\n\t\t6: Challenging Shout - Leap to a target area, taunting foes and gaining a damage shield.\n\t\t11: Dusk Shield - Retaliate against attackers with darkness damage, and grant your master a shield on using block.\n\t\t16: Dark Aegis - Increases maximum life and reduces the chance to be critically struck and the duration of negative effects.\n\t\tYou can only have a single squire active at one time.\n\t\tThe stat bonuses will improve with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " stat = t.getStatBonus(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 452,
+  "src": "Raise Dead",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", stat, stat/2) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 468,
+  "src": "Summon your loyal undead squire to your side, ready for battle. Your squire's primary stat will be improved by %d, its two secondary stats by %d, and it inherits base stats from you.\n\t\tThe squire wields a sword and shield, and knows unique combat techniques.\n\t\tYour squire will teleport back to you if you are more than %d tiles from you.\n\t\tThe squire's stat bonuses will improve with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l range = self:getTalentRange(t) return("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 476,
+  "src": "Death Pact",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "bonus/2, range) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 516,
+  "src": "#CRIMSON##Source# transfers his wounds to #Target#!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "game:delayedLogMessage(self, target, , ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 561,
+  "src": "You transfer your wounds to your squire, healing yourself for %d%% of your maximum life and damaging them for 50%% of this value.\n\t\tThis can be used on your other minions at 50%% effectiveness and cooldown, but the minion will be destroyed.\n\t\tThe healing increases with your Spellpower.\n\t\t#PURPLE#Soulforge 2: Also transfers 3 negative effects if used on your squire.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 570,
+  "src": "Soul Link",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(self, t)*100 ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 618,
+  "src": "#PURPLE#(%d shared)#LAST#",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "delayedLogDamage(src or self, self, 0, ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 625,
+  "src": "You and your squire link your souls, causing %d%% of all damage you take to be redirected to your squire, and %d%% of all damage you deal to heal your squire.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 630,
+  "src": "Dark Transformation",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "wer(self,t)*80) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/squire.lua",
+  "line": 668,
+  "src": "Your squire becomes a powerful undead monstrosity for %d turns, greatly increasing their combat ability. While under this effect all damage they take is reduced by %d%%, they automatically taunt all foes in radius %d each turn, their Dusk Shield counterattack can attack at range %d, and all melee attacks trigger a shield bash for %d%% shield damage as darkness.\n\t\t#PURPLE#Soulforge 5: Grants immunity to negative effects and increase global speed by 30%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "= t.getShieldDamage(self, t)*100 return("
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 25,
+  "src": "Grasping Claws",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "local Object = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 63,
+  "src": "Grab a target, holding it down and strangling it for %d turns.\n\t\tThe grab will also deal %0.2f physical damage per turn.\n\t\tThe damage will increase with your Physical Power.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 121,
+  "src": "ghoul warrior",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "= , color=colors.WHITE, image = , name ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 122,
+  "src": "This ghoul has been equipped with some tattered chainmail and a rusted mace, which it swings with inhuman force.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " name = , faction = self.faction, desc ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 145,
+  "src": "mace",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "f = 7, resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 145,
+  "src": "heavy",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "rce={antimagic=true} }, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 184,
+  "src": "%s explodes into a burst of necrotic energy!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "s=grids, tx=x, ty=y}) game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 224,
+  "src": "Unlike it's lesser brethren, this ghoul has retained it's mastery of combat, and has been further enhanced with dark magic to give it greater strength and skill.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "= , color=colors.WHITE, image = , desc ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 225,
+  "src": "elite ghoul warrior",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "=colors.WHITE, image = , desc = , name ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 251,
+  "src": "greatmaul",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "f = 7, resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 326,
+  "src": "Call of the Grave",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "value = 0 return m end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 375,
+  "src": "You raise 2 ghouls from the ground around the target and channel an attack through each, dealing %d%% weapon damage as cold. Ghouls last 6 turns.\n#PURPLE#Soulforge 3: Instead summon elite ghoul warriors, who wield greatmauls and have increased combat ability.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 382,
+  "src": "Meat Shield",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(self, t)*100 ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 416,
+  "src": "Not enough space for the ghoul to block!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "entCooldown(t) else game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 426,
+  "src": "Your ghouls taunt enemies within radius %d when summoned, and when a single hit deals more than %d%% of your maximum life a ghoul will rise to block the blow, absorbing %d%% of the damage from the blow and other attacks for 3 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 451,
+  "src": "On your ghouls dying they explode in a radius %d burst of necrotic energy. All enemies struck will waste away, taking %0.2f darkness damage over 6 turns and having their powers reduced by %d%%.\nThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 458,
+  "src": "Necrotic Wall",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "tScour(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 487,
+  "src": "horror",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "re local m = NPC.new{ type = , subtype ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 489,
+  "src": "corpsewall",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " type = , subtype = , display = , name ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 491,
+  "src": "A towering wall of flesh and bone.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "e=, display_h=2, display_y=-1}}}, desc ="
+ },
+ {
+  "file": "data/talents/spells/undeath.lua",
+  "line": 571,
+  "src": "Creates a towering wall of flesh and bone of %d length at the target location for 8 turns.\nEach segment deals an additional %0.2f blight damage (with a 20%% chance to disease) and %0.2f bleed damage over 5 turns on dealing or taking a melee hit.\nSegments are extremely durable (40%% resist all) and completely block line of sight.\n#PURPLE#Soulforge 5: The wall segments learn the Grasping Claws talent, allowing them to grapple and disable enemies.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "batTalentSpellDamage(t, 10, 40) return ("
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 78,
+  "src": "greatsword",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rs.equipbirth{ id=true, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 78,
+  "src": "iron greatsword",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "pbirth{ id=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 79,
+  "src": "iron mail armour",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "_chance= -1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 82,
+  "src": "iron longsword",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ybirth{ id=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 83,
+  "src": "iron shield",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ }
+]

@@ -1,0 +1,2770 @@
+[
+ {
+  "file": "init.lua",
+  "line": 20,
+  "src": "Steam Witch",
+  "tag": "init.lua long_name",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "init.lua",
+  "line": 28,
+  "src": "Adds the Steam Witch, a Tinker sub-class.  The Steam Witch was born into time magic but found the ordered ways of the Wardens boring and struck out to find a path of their own.  Travelling through time and space they found an affinity for technology and integrated their time magic with steam mechanisms.\n\t\t\nSteam Witches are a ranged attack and spell casting class.  Their tl;dr description is ‘magical Psyshot’.  Class highlights:\n\nMystic Combat: Steam Witches fight with a steamgun in one hand and a dagger in other, projecting ranged dagger attacks when attacking with the steamgun.  Successful dagger attacks will trigger additional effects based on a selected Touch ability (possible magical attack, magic enhancement, or lifesteal regeneration).\nTimegear: Use steam-powered devices that are infused with magical effects.\nHexes: Cast hexes on enemies to render them vulnerable to damage types.  Later abilities add damage-over-time and effect vulnerabilities to hexes, plus a special attack based on the hexes a target is afflicted with.\nWitchbrews: Customize your character build with one of three Brew sustains that enhance either combat, magic, or steampower.\nFuture Relics: Activate powerful offensive and defensive abilities that require a turn and a large amount of steam to charge up.\nTime Magic: Phase away from enemies, deflect and delay damage, repair your timeline, summon a spider familiar, and create walls out of thin air!  Be careful though, as Steam Witches lack the rigorous training of Chronomancers and thus do not benefit from and have less control over Paradox.\nClockwork Menagerie: Command an array of mechanical creatures just short of a winged monkey with cymbals.\n\nLink to forum: http://forums.te4.org/viewtopic.php?f=50&t=49638 ",
+  "tag": "init.lua description",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 24,
+  "src": "timefire blast",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "mageType.initState newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 46,
+  "src": "burn over time",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "nd return d end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 61,
+  "src": "elemental chaos",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "=true}) end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 80,
+  "src": "timeshock",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "e) return d end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 93,
+  "src": "temporal confuse",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "power}) end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 110,
+  "src": "temporal confuse steam",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "()) end end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 142,
+  "src": "quantum",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "urn realdam end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 169,
+  "src": "seeping darkness",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "e) return d end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 182,
+  "src": "temporal repulsion",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "/ 6, state) end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 206,
+  "src": "cauldron spill",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "urn realdam end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy/other.lua",
+  "line": 19,
+  "src": "Sets preferred paradox level to 320 and tunes towards that level when resting.  Steam Witches do not have the training required to set their preferred paradox level, nor do they gain spellpower from paradox.\n\tBase Paradox :  %d\n\tWillpower Paradox Modifier : -%d\n\tParadox Sustain Modifier : +%d\n\tTotal Modifed Paradox :  %d\n\tCurrent Anomaly Chance :  %d%%",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "maly = self:paradoxFailChance() return ("
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 23,
+  "src": "Reactive Fate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 82,
+  "src": "Fate reacts to negative events to further your destiny.\n\t\tIf hit by a negative effect gain %d physical, mental, and spell saves for 3 turns, stacking up to 3 times.\n\t\tIf you take damage gain %d%% resistance (less for Physical) to that damage type for 3 turns, stacking up to %d times when hit by that same damage type.\n\t\tIf you miss a ranged attack gain %d accuracy for 3 turns, stacking up to 5 times (effect removed on a successful hit).\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "resstk = t.getResStack(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 91,
+  "src": "Prolong Fate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "s, resstk, acc) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 110,
+  "src": "Activate to Prolong Fate for %d turns.  When you damage a target while Prolong Fate is active you have a %d%% chance to increase the duration of one detrimental status effect on it by one turn.\n\t\tThe duration increase can occur up to %d times per turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l chance = t.getChance(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 116,
+  "src": "Shared Fate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " chance, procs) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 140,
+  "src": "For the next %d turns you displace %d%% of any damage you receive onto a random enemy. Once per turn you have a %d%% chance of sharing a negative effect with an enemy in range 3.\n\t\tShared Fate can't be used while Fickle Fate Field is active.  If you activate Fickle Fate Field while Shared Fate is active it will be consumed to empower Fickle Fate Field.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 147,
+  "src": "Contingent Fate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "er, power + 10) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 179,
+  "src": "#LIGHT_RED#Your Contingent Fate has failed to cast %s!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "d, true, true) then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 181,
+  "src": "#STEEL_BLUE#Your Contingent Fate triggered %s!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "(cont_t).name) else game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/magic/fatemanipulation.lua",
+  "line": 227,
+  "src": "Choose an activatable spell that affects only you, does not require a target, and does not have a fixed cooldown.  When you take damage that reduces your life below %d%% the spell will automatically cast.\n\t\tThis spell will cast even if it is currently on cooldown, will not consume a turn or resources, and uses the talent level of Contingent Fate or its own, whichever is lower.\n\t\tThis effect can only occur once every %d turns and takes place after the damage is resolved.\n\n\t\tCurrent Contingent Fate Spell: %s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "entActive(t.id).talent).name or return ("
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 83,
+  "src": "Mystic Birthright",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "spell=true, type=, generic=false, name ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 83,
+  "src": "Ancient Power.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "=, generic=false, name = , description ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 88,
+  "src": "Witch Hexes",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": ", generic=false, no_silence=true, name ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 88,
+  "src": "Cast hexes to weaken and damage opponents.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": " no_silence=true, name = , description ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 93,
+  "src": "Time and Space",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": ", generic=false, no_silence=true, name ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 93,
+  "src": "Control time and space to stay out of harm's way.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": " no_silence=true, name = , description ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 103,
+  "src": "Witchcraft",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": ", generic=false, no_silence=true, name ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 103,
+  "src": "Tap into the powers of your birthright.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": " no_silence=true, name = , description ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 108,
+  "src": "Witch Brews",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, type=, generic=true, name ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 108,
+  "src": "Augment your abilities with brews from your cauldron.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "e=, generic=true, name = , description ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 118,
+  "src": "Fate Manipulation",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "=, generic=true, no_silence=true, name ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 118,
+  "src": "Redirect the threads of Fate.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": " no_silence=true, name = , description ="
+ },
+ {
+  "file": "data/talents/magic/magic.lua",
+  "line": 308,
+  "src": "'s temporal clone",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "= m.ai_real = m.name = .. target.name .."
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 26,
+  "src": "Touch of Clotho",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Spellpower() * sf) end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 50,
+  "src": "Your projected attack returns %d%% of the damage (up to %d life) as stacking life regeneration over 3 turns, plus %d immediately.  The healing increases if you are below 50%% of max life.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 56,
+  "src": "Touch of Lachesis",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ".getLP(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 81,
+  "src": "Your projected attack temporarily increases spell crit by %d%% and applies a stacking spell power bonus (%d start, approaching %d max) for 3 turns; hits will also tune Paradox towards your preferred level by %d.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "eil(t.getPower(self,t) * 0.333) return ("
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 87,
+  "src": "Touch of Atropos",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ".getPX(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 111,
+  "src": "Your projected attack has a %d%% chance of firing a beam at the target for %d warp damage.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 117,
+  "src": "Witch Touch",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "tPower(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 197,
+  "src": "Create a magical synergy between your weapons.  If you make a successful ranged attack and have an offhand dagger with no attached tinker you project an offhand attack at the same target for %d%% weapon damage.  \n\t\tSuccessful projected attacks count as melee attacks for on-hit effects and have various additional effects based on Touch sustains:\n\t\tTouch of Clotho: Projected attack returns %d%% of the damage (up to %d life) as stacking life regeneration over 3 turns, plus %d immediately.  The healing increases if you are below 50%% of max life.\n\t\tTouch of Lachesis: Temporarily increases spell crit by %d%% and applies a stacking spell power bonus (%d start, approaching %d max) for 3 turns; hits will also tune Paradox towards your preferred level by %d.\n\t\tTouch of Atropos: %d%% chance of firing a beam at the target for %d warp damage.\n\t\tTouch values will increase with talent level and Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l(t3.getPower(self,t3) * 0.333) return ("
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 207,
+  "src": "Witch Sight",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Power(self,t4)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 242,
+  "src": "#ORCHID#%s has a vision!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "Chance(self, t)) then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 254,
+  "src": "Improves your capacity to see invisible/stealthed foes by +%d and accuracy by +%d.  \n\t\tAdditionally every turn an enemy is present you have a %d%% chance to gain Witch Sight (+%d%% Physical Crit, +%d%% Physical Damage, +%d detection, sense creatures in radius 8).\n\t\tSense and accuracy will scale with your Cunning stat, Witch Sight chance/power will scale with your Magic stat.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") local dam = t.getDam(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 262,
+  "src": "Ancestral Bloodline",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "it, dam, sense) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 280,
+  "src": "Your blood is infused with ancient magic.  Increase blind, poison, disease, and blight resist by %d%%, and spell resist by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 286,
+  "src": "Empowered Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "getSR(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 305,
+  "src": "You require an offhand dagger to use this talent.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 348,
+  "src": "%s resists the warp!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "ellpower()/2}) else game.logSeen(target,"
+ },
+ {
+  "file": "data/talents/magic/mysticbirthright.lua",
+  "line": 375,
+  "src": "Channel mystic energy into your offhand dagger and attempt to strike the target for %d%% weapon damage.  If the target survives, inflict additional effects based on the active Witch Touch:\n\t\tTouch of Clotho: Target is affected by Enfeeblement (reduce combat powers by %d and movement speed by %d%%) for %d turns.\n\t\tTouch of Lachesis: Non-destabilized targets are teleported %d spaces away; destabilized targets are first blinded and if that fails confused for %d turns.\n\t\tTouch of Atropos: If the target is below 20%% health it may be instantly slain; targets at 20%% health or greater are stunned for %d turns.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al dur = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 22,
+  "src": "Displacement",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "local Object = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 55,
+  "src": "[phase door] final location of ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "eEmitter(target.x, target.y, 1, ) print("
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 62,
+  "src": "Teleports you randomly within a range of %d to %d grids.\n\t\tThe range will increase with talent level.\n\t\tEvery point in this talent passively increases your out-of-phase bonus by +6 defense, +4%% resist all, and hostile new effect duration reduction by +4%%.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " mRange = t.getMinRange(self,t) return ("
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 70,
+  "src": "Patchwork",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(mRange, range) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 92,
+  "src": "Apply repairs to your frayed strands of fate.  For %d turns regenerate %d health and reduce the duration of %d negative effects by %d turn(s).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 98,
+  "src": "Chrono Nova",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Reduce(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 155,
+  "src": "Releases unstable temporal energy in a wave of repulsion in all directions out to a radius of %d.\n\t\tAll creatures are struck for %d temporal damage (based on paradox level) and knocked away.\n\t\tAll enemy projectiles are reflected back to their source.\n\t\tParadox is reduced by %d.\n\t\tDamage and paradox reduction scales with Spellpower and talent level; damage may be reduced if paradox level is low.\n\t\tThis ability requires a minimum paradox level of %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 166,
+  "src": "Time Barrier",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "tPXMin(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 222,
+  "src": "materialize barrier",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "al e = Object.new{ old_feat = oe, name ="
+ },
+ {
+  "file": "data/talents/magic/timeandspace.lua",
+  "line": 271,
+  "src": "Manifest %d time barrier(s) for %d turns.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/timeandspacex.lua",
+  "line": 271,
+  "src": "Manifest %d obstructing wall(s) of congealed time energy on the battlefield for %d turns.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 21,
+  "src": "Vintage of Violence",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 43,
+  "src": "[PROJECTOR] Vintage of Violence (source) dam",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "DamageResist(self, t2)*0.8) / 100 print("
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 84,
+  "src": "Your skill with weapons is enhanced; increase physical attack speed by %d%% and physical power by %d (increases with spellpower).\n\t\tIf you know Resourceful Brewer: Increase movement speed by %d%%; on activate restore %d%% health.\n\t\tIf you know Two-Hundred Proof Brews: Slow projectiles by %d%% and reduce the damage from enemies 3 or more spaces away by %d%%.\n\t\tYou may only have one Brew active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "r = t3.getDamageResist(self,t3) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 94,
+  "src": "Tincture of Timeliness",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ".6,slow,dr*0.8) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 161,
+  "src": "Quaff this beverage to feel closer to time.  Increase temporal damage by %d%%, temporal resistance by %d%%, and spell crit by %d.  The damage increase and resistance will increase with your Spellpower.\n\t\tIf you know Resourceful Brewer: Reduce paradox by %d every turn; on activate reduce paradox by %d.\n\t\tIf you know Two-Hundred Proof Brews: Increase physical resistance by %d%% and gain talent Twist Fate (holds minor temporal anomalies briefly) at level %d.\n\t\tYou may only have one Brew active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "r = t3.getDamageResist(self,t3) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 171,
+  "src": "Elixir of Engineering",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " power, dr, tf) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 201,
+  "src": "#ORCHID#%s's Elixir charges their Powercell!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "getPC(self, t2)) then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 243,
+  "src": "Throw back a tall glass of this Elixir to boost Cunning by %d and steam crit by %d%%.\n\t\tIf you know Resourceful Brewer: Increase steam regeneration by %d; on activate restore %d steam.\n\t\tIf you know Two-Hundred Proof Brews: Increase fire resistance by %d%%; if you know Future Relics and enemies are present you have a %d%% chance per turn of gaining 1 Powercell charge.\n\tYou may only have one Brew active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "r = t3.getDamageResist(self,t3) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 252,
+  "src": "Witchbrew Mixer",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "+1,power,dr,pc) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 282,
+  "src": "Working dilligently at your cauldron you have formulated a series of Brews to enhance your abilities.\n\t\t\tVintage of Violence: Increase physical attack speed by %d%% and attack power by %d.\n\t\t\tTincture of Timeliness: Increase temporal damage by %d%%, temporal resistance by %d%%, and spell crit by %d.\n\t\t\tElixir of Engineering: Increase Cunning by %d and steam crit by %d%%.\n\t\t\tYou may only have one Brew active at a time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "self.T_SW_ELIXIR_OF_ENGINEERING) ret = ("
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 299,
+  "src": "Resourceful Brewer",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "old3 return ret end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 321,
+  "src": "Your Brews now have additional abilities, and an on-activation ability.\n\t\t\tVintage of Violence: Increase movement speed by %d%%; on activate restore %d%% health.\n\t\t\tTincture of Timeliness: Reduce paradox by %d every turn; on activate reduce paradox by %d.\n\t\t\tElixir of Engineering: Increase steam regeneration by %d; on activate restore %d steam.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "elf,t) buff = t.getBuff(self,t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 331,
+  "src": "Two-Hundred Proof Brews",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "2,buff+1,power) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 357,
+  "src": "Strong, but smooth!  Your Brews now give you new active or passive benefits.\n\t\t\tVintage of Violence: Slow projectiles by %d%% and reduce the damage from enemies 3 or more spaces away by %d%%.\n\t\t\tTincture of Timeliness: Increase physical resistance by %d%% and gain talent Twist Fate (holds minor temporal anomalies briefly) at level %d.\n\t\t\tElixir of Engineering: Increase fire resistance by %d%%; if you know Future Relics and enemies are present you have a %d%% chance per turn of gaining 1 Powercell charge.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "PC(self,t) tf = t.getTF(self,t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 366,
+  "src": "Tip the Cauldron",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ".8,dr,tf,dr,pc) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchbrews.lua",
+  "line": 405,
+  "src": "Tip over your cauldron, unleashing a wall of foulness that for for %d turns oozes out from the caster with radius 1, increasing once every two turns to a maximum eventual radius of %d, inflicting %0.2f Insidious Poison damage over 8 turns, and possibly knocking the target back.\n\t\tThe damage and duration will increase with your spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrewsx.lua",
+  "line": 88,
+  "src": "Your skill with weapons is enhanced; increase physical attack speed by %d%% and physical power by %d (increases with spellpower).\n\t\tEvery turn you shoot you stack Sustained Fire (+4%% physical crit, up to +16%%).\n\t\tIf you know Resourceful Brewer: Increase movement speed by %d%%; on activate restore %d%% health.\n\t\tIf you know Two-Hundred Proof Brews: Slow projectiles by %d%% and reduce the damage from enemies 3 or more spaces away by %d%%.\n\t\tYou may only have one Brew active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "r = t3.getDamageResist(self,t3) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrewsx.lua",
+  "line": 167,
+  "src": "Quaff this beverage to feel closer to time.  Increase temporal damage by %d%%, temporal resistance by %d%%, and spell crit by %d%%.  The damage increase and resistance will increase with your Spellpower.\n\t\tIf you know Resourceful Brewer: Tune paradox towards your preferred level by %d every turn; on activate tune paradox by %d.\n\t\tIf you know Two-Hundred Proof Brews: Increase physical resistance by %d%% and gain talent Twist Fate (holds minor temporal anomalies briefly) at level %d.\n\t\tYou may only have one Brew active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "r = t3.getDamageResist(self,t3) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrewsx.lua",
+  "line": 251,
+  "src": "Throw back a tall glass of this Elixir to boost Cunning by %d and steam crit by %d%%.\n\t\tIf you know Resourceful Brewer: Increase steam regeneration by %d per turn; on activate restore %d steam.\n\t\tIf you know Two-Hundred Proof Brews: Increase fire resistance by %d%%; if you know Future Relics and enemies are present you have a %d%% chance per turn of gaining 1 Powercell charge.\n\tYou may only have one Brew active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "r = t3.getDamageResist(self,t3) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrewsx.lua",
+  "line": 288,
+  "src": "Working dilligently at your cauldron you have formulated a series of Brews to enhance your abilities.\n\t\t\tVintage of Violence: Increase physical attack speed by %d%% and attack power by %d. Every turn you shoot you stack Sustained Fire (+4%% physical crit, up to +16%%).\n\t\t\tTincture of Timeliness: Increase temporal damage by %d%%, temporal resistance by %d%%, and spell crit by %d%%.\n\t\t\tElixir of Engineering: Increase Cunning by %d and steam crit by %d%%.\n\t\t\tYou may only have one Brew active at a time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "elf.T_SWX_ELIXIR_OF_ENGINEERING) ret = ("
+ },
+ {
+  "file": "data/talents/magic/witchbrewsx.lua",
+  "line": 327,
+  "src": "Your Brews now have additional abilities, and an on-activation ability.\n\t\t\tVintage of Violence: Increase movement speed by %d%%; on activate restore %d%% health.\n\t\t\tTincture of Timeliness: Tune paradox towards your preferred level by %d every turn; on activate tune paradox by %d.\n\t\t\tElixir of Engineering: Increase steam regeneration by %d per turn; on activate restore %d steam.\n\t\t\tMovement speed, resource regeneration, and resource boost increase with talent level.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "esource = t.getResource(self,t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchbrewsx.lua",
+  "line": 411,
+  "src": "Tip over your cauldron, unleashing a wall of foulness that for for %d turns oozes out from the caster with radius 1, increasing once every two turns to a maximum eventual radius of %d, inflicting %0.2f Insidious Blight damage over 8 turns, and possibly knocking the target back.\n\t\tThe damage and duration will increase with your spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 23,
+  "src": "Cut the Threads",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "local Object = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 110,
+  "src": "Sever the lifelines of those you have marked.  Inflict random damage (varying around %d) and/or effects (%d duration) for each hex targets are afflicted by (applied separately). Possible effects:\n\t\tEnervation: Physical damage, Temporal damage, Stoning, Wasting + Turn Back The Clock\n\t\tFrailty: Lightning Daze, Ice Slow, Burning Shock, Fire/Cold/Lighting damage + Blind\n\t\tVile: Blight damage, Life Drain, Spydric Poison, Crippling Poison, Crippling Blight\n\t\t.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 119,
+  "src": "Fickle Fate Field",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ration(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 141,
+  "src": "#PINK#%s consumes Shared Fate to empower Fickle Fate Field.",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "f.EFF_SW_SHARED_FATE) game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 147,
+  "src": "Surround yourself with a mystic field for %d turns that can change your fate.  Gain %d damage reduction and have a chance of displacing, smearing, or delaying incoming damage by %d%% (varies by effect).\n\t\tDamage reduction based on Spellpower, damage mitigation based on talent level.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 154,
+  "src": "Reversal of Fortune",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Reduce(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 219,
+  "src": "Attempts to remove up to %d effects from the enemy target (spellpower vs. resist) and temporarily grants you 5 Spellpower and 3%% Spell Crit per effect removed.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "unt = t.getRemoveCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 225,
+  "src": "Summon Familiar",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "):format(count) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchcraft.lua",
+  "line": 280,
+  "src": "Draw upon your connections to time and witchcraft to summon a friendly weaver matriarch for %d turns.  The weaver will be enchanted with Haste.\n\t\tAt talent level 3+ the weaver will gain an additional enchantment.\n\t\tEnchantment power will increase with talent level.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchhexes.lua",
+  "line": 38,
+  "src": "Enervating Hex",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " else return 0 end end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchhexes.lua",
+  "line": 86,
+  "src": "Hexes your target and everything in a 2 radius ball around it for %d turns, reducing physical, temporal, knockback, teleport, and pin resistance by %d%%.\n\t\tTargets also have a %d%% chance of becoming pinned for %d turns.\n\t\tIf Inevitibility is active the hex also reduces bleed resistance, and causes %d Bleed damage.\n\t\tEffectiveness and damage increase with spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchhexes.lua",
+  "line": 94,
+  "src": "Frailty Hex",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "getDam(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchhexes.lua",
+  "line": 141,
+  "src": "Hexes your target and everything in a 2 radius ball around it for %d turns, reducing fire, cold, lightning, light, and blind resistances by %d%%.\n\t\tTargets also have a %d%% chance of becoming blinded for %d turns.\n\t\tIf Inevitibility is active the hex also reduces stun resistance, and causes %d Fireburn damage.\n\t\tEffectiveness and damage increase with spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchhexes.lua",
+  "line": 149,
+  "src": "Vile Hex",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "getDam(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchhexes.lua",
+  "line": 195,
+  "src": "Hexes your target and everything in a 2 radius ball around it for %d turns, reducing blight, nature, disease, poison, and confusion resistances by %d%%.\n\t\tTargets also have a %d%% chance of becoming confused for %d turns.\n\t\tIf Inevitibility is active the hex also causes Malady (%d damage over time and %d reduced powers).\n\t\tEffectiveness and damage increase with spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/magic/witchhexes.lua",
+  "line": 203,
+  "src": "Inevitibility",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Power(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/magic/witchhexes.lua",
+  "line": 223,
+  "src": "Seeing the span of time you know that everything will eventually end; when is the question and the right tweaks in time can change the answer.\n\t\tHasten the end for your enemies: Hexes gain additional abilities and are applied with 25%% more spellpower (though hexes do not apply spellshock).\n\t\tDelay the end for yourself: you can only die when you reach -%d health.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 93,
+  "src": "Infuriating Pest",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "_tactic.escape = 0 end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 107,
+  "src": "#GREEN#%s escapes death!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "tChance(self,t)) then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 116,
+  "src": "This pest is harder to kill than you'd expect. %d%% chance of escaping fatal damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 122,
+  "src": "Bat Screech",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Chance(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 126,
+  "src": "@Source@ screeches!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "1}, points = 5, random_ego = , message ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 149,
+  "src": "You let out a screech that sends your foes into utter confusion for %d turns in a radius of %d.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 155,
+  "src": "Exploit Vulnerability",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "dius+1, radius) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 168,
+  "src": "Systematically find the weaknesses in your opponents' physical resists.  Each time you hit an opponent with a melee attack, you reduce their physical resistance by 5%%, up to a maximum of %d%%.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "on = t.getReductionMax(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 174,
+  "src": "Pounce",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "rmat(reduction) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 176,
+  "src": "@Source@ pounces, claws sharp and ready!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": ", short_name = , type = {, 1}, message ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 228,
+  "src": "Pounce onto a target in range %d dealing %d%% damage. If your attack hits, the target is left reeling and vulnerable, reducing their physical save by %d and their stun, blind, confusion and pin immunities to 50%% of normal for %d turns.\n\t\tThis effect bypasses saves.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal power = t.getPower(self,t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 235,
+  "src": "Primed: Blight Cloud",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ower, duration) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 258,
+  "src": "On death will explode in a radius 1 infective blight cloud that lasts for %d turns and causes %d damage.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 264,
+  "src": "Primed: Mire Cloud",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Damage(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 287,
+  "src": "On death will explode in a radius 1 cloud of caustic mire that lasts for %d turns and causes %d acid damage plus %d%% slow.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 293,
+  "src": "Primed: Fireblast Cloud",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "etSlow(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 315,
+  "src": "On death will explode in a radius 1 cloud of stunning fire that lasts for %d turns and causes %d fire damage.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 322,
+  "src": "Safety Check",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Damage(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 328,
+  "src": "Checks distance from summoner before detonating.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "s = 5, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 334,
+  "src": "Click-Boom",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "f, t) return () end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 354,
+  "src": "Detonate your clockwork summons.  This will override Safety Protocol!",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 359,
+  "src": "Safety Protocol",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "f, t) return () end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 377,
+  "src": "Prevents Clockworks from exploding within range of yourself.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 382,
+  "src": "Clockwork Rat",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "f, t) return () end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 423,
+  "src": "clockwork",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "re local m = NPC.new{ type = , subtype ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 425,
+  "src": "clockwork rat",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "= , color=colors.SLATE, image = , name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 463,
+  "src": "%s explodes in a cloud of infective blight!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": ".summoner, ) game.logSeen(self.summoner,"
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 481,
+  "src": "Summon a Clockwork Rat for %d turns to attack your foes. Clockwork Rats are melee pests that can inflict diseases (%d damage and %d reduced stat for 5 turns).\n\t\tIt will get %d Strength, %d Dexterity, %d Constitution, and %d Cunning (increases with Steampower and talent level).\n\t\tClockwork summons inherit your increased damage%% and are immune to most status effects.  Summoning one Clockwork will put the others on cooldown for 7 turns.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ats = t.incStats(self, t, true) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 490,
+  "src": "Clockwork Bat",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", incStats.cun) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 530,
+  "src": "clockwork bat",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "= , color=colors.SLATE, image = , name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 568,
+  "src": "%s explodes in a cloud of caustic mire!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": ".summoner, ) game.logSeen(self.summoner,"
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 588,
+  "src": "Summon a Clockwork Bat for %d turns to attack your foes. Clockwork Bats share sight of enemies with their summoner and emit confusing screeches (radius %d, confuse duration %d).\n\t\tIt will get %d Strength, %d Dexterity and %d Constitution (increases with Steampower and talent level).\n\t\tClockwork summons inherit your increased damage%% and are immune to most status effects.  Summoning one Clockwork will put the others on cooldown for 7 turns.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ats = t.incStats(self, t, true) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 597,
+  "src": "Clockwork Cat",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", incStats.con) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 637,
+  "src": "clockwork cat",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "= , color=colors.SLATE, image = , name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 668,
+  "src": "%s explodes in a cloud of flame!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": ".summoner, ) game.logSeen(self.summoner,"
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 687,
+  "src": "Summon a Clockwork Cat for %d turns to attack your foes. Clockwork Cats are melee attackers that bleeds enemies and exploits their weaknesses.\n\t\tIt will get %d Strength, %d Dexterity and %d Constitution (increases with Steampower and talent level).\n\t\tClockwork summons inherit your increased damage%% and are immune to most status effects.  Summoning one Clockwork will put the others on cooldown for 7 turns.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ats = t.incStats(self, t, true) return ("
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 696,
+  "src": "Hardwired to Self-Destruct",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", incStats.con) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/clockworkmenagerie.lua",
+  "line": 730,
+  "src": "Your engineering efficiency has found a way for your clockworks to serve you in death as well as life.  On dying or timing out if enemies are present clockworks explode in a variety of ways:\n\t\tClockwork Rat: A cloud of infective blight causing %d damage.\n\t\tClockwork Bat: A cloud of caustic mire causing %d damage and %d%% slow.\n\t\tClockwork Cat: A cloud of stunning fire causing %d damage.\n\t\tUpon learning this talent you also learn Click-Boom (remotely detonate your clockworks).\n\t\tAt level 3+ you learn Safety Protocol (prevents clockworks from detonating when within range of you).\n\t\tNote that clockworks install Hardwired and Safety Protocol at time of summon.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 31,
+  "src": "Transporter Clone (",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= {actor=nil}, ai = , ai_real = , name ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 32,
+  "src": "An echo of yourself.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ai_real = , name = ..self.name.., desc ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 65,
+  "src": "Transporter Clone",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "y:addMember(m, { control=, type=, title="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 74,
+  "src": "Charge Powercell",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "}) end return true end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 87,
+  "src": "Powercell already charged!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 100,
+  "src": "Generate two charges for your Powercell for %d turns.  Future Relic talents require the use of a Powercell charge.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 121,
+  "src": "Phase Engine",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "nd end return true end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 136,
+  "src": "You require a charged Powercell for this talent.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 163,
+  "src": "%s's phase fizzles!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "tRandom(x, y, 0) then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 178,
+  "src": "Transports you to a target location within %d tiles.\tThe range will increase with talent level.\n\t\tAt talent level 3+ a Transporter Clone will be left in your old location.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal range = t.getRange(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 184,
+  "src": "Photon Emitter",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "):format(range) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 244,
+  "src": "Fire a beam of energy that deals %0.2f light damage to all foes in a line.  At talent level 3+ it may blind targets.\n\t\tThe damage done will increase with your Steampower.\n\t\tWhen you learn this talent you will also learn Charge Powercell (spend a large amount of Steam to charge your Powercell).  Future Relic talents require one Powercell charge for use.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 252,
+  "src": "Panic Button",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "LIGHT, damage)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 291,
+  "src": "%s's teleport fizzles!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": ", range, mRange) then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 312,
+  "src": "Teleports you randomly within a range of %d to %d grids and generate a %d point damage shield.  The range will increase with talent level.  Costs 2 Powercell charges if available (will work with 1).\n\t\tWhen you learn this talent you will also learn Phase Engine (phase door to a target location in range %d).\n\t\tAt talent level 3+ when either talent is used a Transporter Clone will be left in your old location.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l pRange = t1.getRange(self,t1) return ("
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 320,
+  "src": "Vortex Box",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "absorb, pRange) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 364,
+  "src": "maelstrom",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "t.new{ old_feat = oe, type = , subtype ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 365,
+  "src": "'s vortex",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "type = , name = self.name:capitalize().."
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 431,
+  "src": "Create a powerful maelstrom for %d turns.  Each turn, the maelstrom will pull in targets within a radius of %d, and inflict %0.2f physical damage.\n\t\tAt talent level 3+ a field will be set up around friendly targets to protect them from the effects of the maelstrom.\n\t\tThe damage will scale with your Steampower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 438,
+  "src": "Time Scrambler",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "SICAL, damage)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/futurerelics.lua",
+  "line": 529,
+  "src": "Void the warranty on your time travel equipment and project an unstable burst of chrono energy at a target, inflicting at most %d negative temporal effects (damaging effects vary around %d damage).\n\t\tThe damage will scale with your Steampower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "t) local dam = t.getDam(self,t) return ("
+ },
+ {
+  "file": "data/talents/steam/steam.lua",
+  "line": 61,
+  "src": "Timegun Training",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "steam=true, type=, generic=false, name ="
+ },
+ {
+  "file": "data/talents/steam/steam.lua",
+  "line": 61,
+  "src": "Ranged fighting techniques that combine magic and steam.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "=, generic=false, name = , description ="
+ },
+ {
+  "file": "data/talents/steam/steam.lua",
+  "line": 71,
+  "src": "Timegear",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "steam=true, type=, generic=false, name ="
+ },
+ {
+  "file": "data/talents/steam/steam.lua",
+  "line": 71,
+  "src": "Utilize steam devices infused with time magic.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "=, generic=false, name = , description ="
+ },
+ {
+  "file": "data/talents/steam/steam.lua",
+  "line": 76,
+  "src": "Future Relics",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "steam=true, type=, generic=false, name ="
+ },
+ {
+  "file": "data/talents/steam/steam.lua",
+  "line": 76,
+  "src": "Relics from a now-lost future time.  Relics require Powercell charges for use.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "=, generic=false, name = , description ="
+ },
+ {
+  "file": "data/talents/steam/steam.lua",
+  "line": 81,
+  "src": "Clockwork Menagerie",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "_steam=true, type=, generic=true, name ="
+ },
+ {
+  "file": "data/talents/steam/steam.lua",
+  "line": 81,
+  "src": "Command an array of mechanical creatures just short of a winged monkey with cymbals.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "e=, generic=true, name = , description ="
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 21,
+  "src": "Timethrower",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 59,
+  "src": "Conjures up a cone of timefire with radius %d. Any targets caught in the area will take %d Timefire damage and suffer Timeshock (Global Slow of %d%% + movement speed slow of %d%%).\n\t\tThe damage will increase with your Steampower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 91,
+  "src": "Time Bombs",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "urn Trap.new(trap) end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 127,
+  "src": "timebomb",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ".getDuration(self, t), { type = , name ="
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 158,
+  "src": "%s travel time!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "N, 100, {power=power}) game.logSeen(who,"
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 164,
+  "src": "instability",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "t.new{ old_feat = oe, type = , subtype ="
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 165,
+  "src": "temporal instability",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "d_feat = oe, type = , subtype = , name ="
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 226,
+  "src": "You focus on a target zone of radius 2 to make up to %d timebombs appear.\n\t\tThe first timebomb will appear at the center of the target zone, while others will appear at random spots.\n\t\tEach timebomb lasts %d turns and explodes when a hostile creature walks over it, dealing %d Temporal damage and possibly removing the target from the timeline for %d turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al dur = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 235,
+  "src": "Quantum Mortar",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " dam), dur / 2) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 275,
+  "src": "You lob a special mortar shell at a target that explodes in radius %d for %d Quantum damage (applied 2-4 times for a corresponding fraction of the damage).\n\t\tAt talent level 4+ radius increases to 2.\n\t\tDamage increases with steampower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 282,
+  "src": "Regulator",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "amage(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/timegear.lua",
+  "line": 310,
+  "src": "The Regulator recirculates your blood, infusing it with a specially-formulated witch's brew and filtering out negative elements.\n\t\tIncreases life regeneration by %0.2f%% of maximum health, healing factor by %d%%, and negative effects duration by %d%%.\n\t\tIt also empowers your spells with %d%% of your steampower (%d spellpower).\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 81,
+  "src": "Your projected attack temporarily increases spell power by %d and spell crit by %d%% for 3 turns; hits will also tune Paradox towards your preferred level by an amount (%d) depending on current paradox level.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 120,
+  "src": "Timegun Mastery",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "tPower(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 204,
+  "src": "Increases Physical Power by %d, increases weapon damage by %d%%, and increases your reload rate by %d when using steamguns.\n\t\tWeapons and ammo use Cunning instead of Dexterity for requirements.\n\t\tWeapons use Magic instead of Dexterity and Cunning instead of Strength for damage calculations.\n\t\tIf you make a successful steamgun attack and have an offhand dagger with no attached tinker you project an attack with the offhand weapon at the same target for %d%% weapon damage.  \n\t\tSuccessful projected attacks also have various effects based on Touch sustains:\n\t\tTouch of Clotho: Projected attack returns %d%% of the damage (up to %d life) as stacking life regeneration over 3 turns, plus %d immediately.  The healing increases if you are below 50%% of max life.\n\t\tTouch of Lachesis: Temporarily increases spell power by %d and spell crit by %d%% for 3 turns; hits will also tune Paradox towards your preferred level by %d.\n\t\tTouch of Atropos: %d%% chance of firing a beam at the target for %d warp damage.\n\t\tOffhand projected attack damage and Touch values will increase with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "mId(self.T_SW_TOUCH_OF_ATROPOS) return ("
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 217,
+  "src": "Hasted Gunnery",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Power(self,t4)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 227,
+  "src": "You require a steamgun for this talent.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 247,
+  "src": "Use localized spacial acceleration to fire your gun three times.\n\tEach shot (targeted separately) deals %d%% damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 253,
+  "src": "Warp Bullets",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "tiple(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 284,
+  "src": "Infuse your bullets with warp energy for %d turns.  Bullets will inflict %d temporal damage and may (%d%%) attempt to teleport the target randomly in range %d.\n\t\tAdditionally your bullets will bypass friendly targets for the duration.\n\t\tDuration is based on Steam Power; Damage, Teleport Apply Power, and Teleport Range is based on Spell Power.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal power = t.getPower(self,t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegun-training.lua",
+  "line": 339,
+  "src": "Improves your capacity to see invisible/stealthed foes by +%d and accuracy by +%d.  \n\t\tAdditionally every turn an enemy is present you have a %d%% chance to gain Witch Sight (+%d%% Physical Crit, +%d%% Physical Damage, +%d detection).\n\t\tSense and accuracy will scale with your Cunning stat, Witch Sight chance/power will scale with your Magic stat.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") local dam = t.getDam(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 40,
+  "src": "Increase Physical Power by %d, weapon damage by %d%%, and reload rate by %d when using steamguns.\n\t\tWeapons and ammo use Cunning instead of Dexterity for requirements.\n\t\tWeapons use Magic instead of Dexterity and Cunning instead of Strength for damage calculations.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " t.ammo_mastery_reload(self, t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 118,
+  "src": "Infuse your bullets with warp energy for %d turns.  Adds %d temporal damage, inflicts Warptouched (reduces defense and saves), and may (%d%%) attempt to teleport the target randomly in range %d.\n\t\tAdditionally your bullets will bypass friendly targets for the duration.\n\t\tDuration is based on Steam Power; Damage, Teleport Apply Power, and Teleport Range is based on Spell Power.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal power = t.getPower(self,t) return ("
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 126,
+  "src": "Destined Shot",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " chance, power) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 169,
+  "src": "[Destined shot] targetting",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "(target, fx, fy, function(dx, dy) print("
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 175,
+  "src": "[Destined shot] looking for more targets",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ected[actor] = true first = actor print("
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 175,
+  "src": " at ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "[actor] = true first = actor print(, nb,"
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 175,
+  "src": "radius ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "true first = actor print(, nb, , dx, dy,"
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 179,
+  "src": "[Destined shot] found possible actor",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "lf:reactionToward(actor) < 0 then print("
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 191,
+  "src": "[Destined shot] Found targets:",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "targets = table.listify(affected) print("
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 205,
+  "src": "[Destined shot] jumping from",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "fire=false, talent=t, x=sx, y=sy} print("
+ },
+ {
+  "file": "data/talents/steam/timegun-trainingx.lua",
+  "line": 242,
+  "src": "Let time take its own course, whether to bring many together or to tear one apart.  \n\t\tAim your steamgun at a target within range.\n\t\tIf there are enemies within 3 radius of the target: Deal %d temporal damage (increasing with talent and steam power) to up to %d targets and Braid their lifelines (take %d%% damage of any other Braided target; percentage increases if less than half of targets struck) for %d turns.  \n\t\tIf not: Deal shot damage to the target plus temporal damage equal to %d%% (reduced by rank) of the target's maximum life.  If the target survives, pin for %d turns.\n\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal pct = t.getPercent(self, t) return ("
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 26,
+  "src": "Steam Witch",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "then newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 28,
+  "src": "The Steam Witch was born into time magic but found the ordered ways of the Wardens boring and struck out to find a path of their own.  Travelling through time and space they found an affinity for technology and integrated their time magic with steam mechanisms.  Steam Witches attack enemies at range with a steam gun and projected dagger attacks while using time magic to keep out of harm's way.  Their hexes make enemies vulnerable to attacks and further magical assaults.  Steam-powered equipment provides additional offensive/defensive capabilities.  Primary stats are Magic and Cunning.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 30,
+  "src": "#LIGHT_BLUE# * +4 Cunning, +1 Willpower,",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 31,
+  "src": "#LIGHT_BLUE# * +4 Magic, +0 Constitution,",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "riptor{ type = , name = , desc = { , , ,"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 32,
+  "src": "#LIGHT_BLUE# * +0 Strength, +0 Dexterity",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ptor{ type = , name = , desc = { , , , ,"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 67,
+  "src": "steamgun",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "solvers.equip{ id=true, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 67,
+  "src": "iron steamgun",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": ".equip{ id=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 68,
+  "src": "dagger",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 68,
+  "src": "iron dagger",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 69,
+  "src": "shot",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 69,
+  "src": "pouch of iron shots",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 70,
+  "src": "head",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 70,
+  "src": "rough leather hat",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 71,
+  "src": "cloth",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "1000, ego_chance=1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 71,
+  "src": "linen robe",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "go_chance=1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 72,
+  "src": "cloak",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 72,
+  "src": "linen cloak",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 89,
+  "src": "implant",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": " id=true, transmo=true, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 89,
+  "src": "steam generator implant",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "e, transmo=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 103,
+  "src": "Steam Witch",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "criptor(, ).descriptor_choices.subclass["
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 29,
+  "src": "Witch Sight",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "ire newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 31,
+  "src": "Physical damage increased by %d%%, physical crit increased by %d%%, stealth/invisibility detection increased by %d, and sense creatures in range 8.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 54,
+  "src": "Seeping Darkness",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 55,
+  "src": "Darkness seeping within, causing %0.2f Darkness damage per turn.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 76,
+  "src": "Enervating Hex",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 79,
+  "src": "The target is hexed, reducing physical, temporal, knockback, teleport, and pin resistances by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "self, eff) if eff.emp == 1 then return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 81,
+  "src": "The target is hexed, reducing physical, temporal, knockback, teleport, pin, and bleed resistances by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "eturn ():format(eff.power) else return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 88,
+  "src": "#Target# is hexed.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 88,
+  "src": "+hex",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 89,
+  "src": "#Target# is no longer hexed.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 89,
+  "src": "-hex",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 112,
+  "src": "Frailty Hex",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 115,
+  "src": "The target is hexed, reducing fire, cold, lightning, light, and blind resistances by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "self, eff) if eff.emp == 1 then return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 117,
+  "src": "The target is hexed, reducing fire, cold, lightning, light, blind, and stun resistances by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "eturn ():format(eff.power) else return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 144,
+  "src": "Vile Hex",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 146,
+  "src": "The target is hexed, reducing blight, nature, disease, poison, and confusion resistances by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 170,
+  "src": "Patchwork",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 171,
+  "src": "The target is regaining %d life per turn.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 176,
+  "src": "#Target# is being patched up.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "0}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 176,
+  "src": "+Patchwork",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 177,
+  "src": "#Target# is no longer being patched.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 177,
+  "src": "-Patchwork",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 222,
+  "src": "Fickle Fate Field",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 223,
+  "src": "The target's fate is fickle, absorbing %d damage and possibly deflecting %d%% damage (varying by effect).",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 228,
+  "src": "#Target#'s fate is fickle.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "0}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 228,
+  "src": "+FFF",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 229,
+  "src": "#Target#'s fate is again following the thread.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 229,
+  "src": "-FFF",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 237,
+  "src": "#LIGHT_BLUE##Source# delays their fate!",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "6)}) game:delayedLogMessage(self, nil, ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 238,
+  "src": "#LIGHT_BLUE#(%d deferred)#LAST#",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " ) game:delayedLogDamage(src, self, 0, ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 244,
+  "src": "reality smearing",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "ox/4}) game:delayedLogMessage(self, nil,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 244,
+  "src": "#LIGHT_BLUE##Source# converts damage to paradox!",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "/4}) game:delayedLogMessage(self, nil, ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 266,
+  "src": "#LIGHT_BLUE##Source# displaces damage!",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "lace game:delayedLogMessage(self, nil, ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 267,
+  "src": "%s(%d fickle fate field)#LAST#",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " ) game:delayedLogDamage(src, self, 0, ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 286,
+  "src": "Stolen Fortune",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 287,
+  "src": "Increases the target combat power and spellpower by %d, and critical chance by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 292,
+  "src": "Fortune shines on #Target#.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "0}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 292,
+  "src": "+Stolen Fortune",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 293,
+  "src": "#Target# seems less fortunate.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 293,
+  "src": "-Stolen Fortune",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 310,
+  "src": "Gift of Lachesis",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 311,
+  "src": "Increases the target spellpower by %d and spell critical chance by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 316,
+  "src": "Lachesis gifts #Target#.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "0}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 316,
+  "src": "+Gift of Lachesis",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 317,
+  "src": "#Target#'s gift has faded.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 317,
+  "src": "-Gift of Lachesis",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 346,
+  "src": "Gift of Clotho",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 347,
+  "src": "Life returns to the target, restoring %0.2f life per turn.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 352,
+  "src": "Clotho gifts #Target#.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 352,
+  "src": "+Gift of Clotho",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 353,
+  "src": "-Gift of Clotho",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 380,
+  "src": "Delayed Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 381,
+  "src": "The target's fate is catching up to them, taking %0.2f damage per turn.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 386,
+  "src": "#Target# is delaying fate!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 387,
+  "src": "#Target# rejoins the thread.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 398,
+  "src": "unable to escape their fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "Hit(eff.power, self, {special_death_msg="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 401,
+  "src": "%s%d %s#LAST#",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " game:delayedLogDamage(eff, self, val, ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 409,
+  "src": "Enfeeblement",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 410,
+  "src": "Decreases combat powers by %d and movement speed by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 415,
+  "src": "#Target# has been weakened.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "0}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 415,
+  "src": "+Enfeeblement",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 416,
+  "src": "#Target# regains strength.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 416,
+  "src": "-Enfeeblement",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 436,
+  "src": "Reactive Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 437,
+  "src": "The target's defense and saves have been increased by %d and accuracy by %d.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 438,
+  "src": " Charges",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "function(self, eff) return eff.charges.."
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 444,
+  "src": "#Target#'s timeline reacts.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "3}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 444,
+  "src": "+Reactive Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 445,
+  "src": "#Target#'s timeline normalizes.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 445,
+  "src": "-Reactive Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 494,
+  "src": "Prolong Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 503,
+  "src": "+Prolong Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "n_gain = function(self, err) return nil,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 504,
+  "src": "-Prolong Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "n_lose = function(self, err) return nil,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 538,
+  "src": "Shared Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 543,
+  "src": "+Shared Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "n_gain = function(self, err) return nil,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 544,
+  "src": "-Shared Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "n_lose = function(self, err) return nil,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 569,
+  "src": "%s(%d shared fate)#LAST#",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "ce game:delayedLogDamage(src, self, 0, ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 578,
+  "src": "cross tier",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "c == self) then return end if e.subtype["
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 581,
+  "src": "#STEEL_BLUE#%s shares the effect '%s'!",
+  "tag": "logSeen",
+  "ctor": "newEffect",
+  "prefix": " 100) then return end game.logSeen(self,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 615,
+  "src": "Warptouched",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 616,
+  "src": "The target's defense and saves have been reduced by %d.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 623,
+  "src": "#Target# doesn't feel right...",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "3}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 623,
+  "src": "+Warptouched",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 624,
+  "src": "#Target# feels better.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 624,
+  "src": "-Warptouched",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 670,
+  "src": "Resilient Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 671,
+  "src": "The target's saves have been increased by %d.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 676,
+  "src": "+Resilient Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 677,
+  "src": "-Resilient Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 763,
+  "src": "Enduring Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 769,
+  "src": "+Enduring Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 770,
+  "src": "-Enduring Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 804,
+  "src": "Guiding Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 805,
+  "src": "The target's accuracy has been increased by %d (removed on hit).",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 810,
+  "src": "+Guiding Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 811,
+  "src": "-Guiding Fate",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 844,
+  "src": "Malady",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 845,
+  "src": "Illness causing %d damage and reducing powers by %d.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 0,
+  "src": "steamtech",
+  "tag": "effect subtype",
+  "ctor": "newEffect",
+  "prefix": "subtype-key"
+ },
+ {
+  "file": "data/timed_effects/magical.lua",
+  "line": 0,
+  "src": "unresistable",
+  "tag": "effect subtype",
+  "ctor": "newEffect",
+  "prefix": "subtype-key"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 29,
+  "src": "Timefire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "ire newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 30,
+  "src": "The target is coated in timefire, taking %0.2f fire and temporal damage per turn.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 35,
+  "src": "#Target# is coated in timefire!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 35,
+  "src": "+Timefire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 36,
+  "src": "#Target# stops burning.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 36,
+  "src": "-Timefire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 58,
+  "src": "Timeshock",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 59,
+  "src": "Reduces global action speed by %d%% and movement speed by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 77,
+  "src": "Warp Bullets",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 78,
+  "src": "Bullets cause %d additional temporal damage, inflict Warptouched (reduces defense and saves), and may teleport the target to a random location.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 90,
+  "src": "Powercell",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 91,
+  "src": " Charge(s)",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "function(self, eff) return eff.charges.."
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 92,
+  "src": "Powercell has %d charge(s).",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 109,
+  "src": "Primed",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 110,
+  "src": "Primed to explode.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 127,
+  "src": "Sight Relay",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 128,
+  "src": "Clockwork Bat relaying enemy sight.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 137,
+  "src": "Improves senses, allowing the detection of remote enemies.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": ", long_desc = function(self, eff) return"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 157,
+  "src": "Sustained Fire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 158,
+  "src": "The target's physical crit chance has been increased by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 163,
+  "src": "#Target# is on a shooting streak.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "5}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 163,
+  "src": "+Sustained Fire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 164,
+  "src": "#Target#'s streak ends.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects/physical.lua",
+  "line": 164,
+  "src": "-Sustained Fire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ }
+]

@@ -1,0 +1,3218 @@
+[
+ {
+  "file": "init.lua",
+  "line": 20,
+  "src": "Midnight",
+  "tag": "init.lua long_name",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "init.lua",
+  "line": 28,
+  "src": "Two more Celestial classes, two more races and two more starter dungeons for the Far East.\nAlso contains Sceptre weapons and tweaks to existing Celestial classes.",
+  "tag": "init.lua description",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 54,
+  "src": "aeryn-main",
+  "tag": "effect subtype",
+  "ctor": "",
+  "prefix": "ot = game.level:pickSpot{type=, subtype="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 56,
+  "src": "gates-of-morning-main",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ":move(spot.x, spot.y, true) e.can_talk ="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 61,
+  "src": "pop-birth",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ") local spot = game.level:pickSpot{type="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 61,
+  "src": "sunwall",
+  "tag": "effect subtype",
+  "ctor": "",
+  "prefix": "ot = game.level:pickSpot{type=, subtype="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 64,
+  "src": "slazish-fens",
+  "tag": "effect subtype",
+  "ctor": "",
+  "prefix": "ot = game.level:pickSpot{type=, subtype="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 69,
+  "src": "sunwall-orchard",
+  "tag": "effect subtype",
+  "ctor": "",
+  "prefix": "ot = game.level:pickSpot{type=, subtype="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 74,
+  "src": "tomidnight",
+  "tag": "effect subtype",
+  "ctor": "",
+  "prefix": "ot = game.level:pickSpot{type=, subtype="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 118,
+  "src": "midnight+gates-of-morning-overlay",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "lay = true, generator = , data = { map ="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 156,
+  "src": "%s has been saved by a blast of negative energy!",
+  "tag": "logSeen",
+  "ctor": "",
+  "prefix": "playSoundNear(self, ) game.logSeen(self,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 165,
+  "src": "%s blinks away before death!",
+  "tag": "logSeen",
+  "ctor": "",
+  "prefix": "alue < self.life then game.logSeen(self,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 188,
+  "src": "voratun sceptre",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "lf:get() then return end local bases = {"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 237,
+  "src": "#CRIMSON#Your timetravel has no effect on pre-determined outcomes such as this.",
+  "tag": "log",
+  "ctor": "",
+  "prefix": "00) if game._chronoworlds then game.log("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 243,
+  "src": "Do you want to name your item?\n",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "saveGame() end self:addChat{ id=, text ="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 310,
+  "src": "Enables altered Anorithil/Sun Paladin talents.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 312,
+  "src": "#GOLD##{bold}#Midnight: Enables altered Anorithil/Sun Paladin talents?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 326,
+  "src": "Change Selection",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " name= }, { name= }, } Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 326,
+  "src": "Enable altered Anorithil/Sun Paladin talents? #RED#Best not to change this option in the middle of a game.#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 334,
+  "src": "Allows NPCs to use Midnight talents.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 336,
+  "src": "#GOLD##{bold}#Midnight: NPCs use Midnight talents?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 350,
+  "src": "NPCs use Midnight talents?",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 358,
+  "src": "Allows Sceptres to drop.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 360,
+  "src": "#GOLD##{bold}#Midnight: Enable Sceptres?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 374,
+  "src": "Enable Sceptres?",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 22,
+  "src": "shield break",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 39,
+  "src": "black hole",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "end end end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 57,
+  "src": "orbit",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "st) end end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 72,
+  "src": "prominence",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "{}) end end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 91,
+  "src": "lunar pulse",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "()) end end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 130,
+  "src": "dark cold",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "end end end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/gates-of-morning-grids.lua",
+  "line": 21,
+  "src": "Way up to the Mountain Orchards",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "newEntity{ define_as = , name ="
+ },
+ {
+  "file": "data/gates-of-morning-grids.lua",
+  "line": 24,
+  "src": "sunwall-orchard",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "= {class.new{image=, z=8}}, change_zone="
+ },
+ {
+  "file": "data/gates-of-morning-grids.lua",
+  "line": 28,
+  "src": "Jumpgate to Midnight",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " true, } newEntity{ define_as = , name ="
+ },
+ {
+  "file": "data/gates-of-morning-grids.lua",
+  "line": 31,
+  "src": "town-midnight",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "= {class.new{image=, z=8}}, change_zone="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 29,
+  "src": "glowing ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 45,
+  "src": "phasing ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 59,
+  "src": "mystic's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 76,
+  "src": "invoker's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 93,
+  "src": "sage's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 118,
+  "src": "project an attack as arcane damage doing 100%% weapon damage",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "0 return 0, v end)}, }, resolvers.charm("
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 120,
+  "src": "bolt",
+  "tag": "entity type",
+  "ctor": "newEntity",
+  "prefix": "6, function(self, who) local tg = {type="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 152,
+  "src": "channeller's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 162,
+  "src": "channel mana (increasing mana regen by 500%% for ten turns)",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "00 return 0, v end), }, resolvers.charm("
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 168,
+  "src": "Your negative mana regeneration rate is unaffected by the sceptre.",
+  "tag": "logPlayer",
+  "ctor": "newEntity",
+  "prefix": ".mana_regen < 0 then game.logPlayer(who,"
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 172,
+  "src": "Your nonexistant mana regeneration rate is unaffected by the sceptre.",
+  "tag": "logPlayer",
+  "ctor": "newEntity",
+  "prefix": "ogPlayer(who, ) else game.logPlayer(who,"
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 175,
+  "src": "%s is channeling mana!",
+  "tag": "logSeen",
+  "ctor": "newEntity",
+  "prefix": "gPlayer(who, ) end end game.logSeen(who,"
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 183,
+  "src": "vile ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 200,
+  "src": "planar ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 218,
+  "src": "bugslayer's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 235,
+  "src": "hunter's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 250,
+  "src": "undeadslayer's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 268,
+  "src": "giantslayers's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 284,
+  "src": "dragonslayers's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 305,
+  "src": "mageslayers's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 327,
+  "src": "horrorslayer's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 344,
+  "src": "banditslayer's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 359,
+  "src": "orcslayer's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 376,
+  "src": "determined ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "y{ power_source = {psionic=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 418,
+  "src": "glorious ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 434,
+  "src": "guarding ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " power_source = {technique=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 450,
+  "src": "healer's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 466,
+  "src": "royal ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 486,
+  "src": "thug's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " power_source = {technique=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 503,
+  "src": "scoundrel's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " power_source = {technique=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 520,
+  "src": "brute's ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " power_source = {technique=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 616,
+  "src": " of light",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 635,
+  "src": " of dark",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 654,
+  "src": " of arcane",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 692,
+  "src": " of nature",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 711,
+  "src": " of blight",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 730,
+  "src": " of thought",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 749,
+  "src": " of time",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 768,
+  "src": " of dissolution",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 789,
+  "src": " of incineration",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 810,
+  "src": " of glaciation",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 831,
+  "src": " of electrocution",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 852,
+  "src": " of luminescence",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 873,
+  "src": " of necrofication",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 894,
+  "src": " of mana warping",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 895,
+  "src": "mana warping",
+  "tag": "entity keyword",
+  "ctor": "newEntity",
+  "prefix": "rue, instant_resolve=true, keywords = {["
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 915,
+  "src": " of laceration",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 936,
+  "src": " of asphyxiation",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 957,
+  "src": " of infestation",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 978,
+  "src": " of migranes",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 999,
+  "src": " of deja vu",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ty{ power_source = {arcane=true}, name ="
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 1000,
+  "src": "deja vu",
+  "tag": "entity keyword",
+  "ctor": "newEntity",
+  "prefix": "rue, instant_resolve=true, keywords = {["
+ },
+ {
+  "file": "data/sceptre_egos.lua",
+  "line": 1070,
+  "src": "leadfilled ",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " power_source = {technique=true}, name ="
+ },
+ {
+  "file": "data/sceptres.lua",
+  "line": 27,
+  "src": "sceptre_%s",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "= t[1] local r, r2 if slot == then r = {"
+ },
+ {
+  "file": "data/sceptres.lua",
+  "line": 41,
+  "src": "sceptre",
+  "tag": "entity subtype",
+  "ctor": "newEntity",
+  "prefix": "dual_wieldable = true, type = , subtype="
+ },
+ {
+  "file": "data/sceptres.lua",
+  "line": 42,
+  "src": " (#COMBAT#)",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "le = true, type = , subtype=, add_name ="
+ },
+ {
+  "file": "data/sceptres.lua",
+  "line": 56,
+  "src": "iron sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "s(40, 5) }, } newEntity{ base = , name ="
+ },
+ {
+  "file": "data/sceptres.lua",
+  "line": 73,
+  "src": "steel sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "wer = 3, }, } newEntity{ base = , name ="
+ },
+ {
+  "file": "data/sceptres.lua",
+  "line": 90,
+  "src": "dwarven-steel sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "wer = 6, }, } newEntity{ base = , name ="
+ },
+ {
+  "file": "data/sceptres.lua",
+  "line": 107,
+  "src": "stralite sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "wer = 9, }, } newEntity{ base = , name ="
+ },
+ {
+  "file": "data/sceptres.lua",
+  "line": 124,
+  "src": "voratun sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "er = 12, }, } newEntity{ base = , name ="
+ },
+ {
+  "file": "data/stores.lua",
+  "line": 5,
+  "src": "sceptre",
+  "tag": "effect subtype",
+  "ctor": "",
+  "prefix": "store local filter = {type = , subtype ="
+ },
+ {
+  "file": "data/stores.lua",
+  "line": 33,
+  "src": "mystical supplies",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ter) end newEntity{ define_as = , name ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 30,
+  "src": "Bathed in Night",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "ire newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 31,
+  "src": "Improves/gives invisibility/stealth (power %d) and strikes melee attacks with darkness (%0.2f).",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 36,
+  "src": "#Target# vanishes from sight.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 37,
+  "src": "#Target# is no longer invisible.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 51,
+  "src": "Cosmic Quiver",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 52,
+  "src": "Unlimited ammo and %d%% of all damage you do is converted into darkness.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 57,
+  "src": "#Target# gathers raw starlight.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 57,
+  "src": "+Cosmic Quiver",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 58,
+  "src": "#Target# is no longer gathering starlight.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 58,
+  "src": "-Cosmic Quiver",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 79,
+  "src": "Orbit",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 80,
+  "src": "A projectile is orbitting around this creature.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 85,
+  "src": "#Target# is being orbitted by a projectile shot.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 85,
+  "src": "+Orbit",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 86,
+  "src": "#Target# is no longer being orbitted.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 86,
+  "src": "-Orbit",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 99,
+  "src": "Nightchilled",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 100,
+  "src": "The target is exposed to the night chill, taking %0.2f cold/dark damage per turn.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 105,
+  "src": "#Target# is exposed!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 105,
+  "src": "+Nightchill",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 106,
+  "src": "#Target# feels warmer.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 106,
+  "src": "-Nightchill",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 124,
+  "src": "Shadow Swell",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 125,
+  "src": "Increases evasion (power %d) and stealth power (power %d).",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 130,
+  "src": "#Target# blurs into shadows.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 130,
+  "src": "+Shadow Swell",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 131,
+  "src": "#Target# is no longer blurred.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 131,
+  "src": "-Shadow Swell",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 144,
+  "src": "Mana Flare",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 145,
+  "src": "Increases attack powers and spellsave by %d.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 150,
+  "src": "#Target# shines with inner fire.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 150,
+  "src": "+Mana Flare",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 151,
+  "src": "#Target# is no longer shining.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 151,
+  "src": "-Mana Flare",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 167,
+  "src": "Chromatic Flash",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 168,
+  "src": "You have a %d%% chance of doing an extra %d damage with *ANY* attack.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 173,
+  "src": "#Target# is overloaded with power.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 173,
+  "src": "+Chromatic Flash",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 174,
+  "src": "#Target# is no longer overloaded.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 174,
+  "src": "-Chromatic Flash",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 194,
+  "src": "Corrupt Starscape",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 195,
+  "src": "Has summoned the starscape, slowing all creatures 67%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 408,
+  "src": "Outside the Starscape",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 409,
+  "src": "This unit is outside of the starscape and cannot be harmed from within it,",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 26,
+  "src": "shiny shield",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "cane=true}, unique = true, unided_name ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 27,
+  "src": "Polished Disc",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "}, unique = true, unided_name = , name ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 28,
+  "src": "Its either a mirror, or the shield of a Sun Paladin that liked polishing too much.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "nided_name = , name = , image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 58,
+  "src": "Astrolabe",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": ", technique=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 59,
+  "src": "a strange device",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " = , color = colors.BLACK, unided_name ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 60,
+  "src": "A carefully constructed device for measuring and predicting the movements of celestial bodies.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ".BLACK, unided_name = , image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 77,
+  "src": "Quartz Sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "e = {arcane=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 78,
+  "src": "crystal mace",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " = colors.WHITE, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 79,
+  "src": "Though the crystal on the end refracts light in unexpected ways, this Sceptre is still strong enough to give out a good beating.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ".WHITE, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 103,
+  "src": "Claws of Night",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "e = {arcane=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 104,
+  "src": "dark metal gauntlets",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "r = colors.GREY, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts-far-east.lua",
+  "line": 105,
+  "src": "They appear to be made of a metal you have never seen before. Shadows cling to them.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "s.GREY, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 35,
+  "src": "dark, radiant staff",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "= {arcane=true}, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 78,
+  "src": "Burning Basher",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "e = {arcane=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 79,
+  "src": "smouldering sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "or = colors.RED, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 80,
+  "src": "The end of this sceptre emits an acrid smoke and burns painfully if you touch it.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "rs.RED, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 109,
+  "src": "Demon Arm",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "e = {arcane=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 110,
+  "src": "handy sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "or = colors.RED, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 111,
+  "src": "This sceptre has been designed to look like the arm of a demon. Wait, it is the arm of a demon! Eww...",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "rs.RED, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 140,
+  "src": "Hatred of the Storm",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ue, psionic=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 141,
+  "src": "brooding sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "r = colors.BLUE, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 142,
+  "src": "Black sparks leap of this sceptre whenever it senses hatred nearby.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "s.BLUE, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 172,
+  "src": "The Beacon",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ue, psionic=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 173,
+  "src": "hopeful sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "= colors.YELLOW, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 174,
+  "src": "The light from this beacon fills you with hope and courage.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "YELLOW, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 207,
+  "src": "Lightning Rod",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": ", technique=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 208,
+  "src": "conductive sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " = colors.WHITE, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 209,
+  "src": "Expertly crafted to channel lightning through its core, but has no control of where it goes next.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ".WHITE, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 239,
+  "src": "Breacher",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "rue, nature=true}, unique = true, name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 240,
+  "src": "glowing sceptre",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " = colors.GREEN, image = , unided_name ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 241,
+  "src": "Powerful enchantments have been laid on this sceptre to make it able to break the most formidible of defenses, both physical and magical.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ".GREEN, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 22,
+  "src": "Chilling Night",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 47,
+  "src": "Expose the target to the cold void between the stars, hurting them for %0.2f cold and %0.2f darkness damage over 8 turns.\nNB: Repeated casts can stack.\nThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 54,
+  "src": "Star Sign",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ESS, damage/2)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 80,
+  "src": "[Chain lightning] targetting",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ject(tg, fx, fy, function(dx, dy) print("
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 87,
+  "src": "[Chain lightning] looking for more targets",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ected[actor] = true first = actor print("
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 87,
+  "src": " at ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "[actor] = true first = actor print(, nb,"
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 87,
+  "src": "radius ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "true first = actor print(, nb, , dx, dy,"
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 91,
+  "src": "[Chain lightning] found possible actor",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "lf:reactionToward(actor) < 0 then print("
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 103,
+  "src": "[Chain lightning] Found targets:",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "targets = table.listify(affected) print("
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 116,
+  "src": "[Chain lightning] jumping from",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "fire=false, talent=t, x=sx, y=sy} print("
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 133,
+  "src": "The doom of thy enemies is written in the stars, invoke this doom to inscribe a constellation of darkness linking up to %d enemies up to 6 grids apart.\nThey will be hurt for %0.2f darkness damage and be spellshocked for %d turns.\nThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ets = t.getTargetCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 293,
+  "src": "Corrupt Starscape",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "elf, ) return true end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/alter-celestial.lua",
+  "line": 318,
+  "src": "Summons the corrupt starscape in the surrounding area in a radius of %d. For %d turns, this area exists outside normal time, and in zero gravity. In addition to the effects of zero gravity, Movement of creatures and projectiles is three times as slow. Spells and attacks cannot escape the radius until the effect ends.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 167,
+  "src": "night",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 167,
+  "src": "Invoke the power of the night to conceal and harm.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": ", name = , generic = true, description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 171,
+  "src": "lunar combat",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 171,
+  "src": "As the Moons always shine, so does your combat.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 175,
+  "src": "shooting stars",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 175,
+  "src": "Infuse your projectiles with celestial power, and make they shine like shooting stars.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 179,
+  "src": "guidance",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 179,
+  "src": "Be guided on your path by the moons and the stars.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 183,
+  "src": "deep space",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 183,
+  "src": "Magic from between distant stars.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 187,
+  "src": "sigils",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 187,
+  "src": "Bind the tenebrous powers into sigils to trap your foes.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 191,
+  "src": "glory",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 191,
+  "src": "The true glory of the Sun and Light.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 195,
+  "src": "moon magic",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 195,
+  "src": "Magic drawn from the two moons of Eyal, Summertide and Wintertide.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 199,
+  "src": "star elf",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "tType{ allow_random=false, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 199,
+  "src": "Star Elf racial talents.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": ", name = , generic = true, description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 200,
+  "src": "mardrop",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "tType{ allow_random=false, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 200,
+  "src": "Mardrop racial talents.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": ", name = , generic = true, description ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 204,
+  "src": "umbra",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/celestial/celestial.lua",
+  "line": 204,
+  "src": "The true terrible power of the Stars and Darkness.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/celestial/deep-space.lua",
+  "line": 21,
+  "src": "Orbit",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/deep-space.lua",
+  "line": 33,
+  "src": "You require a bow or sling for this talent.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/celestial/deep-space.lua",
+  "line": 46,
+  "src": "You fire a shot into orbit around the target. Every turn for %d turns, this shot will hit the adjacent creatures, but not the one it orbits.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/deep-space.lua",
+  "line": 52,
+  "src": "Warped Space",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ation(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/deep-space.lua",
+  "line": 82,
+  "src": "Cosmic energies warp space around you, increasing your Accuracy by %d and your movement speed by %d%%.\n\t\tProjectiles are also affected. Yours travel %d%% faster, whereas enemy projectiles targetting you will travel %d%% slower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l attack = t.getAttack(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/deep-space.lua",
+  "line": 107,
+  "src": "You step out of phase with reality.\n\t\tFor %d turns, you can walk through walls and gain +%d defense, +%d%% resist all and debuff duration reduction.\n\t\tThese effects will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/deep-space.lua",
+  "line": 115,
+  "src": "Black Hole",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", attack_power) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/deep-space.lua",
+  "line": 164,
+  "src": "Opens a small portal to the depths of the darkest of stars for %d turns.\n\t\tEach turn in a radius of %d, it will try to pull creatures towards its centre, also doing %0.2f darkness damage.\n\t\tThe damage done will scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 21,
+  "src": "Radiant Soul",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 51,
+  "src": "The radiance of your soul shines brightly, granting %0.2f%% light resistance penetration.\n\t\tAt raw talent level 3 it also grants fire resistance penetration.\n\t\tAt raw talent level 5 it also grants light affinity.\n\t\tThese effects will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 60,
+  "src": "Flashstep",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Power(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 96,
+  "src": "%s is not blinded!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "(self, t), {}) else game.logSeen(target,"
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 115,
+  "src": "Step at the speed of light to your target, blinding it for %d turns and hitting it with all your weapons for %d%% light weapon damage.\n\t\tIf Path of Light is active, you will also leave a trail of light along your path.\n\t\tTo Flashstep, you need to be able to see the target.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 123,
+  "src": "Prominence",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "self, t) * 100) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 152,
+  "src": "You invoke sunfire in a frontal cone of radius %d. \n\t\tAny target caught in the area will take %0.2f light damage, %0.2f fire damage and be stunned and burn for %0.2f fire damage over %d turns.\n\t\tThe damage will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al dur = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 159,
+  "src": "Path of Light",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "E, dam/3), dur) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/glory.lua",
+  "line": 195,
+  "src": "You walk in the light and the light shines where you walk. \n\t\tYou leave a trail of blazing light behind you for 4 turns, doing %0.2f light damage to any who touch it.\n\t\tThis also increases your positive energy regeneration by %0.2f per turn.\n\t\tThe damage will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dam = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 21,
+  "src": "Celestial Aegis",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 49,
+  "src": "Wrap yourself in protective celestial magic, increasing your defense by %d, your armour hardiness by %d%% and your light and dark resistance by %d%%.\n\t\tThese effects will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 56,
+  "src": "Constellation Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "elf, t), power) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 82,
+  "src": "[Constellation Strike] targetting",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ject(tg, fx, fy, function(dx, dy) print("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 89,
+  "src": "[Constellation Strike] looking for more targets",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ected[actor] = true first = actor print("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 93,
+  "src": "[Constellation Strike] found possible actor",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "lf:reactionToward(actor) < 0 then print("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 105,
+  "src": "[Constellation Strike] Found targets:",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "targets = table.listify(affected) print("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 114,
+  "src": "[Constellation Strike] jumping from",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "or i, actor in ipairs(targets) do print("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 144,
+  "src": "Invokes the stars to guide you into attacking up to %d enemies near your target, up to 6 grids apart.\n\t\tEach attack made will do %d%% weapon damage as darkness and will daze them for %d turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ets = t.getTargetCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 151,
+  "src": "Blood of the Heavens",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "*100, duration) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 171,
+  "src": "Imbue your blood with magic from the heavens, increasing your healing by %d%%.\n\t\tWhen you take damage you will also gain 1 point of negative energy per 10 damage taken.\n\t\tHealing factor scales with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 179,
+  "src": "Celestial Intervention",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ": format(power) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/guidance.lua",
+  "line": 201,
+  "src": "Any attack that would drop you below 1 hit point instead triggers Celestial Intervention, deactivating the talent and granting you a damage shield for 5 turns that can block up to %d damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 21,
+  "src": "Wax",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 55,
+  "src": "Attack the target with your weapon doing %d%% damage. If the strike connects, it will explode in a burst of light that inflicts %0.2f light damage on all targets except yourself within radius %d of the target.\n\t\tThe light damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 62,
+  "src": "Wane",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "amage), radius) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 96,
+  "src": "Attack the target with your weapon doing %d%% damage. If the strike connects, it will explode in a burst of darkness that inflicts %0.2f darkness damage on all targets except yourself within radius %d of the target.\n\t\tThe dark damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 103,
+  "src": "Moongate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "amage), radius) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 135,
+  "src": "Open a moongate to the target tile. Light will pour from the gate for %0.2f light damage in a radius of 2.\n\t\tYou then step through the gate and appear at the target tile. Darkness will pour from the gate behind you for %0.2f darkness damage in a radius of 2.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "age = t.getLightDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 142,
+  "src": "Twin Moons",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", lightdamage)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 161,
+  "src": "You cannot use Twin Moons without an offhand weapon/shield!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " not offweapon then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 167,
+  "src": "You cannot use Twin Moons without an onhand weapon!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not weapon then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/celestial/lunar-combat.lua",
+  "line": 198,
+  "src": "Two Moons, Two Weapons, Two Strikes, Two Targets. Channel the power of the Moons into a devastating attack.\n\t\tFirst strike with your main weapon doing light damage, then your offhand for fire damage.\n\t\tThen strike again with your main hand weapon for darkness damage, then your offhand for cold damage.\n\t\tYou may select a different target for the second attack. You may use a shield as the offhand weapon.\n\t\tEach hit does %d%% weapon damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/moon-magic.lua",
+  "line": 56,
+  "src": "Lunar Pulse",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "KNESS, damage)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/moon-magic.lua",
+  "line": 83,
+  "src": "Invoke the power of the Moons to release a pulse of alien magic that disrupts the auras of your targets within radius 3, stunning them for %d turns, and dispelling a beneficial magical effect/talent from them.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "on = t.getStunDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/moon-magic.lua",
+  "line": 125,
+  "src": "Moontide",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", dam), radius) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/moon-magic.lua",
+  "line": 156,
+  "src": "You invoke moon waters in a frontal cone of radius %d. \n\t\tAny target caught in the area will take %0.2f darkness damage, %0.2f physical damage, %0.2f cold damage and be knocked back two tiles.\n\t\tThe damage will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al dur = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/night.lua",
+  "line": 21,
+  "src": "Restful Night",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/night.lua",
+  "line": 52,
+  "src": "A refreshing ray of Night shines on you, restoring %d stamina and reducing the duration of detrimental effects by %d.\n\t\tThe amount of stamina restored will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local time = t.getTime(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/night.lua",
+  "line": 59,
+  "src": "Cloak in Night",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "mat(heal, time) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/night.lua",
+  "line": 79,
+  "src": "A magical zone of Night covers you, increasing your stealth and invisibility by %d and harming those who hit you in melee for %0.2f darkness damage. The effect lasts for %d turns.\n\t\tEffect power scales with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/night.lua",
+  "line": 86,
+  "src": "Nocturnal Raid",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "age), duration) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/night.lua",
+  "line": 110,
+  "src": "Breaks all damage shields (or similar) in a radius of %d around you and increases your movement speed by %d%% for one turn.\n\t\tThe movement speed increases with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal speed = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/night.lua",
+  "line": 117,
+  "src": "Disciple of Dusk",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(radius, speed) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/night.lua",
+  "line": 142,
+  "src": "You walk in the dark, and when night falls on an enemies life, you harvest %0.1f negative energy from their death.\n\t\tAlso, your weapon attacks will release a radius 1 burst of darkness when you critically hit, for %0.2f damage.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "n = t.getNegativeRegen(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 36,
+  "src": "Shadow Swell",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " 24 + (level-1) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 51,
+  "src": "Call upon the upon the shadows to conceal yourself for 10 turns, granting %d%% evasion, %d extra stealth and %0.1f per turn negative celestial energy regeneration per turn.\n\t\tThe concealment bonuses will increase with your Dexterity.\n\t\tThis talent will not break stealth.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 58,
+  "src": "Blessing of Felia",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ative(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 90,
+  "src": "You are blessed by the Wintertide Moon. \n\t\tThis increases your resistance, resistance cap, damage and resistance penetration by %0.1f%% for cold, acid, darkness, physical, blight and mind damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 97,
+  "src": "Starlight",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "lentLevel(t)*2) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 126,
+  "src": "A life lived under the stars has taught you how to see with minimal light.\n\t\tYou may change your lamp to starlight, which reduces your light radius by %d, increases your infravision/heightened senses range by %d, and your ability to see stealthed/invisible creatures by %d.\n\t\tThe bonus to spotting hidden creatures scales with your Magic.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 134,
+  "src": "Lucky Stars",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Power(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 144,
+  "src": "Lucky Stars shine upon you, increasing your luck by %d. \n\t\tAlso, when you would receive lethal damage, this damage is halved and you teleport up to %d tiles away.\n\t\tThis can only happen once every %d turns.\n\t\tTeleport range scales with Cunning.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 154,
+  "src": "Mana Flare",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ldown(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 168,
+  "src": "Unleash magic from deep in the core of your being for 10 turns, granting +%d to spellpower, physical power, mind power and spellsave, and %0.1f positive celestial energy and mana regeneration per turn.\n\t\tThe power/save bonus will increase with your Constitution.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 174,
+  "src": "Blessing of Altia",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "itive(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 206,
+  "src": "You are blessed by the Summertide Moon. \n\t\tThis increases your resistance, resistance cap, damage and resistence penetration by %0.1f%% for fire, lightning, light, arcane, nature and temporal damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 213,
+  "src": "Hale",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "lentLevel(t)*2) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 225,
+  "src": "While Mardrop aren't the toughest of peoples, they have incredible recovery.\n\t\tIncreases life regeneration by %0.1f per turn, and stamina, mana and psi renegeration by %0.1f per turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 232,
+  "src": "Chromatic Flash",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Level(t) * 0.2) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 246,
+  "src": "Powerful magic flows through your veins, sometimes it comes to the surface in a bright flash.\n\t\tWhile active, gives you a %d%% chance of inflicting %d damage of a random type when you hit with *ANY* attack (weapon, spell, or mindpower).\n\t\tDuration is 10 turns.\n\t\tThe damage scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/races.lua",
+  "line": 282,
+  "src": "Powerful magic flows through your veins, sometimes it comes to the surface in a bright flash.\n\t\tWhile active, gives you a %d%% chance of inflicting %d damage of a random type, when you hit with any attack.\n\t\tThe damage scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/shooting-stars.lua",
+  "line": 48,
+  "src": "You fire from the shadows, doing %d%% darkness damage to the target and confusing them (power %d) for %d turns.\n\t\tDoesn't break stealth when used.\n\t\tConfusion scales with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/shooting-stars.lua",
+  "line": 56,
+  "src": "Comet Shot",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "alentLevel(t))) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/shooting-stars.lua",
+  "line": 87,
+  "src": "You fire a shot infused with the power of a comet, which pierces through all enemies in your way for %d%% weapon damage as light.\n\t\tThe blazing shot will also leave a trail of fire on the ground that does %0.2f fire damage.\n\t\tThe fire damage will scale with Spellpower. ",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/shooting-stars.lua",
+  "line": 95,
+  "src": "Cosmic Quiver",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "mage(self, t))) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/shooting-stars.lua",
+  "line": 110,
+  "src": "You cannot use Cosmic Quiver without a bow or sling!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not weapon then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/celestial/shooting-stars.lua",
+  "line": 145,
+  "src": "You channel powerful celestial energies and shape them into ammunition for your weapon.\n\t\tWhile active, your ammo is infinite and %d%% of all damage you do is converted into darkness damage.\n\t\tEvery shot you fire will cost 1 stamina and negative energy.\n\t\tAt raw talent level 5, normal shots will also be beam shaped.\n\t\tConversion rate will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "wer = t.getAttackPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/shooting-stars.lua",
+  "line": 155,
+  "src": "Starburst",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "t(attack_power) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/shooting-stars.lua",
+  "line": 193,
+  "src": "You fire a shot infused with brilliant starlight, doing %d%% light damage the the target.\n\t\tThe shot will then shatter into %d shards of starlight which do %0.2f darkness damage to whatever they hit.\n\t\tBoth the primary and secondary shots have a 25%% chance of blinding.\n\t\tShard damage scales with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dam = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 25,
+  "src": "Sigil of Shrouding",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "re local Map = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 50,
+  "src": "sigil of shrouding",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "return end local trap = Trap.new{ name ="
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 94,
+  "src": "You bind darkness in a sigil on the floor. All targets walking over the sigil will be blinded for %d turns.\n\t\tThe sigil is a hidden trap (%d detection and %d disarm power based on your Magic) and lasts for %d turns.\n\t\tAt raw talent level 5, these sigils are placed in a radius 1 around the target.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 102,
+  "src": "Sigil of Fascination",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", t), duration) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 126,
+  "src": "sigil of fascination",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "return end local trap = Trap.new{ name ="
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 179,
+  "src": "You bind darkness in a sigil on the floor. This sigil will fascinate all enemies in a radius of 4, drawing them towards it.\n\t\tThe sigil is a hidden trap (%d detection and %d disarm power based on your Magic) and lasts for %d turns.\n\t\tAt raw talent level 5, these sigils are placed in a radius 1 around the target.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 187,
+  "src": "Sigil of Sleep",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", t), duration) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 212,
+  "src": "sigil of sleep",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "return end local trap = Trap.new{ name ="
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 256,
+  "src": "You bind darkness in a sigil on the floor. All targets walking over the sigil will fall into a magical sleep for %d turns.\n\t\tThe sigil is a hidden trap (%d detection and %d disarm power based on your Magic) and lasts for %d turns.\n\t\tAt raw talent level 5, these sigils are placed in a radius 1 around the target.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 264,
+  "src": "Sigil of Space",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", t), duration) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 291,
+  "src": "sigil of space",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "return end local trap = Trap.new{ name ="
+ },
+ {
+  "file": "data/talents/celestial/sigils.lua",
+  "line": 341,
+  "src": "You bind darkness in a sigil on the floor. All targets walking over the sigil will take %0.2f darkness damage and be teleported up to %d tiles away.\n\t\tThe sigil is a hidden trap (%d detection and %d disarm power based on your Magic) and lasts for %d turns.\n\t\tAt raw talent level 5, these sigils are placed in a radius 1 around the target.\n\t\tDamage scales with Spellpower and Cunning.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 21,
+  "src": "Umbral Soul",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 51,
+  "src": "The darkness of your soul fades dimly, granting %0.2f%% darkness resistance penetration.\n\t\tAt raw talent level 3 it also grants cold resistance penetration.\n\t\tAt raw talent level 5 it also grants darkness affinity.\n\t\tThese effects will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 60,
+  "src": "Terminator",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Power(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 137,
+  "src": "A wave of pure darkness flows from the caster with an initial radius of 1, increasing 1 per turn to a maximum eventual radius of %d, then shrinking back to zero, doing %0.2f darkness damage to all inside per turn.\n\t\tThis wave lasts for %d turns and spreads in the chosen direction, but will hurt the caster for invoking such a terrible power.\n\t\tThe damage and radius will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 145,
+  "src": "Umbral Gate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "age), duration) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 175,
+  "src": "Open a gate through the shadows to escape. \n\t\tThis will blind enemies in a radius of %d for %d turns and then teleport you at random to a point between %d and %d tiles away.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 181,
+  "src": "Pitch Black",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "2, radius * 4 ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 193,
+  "src": "dark",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "re local m = NPC.new{ type = , subtype ="
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 194,
+  "src": "tinnugoroth",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "m = NPC.new{ type = , subtype = , name ="
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 195,
+  "src": "A dark shifting shape stalks through the shadows, blending in seemlessly.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " = , name = , color=colors.BLACK, desc ="
+ },
+ {
+  "file": "data/talents/celestial/umbra.lua",
+  "line": 276,
+  "src": "Call upon the deepest darkness between the stars to infest your darkness magic.\n\t\tEach of your darkness field effects have a %d%% chance to spawn a Tinnugoroth inside their radius each turn.\n\t\tThese Dusk Terrors require darkness to survive and will rapidly weaken while outside a darkness field.\n\t\tSpells that this affects include Terminator, Shadow Blast, Black Hole and Circle of Shifting Shadows.\n\t\tChance to spawn Tinnugoroths scales with your Spellpower.\n\t\tBlighted Summoning will grant them Moonlight Ray.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l chance = t.getChance(self, t) return ("
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 26,
+  "src": "Star Elf",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "newBirthDescriptor { type = , name ="
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 28,
+  "src": "A race of Elves all but forgotten, Star Elves have close ties with the Wintertide moon and have a very well developed study of astronomy. They are completely nocturnal, a quality that would help them evade the Orcs after the Spellblaze.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "hDescriptor { type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 29,
+  "src": "Eluding the Orcs would only last for so long, however. In the Age of Pyre they suffered the near extinction of their race to the hands of Orcish raiding parties, as they eventually located and conquered their once secluded dwellings. What few remain spend their time in hiding within the shadows of the night.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "escriptor { type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 30,
+  "src": "They look to the stars for guidance and blessings.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "criptor { type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 31,
+  "src": "They possess the #GOLD#Shadow Swell#WHITE# talent which allows them a boost of evasion every once in a while.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "iptor { type = , name = , desc = { , , ,"
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 33,
+  "src": "#LIGHT_BLUE# * 0 Strength, +2 Dexterity, +0 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "r { type = , name = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 47,
+  "src": "zone-pop",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ax_syllables = 4, default_wilderness = {"
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 47,
+  "src": "ruined-gates-of-morning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "x_syllables = 4, default_wilderness = {,"
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 48,
+  "src": "town-gates-of-morning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "fault_wilderness = {, }, starting_zone ="
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 49,
+  "src": "start-midnight",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "{, }, starting_zone = , starting_quest ="
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 59,
+  "src": "old-forest",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ties = { {, 1, 2}, {, 1, 2}, {, 1, 2}, {"
+ },
+ {
+  "file": "data/birth/races/elf.lua",
+  "line": 62,
+  "src": "Star Elf",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor(, ).descriptor_choices.subrace["
+ },
+ {
+  "file": "data/birth/races/human.lua",
+  "line": 26,
+  "src": "Mardrop",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "newBirthDescriptor { type = , name ="
+ },
+ {
+  "file": "data/birth/races/human.lua",
+  "line": 28,
+  "src": "Mardrop humans are all but extinct, after the Spellhunt and the plagues during the Age of Dusk. They were known to be powerful spellcasters, and as such were prime targets by the spellhunters. ",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "hDescriptor { type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/races/human.lua",
+  "line": 29,
+  "src": "However some trace of them can still be found, as their fiery hair and freckled skin oft can appear in those of distant descent. A few are rumoured to still possess citadels and towers in remote locations.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "escriptor { type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/races/human.lua",
+  "line": 30,
+  "src": "They possess the #GOLD#Mana Flare#WHITE# which allows them to boost their spellpower and spellsave once in a while.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "criptor { type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/races/human.lua",
+  "line": 33,
+  "src": "#LIGHT_BLUE# * +3 Magic, +0 Willpower, +0 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "r { type = , name = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 24,
+  "src": "Sun Paladin",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "orTalents = require getBirthDescriptor(,"
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 32,
+  "src": "Moon Paladin",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "0.3} newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 34,
+  "src": "We want to stand in the light, but we must stand in the dark if we are to survive to that day, and so we live in the twilight.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "uild.divine_anorithil end, locked_desc ="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 36,
+  "src": "Moon Paladins hail from the Gates of Morning, the last bastion of the free people in the Far East. Their way of life is well represented by their motto 'We stand between the moons, to whom the Sun gives power during the blackest of nights. We are the stars that shine even when the sun is dim, and against our strength none shall pass.'",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "_anorithil end, locked_desc = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 37,
+  "src": "They channel the power of Eyal's two moons, Summertide and Wintertide, with their dual weapons to rend any who seek to destroy the Sunwall. They can protect and harm with the power of the moons and stars.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "norithil end, locked_desc = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 38,
+  "src": "Their most important stats are: Dexterity and Magic",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rithil end, locked_desc = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 71,
+  "src": "dagger",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "solvers.equip{ id=true, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 71,
+  "src": "iron dagger",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": ".equip{ id=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 73,
+  "src": "rough leather armour",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 83,
+  "src": "Starslinger",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "}, } newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 85,
+  "src": "You may think there is no light after dusk, search the darkness well and you might discover its hidden light.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ld.divine_sun_paladin end, locked_desc ="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 87,
+  "src": "Starslingers hail from the Gates of Morning, the last bastion of the free people in the Far East. Their way of life is well represented by their motto 'The stars are our guidance, our light, our protectors. When sun and moon fail to shine, we alone are the last lights of salvation.'",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "un_paladin end, locked_desc = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 88,
+  "src": "They can channel the cosmic power of the stars into their ammo while unseen by enemies, destroying all those who seek to destroy the Sunwall from afar. They can lay down magic sigils of darkness, trapping enemies before they have any chance of attacking.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "_paladin end, locked_desc = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 124,
+  "src": "sling",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "solvers.equip{ id=true, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 124,
+  "src": "rough leather sling",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": ".equip{ id=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 126,
+  "src": "shot",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 126,
+  "src": "pouch of iron shots",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/celestial.lua",
+  "line": 135,
+  "src": "Moon Paladin",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "criptor(, ).descriptor_choices.subclass["
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 25,
+  "src": "tenebrous-glades-note-1",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "newLore{ id ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 27,
+  "src": "astrologer's log part 1",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "newLore{ id = , category = , name ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 28,
+  "src": "Every horoscope I cast speaks of a great doom approaching. It overshadows everything else.\nI cannot tell anyone of this, it would cause many to lose all hope.\nWe have followed the stars for ages, they guide us and we place our trust in them.\nBut now they show no way foward. Have they abandoned us?\nYueh wants me to cast horoscopes to decide on the best battle plans, but they all end in doom. What can I report without raising suspicion?",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "ore{ id = , category = , name = , lore ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 36,
+  "src": "tenebrous-glades-note-2",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "ry = , name = , lore = , } newLore{ id ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 38,
+  "src": "astrologer's log part 2",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": " , } newLore{ id = , category = , name ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 39,
+  "src": "A new star in the sky. A red one. Unusual and unexpected.\nI would like to consult Rinmir about this, but he is off studying the Moonstone.\nIs this an omen of our doom or of our salvation? My auguries are unclear.\nI will pray to it for guidance.",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "ore{ id = , category = , name = , lore ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 46,
+  "src": "tenebrous-glades-note-3",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "ry = , name = , lore = , } newLore{ id ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 48,
+  "src": "astrologer's log part 3",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": " , } newLore{ id = , category = , name ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 49,
+  "src": "I see the truth now. The new Star is the way forward.\nMy auguries were correct, the Star is both our doom and salvation.\nThey are coming and, their fires will cleanse us of our sins, and we will be saved.\nI shall worship his shadow.",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "ore{ id = , category = , name = , lore ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 58,
+  "src": "What just happened?",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": " , } newLore{ id = , category = , name ="
+ },
+ {
+  "file": "data/lore/tenebrous-glades.lua",
+  "line": 59,
+  "src": "The stars descended and you rose to meet them, yet you feel like nothing really moved.\nYou feel weightless, and constellations of stars can be seen seen in all directions.\nSuddenly you notice the Astrologer is here too. Directly above him is the new red star, shining brightly with malevolence.",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "ore{ id = , category = , name = , lore ="
+ },
+ {
+  "file": "overload/data/texts/intro-midnight.lua",
+  "line": 20,
+  "src": "Welcome #LIGHT_GREEN#@name@#WHITE#.\nYou are a citizen of the Sunwall, and like many of your age you have been trained in combat and magic. It can be a harsh life, and though you dream at times of venturing to distant lands you know your duty is to help defend the outpost against the vicious onslaught from the Orc Prides. Most of the soldiers are out in skirmishes with the hated Orcs, as a green recruit you must stay in the relative safety of the Sunwall.\n\nThough you itch to fight Orcs, you have been assigned two mundane tasks instead. Vermin are eating the crops in the Sunwall Orchards. Exterminate them or we will all go hungry.\nThe shadows that were summoned to hide the Midnight Training Camp are restless and becoming aggressive. Quell them and seek out the cause.\n\nBy the power of the Sun and the blessings of the Moons you step forth to find your fate.\n",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "return"
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 20,
+  "src": "Holding the Fort",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 23,
+  "src": "Most of the soldiers are out in skirmishes with the hated Orcs, as a green recruit you must stay in the relative safety of the Sunwall.\n",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "lf, who) local desc = {} desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 24,
+  "src": "Though you itch to fight Orcs, you have been assigned two mundane tasks instead.\n",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "esc = {} desc[#desc+1] = desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 26,
+  "src": "#LIGHT_GREEN#* You have killed the strange horror causing most of the crop destruction.#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " self:isCompleted() then desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 28,
+  "src": "#SLATE#* Vermin are eating the crops in the Sunwall Orchards.#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "hen desc[#desc+1] = else desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 29,
+  "src": "#SLATE#* Exterminate them or we will all go hungry.#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "] = else desc[#desc+1] = desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 32,
+  "src": "#LIGHT_GREEN#* The Mad Astrologer is dead, but you can't help feel a sense of impending doom...#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " self:isCompleted() then desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 34,
+  "src": "#SLATE#* The shadows that were summoned to hide the Midnight Training Camp are restless and becoming aggressive.#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "hen desc[#desc+1] = else desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 35,
+  "src": "#SLATE#* Quell them and seek out the cause.#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "] = else desc[#desc+1] = desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/start-midnight.lua",
+  "line": 44,
+  "src": "start-sunwall",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "f.id, engine.Quest.DONE) who:grantQuest("
+ },
+ {
+  "file": "overload/data/chats/midnight-trainer.lua",
+  "line": 21,
+  "src": "Welcome @playername@, do you need some instruction?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/midnight-trainer.lua",
+  "line": 26,
+  "src": "Sorry, I have to go!",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "s = { {, jump=}, {, jump=}, {, jump=}, {"
+ },
+ {
+  "file": "overload/data/maps/towns/midnight.lua",
+  "line": 49,
+  "src": "~~~~tttttttttttttttttttttttttttttttttttttttttttttt\n~~~t.ttttt..tt...t..tt...t..t..t...t..tt..t...tttt\n~~~.t.ttttt...tt..ttt....t..t....tt..t....t..ttt.t\n~~~........ttt.....t....tttttt....tttttttttt.ttt.t\n~~t.....t....ttt.t.......ttttttt.ttt....t...tt..tt\n~~~...........................................t.tt\n~~tt....t..............t.......t........t....ttt.t\n~~~..............t...........................t.t.t\n~~~.t.........................................t..t\n~~~.t..............t.......t.......t......t...t.tt\n~~~~.t......t.................................tt.t\n~~~~..t..............t................t......tt..t\nt~~~~.t......................................t.t.t\n~~~~~....t..............._......t............t.t.t\n~~~~~t..................._.....................t.t\n~~~~~...................._.............t.....ttt.t\n~~~~~~......t...#########_...t................tt.t\n~~~~~~..........#___#_B_#_..........t........t..tt\n~tt~~~t.........#A__+___+_...................t..tt\n~tt~~~..........#___#___#_########............t.tt\n~~~~~~t.....t...###+#####_+__+___#.........t..tttt\n~~~~~...........#C___#..._####___#............t.tt\n~~~~~.........t.#____#t.___..#___#....t......t..tt\n~~~~~...........###+##._____t##+##...........t.ttt\ntt~~~.........___________*___________1.......t.ttt\n~~~~~...t......####+##._____..._.t...........ttt.t\n~~~~~~.........#**__*#..___.tt._..t..........tt..t\n~~~~~~.........#*__**#t.._t..t._...........t.ttt.t\n~~~~~~.........##+#######_.t._____...........ttttt\n~t~~~~~......t.#________#_..t_____...........t.ttt\n~~~~~~~........#________+______D__...........t..tt\n~~~~~~~........#________#_..._____....t......t..tt\nt~~~~~~..t.....#________#_.t._____...........ttt.t\n~~~~~~.........#________#_...................tt..t\n~~~~~~.........##########_..........t.........tt.t\n~~t~~~.t................._....t..........t....tt.t\n~~~~~~................t.......tt.............t.t.t\n~~~~~~...t...................................t.t.t\n~~~~~~....................t.......t............t.t\nt~~~~~...............t...................t...t.ttt\n~~~~~.......t..............t..................tttt\n~~~~~................................tt......t.ttt\n~~~~~~...t..........t........................t..tt\n~~~t~~~......t.............t.....t......t....tt.tt\n~~~~~~~......................................t.ttt\n~~~~~~~~..t..t..t..t..t..t...t...tt...t...t.t.tt.t\n~t~~~~~~t....tt.tt..tttt2.tt.tt..t...tt...ttt..ttt\n~~~~~~~~~.t.tt..t.tt..tt..ttt..ttt.ttt.t.tt...tt.t\n~~~~t~~~~~.t.t..ttt..t.ttt..t.t.ttt..t..tt..ttt.tt\n~~~~~~~~~~~~~ttttttttttttttttttttttttttttttttttttt",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "(, , nil, ) defineTile(, , nil, ) return"
+ },
+ {
+  "file": "overload/data/maps/zones/sunwall-orchard1.lua",
+  "line": 25,
+  "src": "+++++++++++++++++++++++++++++2++++++++++++++++++++\n++++++++++++++++++++++++++++..++++++++++++++++++++\n++++++++++++++++++++++++++++.+++++++++++++++++++++\n+++++++++++++++++++++++++++..+++++++++++++++++++++\n+++++++++++++++++++++++++++.++++++++++++++++++++++\n+++++++++++++++++++++++++++.++++++++++++++.*++++++\n+++++++++++.*i.+++++++++++..+++++++++++++..+++++++\n+++++++++++.......++++++.....++...........++++++++\n++++++++++.ii.*.i++++++...++....+++++.++++++++++++\n++++++++.i.......+++....*++++.+++++++.++++++++++++\n+++++++++.**.ii.i....++++++++++++++++.++++++++++++\n+++++++++*.....*..+++++++++++++++++++.++++++++++++\n++++++++...i...*..+++++++++++++++++++.++++++++++++\n+++++++++++.ii....+++++++++++++++++++.++++++++++++\n++++++++++..*..+.i+++++++++++++++++++.++++++++++++\n++++++++++.+..+++++++++++++++++++++++.++++++++++++\n+++++++++.+++.+++++++++++++++++++++++.++++++++++++\n++++++++..+++.+++++++++++++++++++++tt...++++++++++\n+++++++..++++.++++++++++++++++++++w....vvv++++++++\n+++++++.+++++..+++++++++++++++++++tt.t.vvv++++++++\n++++++..++++++.++++++++++++++++++wtt.t.vvv++++++++\n++++++.+++++++...........................+++++++++\n++++++..++++++.ttttttttttttttttt.tt..vvvw+++++++++\n++++++++..++++.........t.........tt..vvv++++++++++\n+++++++++..+++.+++++++.t.+++++++.....vvv++++++++++\n+++++++++++....+++++++.t.++++++++++..+++++++++++++\n+++++++++++++.++++++++.t.+++++++++++.+++++++++++++\n+++++++++++++.+++++++++.++++++++++++.+++++++++++++\n+++++++++++++.++++++++++++++++++++++.+++++++++++++\n+++++++++++++.++++++++++++++++++++++.+++++++++++++\n+++++++++++++.++++++++++++++++++++++..++++++++++++\n+++++++++++++.+++++++++++++++++++++++..+++++++++++\n+++++++++++++.++++++++++++++++++++++++..++++++++++\n+++++++++++++..+++++++++++++++++++++++..++++++++++\n+++++++++++......++++++++++++++++++++++..+++ii++++\n+++++++++++.i.----.+++++++++++++++++++++.++....+++\n+++++++++++i..----.+++++....++++++++++++..cccc.*++\n++++++++++i*..----..+....++..++++++++++++.cccc.+++\n++++++++++.i..----....++++++.++++++++++++.cccc.+++\n+++++++++...........++++++++.++++++++++++.cccc.+++\n+++++++++i.----.ii.*++++++++..++++++..........++++\n+++++++++..----.ww+++++++++++..+++...+++++++++++++\n++++.......----.w+++++++++++++.....+++++++++++++++\n++++.++++++----.++++++++++++++.*++++++++++++++++++\n++++.+++++++..++++++++++++++++++++++++++++++++++++\n++++.+++++++++++++++++++++++++++++++++++++++++++++\n++++.+++++++++++++++++++++++++++++++++++++++++++++\n++++.+++++++++++++++++++++++++++++++++++++++++++++\n++++.+++++++++++++++++++++++++++++++++++++++++++++\n++++<+++++++++++++++++++++++++++++++++++++++++++++",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": " 4 starty = 49 endx = 29 endy = 0 return"
+ },
+ {
+  "file": "overload/data/maps/zones/sunwall-orchard2.lua",
+  "line": 27,
+  "src": "+++++++++++++++++++++++++++2++++++++++++++++++++++\n+++++++++++++++++++++++++++..+++++++++++++++++++++\n+++++++++++++++++++++++++++.++++++++++++++++++++++\n+++++++++++++..++++++++++++.++++++++++++++++++++++\n+++++++++www..tt.i+++++++++.+++++++++++......+++++\n++++++++++....dt..++++++i+..+++++++++++.---_.+++++\n++++++++.........++++++....++++++++++++.----.w++++\n++++++....tt.*..*+++++...i+++++++++++++.__--.*++++\n+++++..+..td......+....++++++++++++++++._---.+++++\n++++..+++....+.td.....++++++++++++++++......++++++\n++++.+++++.i++.td...*+++++++++++++++++..++++++++++\n++++.+++++++++.....+++++++++++++++++...+++++++++++\n++++..+++++++++++++++++++++++++++++..*.+++++++++++\n+++++.+++++++++++++++++++++++++++++....+++++++++++\n+++++..+++++++++++++++++++++++++++.*..++++++++++++\n++++++.++++++++++++++++++++++++++....+++++++++++++\n++++++..+++++++++++++++++++++++++..+++++++++++++++\n+++++++.+++++++++++++i.+++++++++...+++++++++++++++\n+++++++..+++++++++++.....++++++...++++++++++++++++\n++++++++......++++++.+++..++....*..+++++++++++++++\n+++++++++++++...+++..++++....++....+++++++++++++++\n+++++++++++++++..+....+++++++++..+.++++++++iii++++\n++++++++++++++++....._c_c+++++++...++++cccc_cc++++\n+++++++++++++++++....cccc+++++++++..+..cc_cccc++++\n++++++++++++++++..cc...*+++++++++++............+++\n++++++++++++++++..c_.----++++++++++++++++.*....+++\n+++++++++++++++...cc.----++++++++++++++++..vvvv.++\n++++++++++++++*..+cc._---++++++++++++++++*.vvv_.++\n+++++++++++++++..++++---_++++++++++++++++.._vvv.++\n+++++++++++++...++++++..++++++++++++++++...vvvv.++\n++++++++++++i.++++++++ww+++++++++++++++..++....+++\n++++++++++++..+++++++++++++++++++++++++.++++ww++++\n+++++++++++++..++++++++++++++++++++++++.++++++++++\n++++++++++++++..+++++++++++++++++++++++.+*++++++++\n++++++++++++++++..+++++++++++++++++++++.++++++++++\n+++++++++++++++++.+++++++++++++++++++++.++++++++++\n+++++++++++++++++.++t.t.++++++++++++++..++++++++++\n+++++++++++++++++................+++++.+++++++++++\n+++++++++++++++.d.t.t.t.t.++++++..+++..+++++++++++\n+++++++++++++++...........+++++++..++.++++++++++++\n++++++++++++++t..+t.+.t.d.++++++++..+.++++++++++++\n+++++++++++++i..+........++++++++++...++++++++++++\n++++++++++++++t..t.d..t..+++++++++++.+++++++++++++\n++++++++++++++++++++.+...t++++++++++.+++++++++++++\n++++++++++++++++++++...t+..+++++++++.+++++++++++++\n++++++++++++++++++++.t++.+.+++++++++.+++++++++++++\n++++++++++++++++++++.t++.d.+++++++++.+++++++++++++\n++++++++++++++++++++i++++ii+++++++++.+++++++++++++\n++++++++++++++++++++++++++++++++++++.+++++++++++++\n++++++++++++++++++++++++++++++++++++<+++++++++++++",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "36 starty = 49 endx = 27 endy = 0 return"
+ },
+ {
+  "file": "overload/data/maps/zones/sunwall-orchard3.lua",
+  "line": 29,
+  "src": "++++++++++++++++++++++++++++++++++++++++++++++++++\n++++++++++++++++++++++++++++++++++++++++++++++++++\n++++++++++++++++++++++++++++++++++++++++++++++++++\n++++++++++++++++++++++++++++++++++++++++ww++++++++\n+++++++++++++++++++++++++++++++++++___..___+++++++\n++++++++++++..*+*++++++++++++++++++___.._2_.++++++\n++++++++.d.............i..i++++++++___..___.++++++\n++++++..*...*..++++++.......................++++++\n+++++d.d.t.++i*++++++.++++++++++++.___..___+++++++\n+++++.....+++++++++++.+++++++++++++___..___+++++++\n+++t.d.t.d.++++++++++.+++++++++++++___..___+++++++\n+++........++++++++++.+++++++++++++++.....++++++++\n++.d.t.d.d*+++++++++..++++++++++++++++....++++++++\n++*.......+++++++++..+++++++++++++++++...+++++++++\n+++t.d.t+++++++++++.++++++++++++++++++..++++++++++\n++++...+++++++++++..+++++++++++++++++...++++++++++\n++++++.+++++++++++.++++++++++++++++++*..++++++++++\n++++++..+++++..+..++++++++++++++++++...+++++++++++\n+++++++...+--_-.---_+++++++++++++++...++++++++++++\n+++++++++..-__-.____+++++++++++++++...++++++++++++\n++++++++++.-___.___-.+++++++++++++...+++++++++++++\n++++++++++.-_--._---..++++i.*.i+++..++++++++++++++\n++++++++++.........................*.*++++++++++++\n++++++++++_-_-.-___..tdtdtddtdtdd....*++++++++++++\n++++++++++-_--.__--................+++++++++++++++\n++++++++++-__-.--_-..+++++.+.*.+++...+++++++++++++\n+++++++++.___-.-__-..+++++*i++++++++..++++++++++++\n+++++++++*.+++wwww++.+++++++++++++....++++++++++++\n++++++++++++++++++++.++++++++++++___v..+++++++++++\n++++++++++++++++++++.++++++++++++vv__..+++++++++++\n+++++++++++++++++++..++++++++++++__vv...w+++++++++\n+++++++++++++++++++.i++++++++++++vv__....+++++++++\n+++++++++++++++++++..++++++++++++_v_v.vv_v++++++++\n++++++++++++++++++++.++++++++++++.....__v_.+++++++\n++++++++++++++++++++.++++++++++++.*...vv__.i++++++\n++++++++++++++++++++.+++++++++++ii.*..___v++++++++\n++++++++++++++++++++.++++++++++++++.*.vv__++++++++\n++++++++++++++++++++.+++++++++++++++++++++++++++++\n++++++++++++++++++++.+++++++++++++++++++++++++++++\n++++++++++++++++++++..*..+++++++++++++++++++++++++\n++++++++++++++++++i....tdd++++++++++++++++++++++++\n+++++++++++++++++c__c......+++++++++++++++++++++++\n++++++++++++++++._cc_..ddt++++++++++++++++++++++++\n++++++++++++++++*___c.....ww++++++++++++++++++++++\n+++++++++++++++++c___..ddtww++++++++++++++++++++++\n++++++++++++++++++++.....+++++++++++++++++++++++++\n+++++++++++++++++++++.++++++++++++++++++++++++++++\n+++++++++++++++++++++.++++++++++++++++++++++++++++\n+++++++++++++++++++++.++++++++++++++++++++++++++++\n+++++++++++++++++++++<++++++++++++++++++++++++++++",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "21 starty = 49 endx = 41 endy = 5 return"
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/events.lua",
+  "line": 21,
+  "src": "antimagic-bush",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "return { one_per_level = true, {name="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/events.lua",
+  "line": 22,
+  "src": "font-life",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " {name=, minor=true, percent=60}, {name="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/grids.lua",
+  "line": 52,
+  "src": "Exit to Midnight",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": ".}}} end newEntity{ define_as = , name ="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/npcs.lua",
+  "line": 144,
+  "src": "star elf",
+  "tag": "entity subtype",
+  "ctor": "newEntity",
+  "prefix": "Entity{ define_as = , type = , subtype ="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/npcs.lua",
+  "line": 147,
+  "src": "The Astrologer",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "te_dungeon = true, unique = true, name ="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/npcs.lua",
+  "line": 150,
+  "src": "The Astrologer seems to be babbling incoherently and bleeding from a star cut into his forehead.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ge=, display_h=1, display_y=0}}}, desc ="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/npcs.lua",
+  "line": 151,
+  "src": "and was sacrificed to the red star",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "isplay_y=0}}}, desc = , killer_message ="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/npcs.lua",
+  "line": 188,
+  "src": "Behold our Doom!!!",
+  "tag": "say",
+  "ctor": "newEntity",
+  "prefix": "hen self.starscaped = true self:doEmote("
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/objects.lua",
+  "line": 25,
+  "src": "astrologer's log",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "Entity{ base = , define_as = ..i, name ="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/objects.lua",
+  "line": 25,
+  "src": "tenebrous-glades-note-",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "base = , define_as = ..i, name = , lore="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/objects.lua",
+  "line": 26,
+  "src": "A paper scrap, dropped by the astrologer.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "fine_as = ..i, name = , lore=..i, desc ="
+ },
+ {
+  "file": "overload/data/zones/tenebrous-glades/zone.lua",
+  "line": 22,
+  "src": "Tenebrous Glades",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "return { name ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/grids.lua",
+  "line": 34,
+  "src": "Way into the Tenebrous Glades",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ge=}}, } newEntity{ define_as = , name ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/grids.lua",
+  "line": 37,
+  "src": "tenebrous-glades",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "= {class.new{image=, z=8}}, change_zone="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/grids.lua",
+  "line": 41,
+  "src": "Jumpgate to the Gates of Morning",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": " true, } newEntity{ define_as = , name ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 54,
+  "src": "Mystical supplier",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "newEntity{ base = , define_as = , name ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 55,
+  "src": "This elf has all sorts of baubles to sell.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " = , color=colors.BLUE, image = , desc ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 62,
+  "src": "Psionic supplier",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "newEntity{ base = , define_as = , name ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 63,
+  "src": "This elf has all sorts of focii to sell.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " = , color=colors.BLUE, image = , desc ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 70,
+  "src": "Tool supplier",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "newEntity{ base = , define_as = , name ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 71,
+  "src": "This elf has all sorts of tools to sell.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " = , color=colors.BLUE, image = , desc ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 78,
+  "src": "Training Master",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "newEntity{ base = , define_as = , name ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 79,
+  "src": "This elf coordinates the trainers.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " = , color=colors.BLUE, image = , desc ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/npcs.lua",
+  "line": 82,
+  "src": "midnight-trainer",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "fe = resolvers.rngavg(50,60), can_talk ="
+ },
+ {
+  "file": "overload/data/zones/town-midnight/zone.lua",
+  "line": 21,
+  "src": "Midnight",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "return { name ="
+ },
+ {
+  "file": "overload/data/zones/sunwall-orchard/grids.lua",
+  "line": 51,
+  "src": "a large rock",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "}} } end newEntity{ define_as = , name ="
+ },
+ {
+  "file": "overload/data/zones/sunwall-orchard/grids.lua",
+  "line": 64,
+  "src": "fruit tree",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "efine_as = , type = , subtype = , name ="
+ },
+ {
+  "file": "overload/data/zones/sunwall-orchard/grids.lua",
+  "line": 80,
+  "src": "stripped tree",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "efine_as = , type = , subtype = , name ="
+ },
+ {
+  "file": "overload/data/zones/sunwall-orchard/npcs.lua",
+  "line": 33,
+  "src": "worm that eats",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "le{image=, add_mos = {{image=}}}, name ="
+ },
+ {
+  "file": "overload/data/zones/sunwall-orchard/npcs.lua",
+  "line": 34,
+  "src": "A bulging rotten robe seems to tear at the seams, with masses of bloated worms spilling out all around the moving form.  Two arm-like appendages, each made up of overlapping mucous-drenched maggots, grasp tightly around the handles of bile-coated waraxes.\nEach swing drips pustulant fluid before it, and each droplet writhes and wriggles in the air before splashing against the ground.\nThis one is extremely hungry.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , color=colors.SANDY_BROWN, desc ="
+ },
+ {
+  "file": "overload/data/zones/sunwall-orchard/zone.lua",
+  "line": 21,
+  "src": "Sunwall Orchards",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "return { name ="
+ }
+]

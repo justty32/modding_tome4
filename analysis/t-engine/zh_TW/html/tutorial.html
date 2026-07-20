@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>T-Engine 4 分析 — 教學導覽</title>
+<link rel="stylesheet" href="_shared.css">
+<link rel="stylesheet" href="css/tutorial.css">
+</head>
+<body>
+<nav>
+  <span class="nav-brand">T-Engine 4</span>
+  <a href="index.html">首頁</a>
+  <a href="architecture.html">架構分析</a>
+  <a href="tutorial.html" class="active">教學導覽</a>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto;">
+
+<div class="page-header">
+  <h1>教學導覽（01–17）</h1>
+  <p>17 篇目標導向教學，每篇解決一個具體問題。總覽與路徑對照見 <a href="../tutorial/00-overview.md">tutorial/00-overview.md</a>。</p>
+</div>
+
+<div class="section">
+  <div class="section-title">三種開發路線</div>
+  <div class="g3">
+    <div class="card card-accent-green">
+      <h3>獨立遊戲（全新模組）</h3>
+      <p>教學 01 → 02 → 03 → 04 → 05，從 Hello Dungeon 一路加到進階 AI。</p>
+    </div>
+    <div class="card card-accent-blue">
+      <h3>ToME Addon（擴充內容）</h3>
+      <p>教學 01 → 06 → 07 打底，之後依主題挑 08–17。</p>
+    </div>
+    <div class="card card-accent-red">
+      <h3>引擎底層修改（C 層）</h3>
+      <p>先讀 <a href="../architecture/engine_detail.md">engine_detail.md</a>；C 源不在本地，需另取官方 git。</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">基礎：製作獨立遊戲（01–05）</div>
+  <div class="g3">
+    <div class="card card-accent-green tut-card">
+      <div class="tc-no">教學 01</div>
+      <h3>Hello Dungeon</h3>
+      <p>最小可執行模組：地城探索 + NPC + 技能 + 角色創建。全系列的地基。</p>
+      <a class="tc-link" href="../tutorial/01-hello-dungeon.md">→ 01-hello-dungeon.md</a>
+    </div>
+    <div class="card card-accent-green tut-card">
+      <div class="tc-no">教學 02</div>
+      <h3>物品系統</h3>
+      <p>揹包、裝備欄、消耗品、物品掉落。</p>
+      <a class="tc-link" href="../tutorial/02-items.md">→ 02-items.md</a>
+    </div>
+    <div class="card card-accent-green tut-card">
+      <div class="tc-no">教學 03</div>
+      <h3>多地區與切換</h3>
+      <p>Zone 切換、WorldNPC、Wilderness。</p>
+      <a class="tc-link" href="../tutorial/03-zones.md">→ 03-zones.md</a>
+    </div>
+    <div class="card card-accent-green tut-card">
+      <div class="tc-no">教學 04</div>
+      <h3>任務與 NPC 對話</h3>
+      <p>Quest 定義、任務狀態追蹤、NPC 對話。</p>
+      <a class="tc-link" href="../tutorial/04-quests.md">→ 04-quests.md</a>
+    </div>
+    <div class="card card-accent-green tut-card">
+      <div class="tc-no">教學 05</div>
+      <h3>進階 AI</h3>
+      <p><code>improved_tactical</code> 戰術評分、<code>ai_tactic</code> 權重表。</p>
+      <a class="tc-link" href="../tutorial/05-advanced-ai.md">→ 05-advanced-ai.md</a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">進階：ToME Addon 開發（06–12）</div>
+  <div class="g3">
+    <div class="card card-accent-blue tut-card">
+      <div class="tc-no">教學 06</div>
+      <h3>第一個 Addon</h3>
+      <p>Addon 結構、hooks、superload、overload——Addon 生態的三大機制。</p>
+      <a class="tc-link" href="../tutorial/06-addon-dev.md">→ 06-addon-dev.md</a>
+    </div>
+    <div class="card card-accent-blue tut-card">
+      <div class="tc-no">教學 07</div>
+      <h3>新職業與技能樹</h3>
+      <p><code>newTalentType</code>、<code>newTalent</code>、Birth 描述符整合。</p>
+      <a class="tc-link" href="../tutorial/07-tome-class.md">→ 07-tome-class.md</a>
+    </div>
+    <div class="card card-accent-blue tut-card">
+      <div class="tc-no">教學 08</div>
+      <h3>連技體系</h3>
+      <p>全新技能系統：連技資源與連段設計（Technique System）。</p>
+      <a class="tc-link" href="../tutorial/08-technique-system.md">→ 08-technique-system.md</a>
+    </div>
+    <div class="card card-accent-blue tut-card">
+      <div class="tc-no">教學 09</div>
+      <h3>戰術指令與僱傭兵</h3>
+      <p>隊友指令系統、僱傭兵生成與跟隨。</p>
+      <a class="tc-link" href="../tutorial/09-tactical-commands-and-mercenaries.md">→ 09-tactical-commands-and-mercenaries.md</a>
+    </div>
+    <div class="card card-accent-blue tut-card">
+      <div class="tc-no">教學 10</div>
+      <h3>據點系統・基礎</h3>
+      <p>玩家據點 Zone 與設施互動。</p>
+      <a class="tc-link" href="../tutorial/10-base-camp-basic.md">→ 10-base-camp-basic.md</a>
+    </div>
+    <div class="card card-accent-blue tut-card">
+      <div class="tc-no">教學 11</div>
+      <h3>據點系統・擴展</h3>
+      <p>據點升級、NPC 進駐、資源產出。</p>
+      <a class="tc-link" href="../tutorial/11-base-camp-extended.md">→ 11-base-camp-extended.md</a>
+    </div>
+    <div class="card card-accent-blue tut-card">
+      <div class="tc-no">教學 12</div>
+      <h3>自訂大地圖</h3>
+      <p>Wilderness 世界地圖、據點入口、遭遇。</p>
+      <a class="tc-link" href="../tutorial/12-world-map.md">→ 12-world-map.md</a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">專題：UI 與美術（13–17）</div>
+  <div class="g3">
+    <div class="card card-accent-purple tut-card">
+      <div class="tc-no">教學 13</div>
+      <h3>技能學習界面</h3>
+      <p>Dialog、TreeList、雙欄版面的自訂 UI 實作。</p>
+      <a class="tc-link" href="../tutorial/13-skill-learn-dialog.md">→ 13-skill-learn-dialog.md</a>
+    </div>
+    <div class="card card-accent-purple tut-card">
+      <div class="tc-no">教學 14</div>
+      <h3>技能視覺特效</h3>
+      <p>粒子系統 + 自訂貼圖的技能特效。</p>
+      <a class="tc-link" href="../tutorial/14-skill-effects.md">→ 14-skill-effects.md</a>
+    </div>
+    <div class="card card-accent-purple tut-card">
+      <div class="tc-no">教學 15</div>
+      <h3>武器／裝備／種族貼圖</h3>
+      <p>moddable tiles 與貼圖分層機制。</p>
+      <a class="tc-link" href="../tutorial/15-custom-sprites.md">→ 15-custom-sprites.md</a>
+    </div>
+    <div class="card card-accent-purple tut-card">
+      <div class="tc-no">教學 16</div>
+      <h3>地塊貼圖與 UI 風格</h3>
+      <p>tileset 與 UI skin 自訂。</p>
+      <a class="tc-link" href="../tutorial/16-custom-tiles-and-ui.md">→ 16-custom-tiles-and-ui.md</a>
+    </div>
+    <div class="card card-accent-purple tut-card">
+      <div class="tc-no">教學 17</div>
+      <h3>自訂動畫</h3>
+      <p>動畫幀、移動／攻擊動畫。</p>
+      <a class="tc-link" href="../tutorial/17-custom-animations.md">→ 17-custom-animations.md</a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="highlight-box hl-blue">
+    測試模組直接丟進 Steam 版 <code>game/modules/</code> 即可載入，免編譯；輔助工具用 <code>tome-addon-dev</code> addon 與遊戲內 F1 Lua console。
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</body>
+</html>

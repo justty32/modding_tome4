@@ -1,0 +1,1458 @@
+[
+ {
+  "file": "hooks/load.lua",
+  "line": 230,
+  "src": "arcanum+angolwen-overlay",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "lay = true, generator = , data = { map ="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 396,
+  "src": "tempest-dead",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ") if self.name == then self:addChat{ id="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 409,
+  "src": "lightning-overload",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ame{do_color=true}) end player:hasQuest("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 596,
+  "src": "Altered Alchemist quest? #RED#Best not to change this option in the middle of a game.#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 606,
+  "src": "#PURPLE##{bold}#Arcanum: NPCs use Arcanum talents?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 628,
+  "src": "Creates a training 'shop' in Angolwen for arcane training.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 630,
+  "src": "#PURPLE##{bold}#Arcanum: Enable Angolwen Academy?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 654,
+  "src": "#PURPLE##{bold}#Arcanum: Enable Artifacts?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 676,
+  "src": "Allows Ritual Blades and Wardstones to be created.\nRitual Blades are one handed caster knives.\nWardstone are metaphysical shields.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 680,
+  "src": "#PURPLE##{bold}#Arcanum: Enable Ritual Blades and Wardstones?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 704,
+  "src": "#PURPLE##{bold}#Arcanum: Enable extra egos and runes?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 728,
+  "src": "#PURPLE##{bold}#Arcanum: Upgrade Staff Combat?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "data/angolwen_objects.lua",
+  "line": 24,
+  "src": "Entitles the weilder to one free course at the Angolwen Academy. (Surrender token before commencing study. No refunds for failing courses. Academy not responsible for applicant death, dismemberment, or crippling lifelong injury. Conditions apply.)",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "t=true, identified=true, name = , desc ="
+ },
+ {
+  "file": "data/boss-artifacts-maj-eyal.lua",
+  "line": 41,
+  "src": "(The created item can be activated to recover the Focus.)",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "= , special_desc = function(self) return"
+ },
+ {
+  "file": "data/boss-artifacts-maj-eyal.lua",
+  "line": 53,
+  "src": "Talent on hit: 10% chance to cast Manathrust level 2.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "T_MANATHRUST, level=2, chance=10}, desc="
+ },
+ {
+  "file": "data/boss-artifacts-maj-eyal.lua",
+  "line": 185,
+  "src": "#GOLD#The two crystals start humming and crystaline shards grow all over your golem.",
+  "tag": "logPlayer",
+  "ctor": "newEntity",
+  "prefix": "emy_golem.y) game.logPlayer(game.player,"
+ },
+ {
+  "file": "data/boss-artifacts-maj-eyal.lua",
+  "line": 190,
+  "src": "#CRIMSON#The humming ceases and the shards fall away.",
+  "tag": "logPlayer",
+  "ctor": "newEntity",
+  "prefix": "moveAllMOs() game.logPlayer(game.player,"
+ },
+ {
+  "file": "data/boss-artifacts-maj-eyal.lua",
+  "line": 202,
+  "src": "(The created item can be activated to recover the Heart.)",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "= , special_desc = function(self) return"
+ },
+ {
+  "file": "data/boss-artifacts-maj-eyal.lua",
+  "line": 214,
+  "src": "Talent on hit: 10% chance to cast Manathrust level 5.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "T_MANATHRUST, level=5, chance=10}, desc="
+ },
+ {
+  "file": "data/boss-artifacts-maj-eyal.lua",
+  "line": 346,
+  "src": "Talent on hit: 10% chance to cast Petrify level 1.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "T_HP_PETRIFY, level=1, chance=10}, desc="
+ },
+ {
+  "file": "data/brotherhood-artifacts.lua",
+  "line": 41,
+  "src": "A pale but crystal clear sapphire, it is strangely light weight.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " , image = , color = colors.BLUE, desc ="
+ },
+ {
+  "file": "data/brotherhood-artifacts.lua",
+  "line": 68,
+  "src": "Talent on hit: 10% chance to cast Healing Nexus level 5.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "EALING_NEXUS, level=5, chance=10}, desc="
+ },
+ {
+  "file": "data/brotherhood-artifacts.lua",
+  "line": 86,
+  "src": "#00FF00#The elixir has improved your learning ability!",
+  "tag": "logPlayer",
+  "ctor": "newEntity",
+  "prefix": "ed_talents_types + 1 game.logPlayer(who,"
+ },
+ {
+  "file": "data/brotherhood-artifacts.lua",
+  "line": 132,
+  "src": "Talent on hit: 10% chance to cast Slime Spit level 5.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "T_SLIME_SPIT, level=5, chance=10}, desc="
+ },
+ {
+  "file": "data/inscriptions.lua",
+  "line": 99,
+  "src": "Fires a Magic Missile that does %0.f arcane damage and inflicts Spellshocked for 5 turns.",
+  "tag": "tformat",
+  "ctor": "newInscription",
+  "prefix": "etInscriptionData(t.short_name) return ("
+ },
+ {
+  "file": "data/inscriptions.lua",
+  "line": 109,
+  "src": "Fires a Magic Missile that does %0.f->%0.2f arcane damage and inflicts Spellshocked for 5 turns.",
+  "tag": "tformat",
+  "ctor": "newInscription",
+  "prefix": "E, d1.power + d1.inc_stat)) end return ("
+ },
+ {
+  "file": "data/inscriptions.lua",
+  "line": 126,
+  "src": "Activate the rune to enchant your weapons and armour for %d turns.\n\t\tThis enchantment increases your accuracy and armour by %d and adds %d arcane damage to all your hits.",
+  "tag": "tformat",
+  "ctor": "newInscription",
+  "prefix": "etInscriptionData(t.short_name) return ("
+ },
+ {
+  "file": "data/inscriptions.lua",
+  "line": 140,
+  "src": "Activate the rune to enchant your weapons and armour for %d->%d turns.\n\t\tThis enchantment increases your accuracy and armour by %d->%d and adds %d->%d arcane damage to all your hits.",
+  "tag": "tformat",
+  "ctor": "newInscription",
+  "prefix": "E, d1.power + d1.inc_stat)) end return ("
+ },
+ {
+  "file": "data/inscriptions.lua",
+  "line": 236,
+  "src": "Fires a %s that does %0.f %s damage and restores %d %s.",
+  "tag": "tformat",
+  "ctor": "newInscription",
+  "prefix": "ore == then heal = heal * 2 end return ("
+ },
+ {
+  "file": "data/inscriptions.lua",
+  "line": 238,
+  "src": "<unknown> You will have to try it to discover what it does.",
+  "tag": "tformat",
+  "ctor": "newInscription",
+  "prefix": "rune.restore:capitalize()) else return ("
+ },
+ {
+  "file": "data/lore.lua",
+  "line": 28,
+  "src": "\tDavan the Woodsman was a quite Sholtar who lived just outside of a small town a short time after the Spellblaze. He kept to himself a lot and meticulously tended his traps and other work.\n\tWhen the first wave of sickness from the Spellblaze went through the town, Davan was unaffected and provided free game to those who were too sick to work themselves. As years past, the diseases kept coming and people kept getting sick and dying, but not Davan.\n\tIn other times, he would have been praised for his kindness and generosity, but this wasn't other times, this was the time of the Spellhunt. Jealous tongues wagged and rumours of magic spread. Soon the Spellhunt came to town.\n\tDavan showed them his home, that it was free of magic and explained that his life in the woods was what made him healthy. But hate and suspicion had joined jealousy and soon a magical talisman was found in the woods near his house.\n\tWood was collected for a pyre and in a last attempt to clear his name, Davan uttered a curse against all mages. They tied him to the pyre and it lit it anyway. But flames didn't seem to be burning him as fast as expected. The crowd saw this as evidence of magic. Davan thought that the Spellhunters were deliberately torturing him. He started to utter another curse against all spellhunters, but one threw a knife which caught the curse in his throat, killing him.\n\tIn the ashes the next morning, his armour and the knife were found intact. Completely untouched by the flames, but not unaffected by his curses. He was afterall, meticulous in his work.\n\t",
+  "tag": "_t",
+  "ctor": "newLore",
+  "prefix": "ore{ id = , category = , name = , lore ="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 268,
+  "src": "ignites the target, causing fire damage equal to your spellpower per turn for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 290,
+  "src": "freezes the target in an iceblock with strength equal to your spellpower for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 335,
+  "src": "corrodes the target, reducing their accuracy, defense and armour by half your spellpower, for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 379,
+  "src": "curse the target reducing their resistances by a third of your spellpower, for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 401,
+  "src": "poisons the target, causing nature damage equal to half you spellpower per turn and reducing their damage by half your spellpower percent, for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 423,
+  "src": "infects the target causing blight damage equal to half your spellpower per turn and reducing their healing factor and disease resistance by half your spellpower, for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 445,
+  "src": "pacifies the target for 4 turns, giving them a chance equal to your spellpower in percent of becoming dazed each turn",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 469,
+  "src": "shrouds the target in darkness, reducing their light radius by 4 and reducing their darkness resistance by your spellpower, for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 493,
+  "src": "confuses the target with your spellpower as confusion strength for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 515,
+  "src": "martyrs the target causing them to take your spellpower percent of any damage they do, for 4 turns",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " 30, combat = { special_on_crit = {desc="
+ },
+ {
+  "file": "data/ritual_blade_egos.lua",
+  "line": 782,
+  "src": "channel mana (increasing mana regen by 500%% for ten turns)",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "00 return 0, v end), }, resolvers.charm("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 53,
+  "src": "Reduces all incoming physical, fire, cold and lightning damage by %d.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 192,
+  "src": "The target's blood is laced with corruption, increasing healing and physical save. Also poisons do no damage.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 218,
+  "src": "The target's blood is burning into mana, increasing global speed and mana regeneration.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 275,
+  "src": "The target is surrounded by a magical shield, granting a %d%% chance of negating damage.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 400,
+  "src": "Increased accuracy, armour and arcane damage on hit.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 430,
+  "src": "Fires a radius 2 explosion each turn doing %0.2f arcane/lightning damage in radius 4 around you.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 456,
+  "src": "A corrupted arcane vortex followes the target. Each turn a ray of corrupted arcane fires from it to a random foe in sight doing %0.2f blight and %0.2f manaburn damage to all. If no foes are found the main target takes 150%% more damage this turn. If the target dies the remaining damage is deal as a radius 2 ball of corrupted arcane.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 461,
+  "src": "#Target# is focused by a corrupted arcane vortex!.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 462,
+  "src": "#Target# is free from the corrupted arcane vortex.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 551,
+  "src": "The target is coated with poison. When it hits with a weapon or spell it has a %d%% chance of firing a poison beam.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 576,
+  "src": "The target is surrounded by a spiked metal shell, absorbing %d damage from each attack and doing %d damage to attackers.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed_effects.lua",
+  "line": 600,
+  "src": "The owner of this golem has taken refuge inside it.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/wardstone_egos.lua",
+  "line": 787,
+  "src": "#GOLD#A bolt of lightning fires from #Source#'s wardstone, striking #Target#!",
+  "tag": "logCombat",
+  "ctor": "newEntity",
+  "prefix": "e:playSoundNear(self, ) who:logCombat(a,"
+ },
+ {
+  "file": "data/world-artifacts-maj-eyal.lua",
+  "line": 37,
+  "src": "While the Kar'Krul were a united group of powerful magi, they still employed more mundane soldiers, and some were given exceptional protection.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts-maj-eyal.lua",
+  "line": 98,
+  "src": "#STEEL_BLUE#The arcane energies surrounding you dissapate.",
+  "tag": "logPlayer",
+  "ctor": "newEntity",
+  "prefix": "elf.use_talent = nil game.logPlayer(who,"
+ },
+ {
+  "file": "data/world-artifacts-maj-eyal.lua",
+  "line": 202,
+  "src": "This exceptionally well made leather armour has a charred smell to it, but it is completely undamaged.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", name = , unique=true, image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts-maj-eyal.lua",
+  "line": 244,
+  "src": "This dagger has an aura of both nature and the arcane. But instead of working together, the two powers seem to fight against each other.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 78,
+  "src": "A staff that has been carefully constructed for novices of the Art.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "or_name = , name = , unique=true, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 126,
+  "src": "Once a normal Mindstar, this stone was corrupted by an intersecting Fearscape plane. Nightmares are reflected on its surface and it is wrapped by vines that resemble hellish flames. There is much power in this fell crystal, but it is hard to unleash.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", color=colors.RED, rarity = 400, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 159,
+  "src": "While typically worn at funerals and by people in mourning, this veil works quite well as a sling. It seems to have picked up some of the atmosphere of cemetaries too.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 192,
+  "src": "Slightly charred and smells like brimstone. A bit like that halfling hermit.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "_as = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 225,
+  "src": "You feel a small jolt of magic as you touch this pouch. A small bead of blood forms on your finger where you touched it. It quickly detaches itself and floats into the pouch.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " = true, name = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 253,
+  "src": "Strong but light wood, shod with steel and perfectly balanced.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "or_name = , name = , unique=true, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 280,
+  "src": "This small iron ring seems exceptionally shiny and in focus.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", name = , unique=true, image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 307,
+  "src": "Pure white bone fashioned into a staff. A grinning skull sits on the top, grinning.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "rs.WHITE, image = , rarity = 350, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 348,
+  "src": "Magic from high above the clouds. This dagger serves good.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 384,
+  "src": "A professional alchemist needs professional protection. These gloves are the best you could buy.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , unided_name = , image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 458,
+  "src": "This belt changes shape when you put it on, becoming a perfect fit.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 494,
+  "src": "Despite being made of soft otherworldly fabric, this black hat holds a perfect point at the top. Stars twinkle on its surface.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " = true, name = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 526,
+  "src": "Adventuring wizards tend to have a major problem. How to carry all the paraphenalia that goes with being a wizard? This hat was designed as *the* solution. The top part of the hat contains a large extradimensional space for storing all their heavy gear.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " = true, name = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 545,
+  "src": "This vest doesn't seem to stay still. It moves about all over the place, yet doesn't move at all.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "s.BLUE, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 595,
+  "src": "You could carefully tailor an enchantment along the lines of some sort of theme, or you could just fill it with raw magical power. This is the result of the latter method.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 619,
+  "src": "You feel a small electrical jolt when you touch this pendant.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "T_BLUE, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 639,
+  "src": "'I need something to protect my soul and I need it quick!' \n\tAlways check the label carefully...",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 659,
+  "src": "A shield made from various sharpened bones. It feels icky.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "= , name = , unique=true, image=, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 689,
+  "src": "#CRIMSON#You hear unholy whispers as the bones are reunited.",
+  "tag": "logSeen",
+  "ctor": "newEntity",
+  "prefix": "lSetAdd({,}, {[]=0.2}) game.logSeen(who,"
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 702,
+  "src": "Why anyone would want to make a helm look like a snail is beyond you.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "= , name = , unique=true, image=, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 721,
+  "src": "This large steel greatmaul has more inertia than it should have. ",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " , unided_name = , unique = true, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 748,
+  "src": "While it shouldn't be possible, the metal part of this mace looks wilted and sick somehow.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ".BROWN, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 749,
+  "src": "(Blight Freeze does Blight damage and freezes the target.)",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "= , special_desc = function(self) return"
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 779,
+  "src": "On the left gauntlet is a large sapphire, on the right is a large ruby. Cunningly designed magic has allowed two opposing elements to work in unison.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "PURPLE, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 812,
+  "src": "This battleaxe moves fluidly, almost gracefully when swung.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " , image = , color = colors.BLUE, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 832,
+  "src": "A old rusty axe. You feel it isn't as useless as it looks.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", name = , unique=true, image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 844,
+  "src": "inflicts a cursed wound (halves healing for 10 turns)",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "pe.ACID] = 10}, special_on_crit = {desc="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 859,
+  "src": "A stream of blinding light. It appears to be a whip.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "s.WHITE, unique = true, image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 889,
+  "src": "Its either a disassembled golem or fancy suit of massive plate armour. Whatever it is, it's very old.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 950,
+  "src": "Exceptionally hard shots, designed for breaking weapons.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 951,
+  "src": "(Crumble is Arcane damage, disarms weapons and gets +50% damage versus petrified targets.)",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "= , special_desc = function(self) return"
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1004,
+  "src": "Forged deep underground by unknown peoples, gloom follows this trident, despite it being constantly flaming.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", name = , unique=true, image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1039,
+  "src": "These boots warp gravity around them, making them exceptionally sturdy.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1173,
+  "src": "Talent on hit: 10% chance to cast Golem Eye Beam level 3.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "T_GOLEM_BEAM, level=3, chance=10}, desc="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1186,
+  "src": "This brightly coloured wand is studded with wyrm teeth. It feels close to the elements.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "s.PURPLE, level_range = {10, 20}, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1222,
+  "src": "You can only see it because it is darker than its surroundings. It feels as cold as a grave.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "rs.BLACK, level_range = {20, 30}, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1261,
+  "src": "An unknown crafter has bound the elemental threads of creation into this belt.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1285,
+  "src": "This bronze ring has gone soft and green with age. It seems to have become attuned to the power of such corrosion.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ".GREEN, image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1311,
+  "src": "This staff seems to hold your attention, making it difficult to look away. Once you grasp the staff, the hold vanishes and everything else seems to wait on your command.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "s.YELLOW, image = , rarity = 350, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1343,
+  "src": "A long forgotten rune created by a long forgotten people. It appears to have been part of something greater. Parts of it still hold great power. But who knows what it will unleash?",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", name = , unique=true, image = , desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1402,
+  "src": "As you look at this wardstone, a spark catches your attention. Then more sparks suddenly dance around it. The sparks seem to be activated by your thoughts.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " color=colors.BLUE, rarity = 200, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1429,
+  "src": "It feels cold to the touch and a little bit moist. ",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "color=colors.WHITE, rarity = 250, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1465,
+  "src": "Much heavier than you expected, yet when you hold it, you feel more steady and stable.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "color=colors.BLACK, rarity = 300, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1491,
+  "src": "It looks like this wardstone was made from a mindstar. Deep in the crystal swirls a thunderstorm.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " color=colors.BLUE, rarity = 350, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1519,
+  "src": "Evidently crafted by an Archmage wanting the best protection possible against Oozemancers.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "color=colors.GREEN, rarity = 400, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1546,
+  "src": "This strange wardstone looks like it was part of something bigger. You can't help but wonder what it was that such a powerful item could break off from it. You wonder even more about the force that was strong enough to break this piece off.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", color=colors.RED, rarity = 500, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1607,
+  "src": "This surprisingly sharp blade appears to be a naturally formed icicle.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " color=colors.BLUE, rarity = 250, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1635,
+  "src": "A vile blade that belonged to a feared cultist, until he forgot to feed it one day. Both the blade and the cultist's life disappeared.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", color=colors.RED, rarity = 300, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1700,
+  "src": "Ashes to ashes, dust to dust. That which came from the earth, shall return to it.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "color=colors.BROWN, rarity = 350, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1729,
+  "src": "More of a rift to the aether than a physical blade. You fear the power that pours through might overwhelm you.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "olor=colors.PURPLE, rarity = 400, desc ="
+ },
+ {
+  "file": "data/world-artifacts.lua",
+  "line": 1792,
+  "src": "Talent on hit: 10% chance to cast Chain Lightning level 4.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "IN_LIGHTNING, level=4, chance=10}, desc="
+ },
+ {
+  "file": "data/talents/spells/_enchanted-armours.lua",
+  "line": 123,
+  "src": "Cast a heavy armour enhancing enchantment on an item of your choice.\n\t\tThis makes the armour easier to use, reducing the physical stat requirements by %d and the fatigue by %d.\n\t\tAt level 1, it allows you to wear heavy mail armour, gauntlets, helms, and heavy boots.\n\t\tAt level 2, it allows you to wear shields.\n\t\tAt level 3, it allows you to wear massive plate armour.\n\t\tEnchantments make items arcane powered and you can only have one enchantment on an item at once.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local boost = t.boost(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-armours.lua",
+  "line": 167,
+  "src": "You become better at using your enchanted armour to deflect blows and protect your vital areas. \n\t\tIncreases Armour value by %d, Armour hardiness by %d%%, and reduces chance to be critically hit by %d%% with your current body armour.\n\t\t(This talent only provides bonuses when wearing heavy mail or massive plate armour.)\n\t\tAll effects of this talent only apply to armour that has been enchanted and do not stack with another armour training talent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "riticalChanceReduction(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-armours.lua",
+  "line": 188,
+  "src": "Improves your skill at heavy armour enchantments.\n\t\tYour heavy armour enchantments now add %d physical save and armour.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local boost = t.boost(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-armours.lua",
+  "line": 208,
+  "src": "Adds special wards to your heavy armour enchantments, which do different things depending on the item type they are used on.\n\t\tBody Armour: Reduces all damage by %d.\n\t\tHead: Grants %d%% stun resistance.\n\t\tGauntlets: Grants %d%% disarm resistance.\n\t\tBoots: Grants %d%% knockback resistance.\n\t\tShield: +%d projectile defense.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local boost = t.boost(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-combat.lua",
+  "line": 61,
+  "src": "Charge raw arcane power into your weapon and then attack an adjacent enemy, doing %d%% weapon damage converted to arcane.\n\t\tIf this hits, the target will be throw back.\n\t\tThis attack uses your spellpower in place of accuracy and applies all on weapon hit bonusses and effects at +%d%% strength.\n\t\tDamage multiplier increases with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-combat.lua",
+  "line": 165,
+  "src": "Focus magic into your weapons and attack your target with full force doing %d%% weapon damage. \n\t\tThis attack gains %d%% physical resistance penetration and applied effects will use your spellpower.\n\t\tEach weapon style works slightly differently:\n\t\tTwo handed weapon users will Sunder Armour.\n\t\tDual weapon users will attack with both weapons and stuns if the mainhand hits.\n\t\tUnarmed attacks will attack twice for %d%% weapon damage each, gaining a combo point for each hit.\n\t\tShield users will attack with their weapon and their shield. If the shield attack hits, the target will be knocked back.\n\t\tBow users will pin their target to the ground.\n\t\tSling users will blind their target.\n\t\tDamage and duration scale with talent level.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "n = t.getResistPenalty(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-combat.lua",
+  "line": 435,
+  "src": "Focus magic into your weapon's gem or rune, then attack an enemy for %d%% weapon damage.\n\t\tThe gem/rune will then flare creating a burst of damage doing %d%% of your weapon damage converted to the gem/runes element.\n\t\tDifferent elements produce different shapes.\n\t\tPhysical, Fire, Nature and Light explode in a radius of 2.\n\t\tCold, Acid, Blight and Temporal produce a range 4 cone.\n\t\tLightning, Arcane, Darkness and Mind hit up to 6 targets in a radius 6 chain.\n\t\tDamage burst increases with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "amage = t.getDamageMod(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-combat.lua",
+  "line": 476,
+  "src": "Focus your magic into improving your martial skill.\n\t\tIncreasing your accuracy by %d, physical power by %d and weapon critical chance by %d.\n\t\tThese effects scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local crit = t.getCrit(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-weapons.lua",
+  "line": 94,
+  "src": "Cast a weapon enhancing enchantment on an item of your choice.\n\t\tThis increases the accuracy of the weapon by +%d and reduces the physical stat requirements by %d.\n\t\tEnchantments make items arcane powered and you can only have one enchantment on an item at once.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "weapon_boost = t.boost(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-weapons.lua",
+  "line": 115,
+  "src": "Increases Physical Power by %d and increases weapon damage by %d%% when using enchanted weapons.\n\t\tWill not stack with another Weapon Mastery talent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " inc = t.getPercentInc(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-weapons.lua",
+  "line": 134,
+  "src": "Improves your skill at weapon enchantments.\n\t\tYour weapon enchantments now increase the base weapon power by %d and increases the damage your magic stat adds by +%d%%.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "weapon_boost = t.boost(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/_enchanted-weapons.lua",
+  "line": 260,
+  "src": "Socket a gem into an enchanted weapon, adding extra damage based on the colour and tier of the gem.\n\t\tThe weapon also gets a secondary effect which is specific to each gem type.\n\t\tYou can only work with gems of the same teir or less than your raw talent level in this talent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/advanced-martial-enchantments.lua",
+  "line": 160,
+  "src": "Socket a gem into an enchanted weapon, adding extra damage based on the colour and tier of the gem.\n\t\tThe weapon also gets a secondary effect which is specific to each gem type and +5%% damage mod from magic per gem tier.\n\t\tYou can only work with gems of the same teir or less than your raw talent level in this talent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/advanced-martial-enchantments.lua",
+  "line": 180,
+  "src": "Adds special wards to your heavy armour enchantments, which add %d physical save and an extra bonus depending on the item type they are used on.\n\t\tBody Armour: Reduces all damage by %d.\n\t\tHead: Grants %d%% stun resistance.\n\t\tGauntlets: Grants %d%% disarm resistance.\n\t\tBoots: Grants %d%% knockback resistance.\n\t\tShield: +%d projectile defense.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local boost = t.boost(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/advanced-martial-enchantments.lua",
+  "line": 485,
+  "src": "Focus your magic into improving your martial skill.\n\t\tIncreasing your accuracy by %d, physical power by %d and weapon critical chance by %d%%.\n\t\tThese effects scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local crit = t.getCrit(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 448,
+  "src": "Crush together two alchemist gems, making them extremely unstable.\nYou then throw them to a target area, where they explode on impact, dealing %0.2f physical damage and knocking back any creatures in the blast radius.\nEach kind of gem will also provide a specific effect. At twice the normal power.\nThe damage will improve with better gems and with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "self, DamageType.PHYSICAL, dam) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 501,
+  "src": "Turns the golems skin into molten rock. The heat generated sets ablaze all inside a radius of 3 for doing %0.2f fire damage in 3 turns for %d turns.\nBurning is cumulative, the longer they stay in they higher the fire damage they take.\nIn addition the golem gains %d%% fire resistance.\nMolten Skin damage will not affect the golem's master or their friends.\nThe damage type done by this talent is changed if the golem's master has a non fire infusion active.\nThe damage and resistance will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "N_SKIN.info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 551,
+  "src": "Causes a violent earthquake that deals %0.2f physical damage in a radius of %d each turn for %d turns, and has a 25%% chance of stunning any creature it affects.\nThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 583,
+  "src": "Concentrate on maintaining a Crystalline Focus, increasing all your physical damage by %d%% and ignoring %d%% physical resistance of your targets.\nAlso any time you hit an enemy with a single physical damage hit over 100, you have a %d%% chance of disarming them for 6 turns.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "cal saves = t.getSaves(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 690,
+  "src": "Shatter all frozen (frozen feet counts) or stoned targets in your line of sight, doing %0.2f cold damage.\nDepending on the target's rank, there will also be an additional effect:\n* Critters will be instantly killed\n* +50%% critical chance against Normal rank\n* +25%% critical chance against Elites or Bosses\nAll affected foes will get the wet effect.\nAt most, it will affect %d foes.\nIf you are yourself Frozen, it will be instantly cured.\nThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "unt = t.getTargetCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 733,
+  "src": "Engulfs your hands (and weapons) in a sheath of fire, dealing %0.2f fire damage per melee or ranged attack and increasing all fire damage dealt by %d%%.\nEach hit will also regenerate %0.2f stamina.\nThe effects will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": ".getFireDamageIncrease(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 767,
+  "src": "Engulfs your hands (and weapons) in a sheath of lightning, dealing %d lightning damage with a chance to daze (25%%) per melee or ranged attack and increasing all lightning damage dealt by %d%%.\nEach hit will also regenerate %0.2f mana.\nThe effects will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "t.getIceDamageIncrease(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 796,
+  "src": "The caster's skin grows as hard as stone, granting a %d bonus to Armour and increasing your Armour Hardiness by %d%%.\n\t\tEach time you are hit in melee, you have a %d%% chance to reduce the cooldown of an Earth or Stone spell by 2 (this effect can only happen once per turn).\n\t\tThe bonus to Armour will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "cal armor = t.getArmor(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 809,
+  "src": "You learn to finely craft and tune your offensive spells.\nYou try to carve a hole in spells that affect an area to avoid damaging yourself or friends. The chance of success is %d%%.\nIn addition, you hone your damaging spells to spellshock their targets. This talent gives a bonus of %d to Spellpower solely for the purposes of overcoming the target's Spell Save. Spellshocked targets suffer a temporary 20%% penalty to damage resistances.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "l chance = t.getChance(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 834,
+  "src": "Channel raw mana through your staff, projecting a bolt of your staff's damage type, doing %d%% staff damage.\nThe bolt will only hurt hostile targets, and pass safely through friendly ones.\nThis attack always has a 100%% chance to hit, and ignores the target's Armour.\nWhen projecting a bolt with your staff its damage modifier is increased by 20%%.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "gemod = t.getDamageMod(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 861,
+  "src": "Increases weapon damage by %d%% and physical power by 30 when using staves.\nAlso grants the Channel Staff ability, which lets you fire an energy bolt from an equipped staff.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": " inc = t.getPercentInc(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 917,
+  "src": "Strike the ground with your staff, creating a shockwave that travels up to %d tiles.\nAny enemy the shockwave passes through will take %d%% melee damage as physical, and be stunned for %d turns.\nStun chance will improve with Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "ur = t.getDazeDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 945,
+  "src": "Adopt a defensive posture, increasing your Defense, Armour and Spell Save by %d.\nValues scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "defense = t.getDefense(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 970,
+  "src": "You cannot use Staff Nova without a staff weapon!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not weapon then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1056,
+  "src": "Spin around, extending your weapon and damaging all targets around you for %d%% weapon damage. \n\t\tRaw power flows through your staff, projecting a nova (radius 2) of your staff's element doing %d%% weapon damage as its current element.\n\t\tDifferent staff elements result in different effects.\n\t\tFire: Flameshock.\n\t\tCold: Frozen Ground.\n\t\tAcid: Disarming Acid.\n\t\tLightning: Lightning Daze.\n\t\tLight: Blinding Light.\n\t\tDarkness: Darkness Knockback.\n\t\tNature: Natural Slow.\n\t\tBlight: Blighted Disease.\n\t\tPhysical: Physical Bleeding.\n\t\tTemporal: Temporal Stat Reduction.\n\t\tArcane: Arcane Silence.\n\t\tMind: Brainlocking Mind.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/arcane-elements.lua",
+  "line": 50,
+  "src": "Combine arcane and fire threads into a searing beam of magic that does %0.2f fire and %0.2f arcane damage and dispels one beneficial magical effect from each target hit.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "damage = t.getDamage(self, t)/2 return ("
+ },
+ {
+  "file": "data/talents/spells/arcane-elements.lua",
+  "line": 83,
+  "src": "A wave of aetherial cold emanates from you with a radius of %d, knocking back anything caught inside, causing %0.2f cold and %0.2f arcane damage.\n\t\tAffected creatures will also be wet for 4 turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/arcane-elements.lua",
+  "line": 121,
+  "src": "Protect yourself with magical armour, granting a %d%% reduction to critical hits chances against you.\n\t\tAlso increases your physical and magical saves by %d.\n\t\tThese bonuses will increase with your Spellpower, and physical and arcane damage bonuses.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal saves = t.getSaves(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/arcane-elements.lua",
+  "line": 157,
+  "src": "Become like the Wind, increasing your movement and spell casting speed by %d%% and increasing your defense by %d.\n\t\tDefence bonus scales with your Spellpower, and lightning and arcane damage bonuses.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal def = t.getDefence(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/arcane-elements.lua",
+  "line": 197,
+  "src": "Surround yourself with an aura of light, increasing your light radius by %d, and reducing self-inflicted arcane damage by %d%%.\n\t\tEach turn there is a %d%% chance of blinding adjacent enemies for 4 turns.\n\t\tValues scale with your fire and arcane damage bonuses.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ind = t.getBlindChance(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/arcane-elements.lua",
+  "line": 232,
+  "src": "Tap into mysterious deep arcane reserves to increase your maximum mana capacity by %d and your life regeneration by %0.1f per turn.\n\t\tValues scale with your Spellpower, and cold and arcane damage bonuses.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local mana = t.getMana(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/arcane-elements.lua",
+  "line": 267,
+  "src": "Glare balefully at your enemies. All creatures in a cone of radius of %d will be struck with %0.2f arcane and %0.2f physical damage, and are petrified for %d turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/arcane-elements.lua",
+  "line": 296,
+  "src": "Rupture reality to draw mana directly from the aether, triggering a dangerous cascade of magical energies.\n\t\tEach turn for %d turns, a random explosion will occur within a radius of 4 around you.\n\t\tEach explosion does %0.2f arcane and %0.2f lightning damage in radius 2.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "damage = t.getDamage(self, t)/2 return ("
+ },
+ {
+  "file": "data/talents/spells/chaotic-hedgemagic.lua",
+  "line": 96,
+  "src": "Each turn for %d turns you fire a bolt of random energy at your nearest enemy inflicting %d damage.\n\t\tThe duration can Spell crit.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " duration = t.duration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/chaotic-hedgemagic.lua",
+  "line": 158,
+  "src": "Randomly teleports all targets within a radius of %d around you, including yourself.  Everyone will be teleported between %d and %d tiles from their current location.\n\t\tYou will go out of phase (%d) for %d turns. The duration can Spell crit.\n\t\tRequires your Spellpower to beat the target's Spell Save.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/chaotic-hedgemagic.lua",
+  "line": 191,
+  "src": "Protect yourself with powerful but wild energies for up to %d turns.\n\t\tThe armour will grant a %d%% chance to negate each hit you take.\n\t\tThis magic is unstable and each turn there is a %d%% chance that the duration will decrease faster than normal.\n\t\tThe duration can Spell crit.\n\t\tThe power of the armour scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/chaotic-hedgemagic.lua",
+  "line": 249,
+  "src": "Bathes the target area in raw magic, inflicting %0.2f arcane and %0.2f fire damage per turn for 8 turns.\n\t\tSuch wild magic is difficult to control and channelling it will cause you to take %0.2f arcane and %0.2f fire damage.\n\t\tThe damage will increase with your Spellpower.\n\t\tSpellcraft will not protect you from any damage from this spell.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "elf:getTalentLevel(t) - 1) / 4) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 70,
+  "src": "Twist the elements in the target, changing some of them to Blight. \n\t\tThis shock causes %0.2f Blight damage and stuns them for %d turns.\n\t\tThe damage will scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 108,
+  "src": "Your Elemental Shield now blocks Blight damage.\n\t\tYou gain %0.1f life for every point of Blight damage absorbed.\n\t\tIncreases your Blight resistance by %d%% and your Blight resistance cap by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "atio = self:getTalentLevel(t)/5 return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 174,
+  "src": "Invokes a furious storm of elemental chaos at the target point, doing %0.2f half blight, half random element damage, in a radius of 3 each turn for %d turns.\n\t\tEach turn the vortex will move at random, and can harm its creator.\n\t\tThe damage and duration will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 243,
+  "src": "You have mastered the fifth element, increasing all your blight damage by %d%% and ignoring %d%% blight resistance of your targets.\n\tAlso, %d%% of any blight damage you do, will heal you as well. %s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "f.taintmarks then stringy = end return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 280,
+  "src": "Creates a vortex of blighted energies on the target for 6 turns. Each turn the vortex will look for another foe in sight and fire a ray of corrupted arcane force doing %0.2f blight and %0.2f manaburn damage to all foes in line.\n\t\tIf no foes are found, the target will take 150%% more damage.\n\t\tIf the target dies, the vortex explodes, releasing all remaining damage in a radius 2 ball of corrupted arcane force.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dam = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 313,
+  "src": "Your mastery of corruption allows you to siphon off a portion of the souls of your enemies when you hit them with arcane damage.\n\t\tAll arcane damage you do restores %d%% of the damage done as mana to you.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "steal = t.getManaSteal(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 349,
+  "src": "Blast your enemies away with a gust of corrupted wind, knocking them back %d tiles.\n\t\tThe corrupted wind will also inflict a random disease for 5 turns. Power = %0.2f.\n\t\tThe knockback and disease power will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dist = math.abs(damage/10) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 436,
+  "src": "Invokes a forking beam of blightning doing %0.2f damage and dazing anything it hits.\n\t\tIt can hit up to %d targets up to 10 grids apart, and will never hit the same one twice; nor will it hit the caster.\n\t\tThis talent can trigger Hurricane.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ets = t.getTargetCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 486,
+  "src": "Warp a patch of earth into vile mud, doing %0.2f blight damage in a radius of %d each turn for %d turns.\n\t\tThe mud will also slow living targets by 20%% for 4 turns.\n\t\tWhile using Body of Stone, the cooldown of this talent will decrease.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 527,
+  "src": "Razor sharp crystals erupt from the ground, grabbing hold of any creatures and doing %0.2f bleeding damage over 5 turns, in a radius of %d.\n\t\tWhile using Body of Stone, the cooldown of this talent will decrease.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 554,
+  "src": "Ignite your blood and change it into raw power.\n\t\tFor %d turns your global speed will be increased by %d%%.\n\t\tEach turn, %0.2f life will be converted into mana, but only if your life is positive. (It can still do lethal damage though.)",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 604,
+  "src": "Conjures up a bolt of corrupted fire moving toward the target that explodes into a flash of twisted fire doing %0.2f blight damage in a radius of %d.\n\t\tBurning Wake will apply to this talent.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 631,
+  "src": "Corrupt the water in your blood, changing it to stronger corrupted blood.\n\t\tFor %d turns no poison will damage you and your physical save will be increased by %d.\n\t\tYou will also regenerate %0.1f life per turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/corrupted_elements.lua",
+  "line": 667,
+  "src": "Projects a wave of corrupted cold dealing %0.2f blight damage in a radius of %d. \n\t\tAny creatures caught inside have a 50%% chance of freezing solid.\n\t\tIf the creature is wet, it takes 30%% more damage and the freeze chance is 100%%.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/disenchantment.lua",
+  "line": 81,
+  "src": "You can undo item enchantments.\n\t\tFrom raw talent level 1, you can undo any of your enchantments, but this will destroy any gems or runes used.\n\t\tFrom raw talent level 2, you recover a gem/rune from an enchanted item, but this destroys the item.\n\t\tFrom raw talent level 3, you can temporarily disrupt an enemy's items, reducing their damage by %d%% for %d turns.\n\t\tFrom raw talent level 4, you can strip all affixes from an item. (doesn't work)\n\t\tFrom raw talent level 5, you can remove any of your enchantments and recover any gems/runes used, at the same time.\n\t\t(You cannot claim for any damages to your items, body or sanity due to misfires of this spell.)",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/disenchantment.lua",
+  "line": 167,
+  "src": "Removes up to %d magical effects (good effects from foes, and bad effects from friends) from the target.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "unt = t.getRemoveCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/disenchantment.lua",
+  "line": 211,
+  "src": "Use your disenchanting skill to disrupt the magical auras of all creatures in a radius %d ball.\n\t\tAffected creatures will take %0.2f Manaburn damage and will have a %d%% chance of failing spells for the next %d turns.\n\t\tThese effects scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l chance = t.getChance(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/disenchantment.lua",
+  "line": 245,
+  "src": "Your disenchantment skill gives you a %d%% chance of recovering from a random magical effect each turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/distort.lua",
+  "line": 50,
+  "src": "Surround yourself in a temporal whirlpool with radius %d, doing %0.2f temporal damage and stunning affected creatures.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/distort.lua",
+  "line": 112,
+  "src": "Distort space so that you switch places with another creature with in a range of %d. \n\t\tThe targeted creature will be spellshocked for %d turns.\n\t\tThe spell's hit chance will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/distort.lua",
+  "line": 140,
+  "src": "Adds %0.2f temporal damage to Phase Door, Teleport, Congeal Time, Time Prison and Space Warp (when used on hostile targets).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "TEMPORAL, t.getDamage(self, t)) return ("
+ },
+ {
+  "file": "data/talents/spells/distort.lua",
+  "line": 166,
+  "src": "Your mastery of distorting space and time has reduced the cooldown times of all Spell/Conveyance, Spell/Temporal and Spell/Distortion talents by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/elem.lua",
+  "line": 33,
+  "src": "One doesn't survive channelling the elements long, if one doesn't learn to protect themselves.\n\t\tIncreases fire, cold, lightning and physical resistance by %d%% and their resistance cap by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/elem.lua",
+  "line": 84,
+  "src": "Surround yourself in shield of elemental power for 10 turns. Any physical, fire, cold or lightning damage you take is reduced by %d.\n\t\tThe max damage the shield can absorb will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l absorb = t.getAbsorb(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/elem.lua",
+  "line": 98,
+  "src": "You siphon elemental power from energies absorbed by your Elemental Shield.\n\t\tYou gain %0.1f mana for every point of damage absorbed.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "atio = self:getTalentLevel(t)/5 return ("
+ },
+ {
+  "file": "data/talents/spells/elem.lua",
+  "line": 148,
+  "src": "Binds an elemental into your control, giving you full control over its actions for %d turns.\n\t\tWhen the effect ends the elemental will be banished.\n\t\tInstakill immunity will block Bind Elemental.\n\t\tThe duration and chance to bind will increase with your Willpower.\n\t\tEach point in Bind Elemental will also increase your elemental damage penetration by 4%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/enchanted-trinkets.lua",
+  "line": 75,
+  "src": "Cast a light armour enhancing enchantment on an item of your choice.\n\t\tThis increases the defense of the item by +%d, the spell save by +%d and reduces the physical stat requirements by %d.\n\t\tEnchantments make items arcane powered and you can only have one enchantment on an item at once.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local boost = t.boost(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/enchanted-trinkets.lua",
+  "line": 118,
+  "src": "Manipulate magical forces to enhance the activation power of an item. \n\t\tThis increases the strength of the activation by %d%%.\n\t\tEnchantments make items arcane powered and you can only have one enchantment on an item at once.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local boost = t.boost(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/enchanted-trinkets.lua",
+  "line": 170,
+  "src": "Imbue a piece of jewelry with a gem (up to tier %d), granting it additional powers.\n\t\tYou can only imbue items once, and it is permanent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/enchanted-trinkets.lua",
+  "line": 238,
+  "src": "Carve extra runes onto a staff to increase its spellpower by %d.\n\t\tYou can also enscribe it with a rune from your inventory, using it as an extra inscription slot.\n\t\tShould the staff already have an activatable effect, the rune effect will be used at the same time as the original effect.\n\t\tEnchantments make items arcane powered and you can only have one enchantment on an item at once.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local boost = t.boost(self, t) return ("
+ }
+]

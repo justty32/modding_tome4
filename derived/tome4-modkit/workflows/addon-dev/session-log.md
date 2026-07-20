@@ -1,0 +1,2 @@
+- 2026-07-10: 專案建立，工具鏈 lint/build/deploy 初版可用；verify.sh 待無頭啟動方案定案。
+- 2026-07-10: 驗證分層定案 lint → verify → playtest → 使用者。verify 綠燈不等於做完：改動觸及遊戲邏輯就要跑 playtest。

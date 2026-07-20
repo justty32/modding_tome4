@@ -1,0 +1,322 @@
+[
+ {
+  "file": "init.lua",
+  "line": 20,
+  "src": "Improved Auto-explore and Rest",
+  "tag": "init.lua long_name",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "init.lua",
+  "line": 28,
+  "src": "Quality of Life improvements for resting and auto-exploring.\n\nv3.5.1 *** FOR ToME v1.7.2 ***\nThis is a fork (with permission) of Marson's auto-explore and rest tweaks.  It includes as well C.Lowe/CaptainTrip's improvements as well.  It does not include, but recommends also using Johnny0's Faster RRE add-on for even better rest and auto-explore experience.  This add-on contains numerous Quality of Life improvements designed to make resting and auto-exploring easier to use, brings the add-on overall up to being compatible with 1.7.x, and generally seeks to remove it being more optimal to do timed rests or manual recovery (particularly to help higher difficulty level and players without Faster RRE).  Cleaned up feature list in this take, to make it easier to see what it does.\n\nIt is recommended to turn off Marson's Rest and Auto-Explore as well as C.Lowe's Rest Tweaks if using.  This addon is meant to include all of them.\n\nThis mod provides several options to control it.  These may be found by opening the Game Menu->Game Options->Gameplay menu.  Feel free to customize to preference with the defaults meant to be free of questionable behavior.\n\nLatest Update Notes:\n• Double checked compatibility with 1.7.2 and added to mod notes how to get to the menu.\n• Added an exclusion for track as it plays poorly with auto-use track.\n\nExisting Features:\n• removed First Sighting and Reset on Rest.  Someone can patch them in if they'd like it back, but I'm not really keeping them alive.\n• Fixed actor bugs causing Elemental Surge to never reset.  Thanks Reca♥den.\n• Fixed bug with Paradox Spacetime Tuning from 1.5.5.  This may rebreak posessors with paradox, hard to kinda test. \n• Mostly verified working on 1.6.0\n• Compatibility with restart sustains.  Thanks zizzo.\n• When resting, it will check for infusions and runes that could be used to accelerate HP, Mana, or Equilibrium (via Ancestral Life or Meditation) recovery.  If the acceleration appears significant, it will use them, rotating from first available infusion or rune outward.  In experiment, I found this often reduced rest turn time by 50-80 percent, improving the more drained the resource was.  Particularly helpful for Mana, as it avoids trade-off advantages of short term resting (for increased mana regen) + rune use by just handling that more optimal play for you automatically without breaking rest. \n• Support for steam implants, with usual checkboxes.  This may not always be faster based on steam sustains that may disable after the initial round of rest and steam implants having very long cooldowns (30+ turns) and steam's resource max being pretty small.  It tries to be conservative on that, so will most likely help for cases where your functional steam regen rate is < 2.00 and never activate for things much above it.  I found I was often getting 5-20 steam per turn, which makes the implant support useless.\n• Supports for medical healing salve injectors.  Cooldown measurements are a bit odd here, since they can range from 5-20 depending on injector.  Went with 10 as a happy medium for how many turns of natural regen is considered to be equal to the cooldown cost of using it.\n• Adding support to auto-stealth if available and not stealthed.\n• Option for ignoring small damage when moving and resting, basically if it is <5%, it will ignore it by default, prevent small DoTs from preventing rest.\n• Options added to control whether or not to use inscriptions to accelerate recovery of things. \n• Fixes a ToME bug that can cause autoexplore or running to move only a single square and hang if used immediately after killing an enemy.\n• Lore discovery will only stop autoexplore if it triggers a popup.\n• Autoexplore will ignore Exploratory/Infinite Farportal return portals until the entire level has been explored.\n• Ignores special terrain features such as Font of Healing after they are first discovered.\n• Ignores open chests and alt Maze floor cracks.\n• Rest and AE ask for confirmation if you have an escort in your party.\n• Ignore already activated pedestals.\n• Checks for and waits on any rechargeable items.\n• Checks for and reloads any ammo in offhand quiver.\n• Waits for cooldowns of talents set to auto-use.\n• Waits for depleted air to replenish.\n• Combines all checks into a single instance of rest, rather than having cooldowns etc. require a second resting phase.\n\nDetermines how auto-explore and running respond to telepathy, including mouse moves. Regardless of the setting, hostiles seen via telepathy will not halt resting or the Rod of Recall, nor trigger automated talents. Unique or powerful monsters (rank > 3) will always trigger a halt to running when they are spotted via telepathy for any mode except 'Original'.\n\t\t\t\nAvailable modes:\t\t\t\n• 'Always Viligant' always stops running when a hostile creature is seen via telepathy.\n• 'Original' is standard ToME auto-explore behavior, which ignores telepathy when running or auto-exploring.\n\n• Compatible with ToME v1.6.0\n\nNotes:\nFolks who have helped with bugfixes over the years:\nReca♥den\nSt_ranger_er\nzizzo\n\n• Telepathy will not prevent auto-exploring the way normal sight will. If a halt is triggered by telepathy, hitting auto-explore again will move you at least one more square in the direction of the auto-explore path. If in 'Always Viligant' mode and a hostile is within telepathic sight (but not normal sight), you will auto-explore in 1 square per keypress increments.",
+  "tag": "init.lua description",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 71,
+  "src": "[MARSON] ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "energy.value - game.energy_to_act print("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 93,
+  "src": "Continue?",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " end if on_quest then Dialog:yesnoPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 93,
+  "src": "You have a quest member in your party. Are you sure you want to autoexplore?",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "end if on_quest then Dialog:yesnoPopup(,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 123,
+  "src": "You have a quest member in your party. Are you sure you want to rest?",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "end if on_quest then Dialog:yesnoPopup(,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 144,
+  "src": "Determines how auto-explore and running respond to telepathy, including mouse moves. Regardless of the setting, hostiles seen via telepathy will not halt resting or the Rod of Recall, nor trigger automated talents. Unique or powerful monsters will always trigger a stop via telepathy unless #YELLOW#Original#WHITE# is chosen. Hostiles spotted via telepathy are not remembered from session to session..\n\t\t\t\n• #YELLOW#Original#WHITE# is standard ToME auto-explore behavior which ignores telepathy when running or auto-exploring.\n• #YELLOW#Always Viligant#WHITE# always stops running when a hostile creature is seen via telepathy.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 151,
+  "src": "#GOLD##{bold}#Auto-explore telepathy#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 156,
+  "src": "Original",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "=function(item) local tooltips = {{name="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 156,
+  "src": "Always Viligant",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ocal tooltips = {{name=, style=}, {name="
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 157,
+  "src": "Auto-explore behavior",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "e=, style=}} engine.ui.Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 157,
+  "src": "Select behavior",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "=, style=}} engine.ui.Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 170,
+  "src": "When resting, determines whether or not to use Heal and Regeneration infusions to speed HP recovery if available.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 174,
+  "src": "#GOLD##{bold}#Recover HP when resting with Infusions#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 180,
+  "src": "Enable/Disable Infusions for HP on Rest",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "e=, style=}} engine.ui.Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 194,
+  "src": "When resting, determines whether or not to use Heal and Regeneration infusions to speed Equilibrium recovery if available.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 198,
+  "src": "#GOLD##{bold}#Recover Equilibrium when resting with Infusions#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 204,
+  "src": "Enable/Disable Infusions for Equilibrium on Rest",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "e=, style=}} engine.ui.Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 217,
+  "src": "When resting, determines whether or not to use Mana runes to speed MP recovery if available.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 221,
+  "src": "#GOLD##{bold}#Recover MP when resting with Runes#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 240,
+  "src": "When resting, determines whether to ignore low damage events and just recover past it.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 244,
+  "src": "#GOLD##{bold}#Ignore Small Damage When Resting#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 250,
+  "src": "Enable/Disable Ignoring Small Damage When Resting",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "e=, style=}} engine.ui.Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 263,
+  "src": "When auto-exploring, determines whether to ignore low damage events, and keep rushing on.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 267,
+  "src": "#GOLD##{bold}#Ignore Small Damage When Running#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 273,
+  "src": "Enable/Disable Ignoring Small Damage When Running",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "e=, style=}} engine.ui.Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 286,
+  "src": "When resting, determines whether or not to use Steam implants to speed steam recovery if available.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 290,
+  "src": "#GOLD##{bold}#Recover Steam when resting with Implants#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 296,
+  "src": "Enable/Disable Implants for Steam on Rest",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "e=, style=}} engine.ui.Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 309,
+  "src": "When resting, trigger stealth if available.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 313,
+  "src": "#GOLD##{bold}#When resting, trigger stealth if available#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 319,
+  "src": "Enable/Disable Auto-Stealth while Resting",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "e=, style=}} engine.ui.Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 332,
+  "src": "Ignore quest members for auto-exploring and resting.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 336,
+  "src": "#GOLD##{bold}#Ignore quest members for auto-exploring and resting#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= { zone = zone, name = string.toTString"
+ },
+ {
+  "file": "overload/mod/class/interface/PlayerExplore.lua",
+  "line": 2490,
+  "src": "opening door",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "g.busy then self.running.busy = { type ="
+ },
+ {
+  "file": "overload/mod/class/interface/PlayerExplore.lua",
+  "line": 2612,
+  "src": "at ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "x, ay, , true) end end end self:runStop("
+ },
+ {
+  "file": "superload/mod/class/Player.lua",
+  "line": 157,
+  "src": "no ammo",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " if not self:getInven() then return nil,"
+ },
+ {
+  "file": "superload/mod/class/Player.lua",
+  "line": 161,
+  "src": "bad ammo",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ot QS_ammo.archery_ammo then return nil,"
+ },
+ {
+  "file": "superload/mod/class/Player.lua",
+  "line": 164,
+  "src": "bad type",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "~= QS_ammo.archery_ammo then return nil,"
+ },
+ {
+  "file": "superload/mod/class/interface/PartyLore.lua",
+  "line": 49,
+  "src": "[LORE] learnt",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "layer:registerLoreFound(lore) end print("
+ }
+]

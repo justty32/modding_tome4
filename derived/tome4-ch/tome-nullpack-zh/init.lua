@@ -1,0 +1,11 @@
+long_name = "Doctornull's Class Pack 正體中文化"
+short_name = "nullpack-zh"
+for_module = "tome"
+version = {1,7,6}
+addon_version = {1,0,0}
+weight = 1000000
+author = {'tome4-ch'}
+homepage = '-'
+description = [[Doctornull's Class Pack (nullpack) 的正體中文翻譯（非侵入式 locale patch）。]]
+tags = {'translate'}
+data = true

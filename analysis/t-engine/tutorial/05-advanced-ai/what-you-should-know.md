@@ -1,0 +1,7 @@
+- 理解 TE4 AI 的組合式架構
+- 設定不同難度 NPC 的 AI（`simple` → `dumb_talented` → `improved_tactical`）
+- 為技能正確撰寫 `tactical` 表
+- 用 `ai_tactic` 調整 NPC 的戰術個性
+- 撰寫自訂 AI 函式處理特殊行為
+- 擴充新的戰術分類
+- 使用日誌系統除錯 AI 問題

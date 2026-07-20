@@ -1,0 +1,1250 @@
+[
+ {
+  "file": "init.lua",
+  "line": 1,
+  "src": "Modified Item Descriptions",
+  "tag": "init.lua long_name",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "init.lua",
+  "line": 9,
+  "src": "这是基于 Cleaner Item Descriptions 制作的插件，为中文玩家进行了汉化。\n按'Alt'键可以临时切换回原显示模式\n此外，进行了以下调整：\n提示信息的背景始终处于不透明状态\n某些属性会归类显示\n调整了部分属性的显示顺序\nThis is a fork of Cleaner Item Descriptions that translated for Chinese players.\nOther tweaks:\nTooltip are always opaque no matter locked or not.\nSome attributes are displayed in a group instead of seperate lines.\nAdjust the display order of several attributes.\n",
+  "tag": "init.lua description",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "superload/mod/class/DemonologistsDLC.lua",
+  "line": 6,
+  "src": "%+d",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "data.w, data.compare_with, data.field, ,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 44,
+  "src": "#ORANGE#offense ------#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_PASS_PWR_COLOR = local mod_DPS_sep = _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 45,
+  "src": "#ORANGE#defense ------#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " mod_DPS_sep = _t local mod_DEF_sep = _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 47,
+  "src": "#ORANGE#other -------#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mod_DEF_sep = _t local mod_MISC_sep = _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 49,
+  "src": "phys.bleed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ageType.dam_def.PHYSICALBLEED.name = _t("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 51,
+  "src": "void",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "t(, ) DamageType.dam_def.VOID.name = _t("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 113,
+  "src": "you have set the ring to grant you",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "turn in_str end if in_str:lower():match("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 140,
+  "src": "%1#LIGHT_GREEN#%2#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= in_str:gsub(, ) in_str = in_str:gsub(,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 141,
+  "src": "#LIGHT_GREEN#%1#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= in_str:gsub(, ) in_str = in_str:gsub(,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 165,
+  "src": " %% chance of ",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "eff_name(eff_name) return eff_name:gsub("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 251,
+  "src": "T%d",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "lf.material_level then desc:add({ , }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 270,
+  "src": "Random Unique",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "seif self.randart then item_quality = _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 278,
+  "src": "Ego++",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "f.greater_ego > 1 then item_quality = _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 280,
+  "src": "Ego+",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " self.greater_ego then item_quality = _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 291,
+  "src": "%s %s (%0.1f Encumbrance)",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "pe then if self.encumber then desc:add(("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 297,
+  "src": "%s %s %s/%s (%0.1f Encumbrance)",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "nd else if self.encumber then desc:add(("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 300,
+  "src": "2H ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_type == and (self.slot_forbid == and _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 300,
+  "src": "1H ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "== and (self.slot_forbid == and _t or _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 318,
+  "src": "Arcane Power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "en desc:add(bHasPower and or , { , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 322,
+  "src": "Nature Power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "en desc:add(bHasPower and or , { , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 326,
+  "src": "Antimagic Power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "en desc:add(bHasPower and or , { , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 334,
+  "src": "Psionic Power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "en desc:add(bHasPower and or , { , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 338,
+  "src": "Unknown Power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "en desc:add(bHasPower and or , { , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 391,
+  "src": "It can cause special effects when it strikes in combat.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "en desc:add({ , mod_PASS_PWR_COLOR }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 394,
+  "src": "It can cause special effects when a melee attack is blocked.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "en desc:add({ , mod_PASS_PWR_COLOR }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 414,
+  "src": "Keywords: ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ist[#list + 1] = _t(k, ) end desc:add(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 482,
+  "src": "%d%% %s level %d",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "s_color }, s_desc_pwr, { , }, { , }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 511,
+  "src": "On Spell Hit:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "} desc:merge(talent_on_ability_desc(, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 512,
+  "src": "On Nature Hit:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ") desc:merge(talent_on_ability_desc(, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 513,
+  "src": "On Mind Hit:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ") desc:merge(talent_on_ability_desc(, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 523,
+  "src": "%+d%%",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "compare_fields(w, compare_with, field, ,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 523,
+  "src": "Global Speed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 524,
+  "src": "%+.2f%%",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "compare_fields(w, compare_with, field, ,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 524,
+  "src": "Critical power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 525,
+  "src": "Damage Change",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 529,
+  "src": "Ignore resists",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 534,
+  "src": "Spell Speed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 535,
+  "src": "Spell Crit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 540,
+  "src": "Mind Speed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 542,
+  "src": "Mind Crit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 547,
+  "src": "Steam Speed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 548,
+  "src": "Steam Crit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 583,
+  "src": "Combat Speed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 585,
+  "src": "%+.1f%%",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "compare_fields(w, compare_with, field, ,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 585,
+  "src": "Physical Crit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 588,
+  "src": "Physical Power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "th, field, , { }, _t , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 589,
+  "src": "Ignore Armor",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 591,
+  "src": "On-Hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 596,
+  "src": "On-Ranged-Hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 724,
+  "src": "When Hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 730,
+  "src": "On-Hit (Melee):",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "), { , } end) if found then desc:add( _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 735,
+  "src": "On-Hit (Ranged):",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ng) end if ranged_found then desc:add(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 740,
+  "src": "When Hit:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ged) end if onhit_found then desc:add(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 744,
+  "src": "Ignore Shields",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 745,
+  "src": "%+d%% ",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "e_table_fields(w, compare_with, field, ,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 764,
+  "src": "Ranged Defense",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ld, , { , true }, _t , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 778,
+  "src": "Max Resistance",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 789,
+  "src": "Damage Reduction",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 794,
+  "src": "Resist Against",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 804,
+  "src": "Out-of-Phase Defense",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 805,
+  "src": "Out-of-Phase Resistance",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 806,
+  "src": "Out-of-Phase Resilience",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 808,
+  "src": "Crit Resistance",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 809,
+  "src": "Crit Avoidance",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 811,
+  "src": "Deflect Projectile",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 813,
+  "src": "Damage Avoidance",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 815,
+  "src": "Shield Duration",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 816,
+  "src": "Shield Power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 821,
+  "src": "Mind save",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ld, , { , true }, _t , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 826,
+  "src": "%+.2f",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "compare_fields(w, compare_with, field, ,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 827,
+  "src": "Life Regen",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 829,
+  "src": "Lifesteal Chance",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 831,
+  "src": "Heal-on-summon",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 866,
+  "src": "Slow Projectiles",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 867,
+  "src": "Resist unseen",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 886,
+  "src": "Category Bonus",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 894,
+  "src": "Move Speed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 895,
+  "src": "Spell cooldown",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 897,
+  "src": "Disarm Traps",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 914,
+  "src": "Max stamina",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "t(_t(, )), function(item) local t = { _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 914,
+  "src": "Stamina when hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " function(item) local t = { _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 915,
+  "src": "Max mana",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "tion(item) local t = { _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 915,
+  "src": "Mana when hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "l t = { _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 916,
+  "src": "Max vim",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " { _t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 916,
+  "src": "Vim when hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " , _t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 917,
+  "src": "Max soul",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " , _t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 918,
+  "src": "Max pos.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 919,
+  "src": "Max neg.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 920,
+  "src": "Anomly control",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 921,
+  "src": "Eq. when hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 922,
+  "src": "Max hate",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 922,
+  "src": "Hate when hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 923,
+  "src": "Max psi",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 923,
+  "src": "Psi when hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " , _t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 924,
+  "src": "Max steam",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " , _t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 925,
+  "src": "Max air",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t , _t , _t , _t , _t , _t , _t , _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 932,
+  "src": "Heightened Senses",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 935,
+  "src": "See Stealth",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 937,
+  "src": "See Invisibility",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 939,
+  "src": "Leech Chance",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 942,
+  "src": "Max Summons",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 943,
+  "src": "Summon Regen",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 947,
+  "src": "Pierce Iceblocks",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1011,
+  "src": "Telepath range",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1082,
+  "src": "%+.2f(-) %s",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "(name), true) end else desc:add({ , }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1115,
+  "src": "(%+d)",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "] or 0)), diff < 0 and { , } or { , }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1120,
+  "src": "%s %+d(-)",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": ", }, true) end else desc:add({ , }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1153,
+  "src": "(%+.2f) ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "2] or 0), diff < 0 and { , } or { , }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1158,
+  "src": "%+.2f(-) %s ",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "e) end else desc:add({ , }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1221,
+  "src": "Unarmed combat:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ove_stats) then desc:add(true, { , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1252,
+  "src": "When used to attack:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "at or can_combat then desc:add({ , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1266,
+  "src": "Cannot be teleported.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "self.no_teleport then desc:add({ , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1270,
+  "src": "While equipped:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "r or can_wielder then desc:add({ , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1278,
+  "src": "While carried:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "r or can_carrier then desc:add({ , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1288,
+  "src": "entity on slot",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ".on_type, ) else type = _t(self.on_slot,"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1290,
+  "src": "Attachable to ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ype = _t(self.on_slot, ) end desc:add(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1296,
+  "src": "When attached:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_tinker.wielder) then desc:add({ , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1318,
+  "src": "On block: ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "dd({ , mod_PASS_PWR_COLOR }) desc:add(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1323,
+  "src": "Item imbue powers:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "can_imbue_powers then desc:add({ , }, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1496,
+  "src": "%s%+d%%#LAST#",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "amrange) power_diff[#power_diff + 1] = ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1497,
+  "src": "%s%+.1fx#LAST#",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "f * 100) range_diff[#range_diff + 1] = ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1505,
+  "src": "Power: %3d%% (%s)\nRange: %.1fx (%s)",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "end end end if any_diff then local s = ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1508,
+  "src": "Power: %3d%%\nRange: %.1fx",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "esc:merge(s:toTString()) else desc:add(("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1517,
+  "src": "%s%+.1f#LAST# - %s%+.1f#LAST#",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": " or 0))) power_diff[#power_diff + 1] = ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1529,
+  "src": "Weapon Damage",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "diff, )) end desc:add((mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1561,
+  "src": "Accuracy Stat",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "l_attack then desc:add(mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1566,
+  "src": "Critical Rate",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1567,
+  "src": "Critical Power",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1571,
+  "src": "%+.0f%%",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "100 / orig if compare_with then return ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1576,
+  "src": "Attack Speed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ", , physspeed_compare, mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1578,
+  "src": "Damage Multiplier",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1582,
+  "src": "Auto Reload",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1583,
+  "src": "Projectile Speed",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1588,
+  "src": "On-hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1600,
+  "src": "On-ranged-hit",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1611,
+  "src": "Damage Conversion",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1616,
+  "src": "Damage Against",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1625,
+  "src": "On-Hit, radius 1",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1630,
+  "src": "On-crit, radius 2",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "mpare_with, field, , , mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1635,
+  "src": "On Hit:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " end) desc:merge(talent_on_hit_desc(, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1636,
+  "src": "On Crit:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_t )) desc:merge(talent_on_hit_desc(, _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1754,
+  "src": "On Critical:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "t, )) return list end ) compare_list( _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1764,
+  "src": "On Kill:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "al_list(combat, ) end ) compare_list( _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1799,
+  "src": "Recursion Amount",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_procs_reduce_compare, mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1829,
+  "src": "Accuracy bonus",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "then desc[#desc - i] = mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1943,
+  "src": "\nActivation is instant.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "f.use_no_energy ~= then s_activ_pow = _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1947,
+  "src": " (Instant)",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "_actor, t) == true then s_activ_tal = _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1954,
+  "src": "Uses %d charges out of %d",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": " { , }, true, { , mod_USABLE_COLOR2 }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1957,
+  "src": "Talent ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "e = self.talent_cooldown == and _t or _t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1959,
+  "src": "Puts %s on %d turn cooldown",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": " { , }, true, { , mod_USABLE_COLOR2 }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1963,
+  "src": "Uses %d power out of %d/%d",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": " { , }, true, { , mod_USABLE_COLOR2 }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1973,
+  "src": "Power cost",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " , 0x6f, 0xff, 0x83 }, mod_align_stat(_t"
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1976,
+  "src": "Puts all charms on %d turn cooldown",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": " { , }, true, { , mod_USABLE_COLOR2 }, ("
+ },
+ {
+  "file": "superload/mod/class/Object.lua",
+  "line": 1989,
+  "src": "% to ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "rm_on_use) do ret:add(tostring(d[1]), _t"
+ }
+]

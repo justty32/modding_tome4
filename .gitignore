@@ -1,0 +1,8 @@
+# Third-party / upstream source (not our work)
+projects/t-engine4/
+external/orig/
+external/chn-mod/
+
+# OS / editor cruft
+.DS_Store
+*.swp

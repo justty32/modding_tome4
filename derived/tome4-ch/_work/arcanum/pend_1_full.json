@@ -1,0 +1,1450 @@
+[
+ {
+  "file": "data/talents/spells/force.lua",
+  "line": 72,
+  "src": "Create a strong but short lived protective shield around you for 3 turns which can absorb up to %d damage.\n \t\tThe total damage the barrier can absorb will increase with your Spellpower and the duration can Spell crit.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "100 + (self:attr() or 0)) / 100 return ("
+ },
+ {
+  "file": "data/talents/spells/force.lua",
+  "line": 117,
+  "src": "Fire a wave of repulsion in all directions out to a radius of %d.\n\t\tAll creatures are struck for %0.2f physical damage and knocked away.\n\t\tAll enemy projectiles are reflected back to their source.\n\t\tDamage scales with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/force.lua",
+  "line": 215,
+  "src": "Release arcane energies into most magical shields currently protecting you.\n\t\tIt will affect at most %d shield effects.\n\t\tDamage Shield, Time Shield, Displacement Shield:  Increase the damage absorption value by %d%%.\n\t\tAt raw talent level 5, it will also increase shield durations by 1 turn.\n\t\tDisruption Shield: Tap into the stored energies to restore the shield (at a rate of 2 energy per 1 shield power). Any leftover energy is converted back into mana at a rate of %0.2f energy per mana.\n\t\tThe charging will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l shield = t.getShield(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/fusion.lua",
+  "line": 46,
+  "src": "Conjure a molten boulder and roll it in the direction you choose, and enemies that don't get out of the way will take %0.2f fire damage, %0.2f physical damage and be knocked back.\n\t\tBurning Wake will leave a trail of flames behind the boulder.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "damage = t.getDamage(self, t)/2 return ("
+ },
+ {
+  "file": "data/talents/spells/fusion.lua",
+  "line": 90,
+  "src": "Create an eruption of steam in a radius 1 at the target location, doing %0.2f fire damage and %0.2f cold damage.\n\t\tThe steam will also linger for 4 turns doing another %d damage per turn in a radius of %d.\n\t\tCreatures hit will be Wet for 3 turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/fusion.lua",
+  "line": 155,
+  "src": "Conjures up mana into a powerful beam of plasma, doing %0.2f lightning damage and %0.2f fire damage.\n\t\tThe beam also explodes in a radius of %d at the target doing the same damage again.\n\t\tTempest will add a daze chance to this spell.\n\t\tBurning Wave will leave a trail of flames on the ground.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/fusion.lua",
+  "line": 193,
+  "src": "Conjures an avalanche of snow, dealing %0.2f physical damage and %0.2f cold damage in a radius of %d. Any creatures caught inside will be be frozen to the ground for 4 turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/fusion.lua",
+  "line": 243,
+  "src": "Thunder emanates from you in a circular wave with radius %d, doing %0.2f lightning damage, %0.2f physical damage and possibly stunning anyone affected (25%% chance).\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/fusion.lua",
+  "line": 323,
+  "src": "Invokes a forking beam of liquid lightning doing %0.2f cold damage, %0.2f lightning damage and forking to another target.\n\t\tIt can hit up to %d targets up to 10 grids apart, and will never hit the same one twice; nor will it hit the caster.\n\t\tCreatures hit will be Wet for 5 turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ets = t.getTargetCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 86,
+  "src": "You learn how to create small Draughts that give useful combat effects. \n\t\tHowever, they are slightly toxic and have detrimental side effects (and a bad after taste).\n\t\tQuickness Draught: Increases your Movement Speed by %d%% and your Evasion chance by %d%%. But leaves you weakened when it wears off.\n\t\tFocus Draught: Increases your Critical Chances by %d%% and your Critical Power by %d%%. But leaves you slowed when it wears off.\n\t\tToughness Draught: Increases your Armour by %d and your Armour Hardiness by %d%%. But leaves you confused when it wears off.\n\t\tEach Draught lasts for %d turns and the side effects last for %d turns.\n\t\tUsing a Draught will put the other Draughts on cooldown as well.\n\t\tDraught strengths scale with your Cunning and Talent level.\n\t\tDurations scale with Talent level.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " = t.getDebuffDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 129,
+  "src": "You learn how to create small Balms that give useful curative effects.\n\t\tRegenerative Balm: Lasts for %d turns. Each turn it heals you for %d life and reduces all bleeding effects by 1 turn.\n\t\tAntidote Balm: Reduces the duration of all Poison and Disease effects on you by %d turns.\n\t\tClarity Balm: Cures up to %d detrimental mental effects from you.\n\t\tUsing a Balm will put the other Balms on cooldown as well.\n\t\tBalm strengths and durations scale with your Cunning and Talent level.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "b = t.getDebuffRemoval(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 158,
+  "src": "Your Master level knowledge of Herbalism allows you to improve the other talents in the Herbalism category.\n\t\tHerb Lore: Now adds a bonus to your Healing Factor equal to %d%% of the Poison/Disease resistance bonus.\n\t\tBattle Draught: Reduces the duration of the detrimental side effects by %d%%.\n\t\tCurative Balm: Reduces the turn cost of using a Balm by %d%%.\n\t\tThe cooldown timers of Draughts and Balms are also reduced by %d.\n\t\tThese modifiers scale with your Cunning.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al dur = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 187,
+  "src": "Prepare and ingest a home(/dungeon)-made concoction for a quick boost to your agility.\n\t\tIncreases your movement speed by %d%% and your evasion chance by %d%% for %d turns.\n\t\tThis effect will leave you weakened for %d turns after it expires.\n\t\tUsing this will place all Draughts on cooldown.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " t2.getDebuffDuration(self, t2) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 214,
+  "src": "Prepare and ingest a home(/dungeon)-made concoction for a quick boost to your focus.\n\t\tIncreases your Critical Chances by %d%% and your Critical Power by %d%% for %d turns.\n\t\tThis effect will leave you slowed for %d turns after it expires.\n\t\tUsing this will place all Draughts on cooldown.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " t2.getDebuffDuration(self, t2) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 241,
+  "src": "Prepare and ingest a home(/dungeon)-made concoction for a quick boost to your toughness.\n\t\tIncreases your Armour by %d and your Armour Hardiness by %d%% for %d turns.\n\t\tThis effect will leave you confused for %d turns after it expires.\n\t\tUsing this will place all Draughts on cooldown.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " t2.getDebuffDuration(self, t2) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 272,
+  "src": "Prepare and apply a home(/dungeon)-made concoction for a small regeneration effect.\n\t\tEach turn for %d turns, you will heal for %d life and each bleeding status on you will have its duration reduced by 1 extra turn.\n\t\tUsing this will place all Balms on cooldown.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " dur = t2.getDuration(self, t2) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 324,
+  "src": "Prepare and apply a home(/dungeon)-made concoction for a quick antidote effect.\n\t\tReduces the duration of all Poison and Disease effects on you by %d turns.\n\t\tUsing this will place all Balms on cooldown.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " dur = t2.getDuration(self, t2) return ("
+ },
+ {
+  "file": "data/talents/spells/herbalism.lua",
+  "line": 379,
+  "src": "Prepare and apply a home(/dungeon)-made concoction for some quick clarity.\n\t\tCures up to %d detrimental mental effects from you.\n\t\tUsing this will place all Balms on cooldown.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "= t2.getDebuffRemoval(self, t2) return ("
+ },
+ {
+  "file": "data/talents/spells/high.lua",
+  "line": 64,
+  "src": "Fire a slowish bolt of a random element doing %0.2f damage.\n\t\tAt level 5 it also does 50%% splash damage to adjacent targets.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/high.lua",
+  "line": 86,
+  "src": "The Arcanist focusses on supreme control over mana, allowing them to adjust how it flows near them.\n\t\tIncreases mana regen by +%0.1f, arcane resistance by %d%% and arcane resistance cap by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/high.lua",
+  "line": 105,
+  "src": "Grants +%d%% silence resistance and +%d spell save.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " count = self:getTalentLevel(t) return ("
+ },
+ {
+  "file": "data/talents/spells/high.lua",
+  "line": 159,
+  "src": "Unleash power similar to the original Spellblaze, but on a much smaller scale.\n\t\tThe primary explosion is a radius 2 burst that will release %d extra uncontrolled bolts. These will fly in a random direction and also explode.\n\t\tEach explosion will do %0.2f arcane damage and %0.2f fire damage, and will destroy walls.\n\t\tThe damage will increase with your Spellpower.\n\t\tSpellcraft will not protect you from this spell.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/illusion.lua",
+  "line": 50,
+  "src": "Disrupt the target's mind, doing %0.2f mind damage and brainlocking them for %d turns.\n\t\tThe target may make a mind save against your spellpower to half the damage.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ype.MIND, t.getDamage(self, t)) return ("
+ },
+ {
+  "file": "data/talents/spells/illusion.lua",
+  "line": 86,
+  "src": "Wrap the target's mind in a delusion, making them think you are their friend for %d turns.\n\t\tIf you damage the target it will be free from the delusion.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/illusion.lua",
+  "line": 173,
+  "src": "Cast a chaotic ray of light that bounces and hits up to %d enemies, up to 6 grids apart.\n\t\tThey will be hurt for %0.2f light damage and be confused (%d power) for %d turns.\n\t\tThe damage and confusion strength will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ets = t.getTargetCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/illusion.lua",
+  "line": 202,
+  "src": "The caster is surrounded by a modified phantasmal shield. If hit by a projectile weapon or a spell, the shield will deal %d light damage to the attacker.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/inanimation.lua",
+  "line": 50,
+  "src": "Magically animate your melee weapon and have it fly at a nearby enemy, attacking them for %d%% weapon damage.\n\t\tThis attack uses Spellpower in place of Accuracy and if it hits, will knock the target off balance for 4 turns.\n\t\tWeapon damage multiplier scales with Spellpower.\n\t\t(Will trigger when hit in melee effects on target.)",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/inanimation.lua",
+  "line": 117,
+  "src": "A weapon animated by arcane forces. It will fight to protect its animator.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "etName(), faction = self.faction, desc ="
+ },
+ {
+  "file": "data/talents/spells/inanimation.lua",
+  "line": 221,
+  "src": "Magically animate a weapon and command it to protect you. This enchantment will cause it to attack all nearby enemies for %d turns. When the spell ends, the weapon will drop to the ground. Attack Speed: %d%%",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "= t.getAttackSpeed(self, t)*100 return ("
+ },
+ {
+  "file": "data/talents/spells/inanimation.lua",
+  "line": 263,
+  "src": "Summon a storm of swirling blades to slice your foes, inflicting %0.2f physical damage and bleeding to anyone who approaches, for %d turns.\n\t\tThe damage and duration will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/inanimation.lua",
+  "line": 300,
+  "src": "Allows you to animate a shield to guard you. (This allows you to equip a shield in the Psionic Focus slot. Use the Animate Shield ability to equip the shield.)\n\t\tThe animated shield will also reduce all damage you take by %d.\n\t\tDamage reduction scales with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/inanimation.lua",
+  "line": 368,
+  "src": "Encase a shield in magical animating forces, holding it aloft and setting it to guard you.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/mana-alchemy.lua",
+  "line": 34,
+  "src": "Increases mana regeneration by +%0.1f and maximum mana by +%d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local mana = t.getMana(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/mana-alchemy.lua",
+  "line": 63,
+  "src": "Removes all inscription saturations and reduces the cooldown of your inscriptions by %d turns.\n\t\tDoesn't work on Implants.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "h.floor(self:getTalentLevel(t)) return ("
+ },
+ {
+  "file": "data/talents/spells/mana-alchemy.lua",
+  "line": 122,
+  "src": "Charge an alchemist gem (or pebble) and throw it, it will explode with a radius of %d that illuminates the area.\n\t\tThis light is strong enough to blind for %d turns. It also deals %0.2f arcane damage.\n\t\tIf an alchemist gem is used, it increases the damage by 10%% per material level.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dam = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/mana-alchemy.lua",
+  "line": 143,
+  "src": "Improves the contribution of primary stats on your inscriptions (any type) by %d%%.\n\t\tInscription effects also last %d%% longer.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " t.getMultiplier(self, t) * 100 return ("
+ },
+ {
+  "file": "data/talents/spells/martial-enchantments.lua",
+  "line": 87,
+  "src": "Cast a weapon enhancing enchantment on a weapon of your choice.\n\t\tThis increases the accuracy of the weapon by +%d and reduces the physical stat requirements by %d.\n\t\tThese values scale with your Spellpower.\n\t\tEnchantments make items arcane powered and you can only have one enchantment on an item at once.\n\t\tThis talent also acts as a mastery talent for enchanted weapons.\n\t\tIncreases Physical Power by %d and increases weapon damage by %d%% when using enchanted weapons.\n\t\tWill not stack with another Weapon Mastery talent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " inc = t.getPercentInc(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/martial-enchantments.lua",
+  "line": 246,
+  "src": "Cast a heavy armour enhancing enchantment on an armour of your choice.\n\t\tThis makes the armour easier to use, reducing the physical stat requirements by %d and the fatigue by %d.\n\t\tAt level 1, it allows you to wear enchanted heavy mail armour, gauntlets, helms, and heavy boots.\n\t\tAt level 2, it allows you to wear enchanted shields.\n\t\tAt level 3, it allows you to wear enchanted massive plate armour.\n\t\tEnchantments make items arcane powered and you can only have one enchantment on an item at once.\n\t\tThis talent also acts an armour mastery talent.\n\t\tYou become better at using your enchanted armour to deflect blows and protect your vital areas. \n\t\tIncreases Armour value by %d, Armour hardiness by %d%%, and reduces chance to be critically hit by %d%% with your current body armour.\n\t\t(This talent only provides bonuses when wearing heavy mail or massive plate armour.)\n\t\tAll effects of this talent only apply to armour that has been enchanted and do not stack with another armour training talent.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "riticalChanceReduction(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/martial-enchantments.lua",
+  "line": 330,
+  "src": "Charge raw arcane power into your weapon and then attack an adjacent enemy, doing %d%% weapon damage converted to arcane.\n\t\tIf this hits, the target will be thrown back.\n\t\tThis attack uses your spellpower in place of accuracy and applies all on weapon hit bonusses and effects at +%d%% strength.\n\t\tDamage multiplier increases with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/metal-alchemy.lua",
+  "line": 60,
+  "src": "When you throw your alchemist bombs, you infuse them with explosive metal shards that cause bleeding.\n\t\tIn addition all physical damage you do is increased by %d%%.\n\t\tYou cannot have more than one alchemist infusion sustain active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "daminc = t.getIncrease(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/metal-alchemy.lua",
+  "line": 86,
+  "src": "While Metal Infusion is active, your bombs cover your golem in a shell of shrapnel for %d turns when they hit it.\n\t\tWhile covered in this shell, any damage done to your golem is reduced by %d and any melee attacker will take %0.1f physical damage.\n\t\tThe effects increase with your talent level and with the Spellpower and damage modifiers of your golem.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "CAL, t.getDamage(self, t)) or 0 return ("
+ },
+ {
+  "file": "data/talents/spells/metal-alchemy.lua",
+  "line": 126,
+  "src": "Creates a line of dangerously sharp barbed wire of length %d for %d turns.\n\t\tAny creatures attempting to cross the line will be pinned for 1 turn and take %0.1f bleeding damage over 5 turns.\n\t\tDamage scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/metal-alchemy.lua",
+  "line": 159,
+  "src": "Take refuge inside your golem for %d turns. When this effect ends, you will be healed for %d.\n\t\tThis will also move any buffs/debuffs from you to your golem.\n\t\tHealing scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local heal = t.getHeal(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/morph.lua",
+  "line": 45,
+  "src": "Weakens your target, decreasing its defense, damage and saves by %d for 10 turns.\n\t\tThe weakening will improve with your spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/morph.lua",
+  "line": 91,
+  "src": "Focus your magic inwards enhancing your physical form. \n\t\tThis increases your Strength, Dexterity and Constitution by %d.\n\t\tYou also physically recover faster, increasing your Life regeneration by %0.1f and your Stamina regeneration by %0.1f per turn.\n\t\tThese values will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal regen = t.getRegen(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/morph.lua",
+  "line": 134,
+  "src": "Attempt to turn all creatures in a radius %d around a point to stone for %d turns.\n\t\tStoned creatures are unable to act or regen life and are very brittle.\n\t\tIf a stoned creature is hit by an attack that deals more than 30%% of its life it will shatter and be destroyed.\n\t\tStoned creatures are highly resistant to fire and lightning and somewhat resistant to physical attacks.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/morph.lua",
+  "line": 169,
+  "src": "All nearby enemies within radius %d are violently deconstructed, disarming them and doing %0.2f arcane damage.\n\t\tDoes +50%% damage verses stoned targets.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/new-staff-combat.lua",
+  "line": 121,
+  "src": "Increases weapon damage by %d%% and physical power by 30 when using staves.\n\t\tAlso grants the Channel Staff ability, which lets you fire an energy bolt from an equipped staff.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " inc = t.getPercentInc(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/new-staff-combat.lua",
+  "line": 183,
+  "src": "Strike the ground with your staff, creating a shockwave that travels up to %d tiles.\n\t\tAny enemy the shockwave passes through will take %d%% melee damage as physical, and be stunned for %d turns.\n\t\tStun chance will improve with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ur = t.getDazeDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/new-staff-combat.lua",
+  "line": 219,
+  "src": "Adopt a defensive posture, increasing your Defense, Armour and Spell Save by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "defense = t.getDefense(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/new-staff-combat.lua",
+  "line": 330,
+  "src": "Spin around, extending your weapon and damaging all targets around you for %d%% weapon damage. \n\t\tRaw power flows through your staff, projecting a nova of your staff's element doing %d%% weapon damage as its current element.\n\t\tDifferent staff elements result in different effects.\n\t\tFire: Flameshock.\n\t\tCold: Frozen Ground.\n\t\tAcid: Disarming Acid.\n\t\tLightning: Lightning Daze.\n\t\tLight: Blinding Light.\n\t\tDarkness: Darkness Knockback.\n\t\tNature: Natural Slow.\n\t\tBlight: Blighted Disease.\n\t\tPhysical: Physical Bleeding.\n\t\tTemporal: Temporal Stat Reduction.\n\t\tArcane: Arcane Silence.\n\t\tMental: Brainlocking Mind.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 59,
+  "src": "Learn how to cast lesser runes. You will learn new runes as follows:\n\t\tLevel 1: Lesser Magic Missile\n\t\tLevel 2: Lesser Lightning\n\t\tLevel 3: Lesser Heat Beam\n\t\tLevel 4: Lesser Acid Wave\n\t\tLevel 5: Lesser Biting Gale\n\t\tThese lesser runes work like runes for the purposes of Runic Saturation, Quicken Inscriptions, Inscription Mastery, but do not take up an inscription slot.\n\t\tThey still take a turn to cast and cost mana, and they scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 106,
+  "src": "Fires a Magic Missile that does %0.f arcane damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " dam = t2.getDamage(self, t2)*2 return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 141,
+  "src": "Fires a beam of lightning, doing %0.2f lightning damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " dam = t2.getDamage(self, t2)*2 return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 176,
+  "src": "Fires a beam of heat, doing %0.2f fire damage over 5 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " dam = t2.getDamage(self, t2)*3 return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 221,
+  "src": "Fires a wave of acid in a cone of radius 6, doing %0.2f acid damage. The corrosive acid will also disarm enemies struck for 3 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " dam = t2.getDamage(self, t2)*2 return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 262,
+  "src": "Fires a cone of chilling stormwind doing %0.2f cold damage.\n\t\tThe storm will soak enemies hit reducing their resistance to stuns by 50%% then attempt to freeze them for 3 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " dam = t2.getDamage(self, t2)*2 return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 306,
+  "src": "With perfect control, you teleport to another location up to %d tiles away. \n\t\tAdditional talent points increase the range.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " range = self:getTalentRange(t) return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 341,
+  "src": "Immobilise (pin and stun) all creatures in a radius %d ball for %d turns.\n\t\tThis talent checks pin immunity.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/ordered-hedgemagic.lua",
+  "line": 378,
+  "src": "Cover yourself in bright arcane fire. The flames will not hurt you, but will hurt anyone who hits you in melee for %d fire and %d arcane damage.\n\t\tThe brightness of the flames also increases your light radius by 1 and increases you defense against ranged attacks by %d.\n\t\tAlso increases you fire and arcane resistances by %d%%.\n\t\tThese effects scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "defence = t.getDefence(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/poison-alchemy.lua",
+  "line": 53,
+  "src": "When you throw your alchemist bombs, you infuse them with explosive poison that lowers healing.\n\t\tIn addition all nature damage you do is increased by %d%%.\n\t\tYou cannot have more than one alchemist infusion sustain active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "daminc = t.getIncrease(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/poison-alchemy.lua",
+  "line": 79,
+  "src": "While Poison Infusion is active, your bombs coat your golem in poison for %d turns when they hit it.\n\t\tWhile coated, any attack made by your golem has a %d%% chance to trigger a beam of poison towards the target, that does %0.1f nature damage over 6 turns. (This can only happen once per turn.)\n\t\tThe effects increase with your talent level and with the Spellpower and damage modifiers of your golem.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "URE, t.getDamage(self, t)) or 0 return ("
+ },
+ {
+  "file": "data/talents/spells/poison-alchemy.lua",
+  "line": 130,
+  "src": "Hurl a flask of knockout gas, which explodes on impact releasing the gas in a radius of %d.\n\t\tAny creatures affected by the gas will be put to sleep (%d power) for %d turns.\n\t\tAlchemist Protection reduction works as a chance to avoid hitting yourself with this.\n\t\tSleep power scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/poison-alchemy.lua",
+  "line": 173,
+  "src": "Carefully administered potions and magic allow you to transform your body into a much stronger form.\n\t\tThis increases your physical power and physical saves by %d, your maximum life by %d, your life regeneration by %d per turn, and your size category by 1.\n\t\tEach hit (spell or weapon) you make also has a %d%% chance of firing a beam of poison at the target, doing %0.1f nature damage over 6 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/poison-alchemy.lua",
+  "line": 206,
+  "src": "Cast a beam of poison at your target, doing %0.2f poison damage over six turns.\n\t\tThe damage will scale with your Spellpower",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/poison-alchemy.lua",
+  "line": 228,
+  "src": "Allows you to create up to %d special potions from ingredients you collect on your travels.\n\t\tShould you manage to complete 5 of these potions, you can gain entry into the Guild of Alchemists.\n\t\tIngredients can be viewed from the game menu. Recipies can be viewed in your journal.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal num = t.getElixirs(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/power.lua",
+  "line": 40,
+  "src": "Fold your magic inwards, into a small feedback loop, increasing your Spellpower by %d for your next spell.\n\t\tThis spell can Spell crit to last for more than one turn.\n\t\tThe Spellpower bonus is a fraction of your current Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ".getSpellpowerIncrease(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/power.lua",
+  "line": 71,
+  "src": "Surround yourself with a complex web of forcefields, increasing your stun and knockback resistance by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ist = 100*t.getStunRes(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/power.lua",
+  "line": 139,
+  "src": "Removes up to %d magical effects (both good and bad) and sustained talents from the target, and silences them for %d turns.\n\t\tThe Silence effect is applied with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ", t) local dur = t.dur(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/power.lua",
+  "line": 195,
+  "src": "Overloads one of your active shields, causing it to explode outwards damaging all nearby hostile creatures in a radius %d.\n\t\tDamage amount and type will depend on which shield is overloaded and how powerful the shield is.\n\t\tAffected shields are: Damage Shield, Time Shield, Displacement Shield, Disruption Shield, Elemental Shield.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/restoration.lua",
+  "line": 73,
+  "src": "Wrap yourself in life, increasing your maximum life by %d, your blight resistance by %d%% and your healing factor by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/restoration.lua",
+  "line": 184,
+  "src": "Consume nearby magical energy and convert it into healing energy.\n\t\tUp to a total %d magical beneficial effects or sustained spell talents will be removed from enemies in range.\n\t\tYou are healed for %d life for each effect or talent dispelled.\n\t\tThe number of effects removed can Spell crit.\n\t\tThe life healed will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ects = t.getNumEffects(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 214,
+  "src": "Alter the flow of secondary energies through a staff.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 228,
+  "src": "High magics of past ages. Understand them and gain power, but do not repeat the mistakes of the past.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 232,
+  "src": "The Void is not empty. There is power there, and madness. It wants you.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 240,
+  "src": "A new Element, one of great power.\n\tAfter spending 5 and then 10 talent points in this category, new corruted elemental talents will appear in other elemental categories.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 245,
+  "src": "Conveyance and Temporal magic combine in this school. Master them and distort space and time to your needs.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 249,
+  "src": "An extension of the Phantasm school, Illusion lets you take the fight directly into the minds of your enemies.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 253,
+  "src": "Magical energies and forces are carefully balanced everywhere. Tip the balance if you wish.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 265,
+  "src": "Shape life with arcane forces. Created by mages working in secret to repair the damage of the Spellblaze.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": ", name = , generic = true, description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 269,
+  "src": "Hedgemagery that focusses on control at the expense power.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 273,
+  "src": "Hedgemagery that focusses on power at the expense of control. Use at your own risk.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 318,
+  "src": "The forging of different elements into powerful spells.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 322,
+  "src": "The infusion of raw aether into base elemental magic.\nThese count as Arcane spells for Aether Avatar.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/staff-magic.lua",
+  "line": 84,
+  "src": "Channel raw mana through your staff, projecting a bolt of your staff's damage type doing %d%% staff damage.\n\t\tThe bolt will only hurt hostile targets and pass safely through friendly ones.\n\t\tThis attack always has a 100%% chance to hit and ignores target armour.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "gemod = t.getDamageMod(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/staff-magic.lua",
+  "line": 127,
+  "src": "Charge your staff in preparation for creating damage wards.\n\t\tGrants you the ability to use Ward at level +%d and increases your max wards by +%d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/staff-magic.lua",
+  "line": 233,
+  "src": "Channel raw mana through your staff, projecting a burst of your staff's damage type doing %d%% staff damage.\n\t\tDifferent staff damages result in different effects.\n\t\tFire: Flameshock explosion at target.\n\t\tCold: Frozen Ground explosion at target.\n\t\tAcid: Disarming Acid beam.\n\t\tLightning: Lightning Daze beam.\n\t\tLight: Blinding Light burst around you.\n\t\tDark: Dark Knockback burst around you.\n\t\tNature: Slime breath.\n\t\tBlight: Corrupted Blood breath.\n\t\tPhysical: Shard breath.\n\t\tTemporal: Turn Back The Clock explosion on target.\n\t\tArcane: Arcane Silence beam.\n\t\tMental: Brainlocking Mind burst around you.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "gemod = t.getDamageMod(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/staff-magic.lua",
+  "line": 278,
+  "src": "Prepare to take control of incoming arcane energies. Each time you are hit by one of these energies, you gain a special effect for %d turns. This can only happen every %d turns.\n\t\tArcane: +%d mana regen\n\t\tLight: +%d Accuracy and See Invis/Stealth\n\t\tDarkness: +%d Defense and Stealth\n\t\tTemporal: +%d%% reduced status duration\n\t\tBlight: +%d Spellpower\n\t\tEffects scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ight = 5 + math.ceil(power * 3) return ("
+ },
+ {
+  "file": "data/talents/spells/void.lua",
+  "line": 51,
+  "src": "Conjures up a beam of void energy, doing %0.2f darkness and %0.2f temporal damage.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "damage = t.getDamage(self, t)/2 return ("
+ },
+ {
+  "file": "data/talents/spells/void.lua",
+  "line": 72,
+  "src": "The voices talk to you. \n\t\tThey tell you how to hurt things (+%d%% spell crit chance).\n\t\tThey warn you of danger (+%d defense).\n\t\tThey feed on your sanity (-%d mental save).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/void.lua",
+  "line": 109,
+  "src": "Frays the boundary between the world and the void. All light will drain from a radius %d area.\n\t\tAll creatures will take %0.2f darkness damage and lose %d%% darkness resistance.\n\t\tMana users near the breach will be infected by a Manaworm as well.\n\t\tThe effects of this spell will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/void.lua",
+  "line": 179,
+  "src": "Existence ends where you begin. All you touch turns to less than dust.\n\t\tYou ignore %d%% of your target's darkness and temporal resistances.\n\t\tEverything in a radius %d around you takes %0.2f darkness and %0.2f temporal damage every turn.\n\t\tHowever it also drains your light radius and life regeneration by 1, and sometimes nearby walls just turn to dust.\n\t\tDamage will scale with your Spellpower. %s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "f.taintmarks then stringy = end return ("
+ },
+ {
+  "file": "data/talents/spells/water-alchemy.lua",
+  "line": 57,
+  "src": "Generally used for liquifying difficult ingredients, this trick can be used in combat to do %0.2f acid damage.\n\t\tIf you have Acid Infusion active, the damage increase will apply to this spell and it can blind as well.\n\t\tThe damage will increase with your Spellpower. Range increases with Dexterity.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/water-alchemy.lua",
+  "line": 110,
+  "src": "Throw a flask of poison with a small alchemist bomb attached. On impact the bomb will cause the poison to vaporise, creating a poisonous cloud of radius 2 for %d turns.\n\t\tCreatures inside this cloud will be poisoned for 10 turns, doing %0.2f poison damage per turn and reducing their damage by %d%%.\n\t\tThe poison strength will increase with your Spellpower. Range increases with Dexterity.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l red = t.getReduction(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/water-alchemy.lua",
+  "line": 153,
+  "src": "An extension of a spell normally used to keep potions in a non-volatile state.\n\t\tThis spell chills all enemies in a radius of %d, for %0.2f cold damage and possibly freezing them.\n\t\tIf you have Frost Infusion active, the damage increase will apply to this spell and enemies will be frozen for %d turns.\n\t\tThe damage and duration will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 31,
+  "src": "Increases Physical Power by %d and increases weapon damage by %d%% when using staves.\n\t\tWill not stack with another Staff Mastery talent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " inc = t.getPercentInc(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 83,
+  "src": "Hit a target for %d%% melee damage and stun it for %d turns.\n\t\tStun duration will improve with talent level.\n\t\tAt level 5 this attack can not miss.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ur = t.getDazeDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 115,
+  "src": "Adopt a defensive posture, increasing your defense and armour by %d.\n\t\tEffect scales with your Dexterity.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "defense = t.getDefense(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 140,
+  "src": "You cannot use Staffwhirl without a staff weapon!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not weapon then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 163,
+  "src": "Spin around, extending your weapon and damaging all targets around you for %d%% weapon damage. \n\t\tFollowed by a quick slam on your primary target for an extra %d%% weapon damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 78,
+  "src": "Arcanists are Archmages who focus on control of pure magical power and the Cosmos in general, rather than playing with dirty elements directly.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "build.mage end, locked_desc = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 79,
+  "src": "Archmagi start with knowledge of many schools of magic. They sometimes dabble with dark magics, for purely academic reasons.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ild.mage end, locked_desc = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 80,
+  "src": "Most Arcanists have been trained in the secret town of Angolwen and possess a unique spell to teleport to it directly.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "d.mage end, locked_desc = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 167,
+  "src": "Elementists are a bit more down to earth than most Archmages.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "build.mage end, locked_desc = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 168,
+  "src": "While Archmages focus on control of pure magical power and the Cosmos in general, Elements focus on controlling the physical elements around them.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ild.mage end, locked_desc = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 169,
+  "src": "Archmagi start with knowledge of many schools of magic. However, they usually refuse to have anything to do with dark magics.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "d.mage end, locked_desc = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 170,
+  "src": "Most Elementists have been trained in the secret town of Angolwen and possess a unique spell to teleport to it directly.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "mage end, locked_desc = , desc = { , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 173,
+  "src": "#LIGHT_BLUE# * +0 Strength, +0 Dexterity, +1 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "nd, locked_desc = , desc = { , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 174,
+  "src": "#LIGHT_BLUE# * +5 Magic, +3 Willpower, +0 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": ", locked_desc = , desc = { , , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 261,
+  "src": "An Enchanter is a manipulator of materials using magic.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 262,
+  "src": "Their lack of advanced magical training from Angolwen, means that their spells don't have the power or finesse of an Archmage.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 263,
+  "src": "On the other hand, they have carefully studied every magical item they could get their hands on, and can enchant their own items (and themselves).",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 264,
+  "src": "Someone deciding to take on an Enchanter could find themselves up against surprisingly effective hedgemagic, a whole enchanted armoury, or both.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "riptor{ type = , name = , desc = { , , ,"
+ },
+ {
+  "file": "data/maps/angolwen-overlay.lua",
+  "line": 40,
+  "src": "tt.....tt\nt..###..t\n..#####..\n.#######.\n.#######.\n.#######.\n..##8##..\nt..#_#..t\ntt.._..tt\n^^^^_^^^^\n^^^^_^^^^\n^^^^_^^^^",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "(, , nil, ) defineTile(, , nil, ) return"
+ },
+ {
+  "file": "overload/data/quests/_lightning-overload.lua",
+  "line": 25,
+  "src": "saved-derth",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "] = desc[#desc+1] = if self:isCompleted("
+ },
+ {
+  "file": "overload/data/quests/_lightning-overload.lua",
+  "line": 31,
+  "src": "tempest-entrance",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "desc[#desc+1] = end if self:isCompleted("
+ },
+ {
+  "file": "overload/data/quests/_lightning-overload.lua",
+  "line": 40,
+  "src": "derth",
+  "tag": "effect subtype",
+  "ctor": "",
+  "prefix": "ot = game.level:pickSpot{type=, subtype="
+ },
+ {
+  "file": "overload/data/quests/_lightning-overload.lua",
+  "line": 74,
+  "src": "derth-attack-over",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "al Chat = require local chat = Chat.new("
+ },
+ {
+  "file": "overload/data/quests/_lightning-overload.lua",
+  "line": 88,
+  "src": "tempest-peak",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "kis = function(self) game:changeLevel(1,"
+ },
+ {
+  "file": "overload/data/quests/_lightning-overload.lua",
+  "line": 94,
+  "src": "wilderness-1",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "rance = function(self) game:onLevelLoad("
+ },
+ {
+  "file": "overload/data/quests/_lightning-overload.lua",
+  "line": 96,
+  "src": "tempest-peak",
+  "tag": "effect subtype",
+  "ctor": "",
+  "prefix": "al spot = level:pickSpot{type=, subtype="
+ },
+ {
+  "file": "overload/data/quests/_lightning-overload.lua",
+  "line": 147,
+  "src": "restored-derth",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "elf:isEnded()) and not self:isCompleted("
+ },
+ {
+  "file": "overload/data/quests/brotherhood-of-alchemists.lua",
+  "line": 29,
+  "src": " is the newest member of the Brotherhood of Alchemists.#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "rue then desc[#desc+1] = ..self.winner.."
+ },
+ {
+  "file": "overload/data/quests/brotherhood-of-alchemists.lua",
+  "line": 31,
+  "src": "#RED#You aided various denizens of Maj'Eyal in their attempts to join the Brotherhood of Alchemists, though you did not prove the deciding factor for any. This year's new member is ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "player_won == false then desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/brotherhood-of-alchemists.lua",
+  "line": 43,
+  "src": "#SLATE#Having failed to gain admittance to the Brotherhood of the Alchemists, ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "isStatus(self.DONE) then desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/brotherhood-of-alchemists.lua",
+  "line": 45,
+  "src": ". He has given you some notes on the ingredients:",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "items[self.e[i][j].id].use_simple.name.."
+ },
+ {
+  "file": "overload/data/quests/brotherhood-of-alchemists.lua",
+  "line": 68,
+  "src": "#LIGHT_GREEN#Thanks to your skills and travels, you are now the newest member of the Brotherhood of Alchemists.#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ".player_won == true then desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/brotherhood-of-alchemists.lua",
+  "line": 70,
+  "src": "#LIGHT_BLUE#Various alchemists around Maj'Eyal are competing to gain entry into the great Brotherhood of Alchemists, you included.#WHITE#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "hen desc[#desc+1] = else desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/brotherhood-of-alchemists.lua",
+  "line": 79,
+  "src": "You need to collect some ingredients to make the ",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "irs.player[i].full) then desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/brotherhood-of-alchemists.lua",
+  "line": 219,
+  "src": "brotherhood-of-alchemists",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ayer_last_elixir) player:setQuestStatus("
+ },
+ {
+  "file": "overload/data/chats/_angolwen-leader.lua",
+  "line": 24,
+  "src": "save-derth",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "Chat{ id=, text = , answers = { {, jump="
+ },
+ {
+  "file": "overload/data/chats/_angolwen-leader.lua",
+  "line": 26,
+  "src": "teleport-urkis",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "() and q:isStatus(q.DONE) end}, {, jump="
+ },
+ {
+  "file": "overload/data/chats/_angolwen-leader.lua",
+  "line": 51,
+  "src": "You have our thanks, @playername@. It is saddening to loose a great Mage, but it is sadder still that he used his magic destructively.\nYou have seen how destructive magic can be, so learn how to use magic for creation instead. #LIGHT_GREEN#*She hands you an Academy Token.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "t_urkis() end}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-derth.lua",
+  "line": 121,
+  "src": "#LIGHT_GREEN#*A human robed in immaculate white satin opens the door and eyes you appraisingly.*#WHITE#\nOh no, I'm not letting you steal my secrets. #LIGHT_GREEN#*The door is slammed shut in your face.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "emist_quest == then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-elvala.lua",
+  "line": 121,
+  "src": "#LIGHT_GREEN#*A shabbily-dressed elf opens the door, scratching his head in apparent puzzlement.*#WHITE#\nYou aren't my apprentice! Do you think I'm crazy enough to fall for that trick?! #LIGHT_GREEN#*The door is slammed shut in your face.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "emist_quest == then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-golem.lua",
+  "line": 77,
+  "src": "Change my name? I'm quite happy being 'Telos' thankyou. Though I wouldn't mind being 'Telos the Great and Powerful'...",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "= , answers = ans } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-hermit.lua",
+  "line": 116,
+  "src": "SON OF A RITCH! YOU SHOW UP TEN MINUTES AFTER I GET THE NEWS THAT SOME JACKASS ALREADY FINISHED THE ELIXIRS AND IS GETTING ACCEPTED BY THE BROTHERHOOD. WHAT THE HELL TOOK YOU SO LONG? MIRVENIA'S MAMMARIES, I'LL TAKE THESE AND MAKE YOU YOUR REWARD, BUT ONLY BECAUSE A CURSE WILL KILL ME IF I DON'T. AND IF IT TASTES LIKE PISS, THAT'S YOUR IMAGINATION, I'M SURE.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "er_elixir) if lose == true then return ("
+ },
+ {
+  "file": "overload/data/chats/alchemist-hermit.lua",
+  "line": 125,
+  "src": "#LIGHT_GREEN#*After a great deal of pounding, a halfling wrapped in charred, smoking robes opens the door. He looks irritated.*#WHITE#\nIT'S NOT ENOUGH THAT I WORK ALL MORNING TO MAKE A POTION THAT ENDS UP NEARLY BLOWING MY ASS OFF, BUT NOW I'VE GOT YOU TURNING UP TO GLOAT ABOUT IT HAPPENING! #LIGHT_GREEN#*The door is slammed shut in your face.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "emist_quest == then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 123,
+  "src": "#LIGHT_GREEN#*A dwarf in stained, battered mail armor opens the door.*#WHITE#\n\tBy the corpses of the gods, I'm more likely to let my mother-in-law through the door before I let you through! #LIGHT_GREEN#*The door is slammed shut in your face.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "c.errand_given then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 131,
+  "src": "#LIGHT_GREEN#*A dwarf in stained, battered mail armor opens the door.*#WHITE#\n\tBy the corpses of the gods, I'm more likely to let my mother-in-law through the door before I let you through! \n\n\tBut perhaps you could help a brother alchemist with a little errand?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "rs = { {}, } } else newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 137,
+  "src": "No thanks, its probably something to make me waste my time.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " player) npc.errand_given = true end}, {"
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 146,
+  "src": "#LIGHT_GREEN#*A dwarf in stained, battered mail armor opens the door.*#WHITE#\n\tSay, you interested in dismembering stuff and getting paid?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "d(e[3].start)) then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 176,
+  "src": "Oh, easy. You get a swig of each brew, of course. They'll put hair on your chest, and possibly your eyelids and fingernails. And, if your aid proves the deciding factor, then I've got a real treat for you: perhaps the last Taint of Telepathy left in Maj'Eyal.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " = { {, jump=}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 238,
+  "src": "Right, here's the list. Oh, one more thing. Got me some fellas already out hunting for this stuff, and I'll not play favorites. One of them brings me those ingredients before you do, and you're out of luck. Hurry back.\n\n\t\tOh, and one other last thing... if you have the time for another errand, though I've got no reward on this one.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "rs = { {}, } } else newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 263,
+  "src": "#LIGHT_GREEN#*The mailed dwarf opens his door.*#WHITE#\n\tAha, my favorite adventurer.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "her_alchemist_nums) newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 348,
+  "src": "#LIGHT_GREEN#*He gleefully claps you on the shoulder.*#WHITE#\n\tHa ha! This is the last one! Stire and Marus and that damned hermit can suck on my beard! And so can my wife! YES, I KNOW YOU CAN HEAR ME. Good work, friend. Let's have them.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "name, 3) end }, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 396,
+  "src": "#LIGHT_GREEN#*The dwarf finally returns with a vial.*#WHITE#\n\tTastes like Urh'Rok's own piss, but it gets the job done.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " = { {, jump=}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 428,
+  "src": "#LIGHT_GREEN#*The dwarf finally returns with a vial and a small pouch.*#WHITE#\n\tI put a bit of the good stuff in this one, though it won't do you any favors tomorrow morning. And careful with that Taint of Telepathy, especially if the wife answers the door the next time you knock. Har!",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "(player) end }, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 523,
+  "src": "Here's a list of the creature bits I need. Good luck with the murdering!\n\n\tOh, and one other last thing... if you have the time for another errand, though I've got no reward on this one.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "rs = { {}, } } else newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-last-hope.lua",
+  "line": 579,
+  "src": "He points the location of the graveyard on your map.",
+  "tag": "log",
+  "ctor": "newChat",
+  "prefix": "ealAround(spot.x, spot.y) end) game.log("
+ },
+ {
+  "file": "overload/data/chats/alchemist-player.lua",
+  "line": 50,
+  "src": "#LIGHT_GREEN#*You open your book of alchemical formulae... What would you like to do?*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": ") end if not q then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-player.lua",
+  "line": 58,
+  "src": "#LIGHT_GREEN#*The Brotherhood of Alchemists is accepting one new member this year. To get in you have to complete a variety of challange elixirs. Other alchemists around Maj'Eyal are also competing and are hiring adventurers to do the dirty work for them. Since you are an adventurer, you can save yourself some money...*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " = { {, jump=}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-player.lua",
+  "line": 78,
+  "src": "#LIGHT_GREEN#*You open your book of alchemical formulae... *#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "Status(q.DONE) then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-player.lua",
+  "line": 100,
+  "src": "#LIGHT_GREEN#*A few stuffy Brotherhood alchemists spend hours trying to fault your elixirs. \n\tEventually they give up and the mood changes suddenly from chilly to welcoming.\n\tAn impromptu ceremony is held and you are presented with a pale blue gem. #WHITE#\n\t\"We generally wear it as an unofficial members badge.\"#LIGHT_GREEN#\n\tAfter the ceremony they hold a small soiree and serve slightly dodgy canapes.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "player) end, }, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-player.lua",
+  "line": 106,
+  "src": "[Leave before you get food poisoning; the dip tastes a bit like nightshade and who knows what the punch has been spiked with...]",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "} } newChat{ id=, text = , answers = { {"
+ },
+ {
+  "file": "overload/data/chats/alchemist-player.lua",
+  "line": 125,
+  "src": "#LIGHT_GREEN#*Which elixir do you wish to craft?*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "t.DONE) end, }, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-player.lua",
+  "line": 206,
+  "src": "#LIGHT_GREEN#*Having completed the elixir, you should decant it into two vials. One for you, one for the Brotherhood*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "st) end, }, {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-player.lua",
+  "line": 297,
+  "src": "#LIGHT_GREEN#*You update your alchemical notes. New recipies (if any) are listed in your journal.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "[12].id) end }, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-start.lua",
+  "line": 22,
+  "src": "#LIGHT_GREEN#*Triumphantly, you claim the precious ingredient from the corpse in front of you.\n\tYou quickly set up your portable alchemy equipment and get to work.\n\tCareful preparation means you need only add the final ingredient to the brew and simmer gently until it is cooked.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-start.lua",
+  "line": 32,
+  "src": "#LIGHT_GREEN#*It is complete. Your Elixir of Knowledge is complete!\n\tAs you carefully decant the elixir into a vial and idea comes into your mind... (possibly on the fumes of the elixir?)*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " = { {, jump=}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/alchemist-start.lua",
+  "line": 40,
+  "src": "#LIGHT_GREEN#*Getting this rare ingredient was rather easy, and much quicker than waiting for someone else to do it.\n\tYou could become an Adventurer and collect all the rare ingredients yourself.\n\tIt would save a lot of time and money.#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " = { {, jump=}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 266,
+  "src": "Welcome @playername@ to the Angolwen Academy. \nHere you may exchange an Angolwen Academy Training Token and a small fee (for teaching materials) for training in the Arcane.\nHow can I help you?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " return answers end newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 280,
+  "src": "Beginner classes cost 100 gold.\nAdvanced classes cost 500 gold.\nMastery classes cost 1000 gold.\nSome subjects (categories) are tougher than others and you may need to improve your Magic before you are able to study them.\nOr we also have a couple of special offers available at the moment.\nAt what level would you like to study?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " {, jump=}, {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 302,
+  "src": "Our goal in Angolwen is to see magic preserved for future use by all. \nWe would like to teach as much as anyone wants to learn, but we would also see that magic favours no people in particular. \nWe have only so much time we can devote to teaching, so we restrict it to a little per person.\nThis way, anybody who genuinely wishes to study magic will not be turned away.\nAnd so, we cannot accept payment for more training.\nTolerance of the arcane is all that we request as payment.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " {, jump=}, {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 314,
+  "src": "This will give you the basic foundation of the subject you study. (grants the category locked at 0.8 mastery)",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "answers = { {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 319,
+  "src": "This course goes into enough detail for you to put your learning into practise. (unlocks the category at existing mastery)",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "enerate_basics(), } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 324,
+  "src": "A rigorous class that will add depth to your understanding. (increases category mastery by 0.2)",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "erate_advanced(), } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 329,
+  "src": "Special offer one is a buy one advanced training in staves, get the basic training for free.\nSpecial offer two is a basic mana channelling workshop (increases mana regeneration) for those without a traditional magical background. A bargain at only one token.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "nerate_mastery(), } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 335,
+  "src": "I would like to learn basic mana channelling please.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " 500 then return end return true end}, {"
+ },
+ {
+  "file": "overload/data/chats/angolwen-academy.lua",
+  "line": 350,
+  "src": "The current special offer is a buy one advanced training in staves, get the basic training for free.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "er, ) end}, {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/command-staff.lua",
+  "line": 28,
+  "src": "Just started the chat, and we apparently have o.factory_settings.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "player if o.factory_settings then print("
+ },
+ {
+  "file": "overload/data/chats/command-staff.lua",
+  "line": 30,
+  "src": "Just started the chat, and there's no o.factory_settings",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "actory_settings then print() else print("
+ },
+ {
+  "file": "overload/data/chats/command-staff.lua",
+  "line": 54,
+  "src": "It is not yet your place to command such a staff as this. To do so invites obliteration.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "s_full = , } if o.no_command then return"
+ },
+ {
+  "file": "overload/data/chats/disenchant-item.lua",
+  "line": 39,
+  "src": " [Standard Disenchant]\nAre you sure?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "nd, jump=}, {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/disenchant-item.lua",
+  "line": 61,
+  "src": " [Recover Gem/Rune]\nAre you sure?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "em) end, }, {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/disenchant-item.lua",
+  "line": 80,
+  "src": " [Remove all properties]\nAre you sure?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "em) end, }, {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/mage-apprentice-quest.lua",
+  "line": 104,
+  "src": "Ah yes! I am so glad! I will be able to go back to Angolw...err... Oh well, I guess I can tell you; you deserve it for helping me.\n\tDuring the dark years of the Spellhunt, many thousands of years ago, Linaniil, the great mage of the Kor'Krul, worried that magic might disappear with her generation and be lost to mortals should they need it again.\n\tSo she set a secret plan into action and built a secret place where magic would be kept alive.\n\tHer plan worked and the group built a town called Angolwen in the western mountains. #LIGHT_GREEN#*He marks it on your map, along with a portal to access it*#WHITE#\n\tNot many people are accepted there but I will arrange for you to be allowed inside.\n\tPlease take this as well.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "wen_academy == then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/mage-apprentice-quest.lua",
+  "line": 129,
+  "src": "Ah yes! I am so glad! I will be able to go back to Angolw...err... Oh well, I guess I can tell you; you deserve it for helping me.\nDuring the dark years of the Spellhunt, many thousands of years ago, Linaniil, the great mage of the Kor'Krul, worried that magic might disappear with her generation and be lost to mortals should they need it again.\nSo she set a secret plan into action and built a secret place where magic would be kept alive.\nHer plan worked and the group built a town called Angolwen in the western mountains. #LIGHT_GREEN#*He marks it on your map, along with a portal to access it*#WHITE#\nNot many people are accepted there but I will arrange for you to be allowed inside.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "() end, }, } } else newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/tarelion-start-archmage.lua",
+  "line": 50,
+  "src": "Good luck!\nReturn to me when you done.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "p=}, {, jump=}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/tarelion.lua",
+  "line": 22,
+  "src": "I say, you there. Yes, you, young one!\n\tYou seem like the adventuring fare, up to all sorts of doo-daddle in the outside world, I imagine. Well, don't forget to pay patronage to our good library here in the city. The riches of the world are all well and good, but where would we be without the gift of knowledge? And all proceeds go towards the funding of further research. No greater cause, yes?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "wen_academy == then newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/tarelion.lua",
+  "line": 49,
+  "src": "Smashing work at stopping our work from smashing down again!\nThough the disturbence you found is disturbing. Perhaps something is up there interfering with its orbit?\nAnyway, great work, take this, you deserve it.\t#LIGHT_GREEN#*He hands you an Academy Token.*#WHITE#",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "answers = { {}, } } newChat{ id=, text ="
+ }
+]

@@ -1,0 +1,4930 @@
+[
+ {
+  "file": "init.lua",
+  "line": 18,
+  "src": "Doctornull's Class Pack",
+  "tag": "init.lua long_name",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "init.lua",
+  "line": 26,
+  "src": "Contains some new hybrid classes: Ascetic, Blood Mage, Creep, Flenser, Striker, Gravitic Infantry, Storm Warden, Transcendent Fist, Vector, and a few others.\n\nDetails & discussion here:\nhttp://forums.te4.org/viewtopic.php?f=50&t=38670\n\nThis revision is mostly about removing incompatible bits which changed between 1.4 and 1.5, so the classes are rather bare at the moment. I'm registering it so I can play online. I'll post when the additional content is ready.",
+  "tag": "init.lua description",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 36,
+  "src": "NPCs are all creatures which you don't control.\n\nSometimes a rare or boss NPC will be randomly generated based on classes which are available to the player. The top option allows you to decide if the game can use classes from Nullpack for these NPCs.\n\nSometimes you'll meet an NPC who is randomly built using any talents in the game (for example, hostile Adventuring Parties). The bottom option allows you to prohibit Nullpack talents from being selected randomly by this kind of NPC. If you've unlocked the Adventurer class, that class will also be affected by this option.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 46,
+  "src": "#GOLD##{bold}#Nullpack: NPCs get Nullpack classes?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ne = class_zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 60,
+  "src": "Change Selection",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " name= }, { name= }, } Dialog:listPopup("
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 60,
+  "src": "Should the game allow NPCs based on Nullpack classes? #GOLD#If you change this option, you will need to re-start the game to see it take effect.#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 67,
+  "src": "#GOLD##{bold}#Nullpack: Adventurers and random NPCs can have Nullpack talents?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ne = class_zone, name = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 81,
+  "src": "Should the game allow Adventurers and random NPCs to use Nullpack talents? #GOLD#If you change this option, you will need to re-start the game to see it take effect.#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 90,
+  "src": "If you choose #GOLD#no#LAST# the Ascetic gains Spell/Enhancement.\nIf you choose #GOLD#yes#LAST# the Ascetic gains the new spell tree Spell/Arcane Surge.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 93,
+  "src": "#GOLD##{bold}#Nullpack: Give Ascetic Arcane Surge?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 107,
+  "src": "Give Ascetics the new Arcane Surge tree? #GOLD#If you change this option, you will need to start a new game to see it take effect.#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 116,
+  "src": "If you choose #GOLD#no#LAST# the Striker gains Spell/Divination.\nIf you choose #GOLD#yes#LAST# the Striker gains the new spell tree Cunning/Voidwalker, making the Striker among the most mobile classes in the game.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 119,
+  "src": "#GOLD##{bold}#Nullpack: Give Striker Voidwalker?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 133,
+  "src": "Give Strikers the new Voidwalker tree? #GOLD#If you change this option, you will need to start a new game to see it take effect.#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 142,
+  "src": "If you choose #GOLD#no#LAST# the Alchemist remains unchanged.\nIf you choose #GOLD#yes#LAST# then new Alchemical categories are opened for players and NPCs alike.\n#RED#Warning#LAST#: changing this option will break saved games. Start a new game after changing this.\n",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 147,
+  "src": "#GOLD##{bold}#Nullpack: Use new Alchemy trees?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/ask-npc-classes.lua",
+  "line": 161,
+  "src": "Give Alchemists the new Celestial Alchemy, Toxic Alchemy, and War Alchemy trees? #GOLD#If you change this option, you will need to start a new game to see it take effect.#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 67,
+  "src": "Could not find module.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "rint(name, value) if not name then error"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 72,
+  "src": "ashes-urhrok",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "equire if value.addons and value.addons["
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 73,
+  "src": "Blood Mage",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "dons[] then Birther:getBirthDescriptor(,"
+ },
+ {
+  "file": "data/new_damage_types.lua",
+  "line": 38,
+  "src": "balefire",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "nd return d end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/new_damage_types.lua",
+  "line": 48,
+  "src": "surgefire",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "2) return d end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/new_damage_types.lua",
+  "line": 73,
+  "src": "natural flames",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "nd return 0 end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/new_damage_types.lua",
+  "line": 90,
+  "src": "vile damage",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "nd return 0 end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/new_damage_types.lua",
+  "line": 100,
+  "src": "balefire bolt",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": " return dam end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/new_damage_types.lua",
+  "line": 111,
+  "src": "voidburn",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "m.dur}) end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/new_damage_types.lua",
+  "line": 131,
+  "src": "searing beam",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "end end end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/new_damage_types.lua",
+  "line": 146,
+  "src": "Toxic Storm",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "t}) end end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/talents.lua",
+  "line": 86,
+  "src": "[NULLPACK] Using hooks due to engine version =",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "pare(engine.version,{1,1,6}) then print("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 19,
+  "src": "ascetic combat",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 19,
+  "src": "Basic melee proficiency with a magic staff.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 22,
+  "src": "Staff Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 54,
+  "src": "You cannot use %s without a staff!",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "f not weapon then game.logPlayer(self, ("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 72,
+  "src": "Staff bonk (melee attack as %s damage).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ement or weapon.combat.damtype) return ("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 77,
+  "src": "Staff Ascetic",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "rmat( damtype ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 105,
+  "src": "This talent requires a staff.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 146,
+  "src": " (currently %s)",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "t or weapon.combat.damtype) type_str = ("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 149,
+  "src": "Increases Physical Power by %d and increases weapon damage by %d%% when using staves. Mastery talents overlap (do not stack) with other mastery talents: if more than one mastery talent applies to a weapon, you only gain the benefit of the best one.\n  You can sustain this talent while wielding a staff to cause your default melee attacks to deal your staff's associated damage type%s.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "mageType:get(damtype).name) end return ("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 160,
+  "src": "advanced staff combat",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 160,
+  "src": "Advanced melee techniques which use a magic staff.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 163,
+  "src": "Staff Flurry",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 179,
+  "src": "This talent requires a staff to use.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 213,
+  "src": " as %s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "pon.combat.damtype if d then damtype = ("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 216,
+  "src": "Lashes out with a flurry of thrusts, hitting your target three times with your staff for %d%% weapon damage%s.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "DamageType:get(d).name) end end return ("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 222,
+  "src": "Staff Whirl",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " 1.0), damtype) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 279,
+  "src": "Whirl around, extending your staff and damaging all enemies around you for %d%% weapon damage%s.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "(DamageType:get(d).name) end end return("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 285,
+  "src": "Reckless Invocation",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " 2.1), damtype) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 400,
+  "src": "You must wield a staff to use this talent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "sStaffWeapon() if not weapon then return"
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 409,
+  "src": "fire which burns over 3 rounds.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "geType.FIRE then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 412,
+  "src": "frost which can immobilize.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "geType.COLD then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 415,
+  "src": "either blinding or disarming acid (randomly chosen).",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "geType.ACID then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 418,
+  "src": "lightning daze.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "TNING_DAZE) then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 421,
+  "src": "blinding light.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "eType.LIGHT then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 424,
+  "src": "blinding darkness.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "pe.DARKNESS then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 427,
+  "src": "poison, insidious poison or crippling poison (randomly chosen).",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "Type.NATURE then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 430,
+  "src": "corrupted blood (which can inflict a random disease).",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "Type.BLIGHT then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 433,
+  "src": "gravity (which can pin).",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "pe.GRAVITY) then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 436,
+  "src": "temporal stun, temporal wasting or temporal slow (randomly chosen).",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "pe.TEMPORAL then dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 444,
+  "src": "arcane damage which can silence.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "name = n .. else dam_name = burst_name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 448,
+  "src": "Based on your current staff element (%s), the burst's damage will be %s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "dam_name = burst_name = end end return ("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 464,
+  "src": "Unleash raw, chaotic energy from your staff. You strike an enemy for %d%% weapon damage%s, and evoke a burst that deals %0.2f damage to enemies in radius %d, regardless of if you hit with the blow.\n  %s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "DamageType:get(d).name) end end return ("
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 475,
+  "src": "Reckless Posture",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "osion(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/advanced-staff-combat.lua",
+  "line": 529,
+  "src": "You grip your staff in an aggressive posture, reducing the cooldown of your staff-combat talents by %d and increasing your physical critical chance by %0.2f%%. This bonus increases with your Spellpower.\n  However, your attacks are less precise and you expose yourself to danger, imposing -10 Accuracy and -10 Defense while active.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "crit_chance = t.getCrit(self,t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 21,
+  "src": "toxic alchemy",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 21,
+  "src": "Alchemical control over unhealthy concoctions.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 24,
+  "src": "Toxic Infusion",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 66,
+  "src": "When you throw your alchemist bombs, you augment them with noxious and highly reactive reagents which poison enemies in addition to increasing your base physical damage. The poison lasts for %d turns, dealing %0.2f Nature damage each turn (%0.2f total), and stacks with itself and other deadly poisons.\n  While sustained, all physical damage you do is increased by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "daminc = t.getIncrease(self, t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 73,
+  "src": "Noxious Vigor",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " total, daminc) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 91,
+  "src": "While Toxic Infusion is active, the reagents in your bombs invigorate your golem. For %d turns your golem gains %d%% global speed and +%d%% resist all.\n  The speed increases with your talent level, the duration increases with your talent level and Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l resist = t.getResist(self, t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 99,
+  "src": "Toxic Beam",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " speed, resist) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 200,
+  "src": "Imbue an alchemist gem with toxic energy.\n\t\t\t\t\t\t\t  The gem will disintagrate into a beam dealing %0.1f physical damage, which will poison enemies it hits with a vulnerability poison dealing %0.1f Arcane damage each turn over 8 turns (%0.1f total), and reducing all of the victim's resistances by %d%%.\n  Each kind of gem will also provide a specific effect.\n  The damage will improve with better gems and with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l reduce = t.getReduce(self, t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 212,
+  "src": "Toxic Storm",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " dam), reduce ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 321,
+  "src": "You have learned much about healing from your experience with magical toxins. You gain passive %d%% immunity to poisons and diseases, and %d%% resistance to Nature and Blight damage.\n  You can activate this talent to crush two alchemist gems and evoke a radius %d storm of toxic vapors around yourself for %d turns. This storm buffets enemies for %0.1f acid damage and may poison foes with a random poison for %d turns (%0.1f damage per turn, %0.1f total).\n  You and your allies will not be harmed by the storm. Instead, each turn there is a %d%% chance the storm will act as a medicine and cure you or your ally of one magical or physical ailment.\n  The damage will increase with your Spellpower, and the physical damage and poison damage can both crit separately.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al chance = t.getChance(self, t) return("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 336,
+  "src": "solar alchemy",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 336,
+  "src": "Alchemical studies of stellar phenomena.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 339,
+  "src": "Solar Infusion",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 373,
+  "src": "When you throw your alchemist bombs, you infuse them with blazing sunlight that can blind.\n  While sustained, all light damage you do is increased by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "daminc = t.getIncrease(self, t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 380,
+  "src": "Solar Golem",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " format(daminc) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 421,
+  "src": "Your golem shines, increasing its lite radius each time you learn this talent.\n\t\t\t\t  While Solar Infusion is active, your explosions and your Solar Beams will heal your golem and augment its damage shields, repairing %0.1f damage and either creating a damage shield for the same amount, or reinforcing and extending its existing damage shield for an additional turn. A damage shield can be extended in this way up to 10 times, after which it will expire naturally.\n\t\t\t\t\t  The healing will increase with your spellpower, is affected by your golem's healing factor, and can crit.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local heal = t.getHeal(self, t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 430,
+  "src": "Solar Beam",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "): format(heal) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 530,
+  "src": "Focus brilliant light through one of your alchemical gems.\n  The gem will disintagrate into a beam dealing %0.1f light damage, which will linger on enemies it hits, causing %0.1f light damage each turn over 6 turns (%0.1f total), and reducing the target's armor by %d.\n\t\t\t\t\t  Each kind of gem will also provide a specific effect.\n\t\t\t\t\t  The damage will improve with better gems and with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " = t.getArmorReduction(self, t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 542,
+  "src": "Solar Shield",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", dam), armor ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 589,
+  "src": "Your experience channeling the light of the sun has improved your health, and you passively gain +%d%% healing factor.\n  You can activate this talent to crush an alchemist gem and evoke a damage shield which will absorb up to %d damage and last for %d turns. The amount absorbed will increase with your Spellpower, and can crit.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self, t) return("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 601,
+  "src": "war alchemy",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 628,
+  "src": "Turn part of your target into fire, burning the rest for %0.2f fire damage over 8 turns.\n\t\t\t\t\t\t  The damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 634,
+  "src": "Chill",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ".FIRE, damage)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 699,
+  "src": "Conjures up a cone of frost with radius %d. Any enemies caught in the area will suffer %0.2f cold damage and may be slowed for up to %d turns.\n  The cold crystalizes your thoughts, and those of your allies in the area of effect, removing up to %d detrimental mental or fire effect%s.\n  The damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 707,
+  "src": "Thunderball",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "r > 1) and or ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 774,
+  "src": "Call down a burst of lightning with radius %d. Any enemies caught in the area will suffer %0.2f lightning damage and may be shocked for up to %d turns, halving their stun and pin resistance.\n\t\t\t\t\t\t  The electricity stimulates you (and any of your allies in the area of effect), removing up to %d detrimental pin or slow effect%s.\n\t\t\t\t\t\t  The damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 782,
+  "src": "Detonation",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "r > 1) and or ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/alchemy.lua",
+  "line": 851,
+  "src": "Invoke a terrible explosion all around you with a radius of %d, doing %0.1f physical damage to enemies, who may also be concussed for %d turns. Affected creatures can still act, but all attempts to use talents will fail.\n  Friendly creatures in the area will instead be cleansed of %d detrimental effect%s. Additionally, the explosion can trigger effects which target your golem as though it were an alchemical bomb.\n  The damage and apply chance will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal count = t.getCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 20,
+  "src": "Blood Retaliation",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 66,
+  "src": "When you are struck in melee, there is a 35%% chance your armor will lash out with a narrow cone (radius 4) of corrupted, rotten blood, striking enemies for %0.1f blight damage. Enemies hit by the cone have a 60%% chance to suffer a random disease which deals %0.1f blight damage each turn for 6 turns (%0.1f total), and suffer a -%d penalty to Str, Dex or Con.\n  The blood damage and disease damage increase with your spellpower, and both can crit separately.\n  This retaliation damage can trigger at most once per turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "_pow = t.getDiseasePow(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 74,
+  "src": "blood magic",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, generic=true, type=, name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 74,
+  "src": "Twist vitality into violence.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "eric=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 82,
+  "src": "Blood Mage",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 136,
+  "src": "You have learned to harness cruel blood-magic. You gain a small Vim pool, and you may always cast Vim spells using your own Life when your Vim pool is insufficient.\n  You gain a +%d%% chance to cast a critical spell.\n  Your blight-twisted blood toughens you, granting you +%d Constitution.\n  When you first take this talent, the amount of Life you gain from Constitution increases by +0.5. This bonus is retroactive.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l crit = t.getSpellCrit(self, t) return("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 225,
+  "src": "[NULLPACK] unexpected effect value '%s' in talent '%s'",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ", apply_power=apply_power }) else print("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 234,
+  "src": "You have a talent for causing things pain. When you strike a foe in melee who is already suffering from a disease, a cut, or a poison effect, you may increase its suffering: you have a %d%% chance to inflict slow, stun, blindness or silence on your target for %d turns. You inflict this effect with your Accuracy or your Spellpower, whichever is greater.\n  Also, when you score a critical melee attack, you regain %0.2f Vim.\n  When you first take this talent, the amount of Life you gain from Constitution increases by +0.5. This bonus is retroactive.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local vim = t.vimBonus(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 242,
+  "src": "Armor of Scars",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "nce, dur, vim ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 300,
+  "src": " (The fact that you have no skin of your own only makes this more horrifying.) ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "r self.descriptor.race == then special ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 303,
+  "src": "Scar tissue is tougher than skin, and your experiments with Blight have given your body a tougher exterior.%s\n  Your scar tissue grants you +%d armor and +%d%% armor hardiness, and +%d%% immunity to cuts and diseases.\n  When you first take this talent, the amount of Life you gain from Constitution increases by +0.5. This bonus is retroactive.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "iptor.race == then special = end return("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 311,
+  "src": "Horrid Vitality",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "or, hard, imm ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 364,
+  "src": "Not enough Vim to use %s.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "f not silent then game.logPlayer(self, ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 391,
+  "src": "Your practice stealing the vitality of others has improved your own vital regeneration, granting you a passive +%d%% bonus to your healing factor.\n  You can activate this talent to compel your stolen vitality, your Vim pool, to forcefully regenerate your body. You immediately expend all of your stored Vim to gain regeneration equal to %0.2f plus 20%% of your Vim pool for %d turns (current Vim pool %d would grant %0.2f healing per turn, %0.2f healing total).\n  Base regeneration will increase with your Spellpower. You must have at least 10 stored Vim to use this talent.\n  When you first take this talent, the amount of Life you gain from Constitution increases by +0.5. This bonus is retroactive.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " regen = (0.2 * v) + base_regen return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 409,
+  "src": "desecration helpers",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 409,
+  "src": "Helper functions (not directly available).",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 412,
+  "src": "Desicration Helper",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 432,
+  "src": "Passive helper talent to hold callbacks for Applied Immolation and Autotoxicology.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "end end, info = function(self,t) return("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 439,
+  "src": "desecration",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 439,
+  "src": "Your body is a temple. Desecrate it.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 442,
+  "src": "Applied Immolation",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 495,
+  "src": "Your lessons in suffering have granted you insight into fire, granting you +%d%% fire resistance.\n  Whenever you find yourself subject to a fire effect (burning, burning shock, burning hex, etc.), your corrupted body is invigorated, increasing your movement speed by %d%% for 2 turns.\n  You can activate this talent to set yourself on fire, dealing %0.2f fire damage each turn for %d turns (%0.2f total).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " 100 local total_dam = dam * dur return("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 502,
+  "src": "Autotoxicology",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "RE, total_dam)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 547,
+  "src": "Your experience with poisons have given you +%d%% poison resistance.\n  Whenever you find yourself subject to a poison effect, your corrupted body is stimulated, allowing you to evade melee and missile attacks (%d%% evasion) for 2 turns.\n  You can activate this talent to poison yourself, dealing %0.2f nature damage each turn for %d turns (%0.2f total). This poison effect ignores immunity: it's magic that you're casting upon yourself.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "f,t) local total_dam = dam * dur return("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 554,
+  "src": "Blight Incubator",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "RE, total_dam)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 600,
+  "src": "Your studies of sickness have adapted you to alien energies, gaining +%d%% blight resistance.\n  You can activate this talent to inject yourself with a mild blight disease cultured from your own life force. You suffer %0.2f blight damage each turn for %d turns (%0.2f damage total), but in return you gain 50%% blight affinity.\n  Each turn as it deals damage, your moderately benevolent disease has a %d%% chance to decrease the cooldown of one of your talents by %d turns. This disease is of your own life force, and your body regards it as neither detrimental nor beneficial, so it cannot be easily removed. If you manage to spread this disease to another creature that creature will gain the +50%% blight affinity but your talents will cooldown as the other creature endures the disease.\n            ",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ",t) local dam_total = dam * dur return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 608,
+  "src": "Scholar of Woe",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "chance, power ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 642,
+  "src": "If you are on fire, the pain brings clarity: you have a %d%% chance to remove one detrimental mental effect each turn.\n  If you are poisoned, the natural toxins purge you: you have a %d%% chance to remove one detrimental magical effect each turn.\n  If you are diseased, the blight energizes your corrupted body: you have a %d%% chance each turn to gain %d%% of a turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al energy = t.getEnergy(self,t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 655,
+  "src": "flensing style",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ome.nullpack_npc_talents), type=, name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 655,
+  "src": "Cruelty with knives.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "_talents), type=, name = , description ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 658,
+  "src": "Scholar of Brutality",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 693,
+  "src": "You hit your target, doing %d%% damage. If your attack connects, the target is crippled for %d turns, losing %d%% melee, spellcasting and mind speed.\n  The chance to cripple improves with your Accuracy, and the speed penalty improves with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "en = t.getSpeedPenalty(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 768,
+  "src": "[NULLTEST]",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "(t) local tg, id = rng.table(tgt) print("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 779,
+  "src": "Your cruel combat style promotes offense over defense. Every %d turns, you will make a quick, cruel cut with your offhand weapon against a nearby enemy. This attack causes %d%% weapon damage as bleeding over 5 turns.\n  This attack takes no time, and preferentially targets enemies who are not yet bleeding, and who are not dazed.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "dam = t.getDamage(self,t) * 100 return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 786,
+  "src": "Rain of Agony",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ".cooldown, dam) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 807,
+  "src": "You cannot use %s without dual wielding!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not weapon then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 855,
+  "src": "Stab where it hurts, attacking your target twice with each weapon for %d%% damage. For each hit you score, you will put one of your victim's talents on cooldown for %d turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal cd = t.getCooldown(self,t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 860,
+  "src": "No Escape",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "format(dam, cd) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 929,
+  "src": "Compound your victim's suffering, attacking with both weapons for %d%% damage. For each hit you score, you extend each of your victim's existing detrimental conditions by %d turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al ext = t.getExtension(self,t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 939,
+  "src": "blood spear",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, generic=true, type=, name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 939,
+  "src": "Weaponize your blood.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "eric=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 958,
+  "src": "Blood Spear",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(self,t) end end end ) newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 984,
+  "src": " granting your staff an additional +%d%% Constitution modifier to weapon damage,",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l con = t.getCon(self, t) * 100 return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1078,
+  "src": "Increases Physical Power by %d and increases weapon damage by %d%% when using staves. Mastery talents overlap (do not stack) with other mastery talents: if more than one mastery talent applies to a weapon, you only gain the benefit of the best one.\n  While sustained, you imbue your staff with a sharp blade created from your own life-force,%s and each strike restores +%0.2f Vim (plus +%0.2f Vim per disease on the target).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "_text = t.conBonusText(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1085,
+  "src": "Blood Spite",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "vim, vim_bonus) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1123,
+  "src": "When you strike a foe with your Blood Spear, your corrupted essence feeds you their vitality, and you feed deeper if the target is suffering from any diseases.\n  Your melee attacks inflict +%0.2f vile damage (acid, blight, darkness or fire), and heal you for %0.2f life (+ %0.2f per disease).\n  If you strike a diseased enemy, you will attempt to inflict a Blood Curse which reduces the target's Healing Factor by %d%% and improves your own by the same amount. This effect lasts for %d turns (or until the target dies), and has a cooldown.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "eal = t.getPower(self, t) * 100 return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1131,
+  "src": "Blood Spoil",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "nus, heal, dur) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1215,
+  "src": "  At level 1, you can inflict a disease (Decrepitude, Rotting, or Weakness); Bleeding; or Deadly poison.\n  At level 3, you may inflict Insidious poison.\n  At level 4, you may inflict a Deep Wound.\n  At level 5, you may inflict Crippling poison.\n  At level 6, you may Maim your opponent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "scribeDebuffs = function(self, t) return"
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1226,
+  "src": "Each time you strike a foe with Blood Spear active, the corrupted, rotting blood of your blade has a %d%% chance to inflict one of the following status conditions on your enemy, dealing %0.2f damage each turn for %d turns (%0.2f damage total):\n%s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ff = t.describeDebuffs(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1232,
+  "src": "Blood Spurt",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ur*pow, debuff) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1280,
+  "src": "When you strike a foe with Blood Spear active there is a %d%% chance that your blade forces your opponent's blood to spurt out towards another enemy within range %d, dealing %0.2f infectious blight damage to both targets. This effect can succeed once per turn, and it can crit.\n  This counts as a Cut effect, and cut immunity can prevent the Blood Spurt from triggering.\n  The damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dam = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1291,
+  "src": "pyre",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1291,
+  "src": "Leave nothing but ashes.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1299,
+  "src": "Balefire Bolt",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1332,
+  "src": "Conjures up a bolt of balefire that deals sticks to the target, dealing %0.2f fire and %0.2f blight damage each turn for %d turns (total %0.2f fire and %0.2f blight damage) and healing you for half the total damage. If the target dies before the effect expires, you receive half the remaining damage as healing immediately.\n  The damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al dur = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1345,
+  "src": "Searing Beam",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ".BLIGHT, dam) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1384,
+  "src": "Call forth a beam of boiling vitriol, inflicting %0.2f acid damage in a line. Surviving enemies will also be set on fire (%0.2f fire damage per turn for %d turns, %0.2f damage total).\n  The damage done will increase with your Spellpower. The base damage and the fire damage can each crit separately.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al dur = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1396,
+  "src": "Voidburn",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "E, dot * dur) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1439,
+  "src": "Hurl a bolt of burning hunger that moves toward the target and explodes into a flash of darkness and fire, doing %0.2f darkness and %0.2f fire-burn damage to enemies in radius %d.\n  Enemies caught in the blast must make a physical save or be slowed by 20%%, and make a mental save or be numbed (reducing their damage by 20%%). Each effect lasts for %d turns.\n  The damage and apply chance will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self,t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1452,
+  "src": "Pyre Gate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "adius(t), dur ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1531,
+  "src": "The pyre gate fails!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "ttr() or 0}) end else game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1543,
+  "src": "Reach through the tortured flesh of your foes.\n  Choose a target within range %d who is on fire or suffering from a disease (or both). If the target is on fire, you evoke an explosion of flames in radius %d which causes %0.1f fire damage over 10 turns. If the target is diseased, you evoke a spray of corrupted blood in radius %d which inflicts %0.1f blight damage and may cause diseases (%d%% chance of being infected by a random disease, doing %0.2f blight damage each turn for 6 turns (%0.2f total) and weakening the victim's Constitution, Strength or Dexterity by %d).\n  In the aftermath of the explosion(s), you teleport to the target's location, or to a nearby tile if the target is still alive.\n  The damage will increase with your Spellpower. The fire, blight and disease damage can all crit separately.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dam = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1563,
+  "src": "trauma",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "c_talents), is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1563,
+  "src": "Inflict debilitating effects with melee attacks.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1571,
+  "src": "Searing Ire",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1673,
+  "src": "Hurl yourself %d spaces to an enemy, then attack for %d%% weapon damage. Hit or miss, you will generate an explosion of acid in radius %d around yourself which corrodes enemies for %0.2f acid damage, and reduces enemy accuracy, armor and defense by -%d for %d turns.\n  The damage and penalties will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal pen = t.getPenalty(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1680,
+  "src": "Vile Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "dam), pen, dur) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1720,
+  "src": "Lash out, making two attacks for %d%% weapon damage as random vile damage (acid, blight, darkness or fire). If you hit with either attack, the target will be scorched for %d turns, reducing its blight resistance and disease immunity by %d%%.\n  The resistance reduction will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al dur = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1727,
+  "src": "Twist Vigor",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(dam, dur, pen) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1807,
+  "src": "Strike your opponent for %d%% weapon damage. If you hit and the target survives, twist your opponent's physical vitality, forcing your physical detrimental effects onto it, and stealing its physical beneficial effects. Up to %d effect%s will be stolen or imposed.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local eff = t.getCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1813,
+  "src": "Reaping Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ff > 1 and or ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/blood-magic.lua",
+  "line": 1892,
+  "src": "Attack your target from afar, striking through the bonds of vitality that bind all life together. Your attack may inflict more damage depending on the number of diseases on the target:\n  - 0 diseases: %d%%\n  - 1 disease : %d%%\n  - 2 diseases: %d%%\n  - 3 diseases: %d%%\n  - ... etc.\nIf the target dies, its remains will explode in a burst of infectious blight for %0.2f damage in radius %d. Each creature hit has a %d%% chance of being infected by a random disease, doing %0.2f blight damage each turn for 6 turns (%0.2f total) and weakening either Constitution, Strength or Dexterity. If the target does not die, then each disease and poison afflicting it will have its duration extended by %d.\n  The explosion and disease damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l extend = t.getExtend(self, t) return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 106,
+  "src": "venting",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ilence=true, is_spell=true, type=, name="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 106,
+  "src": "Violence is a resource.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 108,
+  "src": "venting blade",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 108,
+  "src": "Invisible holder category for Blade Vent sustains.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 112,
+  "src": "Blade Vent: Void",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 157,
+  "src": ", and a %d%% chance to extend one of your target's detrimental effects by 2 turns (at most once per global turn per target)",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "elf.T_NULL_UNRAVEL) then unravel_str = ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 160,
+  "src": "Your melee attacks deal an extra %0.2f darkness damage. Each hit will restore %0.2f paradox, moving you closer to your preferred paradox (currently %d)%s.\n\t\t\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "rmat( self:callTalent(, ) ) end return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 166,
+  "src": "Blade Vent: Fate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", unravel_str ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 211,
+  "src": ", and a %d%% chance to extend one of your beneficial effects by 2 turns (at most once per global turn)",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "elf.T_NULL_UNRAVEL) then unravel_str = ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 214,
+  "src": "Your melee attacks deal an extra %0.2f temporal damage. Each hit will restore %0.2f paradox, moving you closer to your preferred paradox (currently %d)%s.\n\t\t\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "rmat( self:callTalent(, ) ) end return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 220,
+  "src": "Blade Vent",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", unravel_str ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 239,
+  "src": "You have learned to edge your melee weapons with threads of Void or Flux, increasing damage by either %0.2f darkness or %0.2f temporal damage. Additionally, every time you hit, you'll vent paradox onto your enemy, moving your paradox by %0.2f towards your preferred paradox value.\n  Points in this talent will affect the damage value of both sustains. The damage will also increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " t.getParadoxReduction(self, t) return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 247,
+  "src": "Vent Fatigue",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "adox_reduction) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 287,
+  "src": "chosen randomly",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " t.getStamina(self,t) local chosen_how ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 289,
+  "src": "whichever would be least resisted",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "elf.T_NULL_VENT_FLAWS) then chosen_how ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 292,
+  "src": "Each turn for %d turns you release a bolt of chaotic energy against an enemy within range %d. The bolts deal %0.2f temporal, %0.2f darkness, %0.2f lightning, or %0.2f arcane damage (%s). If the bolt damages an enemy, you regain %0.2f Stamina.\n  While the Vent Fatigue effect is active, your non-fixed talents cooldown twice as fast.\n\t\t\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "NT_FLAWS) then chosen_how = end return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 307,
+  "src": "Unravel",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "osen_how, sta ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 319,
+  "src": "Augment your Blade Vent talents. Void now has a %d%% chance to extend one enemy debuff by 2 turns, and Flux has a %d%% chance to extend the duration of one of your own beneficial effects by 2 turns.\n  This talent can only succeed at modifying one effect per global turn.\n\t\t\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al chance = t.getChance(self,t) return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 326,
+  "src": "Vent Flaws",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "chance, chance) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 341,
+  "src": "When your Vent Fatigue talent damages an enemy, it inflicts the Flawed Design anomaly, which reduces all damage reduction by %d%% for %d turns.\n\n  Also, your Vent Fatigue damage flares will always be of whichever damage type the target resists least.\n \t\t\t\t",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self,t) return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 357,
+  "src": "sheer",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ilence=true, is_spell=true, type=, name="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 357,
+  "src": "Master temporal sheer.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 360,
+  "src": "Cut Ahead",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "name=, description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 388,
+  "src": "You are too close to leap through space-time!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "x, ly, , self) then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 437,
+  "src": "Teleport to your target and attack with all weapons for %d%% damage. If you hit, you'll steal %d%% of a turn from your enemy, making your next action occur sooner and your victim's next action occur later.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "gy = t.getEnergy(self, t) * 100 return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 449,
+  "src": "echoes",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ilence=true, is_spell=true, type=, name="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 449,
+  "src": "Actions reverberate across time.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 457,
+  "src": "gravitic combat",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ilence=true, is_spell=true, type=, name="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 457,
+  "src": "Tactics and training for temporal heavy infantry.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 460,
+  "src": "Ground Contraction",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "name=, description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 495,
+  "src": "You cannot use %s without a shield!",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "f not shield then game.logPlayer(self, ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 508,
+  "src": "You are too close to manipulate distance!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "x, ly, , self) then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 554,
+  "src": "Pull the fabric of space to shorten the distance as you take a single step towards your target. Swiftly move %d and slam your target for %d%% shield bash damage. This takes %d%% of a turn and is considered a teleport for effects like Dimensional Shift, and will set you Out of Phase if you have an on-teleport defense bonus, but it can't move you through other creatures.\n  At full talent mastery, you can use this talent even when immobilized.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "gy = t.getEnergy(self, t) * 100 return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 560,
+  "src": "Heavy Impact",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "r, dam, energy) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 593,
+  "src": "You cannot use Heavy Impact without a shield!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not shield then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 611,
+  "src": "Hit the target with your weapon and shield, doing %d%% weapon and %d%% shield damage as Gravity damage, which can pin the target.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "t.getShieldDamage(self,t) * 100 return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 616,
+  "src": "Pull of Gravity",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "mat(wDam, sDam) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 662,
+  "src": "You cannot use Pull of Gravity without a shield!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not shield then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 678,
+  "src": "%s is drawn in by the pull of gravity!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": ":move(tx, ty, true) game.logSeen(target,"
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 707,
+  "src": "Create localized gravity spike centered on yourself which pulls creatures in a radius %d cone. Enemies suffer %0.2f gravity damage which can pin. After the pull, all enemies who are adjacent to you suffer a shield bash attack for %d%% as they slam into the unyielding anvil that is you.\n  The damage will scale with your Paradox and Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "radius = self:getTalentRadius(t) return("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 714,
+  "src": "Implacable Force",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " g_dam), s_dam) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 784,
+  "src": ", and when you create a new time shield it will be augmented by Aegis / Shielding.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "alent(self.T_SHIELDING) then aegis_txt ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 787,
+  "src": "You are virtually unstoppable. You passively gain %d%% immunity to knockback and pinning, and %d%% physical damage resistance.\n\n  When you use your shield to Block, you also create or extend a time shield.\n\n  If you already have a time shield, its duration is extended by one turn, and its protection is increased by %d, which is %d%% of your block value (currently %d). A time shield can be extended up to 20 times, after which the extension has no effect.\n\n  If you have no active time shield, Block will create one which lasts for %d turns, absorbs up to %d damage (double the extension value), and reduces the duration of new detrimental effects by 20%%.\n\n  The protection value can crit%s.\n",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "_SHIELDING) then aegis_txt = end return("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 810,
+  "src": "temporal assault",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ilence=true, is_spell=true, type=, name="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 810,
+  "src": "Advanced temporal tactics and training.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 813,
+  "src": "Gravity Shunt",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "name=, description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 874,
+  "src": "Violently crush space between yourself and another point within range by manipulating gravity.\n\n\t  You teleport to the target location, and leave a gravitational wake behind dealing %0.2f physical gravity damage (which may pin) to all creatures in the path, and try to stun them for %d turns.\n\n\t  The damage will scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dam = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 884,
+  "src": "Grip Fate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "CAL, dam), dur) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 909,
+  "src": "%s's grip on fate asserts itself.",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "1 then return nil end game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 947,
+  "src": "Your firm grip on reality grants you %d%% immunity to disarm attempts and hostile teleportation.\n\n  Once per turn, there is a %d%% chance that you will reduce the duration of up to %d detrimental effects by one each.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "al reduce = t.getReduce(self, t) return("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 956,
+  "src": "Reversion Cache",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "hance, reduce ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 967,
+  "src": "You already have a copy of yourself cached.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 990,
+  "src": "Copy your current physical state, and send it to yourself up to %d turns in the future. When the Reversion Cache expires, or when you cancel it manually, your physical state will be overwritten with the stored values.\n\n  Ending this effect will restore life, stamina, timed physical effects, and all your Technique and Cunning talent cooldowns. #LIGHT_BLUE#Heroism infusion effects will not be restored due to a bug.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self,t) return ("
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 999,
+  "src": "Inexorable Assault",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "):format( dur ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/chronomancy.lua",
+  "line": 1049,
+  "src": "Your weapons cannot be denied. Your attacks gain %d%% damage shield penetration, and you ignore %d%% temporal and physical resistance. You gain %d%% resistance to your own temporal damage effects.\n  Each time you are struck with a melee or archery attack, you regain %0.2f%% of a turn, allowing you to act sooner. This effect can only grant you one extra action per global turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ergy = t.getEnergy(self,t) * 100 return("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 26,
+  "src": "debility",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 26,
+  "src": "Corrosive malice with arrows.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 81,
+  "src": "Corrupted Archery",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "end self:attr(, 1) end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 136,
+  "src": "You draw your arrow across the bleeding scars of your arm as you pull back on your bow. Your corrupted blood coats each arrow head, adding %0.2f blight damage to your arrows, which has a %d%% chance to inflict a random disease. Your diseases inflict %0.2f blight damage per turn for %d turns (%0.2f total), and reduce a random physical stat by %d. The disease effects will scale with your spellpwoer, and the disease damage can crit.\n  Your blood also serves as a conduit for vitality, and when you hit with an archery attack, it returns you %d Vim, plus %0.2f Vim per disease afflicting the target.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "lood = t.getBlightDamage(self,t) return("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 151,
+  "src": "Siphon Vigor",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "sease(self,t) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 219,
+  "src": "You pull vital energy from all creatures in a cone %d, slowing them by %d%% and replenishing your own reserves: you heal %d for each creature in the cone.\n  Additionally, each creature has a %d%% chance to be Marked.\n  The healing will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal heal = t.getHealing(self,t) return("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 226,
+  "src": "Corrosive Mire",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " chance, heal ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 282,
+  "src": "Your spell befouls the area, slowing creatures in radius %d, and corrosive vapours dealing %0.2f acid damage linger in the area for %d rounds.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local dam = t.getDamage(self,t) return("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 288,
+  "src": "Wretched Gambit",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ation(self,t) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 316,
+  "src": "[DEBUG] Unexpected empty target! Aborting summon.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "t = targets[1] if not target then print("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 330,
+  "src": "minor",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "e local mh = NPC.new{ type = , subtype ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 332,
+  "src": "wretchling",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "= , color=colors.GREEN, image = , name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 333,
+  "src": "Acid oozes all over this small demon's skin.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " name = , faction = self.faction, desc ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 372,
+  "src": "Whisper the rote of wretchedness as you draw back your arrow, transforming your shot into blinding acid. Hit or miss, your arrow will summon %d wretchling(s) around the target. Your wretchlings will return to their native hell after %d turns.\n  Your wretchlings' stats will improve with the talent level and your Magic. If you learn the Blighted Summons prodigy, your wretchlings gain the talent Virulent Diseases.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ue end, info = function(self, t) return("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 382,
+  "src": "deviltry",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 382,
+  "src": "Burning malice with arrows.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 391,
+  "src": "Shadowflame Scorch",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ombat.range or 40) end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 402,
+  "src": "You require a bow or sling for this talent.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 429,
+  "src": "Wreath your arrow in Shadowflame, doing %d%% fire and darkness damage to the target and inflicting lingering burns. While suffereing from these burns the target is vulerable to disease and blight, lowering its resistance to both by %d%% for %d turns.\n  The vulnerability will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self,t) return ("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 437,
+  "src": "Piercing Corrosion",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(dam, pen, dur) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 477,
+  "src": "You fire an arrow tipped with corrosive acid which burns through your foes, piercing multiple targets if possible with nigh infinite armor penetration, doing %d%% acid damage to non-demons (but harmless to demons). Any targets damaged by the acid are corroded for %d turns, reducing their attack, damage and defense by %d.\n  The corrosion effects will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " corrode = t.getCorrode(self,t) return ("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 483,
+  "src": "Balefire Siphon",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", dur, corrode) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 521,
+  "src": "Wreath your arrow in balefire, doing %d%% fire and blight damage to the target. Your cursed flames linger, buring the target for %0.2f balefire damage each turn for %d turns (up to %0.2f total), and healing you for half the damage inflicted.\n  The burn damage (and thus the healing) will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal dur = t.getDuration(self,t) return ("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 528,
+  "src": "Demonseer",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ur, dur * burn) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 605,
+  "src": "You chant a litany of demonic invocation, which will occasionally summons a minor demon (%s) for %d turns which acts as a guard and spotter, adding its sight range to your own: every turn you lack a spotter in your party, there is a %d%% chance you will summon one. If the spotter dies, another will be summoned evetually. The spotter's statistics will improve with the talent level and your Magic. If you gain the Blighted Summoning prodigy, your spotter learns the talent Epidemic.\n  Your insight into demonic cruelty grants you +%d%% critical damage.\n  At level 3, your insight grants telepathy for minor demons.\n  At level 5, your insight grants telepathy for major demons.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ance = t.getSummonChance(self,t) return("
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 699,
+  "src": "balefire quasit",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "y = , color=colors.RED, image = , name ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 700,
+  "src": "This small armored demon looks very observant.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " name = , faction = self.faction, desc ="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 733,
+  "src": "longsword",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "DEMIC, resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/debility.lua",
+  "line": 735,
+  "src": "heavy",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "ubtype=, autoreq=true}, {type=, subtype="
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 20,
+  "src": "spirit embers",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "narmed=true, is_spell=true, type=, name="
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 20,
+  "src": "Human martial arts in veneration of their mythical creator Gerlyk.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "_spell=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 32,
+  "src": "Searing Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "d return dam / 100 end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 110,
+  "src": "Channel the fire of your soul into a searing strike which deals %d%% fire damage. At talent level 3, you strike twice.\n  If you hit, you may set your target on fire, dealing %0.2f stunning fire damage over %d turns. Each hit also generates a combo point.\n  This spell is purely physical and ignores Silence. Every talent point in this tree represents training in spiritual power, and grants +2 spellpower (currently %d).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "n_dam = t.getBurnDamage(self, t) return("
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 117,
+  "src": "Firewalk",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ellpower or 0 ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 140,
+  "src": "You must have at least one combo point to use this ability.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 222,
+  "src": "The firewalk fails!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "elf:clearCombo() else game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 230,
+  "src": "Limber as a leaping flame, you hurl a beam of fire and ride it across the battlefield, appearing at the far end in a shower of sparks.\n  Your fire beam deals %0.2f damage over 3 turns. The range increases with talent level and your current combo points.\n  This talent requires a combo point to use, and consumes all your combo points. At talent level 5, the intensity of the heat will remove up to one detrimental physical condition.\n  This spell is purely physical and ignores Silence. Every talent point in this tree represents training in spiritual power, and grants +2 spellpower (currently %d).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local dam = t.getDamage(self, t) return("
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 238,
+  "src": "Phoenix Punch Prana",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ellpower or 0 ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 322,
+  "src": "Fan your inner fire to a roaring blaze, and strike for %d%% damage. If you hit, you are healed for %d life plus %d per combo point (currently %d total).\n  This talent requires a combo point to use, and consumes all your combo points.\n  This spell is purely physical and ignores Silence. Every talent point in this tree represents training in spiritual power, and grants +2 spellpower (currently %d).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "_total = t.getHealTotal(self, t) return("
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 329,
+  "src": "Cleansing Cascade Kata",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ellpower or 0 ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/embers.lua",
+  "line": 459,
+  "src": "Your strikes burn away hostile magic and disrupt your target's concentration.\n  Make %d attacks for %d%% fire damage. If any of your attacks hit, you will expend all of your combo points. One combo point spent will either remove one detrimental magical effect from yourself or disrupt one of your target's sustained talents.\n  This talent requires a combo point to use.\n  This spell is purely physical and ignores Silence. Every talent point in this tree represents training in spiritual power, and grants +2 spellpower (currently %d).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " attacks = t.getAttacks(self, t) return("
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 19,
+  "src": "transcendent strikes",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": " autolearn_mindslayer=true, type=, name="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 19,
+  "src": "Mental techniques which amplify your physical strikes.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "slayer=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 87,
+  "src": "Far Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "d return dam / 100 end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 183,
+  "src": "*INVALID_DAMAGE_TYPE*",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ype and DamageType:get(dam_type).name or"
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 184,
+  "src": "\n  If you have Combo Points and you hit, your telekinetically wielded gem or mindstar will lash out, consuming all Combo Points to inflict %0.2f %s damage per Combo Point (currently %0.2f). This damage will increase with your Mindpower. Mindstars are half as effective as gemstones or psionic foci.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "Type:get(dam_type).name or tk_attack = ("
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 186,
+  "src": "Distance is an illusion which you can overcome.\n  Make %d unarmed attack%s at range %d for %d%% damage. If you have no Combo Points, each hit earns one.%s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " dam_type, total_burst_dam)) end return("
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 193,
+  "src": "Metaphysical Blows",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "am, tk_attack ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 232,
+  "src": "Project your will through your strikes. While sustained, your melee attacks deal +%0.2f mind damage. If you score a critical hit, you will additionally attempt to Brainlock the target (putting one random talent on cooldown and suspending cooldowns for one turn).\n  At raw talent level 3, the bonus mind damage can crit.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d_dam = t.getMindDamage(self, t) return("
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 239,
+  "src": "Transposition Strike",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "D, mind_dam ) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 266,
+  "src": "You cannot use this talent while immobile.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 295,
+  "src": "Invalid transposition destination!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "Move(x, y, true) then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 384,
+  "src": "Lunge through the illusion of space.\n  You teleport to an empty tile, a friend, or a foe. If you target a friend, you will swap places.\n  If you target a foe, you will attack your foe for %d%% melee damage. If you hit, you will swap places. If you have any combo points, you may also transfer your detrimental physical effects to your foe (%d%% chance per effect, up to one effect per combo point, currently %d). If you have no combo points, hitting a foe will generate one combo point.\n  Being pinned or otherwise rendered immobile prevents use of this talent. The range will increase with your Dexterity.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "dam = t.getDamage(self, t) * 100 return("
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 394,
+  "src": "Instinct Partition",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "nce, combo_pts) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 477,
+  "src": "You can split your own mind into a tower of high defensive function and an aggressive instinctual base. While your higher mind unravels mental and magical effects confounding you, your base instincts push your body beyond its conventional limits. For %d turns (+1 turn per combo point, %d total) you gain +%d physical power, +%d mental save, and +%.2f stamina regeneration.\n  Each turn, your severed conscious mind will unravel one detrimental Mental or Magical effect.\n  This talent requires 1 or more Combo Points, and consumes all your Combo Points.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal combo_pts = self:getCombo() return("
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 488,
+  "src": "energy projection",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "npc_talents), is_mind=true, type=, name="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 488,
+  "src": "Resonate with your psionic focus gem.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "s_mind=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 498,
+  "src": "macrokinesis",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "npc_talents), is_mind=true, type=, name="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 498,
+  "src": "Large-scale telekinetic manipulations.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "s_mind=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 508,
+  "src": "microkinesis",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "npc_talents), is_mind=true, type=, name="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 508,
+  "src": "Small-scale telekinetic manipulations.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "s_mind=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 518,
+  "src": "perfection",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "npc_talents), is_mind=true, type=, name="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 518,
+  "src": "Practice unity of body and mind.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "s_mind=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 530,
+  "src": "Resonance Cloak",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " = } end if false then newTalent{ name ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 566,
+  "src": "You must be telekinetically wielding a gem or weapon to use this ability.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 640,
+  "src": "(Wield a mindstar or weapon to see specific information.)",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "getDuration(self, t) local attack_info ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 641,
+  "src": "This provides you with damage resistance and bonus damage (wield a gem or focus to see specific information).",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " t) local attack_info = local gem_info ="
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 654,
+  "src": "This causes a burst of energy to emanate from you dealing %0.2f %s damage in radius %d, and sheaths you in an energy cloak which grants you +%d%% %s resistance and deals %0.2f %s damage when you hit or are hit in melee.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "eType:get(dam_type).name or gem_info = ("
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 660,
+  "src": "In addition to its usual behavior, your %s may attack adjacent foes (%d%% chance, %d tr%s each turn).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ies = t.getTries(self,t) attack_info = ("
+ },
+ {
+  "file": "data/talents/far-fist.lua",
+  "line": 663,
+  "src": "Resonate with the energies of your telekinetically wielded weapon or focus.\n  Interpose the internal energy matrix of a telekinetically wielded gem or psi focus as a cloak over your physical body. %s\n  If you have a weapon in your TK slot, you gain a chance for bonus attacks. %s\n  Mindstars and other Psionic Focus items can provide both benefits, but at half damage and reduced chance for extra attacks.\n  The cloak will last for %d turns, but will end if you unequip your focus.\n  The damage and duration will increase with your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ", tries, tries > 1 and or ) end return ("
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 22,
+  "src": "ferality",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "armed=true, is_nature=true, type=, name="
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 22,
+  "src": "Unleash your wild, violent nature.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "nature=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 30,
+  "src": "Unleash the Fury",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "name=, description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 62,
+  "src": "You have been initiated as one who can evoke the fury of natural spirits.\n  Points in this talent will affect the duration of all Ferality talents (currently %d turns), the physical power granted (%d), and the chance for melee special effects to trigger (%d%%).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "hance = t.getMeleeChance(self,t) return("
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 70,
+  "src": "Primal Roar",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "power, chance ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 107,
+  "src": "Release the fury of the spirits as a primal roar.\n  When you crit or kill a creature with a melee attack when under the effect of a Ferality talent, you have a %d%% chance to channel a primal vocalization in %d radius around you. The specific effect varies depending on your current Ferality.\n  Many effects will increase with your Mindpower. This talent has a cooldown.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "radius = self:getTalentRadius(t) return("
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 116,
+  "src": "ferality types",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ndom=false, is_nature=true, type=, name="
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 116,
+  "src": "(ferality helper talents)",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "nature=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 128,
+  "src": "You may only have one Feral Rage active at a time.",
+  "tag": "logPlayer",
+  "ctor": "newTalentType",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/gifts.lua",
+  "line": 137,
+  "src": "Nimble Wolf",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "nd end return true end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/mindshards.lua",
+  "line": 19,
+  "src": "shards",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ndom=false, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/mindshards.lua",
+  "line": 19,
+  "src": "Animate crystal shards with your mind and magic.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 26,
+  "src": "sins",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "pc_talents), is_mind=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 26,
+  "src": "Sharpen your sins into deadly mental weapons.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "mind=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 29,
+  "src": "Sloth",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 86,
+  "src": "This talent can never break Stealth. ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "info = function(self, t) local stealth ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 87,
+  "src": "Fantasize your target's painful demise, and impose your cruel vision onto reality.\n  This attack pulls a target %d towards you and the grim end you envision, inflicting %0.2f temporal damage which may slow the target for %d turns. The duration will increase with your Mindpower.\n  Imposing your sin on reality replenishes your Hate.\n  This attack can never crit. %s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "nction(self, t) local stealth = return ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 98,
+  "src": "Envy",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "nd stealth or ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 180,
+  "src": "If you can't have it, nobody can.\n  You unleash a surge of mental pain which will disrupt up to %d beneficial effects (mental or magical) or sustains active on the target, and inflicts %0.2f mind damage per effect or sustain disrupted.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 188,
+  "src": "Wrath",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "age(self,t) ) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 294,
+  "src": "\n* Gain %d Stamina.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "lf:knowTalent(self.T_STAMINA_POOL) and ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 295,
+  "src": "\n* Gain %d Mana.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " self:knowTalent(self.T_MANA_POOL) and ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 296,
+  "src": "\n* Gain %d Psi.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "= self:knowTalent(self.T_PSI_POOL) and ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 297,
+  "src": " Your rage replenishes you:",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "f = (sta_str or mana_str or psi_str) and"
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 299,
+  "src": "You violently reject the obstructions the world keeps throwing in your way.\n  Remove %d detrimental physical condition(s) from yourself. If you removed at least one condition, you enter a frenzy for %d turns which increases your global speed by %d%%, your physical crit by %d%%, and allows you to fight on until your life reaches -%d%% max (currently -%0.2f). Note that you will die if your Frenzy runs out while your life is below 0.%s%s%s%s\n  This talent takes no time to use.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "eboost = t.getLifeBoost(self,t) return ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 309,
+  "src": "Pride",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "str, mana_str ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 406,
+  "src": "Revel in your superiority by removing %d detremental mental or magical effects on yourself and imposing those effects on each enemy in radius %d (%d%% chance per enemy for each effect removed).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 422,
+  "src": "horror",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": " min_lev=10, is_mind=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 422,
+  "src": "Hate is twisting you into something horrific.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "mind=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 425,
+  "src": "Shadow Scuttle",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 487,
+  "src": "The shadow scuttle fails!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "f, t), true) end else game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 495,
+  "src": "You will spread Creeping Darkness in your wake. ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "knowTalent(self.T_CREEPING_DARKNESS) and"
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 495,
+  "src": "This talent would be enhanced if you knew the Creeping Darkness talent. ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "wTalent(self.T_CREEPING_DARKNESS) and or"
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 496,
+  "src": "The teleportation never breaks Stealth, but the attack is treated normally, and may break Stealth. ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "REEPING_DARKNESS) and or local stealth ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 497,
+  "src": "This talent's cooldown has been reduced (-%d) by Voidwalker / Void Mastery. ",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "owTalent(self.T_NULL_VOID_MASTERY) and ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 497,
+  "src": "This talent's cooldown could be reduced by one turn per raw talent level invested in Voidwalker / Void Mastery. ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ntLevelRaw(self.T_NULL_VOID_MASTERY)) or"
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 498,
+  "src": "Your shadow elongates horribly, and you sink into it, only to emerge at the other end in a burst of darkness. You teleport to the target location, and if there is a creature in the target location you will attempt to attack it for %d%% weapon damage.\n  %s%s%s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "w(self.T_NULL_VOID_MASTERY)) or return ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 507,
+  "src": "Devour Memory",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "lth, reduction) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 565,
+  "src": "%s loses access to %s!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "ents_cd[t.id] = cdr game.logSeen(target,"
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 588,
+  "src": "* Gain %d Stamina.\n",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "lf:knowTalent(self.T_STAMINA_POOL) and ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 589,
+  "src": "* Reduce your Equilibrium by %0.2f.\n",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "nowTalent(self.T_EQUILIBRIUM_POOL) and ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 590,
+  "src": "* Reduce your Paradox by %0.2f.\n",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "lf:knowTalent(self.T_PARADOX_POOL) and ("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 591,
+  "src": " For each talent disrupted, you restore yourself:",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "rks = (sta_str or eq_str or par_str) and"
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 593,
+  "src": "For a split second you thrust your weapons through time itself, striking your target's immediate history, and feeding on its mental energy as you devour memoires of its recent past.\n  Make two melee attacks as Temporal and Mind damage. If either attack hits, you will attempt to disrupt %d of the target's active talents, putting them on cooldown for %d turns.%s\n%s%s%s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "str or eq_str or par_str) and or return("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 601,
+  "src": "Voidwrack",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "q_str, par_str) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 661,
+  "src": "Not enough room to summon!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "t tx or not ty then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 669,
+  "src": "void shard",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " = , color=colors.GREY, image = , name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 718,
+  "src": "Tear reality around your victim, forcing the target to experience the horror of the Void.\n  Inflict %0.2f darkness and %0.2f temporal damage, and if the target survives it will be subject to the Echos of the Void for %d turns (which inflicts %0.2f mind damage and drains resources each turn).\n  If the target dies, however, your bolt twists the jagged scraps of its shattered fate into %d friendly void shards which last for %d turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "count = t.getShardCount(self, t) return("
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 732,
+  "src": "Void Communion",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "hard_duration ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spite.lua",
+  "line": 829,
+  "src": "Gaze deep into the Abyss, and let the Abyss gaze also into you.\n  While you sustain this talent, you resonate with darkness, temporal and mind energies, inflicting +%d%% damage with these types, penetrating +%d%% resistance for each, and gaining resistance and affinity +%d%%. Once per turn, when you strike in melee a foe who is suffering a poison, slow, fear or blindness effect, you may drink their pain as power to regain %0.1f Hate.\n  However, your horrific meditation carries a heavy mental cost: you suffer %d to your mental save, and your resistance to fear and confusion are lowered by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "_regen = t.getHateRegen(self, t) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 20,
+  "src": "arcane surge",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 20,
+  "src": "Arcane powers which augment your martial attacks.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 22,
+  "src": "arcane surge spells",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 22,
+  "src": "Invisible holder category for Arcane Surge effects.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 35,
+  "src": "Surge Caller",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 67,
+  "src": "You gain access to arcane surge spells, to briefly augment yourself with the power of Storm, Flame, Earth or Night.\n  Points in this talent will affect the damage value of all four Arcane Surge spells (current base damage %0.2f) and their duration (currently %d turns). The damage will also increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dur = t.getDuration(self,t) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 74,
+  "src": "Surge Shield",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "mat( dam, dur ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 87,
+  "src": "You control the energies of your arcane surge spells to protect you.\nStorm: resist lightning, physical, and fire\nFlame: resist fire, cold, blight, and nature\nEarth: resist physical, lightning, and temporal\nNight: resist light, darkness, and mind\n  Points in this talent will affect the resistance granted by all four Arcane Surge spells (current resistance %0.2f).",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local res = t.getResist(self,t) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 98,
+  "src": "Surge Velocity",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "):format( res ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 126,
+  "src": "Your surges aid your movement and combat prowess.\nStorm: +%d%% movement speed\nFlame: +%d%% combat speed\nEarth: ignore %d%% physical damage resistance\nNight: +%d accuracy\n  Earth's resistance penetration and Night's accuracy bonus will increase with your Spellpower. At level 3, Storm Surge will allow you to ignore some traps.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "accuracy = t.getAccuracy(self,t) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 137,
+  "src": "Surge Vitality",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "pen, accuracy ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 166,
+  "src": "You can use the energies of your arcane surge spells to vitalize yourself.\nStorm: gain %d defense\nFlame: cure %d detrimental physical effect%s\nEarth: restore %0.2f stamina\nNight: die at %d life; heal to %d life if lower when the surge ends\n  Storm's defense bonus and Night's die at and healing values will improve with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "(self,t) local h_to = -(d_at/10) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 179,
+  "src": "Storm Surge",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "m, d_at, h_to ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 200,
+  "src": "You may only have one Arcane Surge active at a time.",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not silent then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 232,
+  "src": "Surround yourself with a whirl of arcane wind for %d turns, granting you %d defense and %d%% resistance to lightning, fire, and physical damage. Your melee and ranged attacks deal %0.2f lightning damage which can daze your target. The wind quickens your stride, granting you +%d%% movement speed.\n  At talent level 3 the wind lightens you enough that you do not trigger pressure traps.\n  Lightning damage and defense will increase with your Spellpower. Duration is checked for Spell critical. You may only have one Arcane Surge active at a time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local def = self:callTalent(, ) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 241,
+  "src": "Flame Surge",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "m), spd * 100 ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 327,
+  "src": "When you activate this talent, the cleansing power of your flame surge removes up to %d detrimental physical effect%s.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "unt = self:callTalent(, ) local cure = ("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 329,
+  "src": "Surround yourself with coils of cleansing arcane flame for %d turns, granting you %d%% resistance to fire, cold, blight and nature damage. Your melee and ranged attacks deal %0.2f fire damage for 5 turns (%0.2f total), and if your target is already on fire, your attacks may stun your target for 3 turns (20%% chance, Spell save vs. Spellpower). The flames quicken your physical aggression, granting you +%d%% combat speed.\n  %s\n  Fire damage will increase with your Spellpower. Duration is checked for Spell critical. You may only have one Arcane Surge active at a time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ":format(count, count~=1 and or ) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 338,
+  "src": "Earth Surge",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "d * 100, cure ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 395,
+  "src": "Buttress yourself with a surge of arcane earth power for %d turns, granting you %d%% resistance to physical, lightning and temporal damage, and %d%% physical resist penetration. Your melee and ranged attacks inflict %0.2f physical gravity damage, which may pin the target to the ground.\n  Earth power is invigorating, regenerating up to +%0.2f Stamina.\n  Damage and resistance penetration will increase with your Spellpower. Duration, stamina gain, and resistance penetration are checked for Spell critical. You may only have one Arcane Surge active at a time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " local sta = self:callTalent(, ) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 404,
+  "src": "Night Surge",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "AL, dam), sta ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 459,
+  "src": "Invoke a surge of dark magic. For %d turns, you resist +%d%% light, darkness and mind damage, and you do not die until your life reaches %d. Your affinity for the night sharpens your senses, granting you infravision 10 and +%d combat accuracy. Your melee and ranged attacks inflict %0.2f Darkness damage, which may blind your target.\n  When the surge expires, you are flooded with vitality. If you are below %d life, you are healed for the difference between your current life and %d.\n  Damage, accuracy and negative life value will increase with your Spellpower. Duration, acuracy and negative life value are checked for Spell critical. You may only have one Arcane Surge active at a time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "Talent(, ) local vit = -(die/10) return("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 471,
+  "src": "mage warden",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "pc_talents), generic=true, type=, name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 471,
+  "src": "Techniques learned by those who guard the magical community and hunt rogue mages.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "eric=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 474,
+  "src": "Arcane Conditioning",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 500,
+  "src": "Rigorous training in a secret Angolwen technique allows you to channel arcane energy through your body in harmony with your own life energy. This improves your recovery, granting you:\n  +%0.2f life regeneration,\n  +%0.2f mana regeneration,\n  +%0.2f stamina regeneration, and\n  +%0.2f equilibrium regeneraion.\n  It is not only your recovery which is supernaturally swift: switching between already equipped weapon sets (default hotkey q) no longer takes a turn.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "am = base local equi = base / 2 return ("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 512,
+  "src": "Arcane Fortitude",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "na, stam, equi) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 565,
+  "src": "Arcane training has improved your resistance to hostile spells and mind attacks (+%d spell and mental save).\n  Once per turn, you have a %d%% chance to reduce the duration of a detrimental Mental effect by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ocal dur = t.getRedDur(self, t) return ("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 573,
+  "src": "Arcane Desaturation",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(res, red, dur) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 604,
+  "src": "Harness the arcane residue in your body to invert the detrimental effect of runic saturation and use the resultant energy to refresh your inscriptions. Remove the runic saturation effect and reduce the cooldown of %d inscription%s by %d turn%s.\n  Both runes and infusions may be affected, but not taints.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "self:getTalentLevelRaw(t) / 2)) return ("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 646,
+  "src": "Arcane Disruption",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "_disruption = true end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 657,
+  "src": "[NULLPACK] attempting Arcane Disruption via Melee",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "cent( t.getChance(self, t) ) then print("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 664,
+  "src": "[NULLPACK] attempting Arcane Disruption via Archery",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "cent( t.getChance(self, t) ) then print("
+ },
+ {
+  "file": "data/talents/stormwarden.lua",
+  "line": 670,
+  "src": "When you score a critical hit with a melee or ranged weapon, you have a %d%% chance to disrupt one beneficial magical or mental effect or one sustained talent. This disruption may succeed up to once per turn.\n  Your disruption power is the highest of your accuracy, spell power or physical power, and your target may resist with a spell save.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l chance = t.getChance(self, t) return ("
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 20,
+  "src": "thunderstrike",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "lence=true, is_spell=true, type=, name ="
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 20,
+  "src": "Every silver lining has a dark cloud.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "pell=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 24,
+  "src": "Lightning Leap",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "me = , description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 80,
+  "src": "The lightning leap fails!",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "ttr() or 0}) end else game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 88,
+  "src": "You can briefly turn yourself into a thunderbolt. You move to the target location and inflict %0.2f lightning daze damage to everything in your path.\n  The damage will scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 101,
+  "src": "Wintery Wrath",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ombat.range or 40) end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 150,
+  "src": "You channel the fury of a blizzard, attacking your target twice for %d%% weapon damage as darkness and cold.\n  This talent applies to ranged and melee weapons alike.\n  At level 3, the darkness damage may blind the target. At level 5, the cold damage may freeze the target.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 159,
+  "src": "Downburst",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Damage(self,t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 208,
+  "src": "The air above you rushes downward at your command, and a strong cone (%d) of magical wind first attempts to push creatures away 2 tiles, then freezes any creatures remaining in the area. The wind inflicts %0.2f physical and %0.2f cold damage. Pinned or immobile targets suffer +50%% physical damage.\n  At level 3 the cold can immobilize the targets for 4 turns.\n  The damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 221,
+  "src": "Flash Jump",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "LD, damage/3) ) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 263,
+  "src": "You can't jump there.",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": ", Map.TERRAIN, ) then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 295,
+  "src": "\\n  By dazzling your foes, this spell resets the cooldown of your Stealth talent.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "ealth_text = if true then stealth_text ="
+ },
+ {
+  "file": "data/talents/thunderstrike.lua",
+  "line": 297,
+  "src": "You can briefly turn yourself into a blinding flash of incandescent lightning.  You move to the target location, and inflict %0.2f blinding light and %0.2f lightning daze damage to every enemy in radius %d of your starting location.%s\n  The damage will scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "if true then stealth_text = end return ("
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 19,
+  "src": "voidwalker",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "npc_talents), generic=true, type=, name="
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 19,
+  "src": "You have learned to step through the cracks in reality.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "eneric=true, type=, name=, description ="
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 22,
+  "src": "Voidwalk",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "name=, description = } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 43,
+  "src": "Selects a destination...",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "leport then min = 0 game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 54,
+  "src": "The targetted voidwalk fizzles and works randomly!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "lf.y, ) or 0)) then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 72,
+  "src": "Step through the void and reappear within a small range of up to %d grids, appearing randomly but at least %d from your starting location.\n  At level 5, it allows you to choose the target area (radius %d). If the target area is not in line of sight, there is a chance you will appear in a random grid.\n  The range will increase with your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") local min = t.getMin(self, t) return ("
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 79,
+  "src": "Void Hardening",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "e, min, radius) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 106,
+  "src": "Your familiarity with the void has toughened you. Gain +%d%% resistance to cold, darkness and physical damage, and +%d to physical saves.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") local save = t.getSave(self,t) return("
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 112,
+  "src": "Void Attunement",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "t(resist, save) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 141,
+  "src": "After a teleport you gain +%d Defense, +%d%% resist all, and hostile new effect durations are reduced by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e(self,t) local reduce = defense return("
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 147,
+  "src": "Void Mastery",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "resist, reduce) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/voidwalker.lua",
+  "line": 187,
+  "src": "You are accustomed to the energies of the void. You gain +%d%% cold and darkness affinity (healing), reduce the cooldown of Voidwalk by %d, and reduce the cooldown of all teleportation, phase door, and controlled phase door runes by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ion = t.getRuneReduction(self,t) return("
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 28,
+  "src": "Timekeeper",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ue, no_drop = true, rarity = nil, name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 30,
+  "src": "This is your shield. There are many like it, but this one is yours. You must master your shield as you master your life.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 38,
+  "src": "Improves its stats based on your level. At levels 11, 21, 31 and 41 it blocks a new damage type.",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "ue, special_desc = function(self) return"
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 147,
+  "src": "Shard of Wintertide",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "unique = true, color=colors.BLUE, name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 148,
+  "src": "This giant icicle shines with a gentle lunar radiance.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "r=colors.BLUE, name = , image = , desc ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 149,
+  "src": "giant icicle",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , desc = , unided_name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 195,
+  "src": "Viper's Retort",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "nique = true, color=colors.GREEN, name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 196,
+  "src": "The top of this ebony staff is carved in the shape of a viper's head. Venom drips from its fangs, and its black eyes gleam with serpentine cunning.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "=colors.GREEN, name = , image = , desc ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 197,
+  "src": "wooden snake",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , desc = , unided_name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 239,
+  "src": "Spine of the Spire",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "anded = true, color=colors.WHITE, name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 240,
+  "src": "This macabre whip was crafted from the spine of an ancient Spire Dragon. It would be far too large to wield were it not animated by a portion of the dead dragon's psionic power and its enduring hatred. The vertebrae are connected by telekinetic bonds, and the skull's eye sockets glow with a dull venomous arrogance.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "=colors.WHITE, name = , image = , desc ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 241,
+  "src": "dragon spine whip",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , desc = , unided_name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 285,
+  "src": "Jade Fervor",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": ", psionic = true}, unique = true, name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 286,
+  "src": "sharp slab of jade",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "= true, name = , image = , unided_name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 291,
+  "src": "A huge blade of carved jade has been fitted to a dragonbone hilt. It is very heavy, but somehow quick in your hands.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "EEN, rarity = 500, encumber = 24, desc ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 292,
+  "src": "Natural flames are both nature and fire damage, and inflict triple damage upon demons and the undead.",
+  "tag": "tformat",
+  "ctor": "newEntity",
+  "prefix": "= , special_desc = function(self) return"
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 306,
+  "src": "devour one beneficial effect or sustain and heal yourself for 75 damage",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ENFIRE] = 40}, special_on_crit = {desc ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 325,
+  "src": "%s devours %s from %s!",
+  "tag": "logSeen",
+  "ctor": "newEntity",
+  "prefix": " rng.tableRemove(effs) game.logSeen(who,"
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 349,
+  "src": "Stained Honor",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "e = {arcane=true}, unique = true, name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 350,
+  "src": "gore-encrusted suit of voratun plate",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "= true, name = , image = , unided_name ="
+ },
+ {
+  "file": "data/general/special-artifacts.lua",
+  "line": 351,
+  "src": "Blood drips continuously from this tainted suit of voratun, and dark magics churn almost visibly within it. Bloody ruin comes to those who stand against its wearer.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ame = , image = , unided_name = , desc ="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 22,
+  "src": "Shield Hero",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 25,
+  "src": "Heroes are Adventurers, and can learn to do a bit of everything, getting training in whatever they happen to find.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ild.adventurer and true or end, desc = {"
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 26,
+  "src": "This hero starts with iron mail armor and a shield, and with enough Strength paid down to meet the armor's prerequisite. You may even start in stat point debt, depending on race.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "d.adventurer and true or end, desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 72,
+  "src": "dagger",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": " id=true, transmo=true, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 72,
+  "src": "iron dagger",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "e, transmo=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 74,
+  "src": "iron longsword",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 76,
+  "src": "greatsword",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "000, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 76,
+  "src": "iron greatsword",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 77,
+  "src": "staff",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "000, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 77,
+  "src": "elm staff",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 78,
+  "src": "mindstar",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 78,
+  "src": "mossy mindstar",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 80,
+  "src": "iron shield",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 81,
+  "src": "hands",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "000, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 81,
+  "src": "iron gauntlets",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 82,
+  "src": "rough leather gloves",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 83,
+  "src": "manasurge rune",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 84,
+  "src": "longbow",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "000, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 84,
+  "src": "elm longbow",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 85,
+  "src": "arrow",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 85,
+  "src": "quiver of elm arrows",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 86,
+  "src": "sling",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 86,
+  "src": "rough leather sling",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 87,
+  "src": "shot",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 87,
+  "src": "pouch of iron shots",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 88,
+  "src": "cloak",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 88,
+  "src": "linen cloak",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 97,
+  "src": "iron mail armour",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 108,
+  "src": "Prototype Hero",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "}, } newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 111,
+  "src": "Prototype Hero is a tool for testing out talent combinations for new classes, using the Adventurer framework. It's basically an Adventurer except all proficiencies are set to 1.3, so you can use it to prototype new class concepts.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ild.adventurer and true or end, desc = {"
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 166,
+  "src": "rough leather armour",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 167,
+  "src": "cloth",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "000, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 167,
+  "src": "linen robe",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 186,
+  "src": "Shield Hero",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor(,).descriptor_choices.subclass["
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 187,
+  "src": "Prototype Hero",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor(,).descriptor_choices.subclass["
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 202,
+  "src": "steamsaw",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": " id=true, transmo=true, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 202,
+  "src": "iron steamsaw",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "e, transmo=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 204,
+  "src": "steamgun",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 204,
+  "src": "iron steamgun",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 206,
+  "src": "implant",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "rue, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 206,
+  "src": "steam generator implant",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 207,
+  "src": "medical injector implant",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 236,
+  "src": "Steam Hero",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": " end newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 239,
+  "src": "Steam Hero is a tool for testing out Tinker builds for new classes, using the Adventurer framework. It's basically an Adventurer except all proficiencies are set to 1.3, and it starts with Steamtech inscriptions and Tinker talents so you can use it to prototype new Tinker-metaclass concepts.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ild.adventurer and true or end, desc = {"
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 329,
+  "src": "simple healing salve",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ers.generic(function(e) e:addNewHotkey(,"
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 330,
+  "src": "simple frost salve",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "n(e) e:addNewHotkey(, ) e:addNewHotkey(,"
+ },
+ {
+  "file": "data/birth/classes/adventurer.lua",
+  "line": 340,
+  "src": "Steam Hero",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor(,).descriptor_choices.subclass["
+ },
+ {
+  "file": "data/birth/classes/afflicted.lua",
+  "line": 22,
+  "src": "Creep",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "uire newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/afflicted.lua",
+  "line": 24,
+  "src": "Loner. Outcast. You have lost your place in the world, and now you creep through the dark night, festering in hate.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/afflicted.lua",
+  "line": 25,
+  "src": "You have gazed too long into the darkness, and the darkness has gazed also into you.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/afflicted.lua",
+  "line": 26,
+  "src": "Your most important stats are: Dexterity, Willpower and Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/afflicted.lua",
+  "line": 29,
+  "src": "#LIGHT_BLUE# * +0 Magic, +3 Willpower, +3 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "or{ type = , name = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/afflicted.lua",
+  "line": 30,
+  "src": "#GOLD#Life per level:#LIGHT_BLUE# +1",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "{ type = , name = , desc = { , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/chronomancy.lua",
+  "line": 22,
+  "src": "Gravitic Infantry",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "uire newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/chronomancy.lua",
+  "line": 24,
+  "src": "Not all threats to space-time can be solved at range, so Point Zero maintains an elite force of heavy infantry.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/chronomancy.lua",
+  "line": 25,
+  "src": "These knights can move swiftly, but unlike their temporal compatriots, they can also hold the line against any onslaught.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/chronomancy.lua",
+  "line": 26,
+  "src": "Their training centers on Strength and Magic. Many of their advanced techniques require some skill with Magic, and their talents can boost both their physical and magical prowess.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/chronomancy.lua",
+  "line": 28,
+  "src": "#LIGHT_BLUE# * +4 Strength, +0 Dexterity, +1 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ptor{ type = , name = , desc = { , , , ,"
+ },
+ {
+  "file": "data/birth/classes/chronomancy.lua",
+  "line": 70,
+  "src": "Timekeeper",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/chronomancy.lua",
+  "line": 80,
+  "src": "Gravitic Infantry",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor(,).descriptor_choices.subclass["
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 22,
+  "src": "Vector",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "uire newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 24,
+  "src": "The origin of this foul profession was siege warfare during the Age of Pyre.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 25,
+  "src": "They are the magical expression of the ancient practice of catapulting diseased, rotting animal carcasses into a sieged city.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 26,
+  "src": "Their tactics are to weaken and isolate their foes, picking them off one by one.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 27,
+  "src": "Their most important stats are: Dexterity and Magic",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "riptor{ type = , name = , desc = { , , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 30,
+  "src": "#LIGHT_BLUE# * +4 Magic, +1 Willpower, +0 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "{ type = , name = , desc = { , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 80,
+  "src": "Flenser",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "}, } newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 82,
+  "src": "Flensers are torturers who delight in bloodshed.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 83,
+  "src": "They have smaller Vim pools than those formally initiated into the ranks of Corruption.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 84,
+  "src": "They are terrible foes, stacking debilities on their target until it dies by a thousand cuts.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 87,
+  "src": "#LIGHT_BLUE# * +0 Strength, +4 Dexterity, +1 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "or{ type = , name = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 89,
+  "src": "#GOLD#Life per level:#LIGHT_BLUE# +4",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "= , name = , desc = { , , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 90,
+  "src": "#GOLD#Vim per level:#LIGHT_BLUE# +2 #WHITE#(not +4)",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "name = , desc = { , , , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 141,
+  "src": "Blood Mage",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "}, } newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 143,
+  "src": "A Blood Mage is one who has learned the horrid practice of harnessing the power of blood.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 145,
+  "src": "They are terrible foes, hurling their very life force as destructive magic.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 146,
+  "src": "Their most important stats are: Constitution and Magic",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "riptor{ type = , name = , desc = { , , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 148,
+  "src": "#LIGHT_BLUE# * +0 Strength, +0 Dexterity, +4 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "or{ type = , name = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/corrupted.lua",
+  "line": 149,
+  "src": "#LIGHT_BLUE# * +5 Magic, +0 Willpower, +0 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "{ type = , name = , desc = { , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 27,
+  "src": "Ascetic",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": " end newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 29,
+  "src": "Ascetics are masters of the esoteric arts of magic and staff-combat.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 30,
+  "src": "Their use of magic is less direct than that of an Alchemist or Archmage, as they hone their bodies to deliver punishment rather than relying on spells exclusively.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 31,
+  "src": "Their most important stats are: Dexterity, Magic and Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 91,
+  "src": "Striker",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": " end newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 93,
+  "src": "They strike with the swiftness of the wind, from the shadows of a storm-darkend sky. They hit with the power of a thunderbolt, and disappear into the night, leaving nothing but the after-image, like a stroke of lightning.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 94,
+  "src": "Their spell selection is more tightly focused than most casters, centering around Light, Darkness, and Lightning, which they use to complement their mobility and stealth.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 98,
+  "src": "#LIGHT_BLUE# * +4 Magic, +0 Willpower, +5 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "or{ type = , name = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 156,
+  "src": "Storm Warden",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "}, } newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 158,
+  "src": "Storm Wardens are soldiers who have taken up the arcane arts as a way to augment their martial prowess. They practice dangerous and unstable forms of magic to give themselve an edge in conflict, since their usual targets are either rogue mages or mage-hunters.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 159,
+  "src": "They often train with bows and knives.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 162,
+  "src": "#LIGHT_BLUE# * +0 Strength, +5 Dexterity, +0 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ptor{ type = , name = , desc = { , , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 236,
+  "src": "Ember of Gerlyk",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "}, } newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 238,
+  "src": "Among the human nations, there are those who say that humanity was created by a god who gifted them especially with a spirit of fire. They hand down an ancient martial art which is said to honor the fiery will of their creator.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 239,
+  "src": "The time of the gods is long gone, but the human affinity for fire seems genuine, and those who practice the ancient martial katas of veneration are able to perform a unique blend of magical and physical power.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 240,
+  "src": "This class is only available to humans (living or undead).",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 313,
+  "src": "Fossil",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "}, } newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 315,
+  "src": "Occasionally a Necromancer attempts to animate the bones of a Brawler who has been buried so long that some essential powers of the Earth have seeped into his or her calcifying bones.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 316,
+  "src": "These petrified pugilists combine traits of the Arcane Blade and the Brawler, hammering down their foes like an avalance. They are notoriously difficult to control.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 317,
+  "src": "This class is only available to Skeletons.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 397,
+  "src": "Storm Warden",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor(,).descriptor_choices.subclass["
+ },
+ {
+  "file": "data/birth/classes/psionic.lua",
+  "line": 22,
+  "src": "Transcendent Fist",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "uire newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/psionic.lua",
+  "line": 24,
+  "src": "Some martial artists find mental enlightenment through physical training.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/psionic.lua",
+  "line": 25,
+  "src": "  Their mental powers augment their physical attacks, giving them power and reach beyond reach, and allowing them to unleash the primal energies of gemstones.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/psionic.lua",
+  "line": 26,
+  "src": "  Their most important stats are: Dexterity and Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/psionic.lua",
+  "line": 28,
+  "src": "  #LIGHT_BLUE# * +0 Strength, +4 Dexterity, +0 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ptor{ type = , name = , desc = { , , , ,"
+ },
+ {
+  "file": "data/birth/classes/psionic.lua",
+  "line": 29,
+  "src": "  #LIGHT_BLUE# * +0 Magic, +0 Willpower, +5 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "or{ type = , name = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/psionic.lua",
+  "line": 87,
+  "src": "Transcendent Fist",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor(,).descriptor_choices.subclass["
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 25,
+  "src": "Dabbler",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "then newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 27,
+  "src": "Build, experiment, discover. The path of inventions is never over!",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "uild.orcs_tinker_eyal end, locked_desc ="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 29,
+  "src": "You are an expermenter, employing any and every technology at your disposal.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "inker_eyal end, locked_desc = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 30,
+  "src": "Your most important stats are Dexterity and Cunning.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ker_eyal end, locked_desc = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 32,
+  "src": "#LIGHT_BLUE# * +1 Strength, +4 Dexterity, +0 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "eyal end, locked_desc = , desc = { , , ,"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 33,
+  "src": "#LIGHT_BLUE# * +0 Magic, +0 Willpower, +4 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "al end, locked_desc = , desc = { , , , ,"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 34,
+  "src": "#GOLD#Life per level:#LIGHT_BLUE# 0",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": " end, locked_desc = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 90,
+  "src": "feet",
+  "tag": "effect subtype",
+  "ctor": "newBirthDescriptor",
+  "prefix": "000, ego_chance=-1000}, {type=, subtype="
+ },
+ {
+  "file": "data/birth/classes/tinker.lua",
+  "line": 90,
+  "src": "pair of rough leather boots",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 29,
+  "src": "Energy Cloak",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "..) newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 30,
+  "src": "The target is cloaked in energy, inflicting +%d %s damage on any foe it hits or is hit by, and gains +%d%% %s resistance.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 36,
+  "src": "#Target# is cloaked in energy!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 36,
+  "src": "+Cloak",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 39,
+  "src": "#Target#'s energy cloak evaporates.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 39,
+  "src": "-Cloak",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 64,
+  "src": "TK Cloak",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 65,
+  "src": "The target is cloaked in force, inflicting up to %d extra attack%s on %sadjacent target%s (%d%% chance%s).",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 65,
+  "src": "an ",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "ff.tries > 1 and or , eff.tries == 1 and"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 71,
+  "src": "#Target# is cloaked in force!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 74,
+  "src": "#Target#'s telekinetic cloak evaporates.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 124,
+  "src": "[PSI ATTACK] attacking with",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "f o.combat and not o.archery then print("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 146,
+  "src": "Instinct Partition",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 147,
+  "src": "The target is running on pure instinct, gaining +%d physical power, +%d mental save, and +%0.2f stamina regen.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 153,
+  "src": "#Target# is running on pure instinct!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 156,
+  "src": "#Target#'s instinctual frenzy ends.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 194,
+  "src": "Scorched",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 195,
+  "src": "Painful lingering shadowflame imposes a %d%% penalty to blight resistance and disease immunity.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 200,
+  "src": "#Target# is scorched!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 200,
+  "src": "+Scorch",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 201,
+  "src": "#Target# recovers from the burns.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 201,
+  "src": "-Scorch",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 229,
+  "src": "Balefire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 230,
+  "src": "Terrible black flames burn for %0.2f each turn; half the damage suffered is returned to as healing to %s.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 235,
+  "src": "#Target# is being drained!.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 235,
+  "src": "+Balefire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 236,
+  "src": "#Target# stops being drained.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 236,
+  "src": "-Balefire",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 267,
+  "src": "Blood Spite Curse",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 268,
+  "src": "Victim's healing factor reduced by -50%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 273,
+  "src": "+Spite Curse",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 274,
+  "src": "-Spite Curse",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 302,
+  "src": "Immolation Vigor",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": " } newEffect { name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 316,
+  "src": "Target's movement speed has been increased %d%% by exposure to fire.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 323,
+  "src": "Toxic Jitters",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": " } newEffect { name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 338,
+  "src": "Target's reflexes have been stimulated by toxins, granting %d%% evasion.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 345,
+  "src": "Injected Disease",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": " } newEffect { name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 354,
+  "src": "#Target# suffers cultured infection!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": ", }, on_gain = function(self,eff) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 392,
+  "src": "%s is enduring disease cultured from %s, gaining +50%% blight affinity but also suffering %0.2f blight damage each turn. The source (%s) has a %d%% chance to cooldown a talent by %d each turn that the target suffers.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "ce_gender then source = end end return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 403,
+  "src": "Storm Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 405,
+  "src": "Target is infused with the power of the storm: +%d%% lightning, fire and physical resistance; +%0.2f lightning daze damage; +%d defense; +%d%% move speed.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 413,
+  "src": "#Target# surges with storm magic!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 413,
+  "src": "+Storm Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 417,
+  "src": "#Target#'s surge abates.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 417,
+  "src": "-Storm Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 436,
+  "src": "Flame Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 438,
+  "src": "Target is surging with arcane fire: +%d%% cold, fire, blight and nature resistance; +%0.2f fireburn damage; +%d%% attack speed.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 446,
+  "src": "#Target# surges with flame magic!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 446,
+  "src": "+Flame Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 450,
+  "src": "-Flame Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 468,
+  "src": "Earth Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 470,
+  "src": "Target is suffused with earth magic: +%d%% physical, lightning and temporal resist, +%d%% physical resistance penetration, +%0.2f gravity pin damage.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 478,
+  "src": "#Target# surges with earth magic!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 478,
+  "src": "+Earth Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 482,
+  "src": "-Earth Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 499,
+  "src": "Night Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 501,
+  "src": "Target is surging with dark magic: survive until %d, +%d accuracy, +%d%% resist light, darkness and mind, and inflict +%0.2f blinding darkness damage.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 509,
+  "src": "#Target# surges with dark magic!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 509,
+  "src": "+Night Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 513,
+  "src": "-Night Surge",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 542,
+  "src": "Entropic Distortion",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 549,
+  "src": "#Target# is no longer distorted by entropy.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 554,
+  "src": " Based on the target's global speed (%d%%), the temporal damage has been increased, and each turn there is a %d%% chance it will lose a physical or magical effect or sustain.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "lf,eff) local speed = (chance > 0) and ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 556,
+  "src": "Target is distorted by entropy, suffering %0.2f temporal damage each round, lowering physical resistance by %0.2f.%s",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "f.global_speed * 100, chance) or return("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 620,
+  "src": "Reversion Cache",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 626,
+  "src": "+Cache",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "n_gain = function(self, err) return nil,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 627,
+  "src": "#Target# reverts to a previous physical state.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 627,
+  "src": "-Cache",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 631,
+  "src": "  (none)",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "f) local eff_descs = {} local eff_desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 638,
+  "src": "Target has cached a copy of a previous physical state which will be restored when this effect expires.\n  Life: %d\n  Stamina: %d\nSaved effects (duration):\n%s",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " = table.concat(eff_descs, ) end return("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 714,
+  "src": "Ferality: Wolf",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 716,
+  "src": "Target is invoking the primal wolf spirit, gaining +%d%% movement speed, +%d defense, +%d invisibility and stealth detection, and %d%% chance to pin in melee.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 723,
+  "src": "#Target# howls with wolfish ferocity!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "= , on_gain = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 723,
+  "src": "+Feral Wolf",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 727,
+  "src": "#Target# looks less wolfish.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 727,
+  "src": "-Feral Wolf",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 764,
+  "src": "Toxic Vigor",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "nses) end, } newEffect { name = , desc ="
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 773,
+  "src": "#Target# is invigorated!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, eff) return"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 783,
+  "src": "The target is invigorated by toxic alchemy, giving +%d%% global speed and +%d%% resist all.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 0,
+  "src": "arcane_surge",
+  "tag": "effect subtype",
+  "ctor": "newEffect",
+  "prefix": "subtype-key"
+ },
+ {
+  "file": "superload/data/timed_effects.lua",
+  "line": 0,
+  "src": "feral",
+  "tag": "effect subtype",
+  "ctor": "newEffect",
+  "prefix": "subtype-key"
+ },
+ {
+  "file": "superload/data/talents/spells/spells.lua",
+  "line": 30,
+  "src": "Turn your body into pure flame, increasing your fire resistance by %d%%, burning any creatures attacking you for %0.2f fire damage, and projecting %d random slow-moving fire bolts per turn at targets in sight, doing %0.2f fire damage with each bolt.\n  The projectiles safely go through your friends without harming them.\n  While this talent and Flame Infusion are both sustained, if your alchemical bombs hit your golem, there is a %d%% chance that each negative physical or magical effect will be removed, up to %d effect%s maximum.\n  The damage and resistance will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": " = t.getGolemRepairMax(self, t) return ("
+ }
+]

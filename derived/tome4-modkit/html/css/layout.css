@@ -1,0 +1,12 @@
+/* ── Section ── */
+.section{margin-bottom:32px;}
+.section-title{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:14px;}
+
+/* ── Grids ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+@media(max-width:960px){.g4{grid-template-columns:1fr 1fr;}}
+@media(max-width:720px){.g3,.g4{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.g2,.g3,.g4{grid-template-columns:1fr;}}

@@ -1,0 +1,10 @@
+- 2026-04-15: 遷移 T-Engine 引擎與 ToME 內容分析。
+- 2026-07-05: 從 Steam 安裝重取 1.7.6 原始碼（te4-1.7.6.teae + tome.team 解壓至 projects/t-engine4/，1999 個 .lua），DLC/addon 封包留在 Steam 目錄未解。
+- 2026-07-05: 對齊現行工作流——00-overview 狀態表補齊 01-17、兩處框線圖改 Mermaid/表格(overview.md、教學13)、教學01 執行方式改 Steam 版+編譯雙軌、補 details/、更新 index 條目；已知欠帳：全批無 檔案:行號 標註。
+- 2026-07-05: 生成 HTML 導覽層 html/（index+architecture+tutorial+_shared.css，沿用 c-mera 樣式），連結全數驗證通過。
+- 2026-07-06: tome4 addon 正體中文化工作區 ~/code/tome4-ch：非侵入式 locale 伴生 addon 方案（機械抽取+agy翻譯+硬驗證管線），12/14 完成，arcanum/verdant 等 agy 額度自動續跑。
+- 2026-07-06: tome4-ch 全部完成——12 個正體中文化伴生 addon（共 ~4,300 條）已裝入 game/addons/，arcanum/verdant 尾段由 sonnet agent 補齊並過硬驗證。
+- 2026-07-06 快照：tome4 addon 漢化收線——12 個 -zh 伴生 addon（~4,400 條）全裝入 game/addons/ 並通過驗證；兩次 crash 皆與漢化無關（Workshop 下載競態 SIGSEGV + neka 1.5.5 老 addon 與 1.7.6 撞 EXHAUSTION，已在 addons.cfg 停用 neka）；待辦：使用者實機確認中文顯示、新訂 7 個 Workshop addon 尚未漢化。
+- 2026-07-10: 巡檢 t-engine 狀態——analysis/t-engine 架構與 01-17 教學完整，projects/t-engine4 保留 Steam 1.7.6 Lua 層，~/code/tome4-ch 工作區乾淨且 12 個 zh 伴生 addon 已以 .teaa 安裝到 Steam game/addons/。
+- 2026-07-10: 繼續 tome4-ch——解包新 addon 參考碼，完成並安裝 combat-turn-separators/hz-escorts/select-your-escorts/skill-on-drop 4 個正體中文化伴生 addon；待處理 steamwitch、master-spell-merchants、zomnibus，neka 因相容性問題暫緩。
+- 2026-07-10: 繼續 agy 批次漢化——完成並安裝 steamwitch(346) 與 zomnibus(858，排除 1 條內部 pattern)；master-spell-merchants 抽取 1490 條，agy 暫停前已完成 356 條，可從 _work/master-spell-merchants/translations.json 續跑。

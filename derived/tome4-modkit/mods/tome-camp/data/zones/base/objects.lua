@@ -1,0 +1,1 @@
+-- 營地不放隨機物。檔案必須存在（Zone:loadBaseLists 會嘗試載入）。

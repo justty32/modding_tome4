@@ -1,0 +1,842 @@
+[
+ {
+  "file": "data/talents/gifts/psiclaws.lua",
+  "line": 44,
+  "src": "mindstar_psiclaw_%s_01",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "o.combat then o.moddable_tile_ornament ="
+ },
+ {
+  "file": "data/talents/gifts/silenthunter.lua",
+  "line": 201,
+  "src": "Strike the target from stealth, doing %d%% weapon damage and not breaking stealth.\n\t\tIf successful, the target will be stunned for %d turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/snakeaspect.lua",
+  "line": 41,
+  "src": "Bites the target for %d%% weapon damage as poison over 5 turns.\n\t\tIf the target is unable to move, this does %d%% weapon damage instead.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/snakeaspect.lua",
+  "line": 86,
+  "src": "Spit poison at your target doing %0.2f poison damage over 5 turns.\n\t\tA bleeding target is more vulnerable to the poison and takes %0.2f poison damage over 5 turns instead.\n\t\tAt raw talent level 3, this becomes a beam.\n\t\tAt raw talent level 5, this becomes a cone.\n\t\tThe damage scales with your Mindpower and uses Mind Crits.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/snakeaspect.lua",
+  "line": 149,
+  "src": "Make a melee attack for %d%% damage and then attempt to grapple a target up to one size category larger then yourself for %d turns. \n\t\tA grappled opponent will be unable to move, take %d damage each turn, be silenced and slowed by %d%%. Any movement from the target or you will break the grapple.\n\t\tYou may only grapple a single target at a time, and using any targeted melee talent on a target that you're not grappling will break the grapple.\n\t\tAt raw talent level 5, you gain +1 effective size for this attack.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/snakeaspect.lua",
+  "line": 182,
+  "src": "Change your shape, gaining some physical and mental aspects of a snake.\n\t\tThis increases your physical attack speed by %d%% and your defence by %d, but lowers your armour by %d.\n\t\tIt also lowers the cooldowns of the Venomous Bite, Spit Venom and Squeeze talents by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/summon-commands.lua",
+  "line": 47,
+  "src": "Command one of your summoned creatures to attack a target creature.\n\t\t- Ritch Flamespitter: Spits stunning fire.\n\t\t- Quillfire Porcupine: Fires a beam of bleeding damage.\n\t\t- Hydra: Breathes lightning, acid or nature at random.\n\t\t- Fire Drake: Breathes stunning fire.\n\t\t- War Hound: Rushes the target.\n\t\t- Minotaur: Attacks all adjacent creatures.\n\t\t- Giant Ant: Spits disarming acid.\n\t\t- Stone Golem: Causes an earthquake.\n\t\t- Turtle: Stuns a target enemy.\n\t\t- Spider: Spits insidious poison.\n\t\t- Jelly: Spits slowing slime.\n\t\t- Rimebark: Breathes freezing cold.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/gifts/summon-commands.lua",
+  "line": 89,
+  "src": "Command one of your summoned creatures to defend a target creature.\n\t\t- Ritch Flamespitter: Cures a physical effect and any physical cross-tier effects.\n\t\t- Quillfire Porcupine: Grants the target an armour of spines.\n\t\t- Hydra: Grants the target life regeneration.\n\t\t- Fire Drake: Emits a confusing roar.\n\t\t- War Hound: Grants tracking skills.\n\t\t- Minotaur: Emits a confusing shout.\n\t\t- Giant Ant: Cures a magical effect and any magical cross-tier effects.\n\t\t- Stone Golem: Grows a wall of stone around the target.\n\t\t- Turtle: Grants the target a shell shield.\n\t\t- Spider: Spits a web.\n\t\t- Jelly: Spits healing slime.\n\t\t- Rimebark: Cures a mental effect and any mental cross-tier effects.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/gifts/summon-commands.lua",
+  "line": 145,
+  "src": "Destroys one of your summons, making it detonate in radius of %d.\n\t\t- Ritch Flamespitter: Explodes into a fireball.\n\t\t- Quillfire Porcupine: Explodes into a physical damage and pinning ball.\n\t\t- Hydra: Explodes into a ball of lightning, acid or poison.\n\t\t- Fire Drake: Generates a cloud of fire.\n\t\t- War Hound: Explodes into a ball of physical damage.\n\t\t- Minotaur: Explodes into a sharp ball, cutting all creatures.\n\t\t- Giant Ant: Explodes into a cloud of bugs which do physical damage and talent failure.\n\t\t- Stone Golem: Knocks back all creatures.\n\t\t- Turtle: Grants a small shell shield to all friendly creatures.\n\t\t- Spider: Pins all foes around.\n\t\t- Jelly: Explodes into a ball of slowing slime.\n\t\t- Rimebark: Explodes into an iceball.\n\t\tIn addition, a random summon will come off cooldown.\n\t\tHostile effects will not hit you or your other summons.\n\t\tThe effects improve with your Willpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/gifts/summon-commands.lua",
+  "line": 176,
+  "src": "Allows you to take direct control of any of your summons.\n\t\tThe summons will appear on the interface; a simple click on them will let you switch control.\n\t\tYou can also press control+tab to switch.\n\t\tWhen taking control, your summon has its lifetime increased by %d turns, it takes %d%% less damage and all its stats are increased by %d.\n\t\tThe damage reduction and bonus stats are based on your Cunning.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/summon-techniques.lua",
+  "line": 74,
+  "src": "You focus yourself on nature, allowing you to summon creatures much faster (%d%% of a normal summon time) and with no chance to fail from high equilibrium for %d turns.\n\t\tWhen activating this power, a random summoning talent will come off cooldown.\n\t\tEach time you summon, the duration of the frantic summoning effect will reduce by 1.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal reduc = t.getReduc(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/summon-techniques.lua",
+  "line": 122,
+  "src": "Energise all your summoned creatures with a burst of natural energy. This heals them for %d life, %d stamina, reduces their equilibrium by %d and increases their duration by %d turns.\n\t\tThe life healed can mind crit and the life/resources restoration scales with your mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/summon-techniques.lua",
+  "line": 159,
+  "src": "This powerful technique allows you to be a vessel for containing the essence of a summoned creature. To use this, target yourself with a summoning wild-gift.\n\t\tWhile no creature is summoned from doing this, the summoner will recieve a powerful buff and one of the creature's talents, as the creature's essence temporarily infuses them.\n\t\tThe buff will last for %d turns and can only be activated once per 20 turns.\n\t\t- Ritch Flamespitter: Increased defense, fire damage and resist. Grants Flamespit.\n\t\t- Quillfire Porcupine: Increase armour and does physical retalitation damage. Grants Quillfire.\n\t\t- Hydra: Increased lightning, acid and nature resistance, and increased life regeneration. Grants Acid Breath.\n\t\t- Fire Drake: Increases strength, willpower and size. Grants Fire Breath.\n\t\t- War Hound: Increases ability to detect hidden creatures. Grants Rush.\n\t\t- Minotaur: Increases strength and constitution. Grants Stun.\n\t\t- Giant Ant: Increases armour, armour hardiness, acid damage and resistance. Grants Acidic Spray.\n\t\t- Stone Golem: Increases life, size, physical damage and resistance. Grants Quake.\n\t\t- Turtle: Increases all damage resistance but reduces movement speed. Grants Taunt.\n\t\t- Spider: Increases resistance to pins and poisons. Grants Spider Web.\n\t\t- Jelly: Increases chance to ignore critical hits, increased nature damage and resistance. Grants Mucus.\n\t\t- Rimebark: Increases armour, armour hardiness, size, cold damage and resistance. Grants Winter's Fury.\n\t\tThe strength of these effects scales with Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/symbiant.lua",
+  "line": 69,
+  "src": "Form a symbiotic relationship with a jelly, increasing your maximum life by %d.\n\t\tThere are a range of jellies to choose from, each with their own damage type.\n\t\tThe symbiotic relationship causes %d%% of all damage you do to be converted to the jelly's damage type, and increases your resistance to and damage done with that damage type by %d%%.\n\t\tThese bonuses scale with your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/symbiant.lua",
+  "line": 114,
+  "src": "Your jelly helps you attack an adjacent target for %d%% weapon damage.\n\t\tIf this attack hits, there is a burst of slime which does %d jelly's damage in a radius %d cone at the target.\n\t\tBurst damage scales with your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/symbiant.lua",
+  "line": 139,
+  "src": "Should you take a blow that would reduce your life to less than 1, your symbiote will absorb all the damage, negating the damage and saving your life, but it will die and explode for %d jelly's damage in a radius of %d.\n\t\tDamage scales with your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/symbiant.lua",
+  "line": 269,
+  "src": "Force life energy into your symbiote making it multiply explosively for a short time.\n\t\tThis causes a wave of slime to erupt in a radius of %d, doing %d jelly's damage and spawning up to %d friendly jellies.\n\t\tDamage and jelly stats scales with your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/gifts/tigeraspect.lua",
+  "line": 45,
+  "src": "Attack your target for %d%% weapon damage. If you hit, they bleed for half that damage over 5 turns and have their armour reduced by %d for %d turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/tigeraspect.lua",
+  "line": 80,
+  "src": "Increases your global speed by %d%% and hate regeneration by %0.1f per turn.\n\t\tEach turn you must pass an Equilibrium fail check, or the fury will end.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/tigeraspect.lua",
+  "line": 118,
+  "src": "Lash out in all directions for %d%% weapon damage. If you hit a bleeding creature they are crippled for %d turns by this attack, reducing their physical, mind and spell speeds by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/tigeraspect.lua",
+  "line": 147,
+  "src": "Change your shape, gaining physical and mental aspects of a tiger.\n\t\tThis increases your physical power by %d and your stealth power by %d, but lowers your spell save by %d.\n\t\tIt also lowers the cooldowns of the Rending Strike, Rabid Fury and Claw Frenzy talents by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/treantaspect.lua",
+  "line": 55,
+  "src": "Renders the target's weapon useless for %d turns and covers them in a slippery moss that causes their talents to have a %d%% chance of failing.\n\t\tIf you have Tangling Roots active, this will target all enemies in range of your roots instead.\n\t\tThis talent will not break stealth.\n\t\tTalent fail chance scales with your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/treantaspect.lua",
+  "line": 110,
+  "src": "Living roots extend from your feet, each turn the roots will randomly target a creature in a radius of %d.\n\t\tAffected creatures are pinned to the ground and take %0.2f physical damage for %d turns.\n\t\tA creature entangled by the vines will have a chance to break free each turn, and will automatically succeed if it is more than %d grids away from you.\n\t\tThe chance to affect targets and damage increase with talent level and Willpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "rns, dam = t.getValues(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/treantaspect.lua",
+  "line": 139,
+  "src": "Relax and focus on harmony with nature, healing you for %d and restoring %d equilibrium.\n\t\tBoth effects will increase with your mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/treantaspect.lua",
+  "line": 169,
+  "src": "Change your shape, gaining some physical and mental aspects of a treant.\n\t\tThis increases your nature resistance and armour hardiness by %d%% but lowers your accuracy by %d.\n\t\tIt also lowers the cooldowns of the Woodcutter's Bane, Tangling Roots and Regrowth talents by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/volcanism.lua",
+  "line": 92,
+  "src": "Summons a small raging volcano for %d turns. Every turn, it will fire %d molten boulders toward your foes, dealing %0.2f fire and %0.2f physical damage.\n\t\tThe damage will scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/volcanism.lua",
+  "line": 142,
+  "src": "Digs up to %d grids into walls, trees or other impassable terrain.\n\t\tThis also breaks up open ground, potentially stunning anyone standing there.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal range = t.getRange(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/volcanism.lua",
+  "line": 189,
+  "src": "The ground is shattered by a lava explosion, doing %0.2f physical (and bleeding) damage in a radius of %d.\n\t\tThe area will also be covered with burning rock for 5 turns, which will ignite any that stand on it for %0.2f fire damage over time.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/gifts/volcanism.lua",
+  "line": 250,
+  "src": "Surround yourself with a cloak of noxious gasses from deep within the earth. This decreases you sight range by 5, your lite radius by 1 and does %0.2f acid damage to nearby enemies, possibly blinding them.\n\t\tIncreases you Equilibrium by 1 per turn and does a fail check. If it fails, Noxious Gasses will cease.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 57,
+  "src": "#0080FF#The clouds dissolve away, leaving a perfectly clear sky.",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "playSoundNear(self, ) game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 76,
+  "src": "The weather around you changes to perfectly clear. \n\t\tThis increases your sight range and your light radius by %d and your critical hit chances by %d%%.\n\t\tDisperses Hurricane effects.\n\t\tYou may only have one Weather active at once.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 139,
+  "src": "#0080FF#The wind picks up, and leaves fly around you.",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "_SONG_OF_AUTUMN) then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 145,
+  "src": "#0080FF#The wind picks up, and clouds fly across the sky.",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "1)) } return ret else game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 161,
+  "src": "The weather around you changes to rather windy. Projectiles fired at you have a %d%% chance to be deflected by %d and lingering cloud effects near you get blown away.\n\t\tYou may only have one Weather active at once.\n\t\tThe effects will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 239,
+  "src": "Cloak yourself with mists, increasing your defence and stealth by %d, but reducing your sight and light radius by 1.\n\t\tYou may only have one Weather active at once.\n\t\tEffects will scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 269,
+  "src": "#0080FF#The clouds go dark, heavy rain begins to fall.",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "playSoundNear(self, ) game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 281,
+  "src": "The weather around you changes to a downpour. All enemies within radius 3 of you become %d%% more vulnerable to cold and stuns, but also %d%% more resistant to fire and acid damage.\n\t\tYou may only have one Weather active at once.\n\t\tThe effects will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 332,
+  "src": "#0080FF#There is a sudden flash, then you hear distant thunder.",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "playSoundNear(self, ) game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 344,
+  "src": "The weather around you changes to a thunderstorm. Each turn, each nearby enemy has a %d%% chance to be struck by lightning for %0.2f damage, and possibly dazing them.\n\t\tYou may only have one Weather active at once.\n\t\tThe effects will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 387,
+  "src": "Grants 4 different sustains for altering the weather around you. These have passive effects and determine the effect of Invoke Weather and Focus Weather.\n\t\t\tClear Skies: Increases your sight and light radius by %d, increases your critical hit chances by %d%%, and makes you immune to Hurricane.\n\t\t\tMist Cloak: Increases your defence and stealth power by %d, but decreases your light and sight radius by 1.\n\t\t\tRainfall: Nearby enemies have their cold and stun resistance reduced by %d%%, but also get %d%% increased fire and acid resistance.\n\t\t\tBolts from the Blue: Nearby enemies have a %d%% chance to be struck by lightning for %0.2f damage and possibly dazing them.\n\t\t\tYou may only have one Weather active at a time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d(self.T_HP_BOLTS_FROM_THE_BLUE) ret = ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 472,
+  "src": "#FF8000#You must have a Weather sustain active to use this",
+  "tag": "logSeen",
+  "ctor": "newTalent",
+  "prefix": "oundNear(self, ) else game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 481,
+  "src": "Invoke your active Weather sustain to strike a single target.\n\t\tClear Skies: The target takes %d light damage and is blinded for %d turns.\n\t\tMist Cloak: Wraps fog around the target, granting %d%% evasion and %d extra defence for %d turns.\n\t\tRainfall: Cleansing water washes over the target, curing up to %d beneficial/detrimental effects from hostile/friendly targets.\n\t\tBolts from the Blue: A lightning bolt strikes the target doing %d lightning damage and dazing them for 3 turns.\n\t\tDamage done scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 510,
+  "src": "You have experienced the harshness of nature, and survived. \n\t\tIncreases resistance to fire, cold, lightning, acid, nature and physical damage by %d%%. \n\t\tYou also recieve +%d maximum life.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") local res = t.getRes(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/weather.lua",
+  "line": 630,
+  "src": "Focus your active Weather sustain into a radius 2 area effect for %d turns.\n\t\tClear Skies: Creates an area of bright sunlight, lighting up tiles and doing %d light damage each turn.\n\t\tMist Cloak: Creates a cloud of fog for %d turns, which blocks line of sight and blinds creatures for 2 turns.\n\t\tRainfall: Creates a puddle of deep mud for %d turns, which slows creatures by %d%% for 7 turns.\n\t\tBolts from the Blue: Instead of creating an area effect, this binds enemies in chains of lightning. If they use a talent they will take %d lightning damage and be dazed for 3 turns.\n\t\tDamage done scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wild-drake.lua",
+  "line": 73,
+  "src": "Grab a target with a root and drag them to your side, pinning them there for %d turns.\n\t\tIf they are in range after being dragged, you make a melee attack against them for %d%% weapon damage as nature damage.\n\t\tThis talent will also attack with your shield, if you have one equipped.\n\t\tEvery level in Root Lash passively regenerates 0.2 equilibrium per turn.\n\t\tEach point in wild drake talents also increases your nature resistance by 1%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wild-drake.lua",
+  "line": 121,
+  "src": "Creates a circle of fungus of radius %d at your feet; the circle decreases everyones spellpower by %d and increases friendly creature's healing factor by %d%%. The circle lasts %d turns.\n\t\tThe effect will increase with your Mindpower.\n\t\tEach point in wild drake talents also increases your nature resistance by 1%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wild-drake.lua",
+  "line": 156,
+  "src": "Imbue yourself with antimagic energies, gaining %d spell save, %d%% arcane resistance and piercing %d%% of damage shields.\n\t\tThe spell save and arcane resistance will scale with Mindpower.\n\t\tEach point in wild drake talents also increases your nature resistance by 1%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wild-drake.lua",
+  "line": 202,
+  "src": "You breathe arcane disrupting energy in a frontal cone of radius %d. Any target caught in the area will take %0.2f arcane resource burn damage.\n\t\tThe breath will also dispel one beneficial magical effect or sustained effect from each target.\n\t\tThe damage will increase with your Strength, and the critical chance is based on your Mental crit rate.\n\t\tEach point in wild drake talents also increases your nature resistance by 1%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l effect = t.getEffect(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wind-drake.lua",
+  "line": 87,
+  "src": "Fly toward your target with incredible speed. If the target is reached, you get a free attack doing %d%% weapon damage.\n\t\tIf the attack hits, the target is dazed for 3 turns.\n\t\tYou then land next to the target.\n\t\tThis talent will also attack with your shield, if you have one equipped.\n\t\tLevels in Flyby Slash additionally raise your Attack and Mind Speeds by %d%%, passively.\n\t\tEach point in wind drake talents also grants +1 defense and +1%% evasion.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wind-drake.lua",
+  "line": 141,
+  "src": "Spin around, slashing at all targets around you for %d%% weapon damage.\n\t\tThis talent will also attack with your shield, if you have one equipped.\n\t\tEach point in wind drake talents also grants +1 defense and +1%% evasion.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wind-drake.lua",
+  "line": 179,
+  "src": "You have have learned the patience and focus of a wyrm, increasing your sight range by %d and lowering your minimum equilibrium by %d.\n\t\tThe equilibrium reduction will scale with your Mindpower.\n\t\tEach point in wind drake talents also grants +1 defense and +1%% evasion.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wind-drake.lua",
+  "line": 227,
+  "src": "You summon a powerful gust of wind, damaging your foes within a radius of %d for %0.2f physical damage with a 25%% chance of stunning them for 2 turns.\n\t\tThe damage will increase with your Strength.\n\t\tEach point in wind drake talents also grants +1 defense and +1%% evasion.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/winds.lua",
+  "line": 77,
+  "src": "Befriend the winds around you, increasing your movement speed by %d%% and slowing enemies by the same amount.\n\t\tHaste/Slow will scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/winds.lua",
+  "line": 108,
+  "src": "Use the winds to instantly fly away %d grids from your target.\n\t\tRange scales with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/winds.lua",
+  "line": 174,
+  "src": "Summons a sandstorm that moves slowly toward its target, following it if it changes position.\n\t\tAny foe caught in its path takes %0.2f physical damage and could be blinded.\n\t\tWhen it reaches its target, it explodes in a radius of 1 for %0.2f physical damage and possibly blinding. All the sand will also drop onto them, slowing them for 4 turns.\n\t\tThe sandstorm will last for %d turns, or until it reaches its target.\n\t\tDamage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/winds.lua",
+  "line": 215,
+  "src": "Intensify the Zephyr into a strong windstorm. Each turn enemies have a %d%% chance of being blown away for %0.2f physical damage.\n\t\tEnemy projectiles are also deflected by the strong winds. This gives a %d%% chance of deflecting an incoming projectile to a tile in a radius of %d.\n\t\tIncreases you Equilibrium by 1 per turn and does a fail check, if it fails, both Typhoon and Zephyr will cease.\n\t\tThe effects will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wolfaspect.lua",
+  "line": 42,
+  "src": "You let out a frightening howl that panics your foes for %d turns in a radius of 7.\n\t\tThis causes them to flee instead of acting 30%% of the time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wolfaspect.lua",
+  "line": 88,
+  "src": "Pounce on an enemy up to %d tiles away, attacking them for %d%% weapon damage and pinning them for 5 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wolfaspect.lua",
+  "line": 192,
+  "src": "Howl to call your hunting pack. Summons three wolves to fight by your side for %d turns.\n\t\tTheir stats scale with talent level and your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/wolfaspect.lua",
+  "line": 220,
+  "src": "Change your shape, gaining some physical and mental aspects of a wolf.\n\t\tThis increases your light and darkness resistance by %d%% but lowers your mental save by %d.\n\t\tIt also lowers the cooldowns of the Dread Howl, Pounce and Wolf Pack talents by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/woodland.lua",
+  "line": 49,
+  "src": "Release spores into the area to put nearby enemies to sleep for 2 turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/woodland.lua",
+  "line": 139,
+  "src": "Grows and animates %d Poison Ivys for %d turns to poison your foes to death. Ivys are really weak in melee and die easily, but they are poisonous to touch.\n\t\tIt will get %d Willpower, %d Cunning and %d Constitution.\n\t\tVarious stats scale with Spellpower.\n\t\tYour summons inherit some of your stats: increased damage%%, stun/pin/confusion/blindness resistance, armour penetration.\n\t\tBlighted Summoning grants: Poisonous Spores.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/woodland.lua",
+  "line": 240,
+  "src": "Grows and animates %d Sleeping Poppies for %d turns to put your foes to sleep. Poppies are really weak in melee and die easily, but their perfume will put their attackers to sleep.\n\t\tIt will get %d Willpower, %d Cunning and %d Constitution.\n\t\tVarious stats scale with Spellpower.\n\t\tYour summons inherit some of your stats: increased damage%%, stun/pin/confusion/blindness resistance, armour penetration.\n\t\tBlighted Summoning grants: Restless Night.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/woodland.lua",
+  "line": 293,
+  "src": "This huge treant likes pummelling things with acorns.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "e=, display_h=2, display_y=-1}}}, desc ="
+ },
+ {
+  "file": "data/talents/gifts/woodland.lua",
+  "line": 345,
+  "src": "Grow and animate a Hailing Oak for %d turns. The Oak is tough and will sling acorns at your enemies.\n\t\tIt will get %d Strength, %d Dexterity and %d Constitution.\n\t\tVarious stats scale with Spellpower.\n\t\tYour summons inherit some of your stats: increased damage%%, stun/pin/confusion/blindness resistance, armour penetration.\n\t\tBlighted Summoning grants: Eye Shot.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/gifts/woodland.lua",
+  "line": 369,
+  "src": "Protect your plants with tough thorns.\n\t\tThis increases their armour by %d and melee attackers will take %d physical damage.\n\t\tYou will also gain these bonuses when you use Elfwood Shield or a Thorny Skin totem.\n\t\tArmour and Damage scale with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal power = t.getPower(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/bow-flexibility.lua",
+  "line": 63,
+  "src": "Attempt to trip your target with your bow; doing %d%% melee damage and stunning it for %d turns.\n\t\tStun power is based on your accuracy.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ur = t.getDazeDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/bow-flexibility.lua",
+  "line": 109,
+  "src": "Allows you to keep an offhand item handy when weilding a bow (makes them one handed). This frees up your off hand to equip something like a dagger or a shield.\n\t\tLevels in this talent are equivalent to levels in Dagger Mastery and allow you to equip shields.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "d end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/bow-flexibility.lua",
+  "line": 132,
+  "src": "Adopt an agile stance, allowing you to make a free movement step with each shot of your bow.\n\t\tEach step costs %0.1f stamina.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/bow-flexibility.lua",
+  "line": 150,
+  "src": "Your training makes you more sure footed; granting %d%% knockback resistance and %d%% stun resistance.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 31,
+  "src": "Increases Physical Power by %d and increases weapon damage by %d%% when using staves.\n\t\tWill not stack with another Staff Mastery talent.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": " inc = t.getPercentInc(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 82,
+  "src": "Hit a target for %d%% melee damage and stun it for %d turns.\n\t\tStun duration will improve with talent level.\n\t\tAt level 5 this attack can not miss.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ur = t.getDazeDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 114,
+  "src": "Adopt a defensive posture, increasing your defense and armour by %d.\n\t\tEffect scales with your Dexterity.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "defense = t.getDefense(self, t) return ("
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 139,
+  "src": "You cannot use Staffwhirl without a staff weapon!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": " if not weapon then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/techniques/staff-combat.lua",
+  "line": 162,
+  "src": "Spin around, extending your weapon and damaging all targets around you for %d%% weapon damage. \n\t\tFollowed by a quick slam on your primary target for an extra %d%% weapon damage.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 9,
+  "src": "Seek the veiled valley, that holds knowledge from the past. Then seek the power that comes not from within. Don't work against, but work with.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": ".mod.allow_build.mage end, locked_desc ="
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 11,
+  "src": "Not all with innate magical ability choose to use it. In a world where Magic is despised, the gift of Magic is seen as a curse.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "build.mage end, locked_desc = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 12,
+  "src": "The strong willed will simply suppress their magic, while others will seek out the Ziguranth to remove their 'curse'.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ild.mage end, locked_desc = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 13,
+  "src": "A rare few find a different path. They use their abilities to actively balance magical disturbances around them and through meditation find a new way to use magic, with Nature, not against.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "d.mage end, locked_desc = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 14,
+  "src": "The Druid is all about synergy. Many talents support each other, with some benefits not listed. Try out different combinations to find them.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "mage end, locked_desc = , desc = { , , ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 18,
+  "src": "#LIGHT_BLUE# * +3 Magic, +5 Willpower, +0 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": ", locked_desc = , desc = { , , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 79,
+  "src": "Focus your will to control your nature and learn what it is to be controlled yourself, and you will find a way for nature to control you.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "uild.afflicted_cursed end, locked_desc ="
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 81,
+  "src": "Cursed by Nature to become an avenger against all who harm her.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ted_cursed end, locked_desc = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 82,
+  "src": "Werebeasts take on traits from natural creatures.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "d_cursed end, locked_desc = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 83,
+  "src": "Unlike a Wyrmic, the Werebeast must focus their will to stop their abilities controlling them.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "cursed end, locked_desc = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 87,
+  "src": "#LIGHT_BLUE# * +0 Magic, +3 Willpower, +3 Cunning",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "nd, locked_desc = , desc = { , , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 158,
+  "src": "The Woodsman is more at home in the wilds than in civilisation.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "thDescriptor{ type = , name = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 159,
+  "src": "They excel at hunting, trapping and surviving in the wilderness.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "Descriptor{ type = , name = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 160,
+  "src": "While a good bow and a sharp knife are their usual tools, they are known to hunt with trained animals as well.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "scriptor{ type = , name = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/wilder.lua",
+  "line": 163,
+  "src": "#LIGHT_BLUE# * +0 Strength, +3 Dexterity, +3 Constitution",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "or{ type = , name = , desc = { , , , , ,"
+ },
+ {
+  "file": "overload/data/texts/intro-werebeast.lua",
+  "line": 20,
+  "src": "Kill the Treekillers.\n\nHunt them. Stalk them. Catch them. Claw them. Bite them.\n\nThey all must die.\n\nKILL THEM ALL!\n",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "return"
+ },
+ {
+  "file": "overload/data/texts/intro2-werebeast.lua",
+  "line": 20,
+  "src": "Welcome #LIGHT_GREEN#@name@#WHITE#.\n\nYou blink. Where are you? ...Who are you? ...and why is there blood everywhere?\n\nAround you are the bodies of at least a dozen lumberjacks, all with a terrified look on their faces, or what it left of their faces.\nJudging by the blood on your weapon, your clothes and by the taste, in your mouth, you are the cause of the terror.\n\nPerhaps you should leave quickly, maybe to atone for whatever just happened, or maybe to continue what you started?\n",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "return"
+ },
+ {
+  "file": "overload/data/quests/lumberjack-cursed.lua",
+  "line": 27,
+  "src": "All the treekillers must die. You must kill them.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "criptor.subclass == then desc[#desc+1] ="
+ },
+ {
+  "file": "overload/data/quests/lumberjack-cursed.lua",
+  "line": 96,
+  "src": "You take a %s from the body of the last treekiller.",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "NVEN_INVEN, o) require():simplePopup(, ("
+ },
+ {
+  "file": "overload/data/quests/lumberjack-cursed.lua",
+  "line": 114,
+  "src": "The remaining lumberjacks collect some gold to thanks you (%0.2f).",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "ncMoney(money) require():simplePopup(, ("
+ },
+ {
+  "file": "overload/data/quests/lumberjack-cursed.lua",
+  "line": 122,
+  "src": "You saved most of us, please take this has a reward. (They give you %s)",
+  "tag": "tformat",
+  "ctor": "",
+  "prefix": "NVEN_INVEN, o) require():simplePopup(, ("
+ },
+ {
+  "file": "overload/data/chats/_antimagic-end.lua",
+  "line": 32,
+  "src": "Hmph a Druid. We do not approve of your kind, but nor will we harm a fellow servant of Nature.\nYou passed our test, but the prize would cripple you. Wait a moment, and I will return with something more fitting.\n#LIGHT_GREEN#*he leaves and returns a moment later.*#WHITE#\nTake this rune, a product of our experiments, and leave this place forever.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " = { {, jump=}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/_antimagic-end.lua",
+  "line": 43,
+  "src": "Excellent! You truly prove that no mage-wrought flame or storm can stand against blade and arrow! Come, learn our ways. You are ready.\n#LIGHT_GREEN#*he gives you a potion.*#WHITE#\nDrink this. We extract it from a very rare kind of drake. It will grant you powers to fight and cancel magic, but never again will you be able to use magic.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "TED) end}, } } else newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/_zigur-trainer.lua",
+  "line": 59,
+  "src": "#LIGHT_GREEN#*A grim-looking Fighter stands there, clad in mail armour and a large olive cloak. He doesn't appear hostile - his sword is sheathed.*#WHITE#\n",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": ".changed = true end newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/_zigur-trainer.lua",
+  "line": 60,
+  "src": ", our guild has been watching you and we believe that you have potential.\nWe see that the hermetic arts have always been at the root of each and every trial this land has endured, and we also see that one day they will bring about our destruction. So we have decided to take action by calling upon Nature to help us combat those who wield the arcane.\nWe can train you, but you need to prove you are pure, untouched by the eldritch forces, and ready to fight them to the end.\nYou will be challenged against magical foes. Should you defeat them, we will teach you our ways, and never again will you be able to be tainted by magic, or use it.\n\n#LIGHT_RED#Note:  Completing this quest will forever prevent this character from using spells or items powered by arcane forces.  In exchange you'll be given access to a mindpower based generic talent tree, Anti-magic, and be able to unlock hidden properties in many arcane-disrupting items.",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": " = true end newChat{ id=, text = ..sex.."
+ },
+ {
+  "file": "overload/data/chats/_zigur-trainer.lua",
+  "line": 88,
+  "src": "Very well. Before you start, we will make sure no magic can help you:\n- You will not be able to use any spells or magical devices\n- Any worn objects that are powered by the arcane will be unequipped\n\nAre you ready, or do you wish to prepare first?",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "answers = { {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/_zigur-trainer.lua",
+  "line": 100,
+  "src": "#VIOLET#*You are grabbed by two olive-clad warriors and thrown into a crude arena!*\n#LIGHT_GREEN#*You hear the voice of the Fighter ring above you.*#WHITE#\n",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "ove_magic}, {}, } } newChat{ id=, text ="
+ },
+ {
+  "file": "overload/data/chats/_zigur-trainer.lua",
+  "line": 102,
+  "src": "! Your training begins! I want to see you prove your superiority over the works of magic! Fight!",
+  "tag": "_t",
+  "ctor": "newChat",
+  "prefix": "c}, {}, } } newChat{ id=, text = ..sex.."
+ },
+ {
+  "file": "superload/mod/class/interface/Combat.lua",
+  "line": 113,
+  "src": "insufficient weapon resources, using unarmed combat",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "se weapon = unarmed print(, target.name,"
+ },
+ {
+  "file": "superload/mod/class/interface/Combat.lua",
+  "line": 177,
+  "src": "[ATTACK] after melee attack bonus hooks & callbacks::",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": ".armor if hd.stop then return end print("
+ }
+]

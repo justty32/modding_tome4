@@ -1,0 +1,11 @@
+long_name = "Improved Auto-explore and Rest 正體中文化"
+short_name = "improved-restauto-zh"
+for_module = "tome"
+version = {1,7,6}
+addon_version = {1,0,0}
+weight = 1000000
+author = {'tome4-ch'}
+homepage = '-'
+description = [[Improved Auto-explore and Rest 的正體中文翻譯（非侵入式 locale patch）。]]
+tags = {'translate'}
+data = true

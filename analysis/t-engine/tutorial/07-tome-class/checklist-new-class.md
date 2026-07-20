@@ -1,0 +1,9 @@
+- [ ] `init.lua`：設定 `hooks=true, data=true`
+- [ ] `hooks/load.lua`：`ActorTalents:loadDefinition` + `Birther:loadDefinition`
+- [ ] `data/talents/xxx.lua`：`newTalentType` + `newTalent`（全部技能）
+- [ ] `data/birth/classes/xxx.lua`：`class` 大類別 + `subclass` 子職業
+- [ ] subclass 的 `talents_types` 包含所有要解鎖的技能樹
+- [ ] subclass 的 `talents` 包含起始技能
+- [ ] subclass 的 `copy.equipment` 用 `resolvers.equipbirth`
+- [ ] `descriptor_choices` 設定種族相容性（允許所有種族或限制特定種族）
+- [ ] 在遊戲中測試角色創建 → 技能 UI → 每個技能效果

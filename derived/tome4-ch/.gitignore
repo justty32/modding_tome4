@@ -1,0 +1,4 @@
+_reference/
+build/
+_work/*/batches/
+__pycache__/

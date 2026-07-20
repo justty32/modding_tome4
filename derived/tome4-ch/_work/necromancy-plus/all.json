@@ -1,0 +1,1938 @@
+[
+ {
+  "file": "init.lua",
+  "line": 20,
+  "src": "Necromancy+",
+  "tag": "init.lua long_name",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "init.lua",
+  "line": 28,
+  "src": "Adds a new categories for Necromancer and the Spiritmancer class.",
+  "tag": "init.lua description",
+  "ctor": "",
+  "prefix": "init-meta"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 101,
+  "src": "Swaps Acid damage on the Bonestaff aspect for Physical damage.",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "= self.c_desc.h, text = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 103,
+  "src": "#BLACK##{bold}#Necromancy+: Make Bonestaves use Physical instead of Acid?#WHITE##{normal}#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "ing.toTString }, name = string.toTString"
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 117,
+  "src": "Change Selection",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": " name= }, { name= }, } Dialog:listPopup("
+ },
+ {
+  "file": "hooks/load.lua",
+  "line": 117,
+  "src": "Alter Bonestaff Aspect? #RED#Best not to change this if you already have a Bonestaff.#LAST#",
+  "tag": "_t",
+  "ctor": "",
+  "prefix": "name= }, { name= }, } Dialog:listPopup(,"
+ },
+ {
+  "file": "data/boss-artifacts.lua",
+  "line": 37,
+  "src": "long sharp scalpel",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "= true, name = , image = , unided_name ="
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 35,
+  "src": "Staff of Bones",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "e = {arcane=true}, unique = true, name ="
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 38,
+  "src": "bone staff",
+  "tag": "entity name",
+  "ctor": "newEntity",
+  "prefix": "ors = {bonestaff=true}, unided_name = _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 43,
+  "src": "A staff made out of the bones of fallen foes. Disgustingly powerful.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "r=colors.VIOLET, rarity = 190, desc = _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 80,
+  "src": "It seems willing and able to talk to you (use Command Staff).",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " special_desc = function(self) return _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 83,
+  "src": "Growing more powerful? Still pathetic compared to a True Necromancer!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ion(self, who) local msg = rng.table{ _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 84,
+  "src": "Ahh the rush of power... I love that!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "self, who) local msg = rng.table{ _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 85,
+  "src": "What feeble power you wield now is nothing!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": ", who) local msg = rng.table{ _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 86,
+  "src": "Yes yes you've leveled up, so what?",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "o) local msg = rng.table{ _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 87,
+  "src": "One more level, that's hardly impressive you know?",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ocal msg = rng.table{ _t, _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 88,
+  "src": "If you weren't so useless I'd be nearly impressed by that new level...",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " msg = rng.table{ _t, _t, _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 96,
+  "src": "KILL! KILL!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "hen return end local msg = rng.table{ _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 97,
+  "src": "We require more souls!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "return end local msg = rng.table{ _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 98,
+  "src": "Destroy them all! OBEY!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "rn end local msg = rng.table{ _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 99,
+  "src": "FEED ME!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "nd local msg = rng.table{ _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 100,
+  "src": "I nee ..err.. you need more souls. Yes you...",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ocal msg = rng.table{ _t, _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 101,
+  "src": "Pain and misery, spread them!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " msg = rng.table{ _t, _t, _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 102,
+  "src": "I love the smell of a fresh corpse.",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": " = rng.table{ _t, _t, _t, _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 103,
+  "src": "Splatter me with the blood of our foes!",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "ng.table{ _t, _t, _t, _t, _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 104,
+  "src": "That one wasn't such an impressive kill...",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "able{ _t, _t, _t, _t, _t, _t, _t, _t, _t"
+ },
+ {
+  "file": "data/cults-artifacts.lua",
+  "line": 105,
+  "src": "Getting a bit sloppy on the kills no?",
+  "tag": "_t",
+  "ctor": "newEntity",
+  "prefix": "{ _t, _t, _t, _t, _t, _t, _t, _t, _t, _t"
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 22,
+  "src": "crystaline snare",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": "newDamageType{ name ="
+ },
+ {
+  "file": "data/damage_types.lua",
+  "line": 56,
+  "src": "pool of light",
+  "tag": "damage type",
+  "ctor": "newDamageType",
+  "prefix": " state) end end, } newDamageType{ name ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 30,
+  "src": "Ghost Touched",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "ire newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 31,
+  "src": "Reduced mind save, cold resist and stun resist.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": ", long_desc = function(self, eff) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 36,
+  "src": "#F53CBE##Target# is touched by a deathly chill!",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "{}, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 36,
+  "src": "+Ghost Touched",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 37,
+  "src": "#Target# is free from the deathly chill",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 37,
+  "src": "-Ghost Touched",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 49,
+  "src": "Meat Shielded",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 50,
+  "src": "The target's armour is increased by %d, and all damage resistance is increased by %d%%.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 87,
+  "src": "Nether Breach",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": "d } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 88,
+  "src": "Fires a darkness explosion each turn doing %0.2f darkness damage in radius 1.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 111,
+  "src": "Spiritform",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 112,
+  "src": "Turn into a spirit, passing through walls (but not natural obstacles), granting %d%% light resistance and affinity.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 117,
+  "src": "#Target# turns into a spirit.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 117,
+  "src": "+Spiritform",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 118,
+  "src": "#Target# returns to normal.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 118,
+  "src": "-Spiritform",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 148,
+  "src": "Karmic Shield",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 149,
+  "src": "This shield absorbs all damage then releases it as a lightning explosion.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 155,
+  "src": "#STEEL_BLUE#(%d absorbed)#LAST#",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "p) game:delayedLogDamage(src, self, 0, ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 205,
+  "src": "Clay Aura",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 206,
+  "src": "A thin shell of clay reduces damage taken by %d.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 221,
+  "src": "Gift of Life",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 222,
+  "src": "Creature has been fortified with life from its summoner, increasing its maximum life by %d and its regeneration by %d.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 227,
+  "src": "#Target# is filled with life.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 227,
+  "src": "+Gift of Life",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 228,
+  "src": "#Target#'s life returns to normal.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 228,
+  "src": "-Gift of Life",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 239,
+  "src": "Peacemakers",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", } newEffect{ name = , image = , desc ="
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 240,
+  "src": "Increases the target combat power, spellpower, accuracy by %d and %d increased global speed.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "long_desc = function(self, eff) return ("
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 245,
+  "src": "#Target# is engulfed in light energies.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": " }, on_gain = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 245,
+  "src": "+Peacemakers",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_gain = function(self, err) return ,"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 246,
+  "src": "#Target# seems less powerful.",
+  "tag": "tformat",
+  "ctor": "newEffect",
+  "prefix": "nd, on_lose = function(self, err) return"
+ },
+ {
+  "file": "data/timed-effects.lua",
+  "line": 246,
+  "src": "-Peacemakers",
+  "tag": "_t",
+  "ctor": "newEffect",
+  "prefix": ", on_lose = function(self, err) return ,"
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 29,
+  "src": "Summon Wisp",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "PIRIC_GIFT.hide = true newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 81,
+  "src": "Surround yourself with ghostly energies, increasing you cold damage and resistance by %d%%. When one of your minions is destroyed while inside your necrotic aura, it has a %d%% chance to create a will o' the wisp.\nThe will o' the wisp will take a random target in sight and home in on it. When it reaches the target, it will explode for %0.2f cold damage.\nAlso, when you hit an enemy with a spell you have a %d%% chance of summoning a wisp.\nThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "nce, dam = t.getParams(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 92,
+  "src": "cold flames",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "itialCreep) local e = Object.new{ name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 200,
+  "src": "Cold Flames slowly spread from %d spots in a radius of %d around the targeted location. The flames deal %0.2f cold damage, and have a chance of freezing.\nThese flames will also slowly burn physical and magical status effects, beneficial from enemies, detrimental form allies.\nDamage improves with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "Count = t.getDarkCount(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 206,
+  "src": "Ghost Touch",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ype.COLD, damage)) end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 233,
+  "src": "Curse your target with a deathly chill, weakening their mind save, cold resistance and stun resistance by %d for 10 turns.\n\t\tBecomes radius 1 with Essence of the Dead.\n\t\tThe curse will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 245,
+  "src": "Aura Mastery",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "DEATH_LINK.hide = true newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 260,
+  "src": "Your dark power radiates further as you grow stronger. Increases the radius of your necrotic aura by %d, and reduces the decay rate of your minions outside the aura by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 285,
+  "src": "degenerated skeleton warrior",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "_warrior = { type = , subtype = , name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 308,
+  "src": "greatsword",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "y = 1, resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 314,
+  "src": "skeleton warrior",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "_warrior = { type = , subtype = , name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 345,
+  "src": "armoured skeleton warrior",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "_warrior = { type = , subtype = , name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 378,
+  "src": "longsword",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "7}, }, resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 378,
+  "src": "heavy",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "ubtype=, autoreq=true}, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 383,
+  "src": "skeleton archer",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "l_archer = { type = , subtype = , name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 411,
+  "src": "longbow",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "el = , resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 411,
+  "src": "arrow",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "ubtype=, autoreq=true}, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 415,
+  "src": "skeleton master archer",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "m_archer = { type = , subtype = , name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 449,
+  "src": "skeleton mage",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "kel_mage = { type = , subtype = , name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 478,
+  "src": "staff",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "nt = , resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 499,
+  "src": "ghoul",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "1, see_invisible = 2, undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 527,
+  "src": "ghast",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "1, see_invisible = 2, undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 555,
+  "src": "ghoulking",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "1, see_invisible = 2, undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 572,
+  "src": "vampire",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "7}, }, }, vampire = { type = , subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 592,
+  "src": "vampire",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "1, see_invisible = 5, undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 619,
+  "src": "master vampire",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "1, see_invisible = 5, undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 628,
+  "src": "wight",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "x=6}}, }, g_wight = { type = , subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 646,
+  "src": "grave wight",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "1, see_invisible = 7, undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 675,
+  "src": "barrow wight",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "1, see_invisible = 7, undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 685,
+  "src": "ghost",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "x=6}, }, }, dread = { type = , subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 710,
+  "src": "dread",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "1, resolvers.sustains_at_birth(), name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 729,
+  "src": "cloth",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "ment = resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 730,
+  "src": "head",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "ance=75, autoreq=true}, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 731,
+  "src": "feet",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "ance=75, autoreq=true}, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 732,
+  "src": "cloak",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "ance=75, autoreq=true}, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 733,
+  "src": "amulet",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "ance=75, autoreq=true}, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 734,
+  "src": "ring",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "nce=100, autoreq=true}, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 759,
+  "src": "lich",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "), resolvers.sustains_at_birth(), name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 793,
+  "src": "mummy",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": ", }, }, mummylord = { type = , subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 811,
+  "src": "mummy lord",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", see_invisible = 10, undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 832,
+  "src": "giant",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": " ), }, bone_giant = { type = , subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 856,
+  "src": "bone giant",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "olvers.mbonus(15, 5), undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 891,
+  "src": "heavy bone giant",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "olvers.mbonus(15, 5), undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 925,
+  "src": "eternal bone giant",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "olvers.mbonus(15, 5), undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 961,
+  "src": "runed bone giant",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "olvers.mbonus(15, 5), undead = 1, name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1131,
+  "src": "Undeath Link",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "elf, ) return true end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1195,
+  "src": "Absorb up to %d%% of the maximum life of each of your necrotic minions (even negative life, possibly destroying them). This will heal you for half of the total amount absorbed.\n\t\tThe healing will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal heal = t.getHeal(self, t)/4 return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1238,
+  "src": "Minions are only tools. You may dispose of them... violently.\nMakes the targeted minion explode for %d%% of its maximum life as blight damage.\nIf used on a Wisp, it will do cold/freeze damage instead.\nIf used on a Bone Giant, it will do physical damage instead and form a temporary shield around you that prevents any attacks from doing more than %d%% of your total life for %d turns.\nBeware! Don't get caught in the blast! (unless you know Dark Empthy: %d%% chance to ignore damage)",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "LOSION.info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1300,
+  "src": "Combines 3 of your skeletons into a bone giant.\nAt level 1, it makes a bone giant.\nAt level 3, it makes a heavy bone giant.\nAt level 5, it makes an eternal bone giant.\nAt level 7, it makes a runed bone giant.\nOnly one bone giant can be active at any time.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "SEMBLE.info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1312,
+  "src": "Soulwinds",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "_SACRIFICE.hide = true newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1335,
+  "src": "Surround yourself with unearthly winds. When one of your minions is destroyed the Soulwinds have a %d%% chance to restore the soul to you.\n\t\tThe Soulwinds will also increase the movement speed of all your undead minions by %d%%.\n\t\tThe speed boost will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e, speed = t.getParams(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1344,
+  "src": "Each minion you summon has a chance to be a more advanced form of undead. \nIn addition all damage done by your minions to other minions is reduced by %d%% (except Retch).\nYour chance for each type of minion is as follows:%s",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ASTERY.info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1422,
+  "src": "human farmer",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ocal race = 5 if race == 1 then m.name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1423,
+  "src": "human",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "5 if race == 1 then m.name = m.subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1425,
+  "src": "A weather-worn human farmer, looking at a loss as to what's going on.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " m.name = m.subtype = m.image = m.desc ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1427,
+  "src": "halfling gardener",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " m.desc = elseif race == 2 then m.name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1428,
+  "src": "halfling",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "seif race == 2 then m.name = m.subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1429,
+  "src": "A rugged halfling gardener, looking quite confused as to what he's doing here.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " == 2 then m.name = m.subtype = m.desc ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1432,
+  "src": "shalore scribe",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "m.image = elseif race == 3 then m.name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1433,
+  "src": "shalore",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "seif race == 3 then m.name = m.subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1434,
+  "src": "A scrawny elven scribe, looking bewildered at his surroundings.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " == 3 then m.name = m.subtype = m.desc ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1437,
+  "src": "dwarven lumberjack",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "m.image = elseif race == 4 then m.name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1438,
+  "src": "dwarf",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "seif race == 4 then m.name = m.subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1439,
+  "src": "A brawny dwarven lumberjack, looking a bit upset at his current situation.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " == 4 then m.name = m.subtype = m.desc ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1442,
+  "src": "cute bunny",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "m.image = elseif race == 5 then m.name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1443,
+  "src": "rodent",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": " == 5 then m.name = m.type = m.subtype ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1444,
+  "src": "It is so cute!",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "n m.name = m.type = m.subtype = m.desc ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1471,
+  "src": "Surround your minions in a veil of darkness. The darkness will teleport them to you, and grant them %d%% evasion for 5 turns.\nAlso reaches through the shadows into quieter places, summoning %d harmless creatures.\nThose creatures are then cursed with a Curse of Hate, making all hostile foes try to kill them.\nIf the summoned creatures are killed by hostile foes, you have 70%% chance to gain a soul.\nThe evasion chance will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l chance = t.getChance(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1480,
+  "src": "Nether Breach",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "etTalentLevel(t))) end newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/alter-spells.lua",
+  "line": 1517,
+  "src": "Rupture reality to temporarily open a passage to the nether, triggering %d random darkness explosions in the target area.\nEach explosion does %0.2f darkness damage in radius 2, and will each trigger at one turn intervals.\nCounts as a Nightfall spell for determining if it will hurt minions.\nThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/charnel.lua",
+  "line": 23,
+  "src": "Blood Burst",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "local Object = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/charnel.lua",
+  "line": 49,
+  "src": "Cause the target's bodily fluids to explode ourwards doing %0.2f blight damage in radius %d.\n\t\tUndead hit by this explosion are healed instead of damaged.\n\t\tDoes not work on Undead.\n\t\tDamage scales with Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/charnel.lua",
+  "line": 58,
+  "src": "Meat Shield",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "alentRadius(t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/charnel.lua",
+  "line": 79,
+  "src": "Everytime you or one of your minions kills a creature, the fallen corpse becomes a shield for you that grants +3 armour and +2%% resist all.\n\t\tThese shields can stack up to %d stacks.\n\t\tThe number of stacks decreases by 1 every %d turns.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") local dur = t.getDur(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/charnel.lua",
+  "line": 87,
+  "src": "Grasping Claws",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(self, t), dur) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/charnel.lua",
+  "line": 114,
+  "src": "Skeletal claws reach up from the grave, grabbing hold of any creatures in a radius of %d around you.\n\t\tThis pins enemies for %d turns, and the claws inflict %0.2f bleeding damage over 5 turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "local dur = t.duration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/charnel.lua",
+  "line": 122,
+  "src": "Vampiric Gift",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "SICAL, damage)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/charnel.lua",
+  "line": 148,
+  "src": "Vampiric energies fill you; each time you deal damage, you have %d%% chance to heal for %d%% of the damage done.\n\t\tThe absorption percent will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "nce, val = t.getParams(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dawn.lua",
+  "line": 21,
+  "src": "Shining Binds",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dawn.lua",
+  "line": 57,
+  "src": "Conjures up a bolt of light that moves toward the target and explodes into a flash of light, doing %0.2f light damage in a radius of %d.\n\t\tAny enemy hit by the flash will also be bound by chains of light, pinning them for 4 turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/dawn.lua",
+  "line": 65,
+  "src": "Pool of Light",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "amage), radius) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dawn.lua",
+  "line": 101,
+  "src": "Create a magical pool of ethereal light, healing all friendly creatures within a radius of %d for %0.2f per turn. The effect lasts for %d turns.\n\t\tEnemies touching the pool will take %0.2f light damage per turn and have a 25%% chance of being blinded.\n\t\tIt also lights up the affected zone.\n\t\tThe healing and damage scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ration = t.getDuration(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dawn.lua",
+  "line": 110,
+  "src": "Holy Word",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "e.LIGHT, heal)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dawn.lua",
+  "line": 143,
+  "src": "The origin of the Holy Word is lost, but its power is not.\n\t\tSpeaking the Holy Word will inflict %0.2f light and %0.2f arcane damage on all undead, horrors and demons within a radius of %d from you.\n\t\tAll enemy creatures will also be stunned for 4 turns.\n\t\tDamage scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dawn.lua",
+  "line": 151,
+  "src": "Endless Light",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "alentRadius(t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dawn.lua",
+  "line": 187,
+  "src": "Tap into the Endless Light, increasing all your light damage by %d%%, ignoring %d%% of your target's light resistance and reducing spell cooldowns by %d%%.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "n = t.getCooldownBonus(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dead-secrets.lua",
+  "line": 23,
+  "src": "Grave Resolve",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "local Object = require newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dead-secrets.lua",
+  "line": 37,
+  "src": "You venture into darkness unfazed. \n\t\t+%d%% fear resistance, %d%% less damage from undead and +%d mental save.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": ") end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dead-secrets.lua",
+  "line": 43,
+  "src": "Darktouched",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "dSave(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dead-secrets.lua",
+  "line": 81,
+  "src": "Your soul has been touched by darkness and death. Grants +%d resistance to cold, darkness.\n\t\tYou can also invoke this darkness to touch another, which heals undead for %d life, or hurts others for %d darkness damage.\n\t\tChanges to Rigor Mortis damage with Essence of the Dead.\n\t\tThe Darktouch scales with Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "batTalentMindDamage(t, 50, 500) return ("
+ },
+ {
+  "file": "data/talents/spells/dead-secrets.lua",
+  "line": 90,
+  "src": "Dead Whispers",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ESS, damage/2)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dead-secrets.lua",
+  "line": 105,
+  "src": "Links your mind to all nearby undead for %d turns. Allowing you to know their position.\n\t\tAlso allows you to see in a radius of %d around your minions when active.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l radius = t.getRadius(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/dead-secrets.lua",
+  "line": 112,
+  "src": "Necroanatomy",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ration, radius) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/dead-secrets.lua",
+  "line": 125,
+  "src": "You are well versed in the anatomy of undead creatures. \n\t\tYou do +%d%% damage to undead and -%d%% damage to your undead minions.\n\t\tIncreases the maximum life of any undead you summon by %d%%.\n\t\tAlso when you use Surge of Undeath, you will heal your undead minions by %d life.\n\t\tHealing scales with your Mindpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "cal heal = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 21,
+  "src": "Ghostly Bulwark",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 32,
+  "src": "You can not summon, you are suppressed!",
+  "tag": "logPlayer",
+  "ctor": "newTalent",
+  "prefix": "t self:canBe() then game.logPlayer(self,"
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 38,
+  "src": "ghostly bulwark",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", display = , color=colors.WHITE, name ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 58,
+  "src": "The ghost of a fallen warrior.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "+ (self:getTalentLevel(t) * 2) }, desc ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 79,
+  "src": "massive",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": " not_properties = {} }, {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 136,
+  "src": "Conjure the ghostly form of a fallen bulwark, complete with massive armour, shield and longsword.\n\t\tThis ghostly defender will guard you and your friends.\n\t\tIts stats scale with your level and Spellpower.\n\t\tBlighted Summoning grants Bone Grab.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 144,
+  "src": "Ghostly Berserker",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "urn ():format() end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 161,
+  "src": "ghostly berserker",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", display = , color=colors.WHITE, name ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 201,
+  "src": "battleaxe",
+  "tag": "effect subtype",
+  "ctor": "newTalent",
+  "prefix": "Y=1 }, resolvers.equip{ {type=, subtype="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 259,
+  "src": "Conjure the ghostly form of a fallen berserker, complete with massive armour and greataxe.\n\t\tThis ghostly warrior will destroy your enemies.\n\t\tIts stats scale with your level and Spellpower.\n\t\tBlighted Summoning grants Execution.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 267,
+  "src": "Pale Veil",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "urn ():format() end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 273,
+  "src": "Grants your ghosts the ability to Fade when they take damage, making them invulnerable for a turn.\n\t\tIncreasing this talent decreases the cooldown of this effect.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ode = , info = function(self, t) return("
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 279,
+  "src": "Banshee",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "turn():format() end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 296,
+  "src": "banshee",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": ", display = , color=colors.WHITE, name ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 319,
+  "src": "The ghost of a fallen maiden.",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "+ (self:getTalentLevel(t) * 2) }, desc ="
+ },
+ {
+  "file": "data/talents/spells/ghosts.lua",
+  "line": 395,
+  "src": "Conjure the ghostly form of a fallen maiden who was slain unjustly.\n\t\tHer sorrow will weaken your enemies.\n\t\tIts stats scale with your level and Spellpower.\n\t\tBlighted Summoning grants Pacification Hex.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 21,
+  "src": "Lightning Flash",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 70,
+  "src": "Conjures up a bolt of lightning that moves toward the target and explodes into a flash of lightning, doing %0.2f lightning damage in a radius of %d.\n\t\tAny enemy hit by the flash will also be blinded by the flash for 4 turns.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "adius = self:getTalentRadius(t) return ("
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 78,
+  "src": "Peacemakers",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "amage), radius) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 106,
+  "src": "A surge of power radiates to all your summoned creatures, increasing their Physical Power, Spellpower and Accuracy by %d, their Global Speed by %d%% for 6 turns.\n\t\tThe effects will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 113,
+  "src": "Indignation",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Speed(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 136,
+  "src": "indignation",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "(self, t)) local trap = Trap.new{ name ="
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 137,
+  "src": "spell",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": " type = , id_by_type=true, unided_name ="
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 203,
+  "src": "Enscribe a powerful rune of justice on the ground. Next turn it will trigger a small but powerful explosion of lightning with a radius of %d.\n\t\tAll creatures hit by this explosion will take %0.2f lightning damage and be dazed for %d turns.\n\t\tThe damage scales with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 210,
+  "src": "Righteous Fury",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "ation(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/justice.lua",
+  "line": 250,
+  "src": "Fills you and your summoned creatures with righteous fury. This increases your lightning damage by %d%%, your lightning damage penetration by %d%% and adds %0.2f lightning damage to your summons' hits.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "ost = t.getSummonBonus(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 21,
+  "src": "Shockbolt",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ short_name = , name ="
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 39,
+  "src": "Spits a bolt of lightning, doing %0.2f lightning damage.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 45,
+  "src": "Sprites",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "age(t, 8, 80))) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 63,
+  "src": "sprite",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " NPC = require local m = NPC.new{ name ="
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 67,
+  "src": "A floating orb of magical energy. It crackles with sparks of lightning. ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "=colors.WHITE, tint=colors.WHITE, desc ="
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 152,
+  "src": "Call spirits of the dead to inhabit Sprites of lightning. This creates 3 Sprites which last for %d turns before unsummoning.\n\t\tThey fire bolts of lightning and if killed, they will explode for %0.2f lightning damage against enemies or healing friendly spirits.\n\t\tTheir stats and explosion damage scale with your Spellpower.\n\t\tCritical spells increase the number of Sprites summoned instead of their strength.\n\t\tThis scales with your crit power strength. Current bonus gives +%d.\n\t\tBlighted Summoning grants Shock.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 162,
+  "src": "Jolt of Fate",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "/100+1.5)*3)-3) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 201,
+  "src": "Call upon Fate to strike down your enemies. Up to three visible enemies within range 10 will be struck by lightning doing %0.2f damage.\n\t\tThe damage will increase with your Spellpower.\n\t\tCritical spells increase the number of enemies hit instead of the damage done.\n\t\tThis scales with your crit power strength. Current bonus gives +%d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 209,
+  "src": "Karmic Shield",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "/100+1.5)*3)-3) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 224,
+  "src": "Protect yourself with a Karmic Shield that absorbs all damage for %d turns.\n\t\tWhen it expires, it will release the absorbed damage as a radius %d explosion doing %d%% of the damage absorbed as lightning.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 231,
+  "src": "Karmic Wave",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "plier(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/karma.lua",
+  "line": 256,
+  "src": "Create a wave of karmic energies in a radius %d cone that does %0.2f lightning damage to all enemies with a 25%% chance of dazing them.\n\t\tThe damage will increase with your Spellpower and how injured you are.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 21,
+  "src": "Clay Aura",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ short_name = , name ="
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 46,
+  "src": "Your Aura of Clay reduces all damage taken by allies in a radius of %d by %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 52,
+  "src": "Clay Golem",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "laypower or 1)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 70,
+  "src": "clay golem",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " type = , subtype = , display = , name ="
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 137,
+  "src": "Shape clay and call upon a spirit to inhabit it, bringing it to life.\n\t\tThe Clay Golem is strong, but not a very good fighter. Its main ability is its Clay Aura which reduces all damage allies  in a radius of %d take by %d.\n\t\tThe golem's stats and the aura scale with your Spellpower.\n\t\tBlighted Summoning grants Empathic Hex.\n\t\tWarning: Clay Golem is water soluble.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 146,
+  "src": "Poltergeist",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "Power(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 183,
+  "src": "Give life to a mischievous spirit who will follow you unseen and harass your enemies. \n\t\tEach turn a random enemy in a radius of 4 around you has a %d%% chance of being disarmed and a %d%% chance of being knocked back.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 190,
+  "src": "Gift of Life",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "hance(self, t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 212,
+  "src": "gave life to their ghosts",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "d self:takeHit(t.getHeal(self, t), self,"
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 231,
+  "src": "Give up some of your own life to sustain your summoned creatures. You lose %d life.\n\t\tYour summoned creatures are healed for %d life and gain +%d maximum life and %0.1f life regeneration per turn for %d turns.\n\t\tTemporary summoned creatures will have their duration extended by %d.\n\t\tThe effects will increase with your Spellpower.\n\t\tInvestment in this talent passively increases the life regen of your ghosts and clay golem by %0.2f per turn. ",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 241,
+  "src": "Hope",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "TalentLevel(t)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/life-giver.lua",
+  "line": 264,
+  "src": "Increases your fear resistance by %d%% and decreases the duration of detrimental effects by %d%%.\n\t\tThese values scale with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 121,
+  "src": "#{bold}#%s decays into a pile of ash!#{normal}#",
+  "tag": "logSeen",
+  "ctor": "",
+  "prefix": "f self.life <= 0 then game.logSeen(self,"
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 314,
+  "src": "charnel",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ncy=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 314,
+  "src": "Necromatic power over blood and bone.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 318,
+  "src": "dead secrets",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ntType{ allow_random=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 318,
+  "src": "Ancient knowledge of Undeath.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": ", name = , generic = true, description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 322,
+  "src": "spirit",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 322,
+  "src": "Summoning of spirits and light magic.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 326,
+  "src": "karma",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 326,
+  "src": "Control of lightning and fate.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 330,
+  "src": "life-giver",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 330,
+  "src": "Giving life back to the fallen.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 334,
+  "src": "dawn",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 334,
+  "src": "Powerful light magic.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 338,
+  "src": "justice",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 338,
+  "src": "Powerful lightning magic.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 342,
+  "src": "ghosts",
+  "tag": "talent type",
+  "ctor": "newTalentType",
+  "prefix": "ell=true, mana_regen=true, type=, name ="
+ },
+ {
+  "file": "data/talents/spells/spells.lua",
+  "line": 342,
+  "src": "Summoning of fallen warrior ghosts.",
+  "tag": "_t",
+  "ctor": "newTalentType",
+  "prefix": "egen=true, type=, name = , description ="
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 21,
+  "src": "Ghost Lights",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 39,
+  "src": "wisp",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": " NPC = require local m = NPC.new{ name ="
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 43,
+  "src": "A floating orb of magical energy. It shines with a radiant light. ",
+  "tag": "_t",
+  "ctor": "newTalent",
+  "prefix": "olors.YELLOW, tint=colors.YELLOW, desc ="
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 121,
+  "src": "Call spirits of the dead to inhabit Wisps of light. This creates 3 Wisps which last for %d turns before unsummoning.\n\t\tThey do light damage in melee and if killed, they will explode for %0.2f light damage against enemies or healing friendly spirits.\n\t\tTheir stats and explosion damage scale with your Spellpower.\n\t\tCritical spells increase the number of Wisps summoned instead of their strength.\n\t\tThis scales with your crit power strength. Current bonus gives +%d.\n\t\tBlighted Summoning grants Blindside.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 131,
+  "src": "Rest in Peace",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "/100+1.5)*3)-3) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 167,
+  "src": "Conjures up a bolt of light, doing %0.2f light damage to the target.\n\t\tIf the target is undead, they take 50%% more damage.\n\t\tAt level 5, it will create a beam of light.\n\t\tThe damage will increase with your Spellpower.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "l damage = t.getDamage(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 176,
+  "src": "Spirit Guide",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "LIGHT, damage)) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 233,
+  "src": "Your Spirits guide and protect you, granting %d defense and saves for each Spiritmancer summoned creature you have.\n\t\tThis bonus cannot exceed %d. Current bonus: %d.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 240,
+  "src": "Spirit Form",
+  "tag": "talent name",
+  "ctor": "newTalent",
+  "prefix": "onus(self, t))) end, } newTalent{ name ="
+ },
+ {
+  "file": "data/talents/spells/spirit.lua",
+  "line": 256,
+  "src": "Turn into a spirit, allowing you to walk through walls (but not preventing suffocation) for %d turns.\n\t\tAlso grants %d%% resistance and affinity (heal) to light damage.\n\t\tWhile in effect, Wisp explosions will heal you.\n\t\tIf you are still in a wall when the effect ends you will randomly teleport.",
+  "tag": "tformat",
+  "ctor": "newTalent",
+  "prefix": "e end, info = function(self, t) return ("
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 28,
+  "src": "Spiritmancer",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "0.3} newBirthDescriptor{ type = , name ="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 32,
+  "src": "The dead do not always rest easy, even free from fell influences.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "eturn true end, locked_desc = , desc = {"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 33,
+  "src": "Some linger, wishing to finish some unfinished business.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "urn true end, locked_desc = , desc = { ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 34,
+  "src": "Others want to pass on a message to a loved one.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "n true end, locked_desc = , desc = { , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 35,
+  "src": "Some seek another chance for glory in battle or revenge against those who killed them.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "true end, locked_desc = , desc = { , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 36,
+  "src": "They all eventually find a Spiritmancer, and bargain temporary servitude for closure.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": "ue end, locked_desc = , desc = { , , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 37,
+  "src": "The Spiritmancer can give form to the lost souls, allowing them to fight again. They also have powerful light and lightning magic.",
+  "tag": "_t",
+  "ctor": "newBirthDescriptor",
+  "prefix": " end, locked_desc = , desc = { , , , , ,"
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 86,
+  "src": "elm staff",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "pbirth{ id=true, {type=, subtype=, name="
+ },
+ {
+  "file": "data/birth/classes/mage.lua",
+  "line": 88,
+  "src": "linen robe",
+  "tag": "birth descriptor name",
+  "ctor": "newBirthDescriptor",
+  "prefix": "o_chance=-1000}, {type=, subtype=, name="
+ }
+]

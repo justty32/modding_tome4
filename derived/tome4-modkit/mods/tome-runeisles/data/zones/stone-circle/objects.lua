@@ -1,0 +1,1 @@
+-- 走隨機掉落（zone.lua 的 generator.object.Random），不需要專屬物品清單。

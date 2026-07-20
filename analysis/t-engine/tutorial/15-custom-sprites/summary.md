@@ -1,0 +1,7 @@
+- **`image`** — 只控制庫存圖示和簡單實體顯示
+- **`moddable_tile`（Actor）** → 指向種族圖片資料夾，如 `"lizardman_#sex#"`
+- **`moddable_tile`（Object）** → 指定裝備在角色身上的圖層名稱，武器用 `%s` 代表左/右手
+- **`resolvers.moddable_tile("sword")`** → 按品質等級選一個預設劍圖層
+- **圖層順序**：陰影 → 尾巴 → 披風後擺 → 光環 → 身體 → 刺青 → 武器後層 → 靴子 → 下身 → 上身 → 披風肩 → 頭髮 → 臉部 → 頭盔 → 角 → 手套 → 箭袋 → 武器前層
+- **最小種族貼圖集**：`base_shadow_01.png`、`base_01.png`、`lower_body_01.png`、`upper_body_01.png`
+- **獨特裝備**：每個種族資料夾的 `special/` 子目錄都需要有對應 PNG
