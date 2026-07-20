@@ -1,6 +1,6 @@
 # ~/repo/moddings/tome4 —— ToME4 modding 總資料夾
 
-ToME4 (Tales of Maj'Eyal) modding 的開發、分析、產物集中地。**不是 git repo**(使用者決定 2026-07-17;拆除前歷史已留 bundle 備份)。
+ToME4 (Tales of Maj'Eyal) modding 的開發、分析、產物集中地。**git repo**(2026-07-20 起,推到 `github.com/justty32/modding_tome4`;第三方大樹 `projects/t-engine4/`、`external/` 由 `.gitignore` 排除,只版控自製工作)。
 
 ## 你來找什麼?
 

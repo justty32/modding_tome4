@@ -15,7 +15,7 @@
 
 - 使用者要你動手做某件事 → [WORKFLOWS.md](WORKFLOWS.md)：依意圖派發到對應工作流。
 - 想看 repo 結構 → 專案自己的 `INDEX.md` 或 `README.md`。
-- 碰原始碼 → 先讀 [workflows/common/conventions.md](workflows/common/conventions.md)，再讀 [CODE_MAP](workflows/common/code-map/CODE_MAP.md)。
+- 碰原始碼 → 先讀 [workflows/common/conventions.md](workflows/common/conventions.md)；程式碼導航以 `derived/tome4-modkit/knowledge/` 為準。
 
 ## Always-on 鐵律
 
@@ -23,7 +23,7 @@
 - 未經使用者確認，不 push、不開新大型工作。
 - 不 revert 使用者或其他 agent 的未確認變更；遇到衝突先停下說明。
 - 各工作流的具體流程在自己的 README，不在本檔重複。
-- 小事可以跳流程；完整規則見 [PRINCIPLES.md](PRINCIPLES.md)。
+- 小事可以跳流程；工作流只在能降低交接／同步／設計風險時才啟用（見 [WORKFLOWS.md](WORKFLOWS.md)）。
 - 非微小工作先定義 `Done when:`。
 - 需要使用者親自驗證、外部環境、權限、實機、帳號或手動操作時，記到 [WAIT_USER.md](WAIT_USER.md)。
 - 跨 session 的 open 狀態記到 [SESSION-LOG.md](SESSION-LOG.md) 或對應工作流的 `session-log.md`。
@@ -49,7 +49,7 @@ AGENTS.md → WORKFLOWS.md / INDEX.md → 各工作流入口 → 工作流內容
 
 - **目錄佈局**：`derived/tome4-modkit/`（addon 開發工具鏈＋知識庫＋8 個 addon 原始碼，實際開發的主場）、`derived/tome4-ch/`（正體中文化工作區：第三方 addon 的 `zh_hant` 伴生 addon 源碼＋翻譯管線＋打包好的 `build/*.teaa`；2026-07-18 自 `~/code/tome4-ch` 搬遷整合，原目錄已刪除）、`analysis/t-engine/`（引擎架構分析與教程，索引性質）、`projects/t-engine4/`（Steam 版解壓的引擎/模組 Lua 源碼，唯讀真相層）、`external/`（第三方 addon 參考素材：`orig/` 25 個實裝 addon 解壓＋`chn-mod/`，`derived/tome4-ch/_reference/` 以 symlink 指回此處，modkit 知識庫真相層代號 `R` 亦指向 `external/orig`）、`dist/`（自製成品：打包好的 `.teaa` addon；在地化 `.teaa` 目前仍在 `derived/tome4-ch/build/`，升格與否見其 README）。
 - **根 README.md 是外來 agent 的入口**（設計情境：`~/notes` 側的 agent 被派來「找做好的 addon 去部署」，會先讀 README.md）——它必須永遠答得出「成品在哪」（`dist/`）與「部署狀態歸 `~/notes` 側管」。新增產物類型或改佈局時同步更新它。
-- **本資料夾不是 git repo**（使用者決定 2026-07-17）：原本的根 repo（2 個 commit、無 remote）已拆除，完整歷史備份在 bundle（拆除當日置於 agent scratchpad `tome4-history.bundle`）。不要在 `~/repo/moddings/tome4` 執行 `git init`/commit；文件直接改檔即可。子專案目前也都不是 git repo；若日後為 `derived/tome4-modkit` 建獨立 repo，commit 訊息沿用既有慣例：`feat(runewright): ...` / `feat(tools): ...` / `docs(knowledge): ...`。
+- **本資料夾現在是 git repo**（2026-07-20 建立並推到 `github.com/justty32/modding_tome4`，`main` 分支）：第三方大樹（`projects/t-engine4/`、`external/orig/`、`external/chn-mod/`）由 `.gitignore` 排除，只版控自製工作（文檔、`dist/`、`derived/`、`analysis/`、`workflows/`）。commit / push 須經使用者確認（見上方鐵律）。子專案 `derived/tome4-modkit`、`derived/tome4-ch` 目前隨本 repo 一起版控；commit 訊息沿用既有慣例：`feat(runewright): ...` / `feat(tools): ...` / `docs(knowledge): ...`。
 - **測試環境限制**：無頭測試（`verify.sh`／`playtest.sh`）需要 `xvfb-run`，本機 Manjaro 已有；Windows 未複驗。跑 `t-engine64` 一律經 Xvfb，絕不在真實桌面裸跑（它沒有 `--help`，任何參數都直接開遊戲視窗）：
   ```bash
   xvfb-run -a env LIBGL_ALWAYS_SOFTWARE=1 timeout 90 \

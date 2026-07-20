@@ -15,8 +15,6 @@
 | 工作流 | session-log | open 摘要 |
 |--------|-------------|----------|
 | feature-dev | [workflows/feature-dev/session-log.md](workflows/feature-dev/session-log.md) | 無 |
-| refactor | [workflows/refactor/session-log.md](workflows/refactor/session-log.md) | 無 |
-| investigation | [workflows/investigation/session-log.md](workflows/investigation/session-log.md) | 無 |
 
 ## 不屬任何工作流的進度
 

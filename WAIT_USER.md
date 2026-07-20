@@ -12,7 +12,7 @@
 
 ## Open
 
-- 2026-07-17 工作區整理後留下兩個使用者決定：(1) `derived/tome4-modkit/` 原由根 repo 版控（169 個檔案），根 repo 拆除後暫無版控——是否為它建立獨立 git repo？歷史在 bundle 備份（agent scratchpad `tome4-history.bundle`，屬 session 暫存，要保久請自行移到穩定位置）。(2) `derived/tome4-modkit/build/` 現存三個 `.teaa`（runeisles/runewright/talent-tutor，7/10 建）早於部分源碼的後續修改，可能過時，是否重建並升級為 `dist/addons/` 正式成品？
+- 2026-07-20 工作區重新納入 git（根目錄成為 repo，推到 `github.com/justty32/modding_tome4`；第三方大樹經 `.gitignore` 排除）。`derived/tome4-modkit/` 現隨此根 repo 一起版控——若仍想給它**獨立** repo（與根 repo 分開發布/歷史）是尚未決定的選項。(2) `derived/tome4-modkit/build/` 現存三個 `.teaa`（runeisles/runewright/talent-tutor，7/10 建）早於部分源碼的後續修改，可能過時，是否重建並升級為 `dist/addons/` 正式成品？
 
   補充（2026-07-18）：`derived/tome4-ch/build/` 的 18 個在地化 `.teaa` 同屬「暫存 build，未升格 dist」，與上方 (2) 同性質；哪天要一起決定發佈策略。
 
