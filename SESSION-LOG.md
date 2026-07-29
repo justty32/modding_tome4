@@ -8,7 +8,20 @@
 
 ## 最新進度
 
-- 目前無跨工作流 open 項。
+- **2026-07-29 addon 升格 dist 計畫（回家後執行，需 Linux+遊戲環境）**——盤點 8 個 modkit addon 源碼成熟度後定案，解 [WAIT_USER.md](WAIT_USER.md) 第 2 點。
+  - 前提結論：7/10 那 3 個 `.teaa`（runeisles/runewright/talent-tutor）**確定過時，一律重建**——build 產物從沒進 git（只活在 Linux 那台），且源碼在 7/10 後還被改過。
+  - **升格批次（6 個夠格）**：runewright / runeisles / talent-tutor / relics / crafting / companions（皆 addon_version 完整、指向 tome 1.7.6、無 TODO）。
+  - **先不升**：orario（v0.3 進行中，市集/眷族未做）、camp（草稿，進階功能未實現）。
+  - **唯一卡關**：runewright 升格前要先完成 modkit `WAIT_USER.md` 的實機手感/平衡驗證（進遊戲看 ᛏ Tiwaz 節奏）；其他 5 個 verify.sh 綠燈即可升。
+  - 執行步驟：
+    ```bash
+    cd derived/tome4-modkit
+    for a in runewright runeisles talent-tutor relics crafting companions; do
+      tools/lint.sh tome-$a && tools/verify.sh tome-$a
+    done
+    tools/deploy.sh runewright   # runewright 額外做實機手感驗證
+    # verify 全綠 + runewright 手感 OK 後，逐個 build 帶版本+SOURCE.md 落 dist/addons/
+    ```
 
 ## 各工作流 session-log
 
