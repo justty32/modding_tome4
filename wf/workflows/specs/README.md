@@ -20,7 +20,12 @@ idea → roadmap → spec → plan → feature-dev
 
 | 設計方案 | 討論日期 | 對應 idea/roadmap | 狀態 |
 |----------|----------|-------------------|------|
-| 無 | - | - | - |
+| [生長式天賦 organic-talents](organic-talents-design.md) | 2026-08-01 | （直接由使用者構想起） | 可行性已驗，待使用者決定 §6 四題後進 plan |
+| [歐拉麗完全版 orario-complete](orario-complete-design.md) | 2026-08-01 | 前身 [PLAN-camp-and-isekai §B](../plans/PLAN-camp-and-isekai.md) | 可行性已驗，**卡在 §4「玩家是誰」** |
+| [生產職業 crafting-professions](crafting-professions-design.md) | 2026-08-01 | （直接由使用者構想起） | 可行性已驗，待使用者決定 §8 四題後進 plan |
+
+> 這三份底層共用同一套機制（見 orario spec §8）。**要不要合併成一個通用框架，
+> 是使用者要拍板的第一題**——它決定接下來全部的工序。
 
 ## 何時不用
 
