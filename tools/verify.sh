@@ -15,7 +15,7 @@
 #    對缺檔粒子的處理），而 verify 的職責是「在最接近使用者的環境下確認 addon 載入」。
 #
 # ============================================================================
-# 為什麼是這樣寫（完整原理與行號在 knowledge/headless-testing.md，這裡只留結論）：
+# 為什麼是這樣寫（完整原理與行號在 docs/knowledge/headless-testing.md，這裡只留結論）：
 #
 # 1) `--home <dir>` 只覆寫 fs.getUserPath()；引擎會再接上 "/.t-engine/4.0"。
 #    所以 cfg/profile/addons 都在 $SCRATCH/.t-engine/4.0/ 底下（見 lib/scratch.sh）。

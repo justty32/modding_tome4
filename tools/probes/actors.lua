@@ -4,7 +4,7 @@
 --
 -- ⚠️ 這裡的 a.name 是**英文原名**（未經 _t() 翻譯），所以可以安全地拿來字串比對。
 --    天賦的 t.name 相反——那個被翻譯過，拿去比對英文會在中文語系下永遠比不中，
---    盧恩術士就是這樣壞掉的（見 knowledge/playtesting-parts/01-why-and-usage.md）。
+--    盧恩術士就是這樣壞掉的（見 docs/knowledge/playtesting-parts/01-why-and-usage.md）。
 local p = game.player
 if not p or not game.level then print("[PROBE.ACTORS] not in game yet") return end
 local function dist(a) return math.max(math.abs(a.x - p.x), math.abs(a.y - p.y)) end

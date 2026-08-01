@@ -4,7 +4,7 @@
 #
 # 這是**分工鐵律的落點**：AI 要的狀態一律走這裡（probe / lua / log 都回純文字），
 # 截圖那條路（screen.sh）是產給使用者看的。探測手法全集見
-# knowledge/playtesting-parts/03-state-probes.md。
+# docs/knowledge/playtesting-parts/03-state-probes.md。
 #
 # 依賴的外部變數（由 playtest.sh 定義）：RUN_LOG、DISP
 

@@ -7,17 +7,17 @@
 - 專案一句話：讓 AI agent **自主開發 Tales of Maj'Eyal (ToME 4, 1.7.6) addon** 的工具鏈與知識庫——開發 → 靜態檢查 → 打包 → 佈署 → 無頭測試，一條龍。
 - 主要語言：Lua 5.1 / LuaJIT（T-Engine4 VM）＋ Bash（工具進入點）
 - lint：`tools/lint.sh <addon>`
-- build：`tools/build.sh <addon>` → `build/tome-<name>.teaa`
+- build：`tools/build.sh <addon>` → `self_mods/build/tome-<name>.teaa`
 - deploy：`tools/deploy.sh <addon>`（目錄形式，改檔即生效）
 - test：`tools/verify.sh <addon>`（Xvfb 無頭）／`tools/playtest.sh`（無頭實機遊玩）
 
 ## 先讀哪裡
 
-- 要動手做某件事 → [WORKFLOWS.md](WORKFLOWS.md)：依意圖派發到對應工作流
-- 要做 addon → [workflows/addon-dev/README.md](workflows/addon-dev/README.md)
+- 要動手做某件事 → [WORKFLOWS.md](wf/WORKFLOWS.md)：依意圖派發到對應工作流
+- 要做 addon → [workflows/addon-dev/README.md](wf/workflows/addon-dev/README.md)
 - **要跑工具 → [tools/README.md](tools/README.md)**（決策表：我想做 X 就跑哪支；每支腳本也吃 `-h`）
-- 引擎真實行為 → [knowledge/](knowledge/README.md)（每條附 `檔案:行號`）
-- repo 結構 → [INDEX.md](INDEX.md)｜程式碼導航 → [workflows/common/code-map/CODE_MAP.md](workflows/common/code-map/CODE_MAP.md)
+- 引擎真實行為 → [docs/knowledge/](docs/knowledge/README.md)（每條附 `檔案:行號`）
+- repo 結構 → [INDEX.md](wf/INDEX.md)｜程式碼導航 → [workflows/common/code-map/CODE_MAP.md](wf/workflows/common/code-map/CODE_MAP.md)
 
 ## Always-on 鐵律
 
@@ -29,13 +29,13 @@
      ./t-engine64 --no-steam --no-web --flush-stdout --home <scratch>
    ```
    要用真桌面的滑鼠／鍵盤或 `tools/run.sh` 前**先問使用者**。
-2. **`sub_proj/analysis/t-engine/` 不是權威**，那是索引。任何 API 結論都要回 `vendor/t-engine4/` 原始碼複驗，並在文件裡附 `檔案:行號`。
+2. **`docs/analysis/` 不是權威**，那是索引。任何 API 結論都要回 `vendor/t-engine4/` 原始碼複驗，並在文件裡附 `檔案:行號`。
 3. **唯讀區不准寫**：`vendor/`（含 `t-engine4/`、`orig/`、`chn-mod/`）、`~/.steam/.../TalesMajEyal/`。
 4. **佈署目標是 `~/.t-engine/4.0/addons/`**，不是 Steam 的 `game/addons/`。理由與行號見 `tools/deploy.sh` 檔頭。
 5. **改完必跑** `tools/lint.sh`；要宣稱「能動」必須跑過 `tools/verify.sh` 並貼出輸出。沒跑就說沒跑。
 6. **實機測試時，AI 取得狀態一律用 `tools/playtest.sh probe`（回傳純文字）**；截圖照產但那是**給使用者看的**——畫面、渲染、手感、平衡由使用者判斷，AI 不自己讀圖（人眼更可靠，圖片也很吃 token）。
 7. **`verify.sh` / `playtest.sh` 跑的是拋棄式 scratch home。** 要交給使用者玩，得另外明確跑一次 `tools/deploy.sh <addon>`（不帶 `--home`），否則他的遊戲裡什麼都沒有。
-8. **使用者不能從 Steam 開遊戲**——引擎自身的工坊同步回呼會 SIGSEGV，與 addon 無關。用 `tools/run.sh`（帶 `--no-steam`）。詳見 `knowledge/real-machine.md`。
+8. **使用者不能從 Steam 開遊戲**——引擎自身的工坊同步回呼會 SIGSEGV，與 addon 無關。用 `tools/run.sh`（帶 `--no-steam`）。詳見 `docs/knowledge/real-machine.md`。
 
 ### 通用
 
@@ -43,23 +43,28 @@
 - 未經使用者確認，不 push、不開新大型工作。
 - 不 revert 使用者或其他 agent 的未確認變更；遇衝突先停下說明。
 - 各工作流的具體流程在自己的入口檔，不在本檔重複。
-- 小事可以跳流程；工作流只在能降低交接／同步／設計風險時才啟用（見 [WORKFLOWS.md](WORKFLOWS.md)）。
+- 小事可以跳流程；工作流只在能降低交接／同步／設計風險時才啟用（見 [WORKFLOWS.md](wf/WORKFLOWS.md)）。
 - 非微小工作先定義 `Done when:`。
-- 需要使用者親自驗證／實機確認 → 記到 [WAIT_USER.md](WAIT_USER.md)。
-- 跨 session 的 open 狀態 → [SESSION-LOG.md](SESSION-LOG.md) 或對應工作流的 `session-log.md`。
+- 需要使用者親自驗證／實機確認 → 記到 [WAIT_USER.md](wf/WAIT_USER.md)。
+- 跨 session 的 open 狀態 → [SESSION-LOG.md](wf/SESSION-LOG.md) 或對應工作流的 `session-log.md`。
 - 引用外部程式碼或技術結論時附來源位置：`path/to/file:line`、函式名、URL、命令輸出摘要。
 - 架構圖／流程圖用 Mermaid、表格、列點；**不要 ASCII 框線圖**（中文全形寬度對不齊）。
 - 輸出語言：繁體中文。
 
 ## 分層思想
 
+**非侵入式佈局**：repo 頂層只有 `AGENTS.md`（本檔）、`CLAUDE.md`、`README.md` 三個 `.md`，
+工作流 kernel 的其餘部分收在 `wf/`。慣例見 `~/repo/workflows/non-invasive-import.md`。
+
 ```text
-AGENTS.md → WORKFLOWS.md / INDEX.md → 各工作流入口 → 工作流內容
-                        ↘ knowledge/  （引擎事實，附行號）
-                        ↘ mods/       （實際 addon 原始碼）
-                        ↘ tools/      （冪等腳本）
-                        ↘ sub_proj/   （次要專案：漢化 / 成品 / 分析）
-                        ↘ vendor/     （唯讀第三方素材）
+AGENTS.md → wf/WORKFLOWS.md / wf/INDEX.md → 各工作流入口 → 工作流內容
+                        ↘ tools/                 （冪等腳本）
+                        ↘ docs/knowledge/        （引擎事實，附行號）
+                        ↘ docs/analysis/         （早期分析，非權威，只當索引）
+                        ↘ docs/html/             （導覽層，.md 才是真相）
+                        ↘ self_mods/             （自製 addon 原始碼 + build/ + dist/）
+                        ↘ sub_proj/              （次要專案：目前只有漢化）
+                        ↘ vendor/                （唯讀第三方素材）
 ```
 
 - `README.md` = 初入一個資料夾先讀的入口／導引。
@@ -69,16 +74,17 @@ AGENTS.md → WORKFLOWS.md / INDEX.md → 各工作流入口 → 工作流內容
 
 ## 本地專案規則
 
-- **目錄佈局**：主體（`tools/` `mods/` `knowledge/` `workflows/`）就是 addon 開發本身；
-  次要專案在 `sub_proj/`；唯讀第三方素材在 `vendor/`。完整說明見 [INDEX.md](INDEX.md)。
+- **目錄佈局**：主體是 `tools/`（工具鏈）＋`self_mods/`（自製 addon）＋`docs/`（knowledge 真相層 + html 導覽層）；
+  次要專案在 `sub_proj/`（目前只有漢化）；唯讀第三方素材在 `vendor/`；工作流 kernel 在 `wf/`。
+  完整說明見 [INDEX.md](wf/INDEX.md)。
 - **`vendor/t-engine4/` 是唯讀真相層**：C 層原始碼（`src/`）不在本地——本地只有 Steam 版隨附的 Lua 層。
   要對照 C 碼需另從官方 git（te4.org）取得。
-- **`knowledge/` 是比 `sub_proj/analysis/t-engine/` 更可信的引擎真相層**（同樣附行號）。
+- **`docs/knowledge/` 是比 `docs/analysis/` 更可信的引擎真相層**（同樣附行號）。
 - **根 `README.md` 是外來 agent 的入口**（設計情境：`~/notes` 側的 agent 被派來「找做好的 addon 去部署」）
-  ——它必須永遠答得出「成品在哪」（`sub_proj/dist/`）與「部署狀態歸 `~/notes` 側管」。改佈局時同步更新它。
+  ——它必須永遠答得出「成品在哪」（`self_mods/dist/`）與「部署狀態歸 `~/notes` 側管」。改佈局時同步更新它。
 - **本機部署狀態**（已裝 addon 清單、`~/.t-engine/4.0/addons/` 現況）**不在本 repo**，歸 `~/notes` 側管理。
-- **生成檔不 commit**：`build/` 已在 `.gitignore`，它是開發迴圈暫存產物，不保證與源碼同步。
-  要交付的成品放 `sub_proj/dist/addons/`（帶版本＋`SOURCE.md`）。
+- **生成檔不 commit**：`self_mods/build/` 已在 `.gitignore`，它是開發迴圈暫存產物，
+  不保證與源碼同步。要交付的成品放 `self_mods/dist/addons/`（帶版本＋`SOURCE.md`）。
 - **git**：2026-07-20 起推到 `github.com/justty32/modding_tome4`（`main`）。`vendor/` 全部由 `.gitignore` 排除。
   commit / push 須經使用者確認。
 - **commit 訊息**：`feat(runewright): ...` / `feat(tools): ...` / `docs(knowledge): ...`

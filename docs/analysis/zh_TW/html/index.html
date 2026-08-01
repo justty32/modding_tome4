@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>T-Engine 4 分析 — 首頁</title>
+<link rel="stylesheet" href="_shared.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<nav>
+  <span class="nav-brand">T-Engine 4</span>
+  <a href="index.html" class="active">首頁</a>
+  <a href="architecture.html">架構分析</a>
+  <a href="tutorial.html">教學導覽</a>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto;">
+
+<div class="hero">
+  <h1>T-Engine 4</h1>
+  <p class="sub">Tales of Maj'Eyal（ToME4）背後的 C + Lua 雙層 roguelike 引擎<br>
+  底層 C/SDL2/OpenGL 顧效能，上層 Lua 寫玩法，模組以 zip 封包發佈</p>
+  <p class="sub2">— docs/analysis · v1.7.6 · 架構分析 6 篇 + 開發教學 17 篇 —</p>
+  <div class="badge-row">
+    <span class="badge badge-purple">Lua 5.1 / LuaJIT</span>
+    <span class="badge badge-blue">SDL2 + OpenGL</span>
+    <span class="badge badge-green">PhysFS 虛擬檔案系統</span>
+    <span class="badge badge-orange">.teae / .team / .teaa 封包</span>
+    <span class="badge badge-red">Roguelike</span>
+  </div>
+</div>
+
+<div class="oneliner">
+  <strong>T-Engine 4</strong> = 一個「引擎歸引擎、遊戲歸遊戲」分得非常乾淨的架構：
+  引擎核心（<code>engine/*.lua</code>）提供實體、地圖、AI、存檔等通用系統，
+  遊戲模組（<code>modules/tome</code> 等）只以資料定義與類別覆寫組出完整遊戲——
+  這也是它的 Addon 生態（hooks / superload / overload）能成立的原因。
+</div>
+
+<div class="section">
+  <div class="section-title">整體分層架構</div>
+  <div class="stack">
+    <div class="card card-accent-purple">
+      <h3>遊戲模組（Lua）</h3>
+      <p><code>modules/tome</code>、<code>modules/example</code>… — 玩法內容、職業、地區、任務，全部資料驅動</p>
+    </div>
+    <div class="layer-arrow">▼</div>
+    <div class="card card-accent-blue">
+      <h3>引擎核心（Lua）</h3>
+      <p><code>engine/*.lua</code> — OOP（class.lua）、實體系統、地圖、UI、AI、存檔、Resolver 延遲計算</p>
+    </div>
+    <div class="layer-arrow">▼</div>
+    <div class="card card-accent-orange">
+      <h3>C ↔ Lua 橋接層（core.* API）</h3>
+      <p><code>core_lua.c</code>、<code>display_sdl.c</code>、<code>map.c</code>、<code>shaders.c</code>… — 效能敏感操作下沉到 C</p>
+    </div>
+    <div class="layer-arrow">▼</div>
+    <div class="card card-accent-green">
+      <h3>底層 C 函式庫</h3>
+      <p>SDL2、OpenGL/GLEW、PhysFS、LuaJIT/Lua 5.1、libvorbis、zlib、LuaSocket…</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">本地原始碼位置（2026-07-05）</div>
+  <div class="card">
+    <table>
+      <tr><th>層</th><th>本地路徑</th><th>備註</th></tr>
+      <tr><td>引擎 Lua 層</td><td><code>vendor/t-engine4/engines/te4-1.7.6/engine/</code></td><td>解壓自 Steam 版 <code>te4-1.7.6.teae</code></td></tr>
+      <tr><td>ToME 內容層</td><td><code>vendor/t-engine4/modules/tome/</code></td><td>解壓自 <code>tome.team</code>（<code>mod/</code> + <code>data/</code>）</td></tr>
+      <tr><td>C 層 <code>src/</code></td><td>不在本地</td><td>Steam 版不含 C 源，需另從 te4.org 官方 git 取得</td></tr>
+      <tr><td>執行環境</td><td><code>~/.local/share/Steam/steamapps/common/TalesMajEyal/</code></td><td>模組放 <code>game/modules/</code>、addon 放 <code>game/addons/</code></td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">文件導覽</div>
+  <div class="nav-cards">
+
+    <a class="nav-card" href="architecture.html">
+      <div class="nc-icon">🏗</div>
+      <h3>架構分析（6 篇）</h3>
+      <p>整體分層總覽、引擎 Lua 層（OOP／實體／遊戲迴圈／Resolver）、game/ 目錄（loader／範例模組）、ToME 內容層（NPC／任務／史料／對話框）、模組開發指南。</p>
+      <span class="nc-arrow">→ architecture.html</span>
+    </a>
+
+    <a class="nav-card" href="tutorial.html">
+      <div class="nc-icon">📖</div>
+      <h3>教學導覽（17 篇）</h3>
+      <p>三條路線：從零做獨立模組（01–05）、ToME Addon 開發（06–12，含新職業／連技系統／僱傭兵／據點／大地圖）、UI 與美術專題（13–17）。</p>
+      <span class="nc-arrow">→ tutorial.html</span>
+    </a>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">分析產物快照（2026-07-05）</div>
+  <div class="g4">
+    <div class="card card-accent-purple">
+      <h3>架構分析</h3>
+      <p>總覽 + 引擎兩篇 + game/ 目錄 + ToME 內容層 + 模組開發指南。</p>
+      <div style="margin-top:8px"><span class="badge badge-purple">6 篇</span></div>
+    </div>
+    <div class="card card-accent-blue">
+      <h3>開發教學</h3>
+      <p>教學 01–17 全數完成，獨立遊戲與 Addon 兩條路線都能走完。</p>
+      <div style="margin-top:8px"><span class="badge badge-blue">17 篇</span></div>
+    </div>
+    <div class="card card-accent-green">
+      <h3>Lua 原始碼</h3>
+      <p>引擎 + tome 本體已解壓至 <code>vendor/t-engine4/</code> 可直接對照。</p>
+      <div style="margin-top:8px"><span class="badge badge-green">1999 個 .lua</span></div>
+    </div>
+    <div class="card card-accent-orange">
+      <h3>執行環境</h3>
+      <p>Steam 安裝版可直接載入自製模組與 addon，免編譯。</p>
+      <div style="margin-top:8px"><span class="badge badge-orange">Steam v1.7.6</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">原始文件（source of truth）</div>
+  <div class="card">
+    <p style="font-size:.82rem;color:var(--muted);">
+      本頁僅為導覽層，內容以 .md 為準：
+      <a href="../architecture/overview.md">architecture/overview.md</a> ·
+      <a href="../tutorial/00-overview.md">tutorial/00-overview.md</a> ·
+      <a href="../session_log.md">session_log.md</a>
+    </p>
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</body>
+</html>

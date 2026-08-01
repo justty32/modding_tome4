@@ -6,13 +6,13 @@ description: 為 Tales of Maj'Eyal (ToME 4) 新增一個可選職業（subclass�
 # ToME4 新職業
 
 先讀 `tome4-addon` skill 的鐵律。工作區 `~/repo/moddings/tome4/`。
-權威細節（含行號）在 `knowledge/class-and-talents.md` 與 `knowledge/addon-loading.md`——**動手前讀它們**。
-加特效與音效前另讀 `knowledge/visuals-and-sounds.md`。
+權威細節（含行號）在 `docs/knowledge/class-and-talents.md` 與 `docs/knowledge/addon-loading.md`——**動手前讀它們**。
+加特效與音效前另讀 `docs/knowledge/visuals-and-sounds.md`。
 
 ## 檔案骨架
 
 ```
-mods/tome-<name>/
+self_mods/tome-<name>/
 ├── init.lua                          # data/hooks/superload 旗標；weight 必填
 ├── hooks/load.lua                    # ToME:load → 手動 loadDefinition 全部定義
 ├── data/
@@ -88,5 +88,5 @@ tools/lint.sh <name> && tools/deploy.sh <name> && tools/verify.sh <name>
 **verify 綠燈只證明載入成功，不證明遊戲邏輯是對的。** 職業與技能一定觸及遊戲邏輯，
 所以還要 `tools/playtest.sh start <name>` 實際建角、施放，並貼出截圖或 log 佐證。
 
-新學到的引擎行為，**附行號**補進 `knowledge/` 對應的那份。
+新學到的引擎行為，**附行號**補進 `docs/knowledge/` 對應的那份。
 需要人眼確認的（手感、平衡）記進 `WAIT_USER.md`。

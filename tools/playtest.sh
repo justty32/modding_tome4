@@ -28,7 +28,7 @@
 #
 # 分工鐵律：AI 要的狀態一律走 `probe` / `lua`（回傳純文字）；
 #           截圖是**產給使用者看的**，畫面、渲染、手感、平衡由使用者判斷。
-#           探測手法全集見 knowledge/playtesting-parts/03-state-probes.md。
+#           探測手法全集見 docs/knowledge/playtesting-parts/03-state-probes.md。
 #
 # 鐵律：全程綁在本腳本自己開的 Xvfb display，**絕不碰真實桌面**。
 #       要在真實桌面用滑鼠鍵盤前，先問使用者。

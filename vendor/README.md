@@ -20,8 +20,8 @@ vendor/
 
 - `orig/` 與 `chn-mod/` 2026-07-18 從 `~/code/tome4-ch/_reference/` 提上來（原先各子專案各自持有，收攏成共用區）。
 - 2026-08-01 repo 以 addon 開發為主體重整時，原 `projects/t-engine4/` 與 `external/` 合併成本目錄。
-- **消費者一：主體工具鏈**——`knowledge/` 的真相層代號 `E`/`M` 指向 `vendor/t-engine4/` 的引擎與模組源碼，
-  `R` 指向 `vendor/orig/`（見 [knowledge/README.md](../knowledge/README.md)），作為「實裝過的第三方 addon，唯讀」對照。
+- **消費者一：主體工具鏈**——`docs/knowledge/` 的真相層代號 `E`/`M` 指向 `vendor/t-engine4/` 的引擎與模組源碼，
+  `R` 指向 `vendor/orig/`（見 [docs/knowledge/README.md](../docs/knowledge/README.md)），作為「實裝過的第三方 addon，唯讀」對照。
   `tools/lib/paths.sh` 的 `TOME_SRC` 預設值也指向 `vendor/t-engine4`。
 - **消費者二：在地化子專案** `sub_proj/tome4-ch/`——其 `_reference/orig`、`_reference/chn-mod` 是指回這裡的
   symlink（`../../../vendor/...`），所以該子專案的相對路徑管線（`_tools/check_locale.lua _reference/orig/<name>/`、
@@ -32,6 +32,6 @@ vendor/
 - **唯讀**：這裡的檔案是別人的東西，一律不改。要對照就 grep/讀，不 in-place 編輯。
   這是根 [AGENTS.md](../AGENTS.md) 的鐵律第 3 條。
 - 可重新取得（從 Steam 安裝 / Workshop / 遊戲 `addons/` 解壓），故不做版控備份；
-  真正的自製產物在 `sub_proj/dist/`，自製源碼在 repo 根的 `mods/`。
+  真正的自製產物在 `self_mods/dist/`，自製源碼在 repo 根的 `self_mods/`。
 - `orig/master-spell-merchants` 已於 2026-07-18 隨使用者退訂該 addon 一併移除。
 - **`vendor/t-engine4/` 只有 Lua 層**——C 層原始碼（`src/`）不在本地，要對照需另從官方 git（te4.org）取得。

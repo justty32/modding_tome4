@@ -12,7 +12,7 @@
 # 為什麼一定要 --no-steam：
 #   從 Steam 啟動時，t-engine 的工坊同步回呼（lua_steam_grab_subscribed_addons_cb）
 #   會在 Lua state 重建後才被 SteamAPI_RunCallbacks 派送，必定 SIGSEGV。
-#   詳見 knowledge/real-machine.md §1。
+#   詳見 docs/knowledge/real-machine.md §1。
 #
 # 為什麼不寫死 DISPLAY=:0：
 #   使用者桌面是 Wayland，X 是 XWayland（通常 :1），且需要 XAUTHORITY。

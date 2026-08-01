@@ -25,27 +25,28 @@ tools/playtest.sh stop                                        # 一定要收尾
 
 | 你要找的 | 去哪裡 |
 |---|---|
-| **做好的 addon 成品**（`.teaa`，拿去部署／發佈） | [`sub_proj/dist/`](sub_proj/dist/README.md)。開發中 addon 的即建即部署走 `tools/build.sh` → `tools/deploy.sh`，暫存產物在 `build/`（不保證與源碼同步）|
-| 動手做某件事 | [AGENTS.md](AGENTS.md)（鐵律）→ [WORKFLOWS.md](WORKFLOWS.md)（派發表）|
-| 做／改一個 addon | [workflows/addon-dev/README.md](workflows/addon-dev/README.md) |
+| **做好的 addon 成品**（`.teaa`，拿去部署／發佈） | [`self_mods/dist/`](self_mods/dist/README.md)。開發中 addon 的即建即部署走 `tools/build.sh` → `tools/deploy.sh`，暫存產物在 `self_mods/build/`（不保證與源碼同步）|
+| 動手做某件事 | [AGENTS.md](AGENTS.md)（鐵律）→ [WORKFLOWS.md](wf/WORKFLOWS.md)（派發表）|
+| 做／改一個 addon | [workflows/addon-dev/README.md](wf/workflows/addon-dev/README.md) |
 | 跑工具 | [tools/README.md](tools/README.md) |
-| 引擎到底怎麼運作 | [knowledge/](knowledge/README.md) — **本 repo 的引擎真相層**，每條附行號 |
-| repo 佈局 / 找檔案在哪 | [INDEX.md](INDEX.md)、[workflows/common/code-map/CODE_MAP.md](workflows/common/code-map/CODE_MAP.md) |
+| 引擎到底怎麼運作 | [docs/knowledge/](docs/knowledge/README.md) — **本 repo 的引擎真相層**，每條附行號 |
+| repo 佈局 / 找檔案在哪 | [INDEX.md](wf/INDEX.md)、[workflows/common/code-map/CODE_MAP.md](wf/workflows/common/code-map/CODE_MAP.md) |
 | 正體中文化（第三方 addon 的 `zh_hant` 伴生 addon） | [`sub_proj/tome4-ch/`](sub_proj/tome4-ch/README.md) — 18 個 `tome-*-zh` 伴生 addon + 翻譯管線 |
 
 ## 目錄
 
+**非侵入式佈局**：頂層只有 `AGENTS.md`、`CLAUDE.md`、本檔三個 `.md`，
+工作流 kernel 的其餘部分收在 `wf/`，不把一堆 `.md` 攤在專案根目錄。
+
 | 路徑 | 內容 |
 |---|---|
 | `tools/` | 工具鏈。bash 進入點 + `lib/`（行程與檔案系統）+ `lua/`（判讀邏輯）+ `probes/`（遊戲內狀態探測）|
-| `mods/` | 實戰 addon 原始碼 |
-| `knowledge/` | 引擎行為知識庫（附行號）|
-| `workflows/` | 工作流入口與 durable 知識 |
-| `.claude/` | skill 與 slash 指令定義 |
-| `build/` | 打包產物，**是暫存**（已 gitignore）|
-| `sub_proj/` | 次要專案：`tome4-ch/`（漢化）、`dist/`（成品）、`analysis/`（引擎分析索引，非權威）|
+| `self_mods/` | **自製 addon 原始碼**（一個子目錄一個 addon）＋ `build/`（打包暫存，已 gitignore）＋ `dist/`（帶版本的交付成品）|
+| `docs/` | `knowledge/` 引擎真相層（附行號）+ `analysis/` 早期架構分析（**非權威**，只當索引）+ `html/` 導覽層 |
+| `sub_proj/` | 次要專案：`tome4-ch/`（正體中文化，18 個 `tome-*-zh` 伴生 addon + 翻譯管線）|
 | `vendor/` | **唯讀**第三方素材：`t-engine4/`（引擎+模組 Lua 源碼）、`orig/`（25 個實裝 addon）、`chn-mod/` |
-| `inbox/` | agent 之間的信件收件匣 |
+| `wf/` | 工作流 kernel：`WORKFLOWS`/`INDEX`/`DEV-GUIDE`/`SESSION-LOG`/`WAIT_USER` + `workflows/` + `session_log/` + `inbox/` |
+| `.claude/` | skill 與 slash 指令定義 |
 
 ## 部署注意
 
@@ -63,7 +64,7 @@ tools/playtest.sh stop                                        # 一定要收尾
 
 完整鐵律見 [AGENTS.md](AGENTS.md)。
 
-## `mods/` 現況
+## `self_mods/` 現況
 
 | addon | 內容 |
 |---|---|

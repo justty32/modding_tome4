@@ -2,7 +2,7 @@
 vendor/*
 !vendor/README.md
 
-# 開發迴圈暫存產物（build→deploy→測試，隨時被覆蓋）
+# 開發迴圈暫存產物（build→deploy→測試，隨時被覆蓋，不保證與源碼同步）
 build/
 
 # OS / editor cruft

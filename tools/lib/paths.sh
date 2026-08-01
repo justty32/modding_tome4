@@ -19,7 +19,7 @@ TOME_ADDONS_DIR="${TOME_ADDONS_DIR:-$TOME_HOME/4.0/addons}"
 TOME_SRC="${TOME_SRC:-$HOME/repo/moddings/tome4/vendor/t-engine4}"
 
 # addon 原始碼放這裡，一個子目錄一個 addon
-MODS_DIR="${MODS_DIR:-$MODKIT_ROOT/mods}"
-BUILD_DIR="${BUILD_DIR:-$MODKIT_ROOT/build}"
+MODS_DIR="${MODS_DIR:-$MODKIT_ROOT/self_mods}"
+BUILD_DIR="${BUILD_DIR:-$MODS_DIR/build}"
 
 LUA_BIN="${LUA_BIN:-$(command -v luajit || command -v lua5.1 || command -v lua || true)}"

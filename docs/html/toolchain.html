@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tome4-modkit — 工具鏈</title>
+<link rel="stylesheet" href="_shared.css"></head>
+<body><nav>
+  <span class="nav-brand">tome4-modkit</span>
+  <a href="index.html">首頁</a>
+  <a href="toolchain.html" class="active">工具鏈</a>
+  <a href="knowledge.html">引擎知識庫</a>
+  <a href="mods.html">mod 產物</a>
+  <a href="sop.html">SOP／計畫文件</a></nav>
+
+<div style="max-width:1100px;margin:0 auto;">
+
+<div class="page-header">
+  <h1>工具鏈 — <code>tools/</code></h1>
+  <p>六支冪等的 Bash／Lua 腳本，涵蓋開發 addon 的完整驗證分層。原始碼與完整檔頭註解在
+  <a href="../../tools/">../tools/</a>；完整 SOP 見
+  <a href="../../wf/workflows/addon-dev/README.md">workflows/addon-dev/README.md</a>（本頁只做導覽與摘要）。</p></div>
+
+<div class="section">
+  <div class="section-title">驗證流水線</div>
+  <div class="pipeline">
+    <span class="pipe-step pipe-purple">scaffold<br><span style="font-weight:400;font-size:.72rem">建目錄骨架</span></span><span class="pipe-arrow">→</span>
+    <span class="pipe-step pipe-blue">lint.sh<br><span style="font-weight:400;font-size:.72rem">語法＋init 欄位</span></span><span class="pipe-arrow">→</span>
+    <span class="pipe-step pipe-cyan">deploy.sh（目錄）<br><span style="font-weight:400;font-size:.72rem">改檔即生效</span></span><span class="pipe-arrow">→</span>
+    <span class="pipe-step pipe-green">verify.sh<br><span style="font-weight:400;font-size:.72rem">Xvfb 無頭載入</span></span><span class="pipe-arrow">→</span>
+    <span class="pipe-step pipe-orange">playtest.sh<br><span style="font-weight:400;font-size:.72rem">真的建角操作</span></span><span class="pipe-arrow">→</span>
+    <span class="pipe-step pipe-red">build.sh<br><span style="font-weight:400;font-size:.72rem">打包 .teaa</span></span><span class="pipe-arrow">→</span>
+    <span class="pipe-step pipe-purple">deploy.sh（真 home）<br><span style="font-weight:400;font-size:.72rem">交付</span></span></div>
+  <p style="font-size:.78rem;color:var(--dim);margin-top:10px">日常走 <code>lint → deploy(dir) → verify</code> 短迴圈；改動觸及<strong>遊戲邏輯</strong>時再加跑 <code>playtest</code>；<code>build</code> 只在要交付 <code>.teaa</code> 時跑。前一層通過<strong>不代表</strong>下一層會過——2026-07-10 盧恩術士在 verify 7/7 全綠時，playtest 仍抓到三個「載入成功但行為錯誤」的 bug。</p></div>
+
+<div class="section">
+  <div class="section-title">各關卡：證明了什麼／證明不了什麼</div>
+  <div class="card" style="padding:0;overflow-x:auto">
+    <table>
+      <tr><th>關卡</th><th>指令</th><th>證明了什麼</th><th>證明不了什麼</th></tr>
+      <tr><td><span class="badge badge-blue">lint</span></td><td><code>tools/lint.sh &lt;addon&gt;</code></td><td>語法正確、<code>init.lua</code> 欄位語意正確</td><td>任何 runtime 行為</td></tr>
+      <tr><td><span class="badge badge-green">verify</span></td><td><code>tools/verify.sh &lt;addon&gt;</code></td><td>addon 被載入、定義註冊成功、載入無 Lua Error</td><td>遊戲邏輯是不是對的</td></tr>
+      <tr><td><span class="badge badge-orange">playtest</span></td><td><code>tools/playtest.sh start &lt;addon&gt; …</code></td><td>真的建得出角色、技能真的能施放、數值真的變動</td><td>好不好玩、平不平衡</td></tr>
+      <tr><td><span class="badge badge-red">build</span></td><td><code>tools/build.sh &lt;addon&gt;</code></td><td>能打包成合法 <code>.teaa</code></td><td>—</td></tr>
+      <tr><td><span class="badge badge-purple">實機</span></td><td><code>tools/deploy.sh &lt;addon&gt;</code> → 使用者</td><td>手感與平衡</td><td>—</td></tr></table></div></div>
+
+<div class="group-label">主要腳本</div>
+<div class="g3">
+
+  <div class="tool-card card-accent-blue"><h3><code>lint.sh</code></h3>
+    <p>靜態檢查 addon：對每個 <code>.lua</code> 跑 <code>luajit -b</code> 確認語法，再用 <code>check_init.lua</code> 檢查 <code>init.lua</code> 欄位。</p>
+    <div class="usage"><code>tools/lint.sh &lt;addon&gt;</code></div></div>
+
+  <div class="tool-card card-accent-red"><h3><code>build.sh</code></h3>
+    <p>把 addon 打包成 <code>.teaa</code>（本質是 zip）。打包前先跑一次 lint。</p>
+    <div class="usage"><code>tools/build.sh &lt;addon&gt; [--out &lt;dir&gt;]</code></div></div>
+
+  <div class="tool-card card-accent-cyan"><h3><code>deploy.sh</code></h3>
+    <p>冪等地把 addon 佈署到 t-engine 的 addons 目錄。目錄形式（開，改檔即生效）或 <code>.teaa</code> 形式二選一。</p>
+    <div class="usage"><code>tools/deploy.sh &lt;addon&gt; [--teaa|--undeploy|--home &lt;dir&gt;]</code></div></div>
+
+  <div class="tool-card card-accent-green"><h3><code>verify.sh</code></h3>
+    <p>無頭驗收：佈署進 scratch home，在 Xvfb 裡跑 <code>t-engine64</code>，靠 log 判定成敗。</p>
+    <div class="usage"><code>tools/verify.sh &lt;addon&gt; [--keep] [--display :97]</code></div></div>
+
+  <div class="tool-card card-accent-orange"><h3><code>playtest.sh</code></h3>
+    <p>實機遊玩：在 Xvfb 裡開遊戲、建角、按技能，截圖／讀 log／下 cheat console。verify 只能證「載入無錯」，playtest 抓「行為錯誤」。</p>
+    <div class="usage"><code>tools/playtest.sh start &lt;addon&gt; [--cheat]</code><br><code>do &lt;shot&gt; &lt;動作…&gt;</code> ／ <code>shot</code> ／ <code>lua</code> ／ <code>log</code> ／ <code>stop</code></div></div>
+
+  <div class="tool-card card-accent-purple"><h3><code>run.sh</code></h3>
+    <p>在使用者的真實桌面開遊戲，自動從 <code>/proc/&lt;pid&gt;/environ</code> 抓 DISPLAY／XAUTHORITY。</p>
+    <div class="usage"><code>tools/run.sh</code> ／ <code>--log</code> ／ <code>--tail [regex]</code> ／ <code>--stop</code></div></div></div>
+
+<div class="group-label">支援層（source 引入，不直接呼叫）</div>
+<div class="g3">
+  <div class="tool-card card-accent-blue"><h3><code>lib.sh</code></h3>
+    <p>共用路徑與工具偵測：<code>MODKIT_ROOT</code>、<code>TOME_GAME_DIR</code>、<code>TOME_HOME</code>、<code>TOME_ADDONS_DIR</code>、<code>TOME_SRC</code>。</p></div>
+  <div class="tool-card card-accent-blue"><h3><code>lib_scratch.sh</code></h3>
+    <p>準備乾淨拋棄式 t-engine 家目錄，挑空的 X display；含 <code>--home</code> 的真實語意。</p></div>
+  <div class="tool-card card-accent-blue"><h3><code>check_init.lua</code></h3>
+    <p>檢查 <code>init.lua</code> 欄位（<code>for_module</code>、<code>version</code>、<code>weight</code> 等），附 <code>engine/Module.lua</code> 行號；由 <code>lint.sh</code> 呼叫。</p></div></div>
+
+<div class="section" style="margin-top:8px">
+  <div class="section-title">鐵律</div>
+  <div class="highlight-box hl-red"><strong>絕不擅自在真實桌面跑 <code>t-engine64</code></strong>——它沒有 <code>--help</code>，任何參數都直接開遊戲視窗。自動化一律 <code>xvfb-run</code> ＋ <code>--home &lt;scratch&gt;</code>（不必問）；要用真桌面滑鼠鍵盤，<strong>先問使用者</strong>，然後用 <code>tools/run.sh</code>。</div></div>
+
+</div>
+</body></html>

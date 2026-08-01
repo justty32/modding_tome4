@@ -72,7 +72,7 @@ cmd_start() {
     if [ -z "$birth" ]; then
         _shot birth
         ok '已停在建角畫面。接下來用 tools/playtest.sh do ... 操作。'
-        info "建角座標速查見 knowledge/playtesting-parts/01-why-and-usage.md"
+        info "建角座標速查見 docs/knowledge/playtesting-parts/01-why-and-usage.md"
         info "（下次可以加 --birth default，就不必碰滑鼠了）"
         return
     fi
