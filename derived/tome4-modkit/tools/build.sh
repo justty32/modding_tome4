@@ -6,6 +6,7 @@
 # .teaa 就是 zip：engine/Module.lua:338 用副檔名判斷，:409 掃描 addons 目錄。
 
 source "$(dirname "$0")/lib.sh"
+handle_help_flag "$@"
 
 [ "$#" -ge 1 ] || die "用法: tools/build.sh <addon> [--out <dir>]"
 ADDON_DIR="$(resolve_addon_dir "$1")"; shift

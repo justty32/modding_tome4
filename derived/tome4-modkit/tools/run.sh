@@ -19,6 +19,7 @@
 #   一律從活著的 GUI 行程的 /proc/<pid>/environ 讀出來。
 
 source "$(dirname "$0")/lib.sh"
+handle_help_flag "$@"
 require_game
 
 RUN_LOG="${RUN_LOG:-/tmp/tome4-run/run.log}"

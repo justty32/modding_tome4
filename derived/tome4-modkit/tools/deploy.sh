@@ -16,6 +16,7 @@
 # natural_compatible），所以不需要手動 enable。
 
 source "$(dirname "$0")/lib.sh"
+handle_help_flag "$@"
 
 [ "$#" -ge 1 ] || die "用法: tools/deploy.sh <addon> [--teaa] [--undeploy] [--home <dir>]"
 ADDON_DIR="$(resolve_addon_dir "$1")"; shift

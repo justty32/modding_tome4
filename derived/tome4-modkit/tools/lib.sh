@@ -1,62 +1,35 @@
 #!/usr/bin/env bash
-# 共用路徑與工具偵測。用 `source` 引入，不要直接執行。
-# 所有路徑可用同名環境變數覆寫。
+# 共用函式庫的**聚合入口**。用 `source "$(dirname "$0")/lib.sh"` 引入，不要直接執行。
+#
+# 實作按職責拆在 tools/lib/ 底下，本檔只負責照順序載入（有相依關係，順序不能亂）：
+#
+#   lib/log.sh      die / info / ok / warn、--help 從檔頭生成
+#   lib/paths.sh    MODKIT_ROOT、TOME_* 等所有路徑常數（皆可用環境變數覆寫）
+#   lib/deps.sh     require_lua / require_game / require_headless_tools ...
+#   lib/addon.sh    resolve_addon_dir / addon_names / addon_field
+#   lib/scratch.sh  prepare_scratch_home / enable_cheat_mode / write_autobirth_spec
+#   lib/game.sh     pick_free_display / start_xvfb / launch_game / stop_game / wait_log
+#
+# Lua 那一側的邏輯（判讀、欄位檢查、探測）在 tools/lua/ 與 tools/probes/，
+# 不由本檔載入——各進入口自己呼叫。分工理由見 tools/README.md。
 
 set -euo pipefail
 
-MODKIT_ROOT="${MODKIT_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
+_LIB_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/lib" && pwd)"
 
-# 遊戲安裝（含 t-engine64 執行檔）
-TOME_GAME_DIR="${TOME_GAME_DIR:-$HOME/.steam/steam/steamapps/common/TalesMajEyal}"
-# 使用者 t-engine home（addons 佈署目標；引擎把它掛在 PhysFS 的 "/"）
-TOME_HOME="${TOME_HOME:-$HOME/.t-engine}"
-TOME_ADDONS_DIR="${TOME_ADDONS_DIR:-$TOME_HOME/4.0/addons}"
-# 唯讀原始碼真相層
-TOME_SRC="${TOME_SRC:-$HOME/repo/moddings/tome4/projects/t-engine4}"
+# shellcheck source=lib/log.sh
+source "$_LIB_DIR/log.sh"
+# shellcheck source=lib/paths.sh
+source "$_LIB_DIR/paths.sh"
+# shellcheck source=lib/deps.sh
+source "$_LIB_DIR/deps.sh"
+# shellcheck source=lib/addon.sh
+source "$_LIB_DIR/addon.sh"
+# shellcheck source=lib/scratch.sh
+source "$_LIB_DIR/scratch.sh"
+# shellcheck source=lib/game.sh
+source "$_LIB_DIR/game.sh"
 
-# addon 原始碼放這裡，一個子目錄一個 addon
-MODS_DIR="${MODS_DIR:-$MODKIT_ROOT/mods}"
-BUILD_DIR="${BUILD_DIR:-$MODKIT_ROOT/build}"
-
-LUA_BIN="${LUA_BIN:-$(command -v luajit || command -v lua5.1 || command -v lua || true)}"
-
-die()  { printf '\033[31m[FAIL]\033[0m %s\n' "$*" >&2; exit 1; }
-info() { printf '\033[36m[INFO]\033[0m %s\n' "$*"; }
-ok()   { printf '\033[32m[ OK ]\033[0m %s\n' "$*"; }
-warn() { printf '\033[33m[WARN]\033[0m %s\n' "$*" >&2; }
-
-require_lua() {
-    [ -n "$LUA_BIN" ] || die "找不到 lua/luajit。裝一個：pacman -S luajit"
-}
-
-require_game() {
-    [ -x "$TOME_GAME_DIR/t-engine64" ] \
-        || die "找不到執行檔 $TOME_GAME_DIR/t-engine64（用 TOME_GAME_DIR= 覆寫）"
-}
-
-# 解析 addon 目錄參數：接受 "runewright"、"tome-runewright" 或完整路徑
-resolve_addon_dir() {
-    local a="$1"
-    if [ -d "$a" ] && [ -f "$a/init.lua" ]; then (cd "$a" && pwd); return; fi
-    if [ -d "$MODS_DIR/$a" ]; then (cd "$MODS_DIR/$a" && pwd); return; fi
-    if [ -d "$MODS_DIR/tome-$a" ]; then (cd "$MODS_DIR/tome-$a" && pwd); return; fi
-    die "找不到 addon「$a」（找過：$a、$MODS_DIR/$a、$MODS_DIR/tome-$a）"
-}
-
-# 從 init.lua 取出某個頂層欄位（用 lua 求值，不用 grep，避免註解誤判）
-# 注意：`luajit -e` 的 chunk 拿不到命令列參數的 `...`（只有跑檔案時才有），
-# 所以參數要透過環境變數傳進去。
-addon_field() {
-    local dir="$1" field="$2"
-    require_lua
-    AF_DIR="$dir" AF_FIELD="$field" "$LUA_BIN" -e '
-        local dir, field = os.getenv("AF_DIR"), os.getenv("AF_FIELD")
-        local env = {}
-        local f = loadfile(dir.."/init.lua")
-        if not f then return end
-        setfenv(f, env); pcall(f)
-        local v = env[field]
-        if type(v) == "table" then io.write(table.concat(v, "."))
-        elseif v ~= nil then io.write(tostring(v)) end
-    '
-}
+# Lua 邏輯層與探測庫的位置，給各進入口用
+MODKIT_LUA_DIR="$MODKIT_ROOT/tools/lua"
+MODKIT_PROBE_DIR="$MODKIT_ROOT/tools/probes"

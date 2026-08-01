@@ -1,29 +1,20 @@
 #!/usr/bin/env bash
-# 準備一個乾淨、可拋棄的 t-engine 家目錄，並挑一個空的 X display。
+# 準備一個乾淨、可拋棄的 t-engine 家目錄。用 `source` 引入，不要直接執行。
 # 由 tools/verify.sh（無頭載入驗證）與 tools/playtest.sh（實機遊玩）共用。
-# 用 `source` 引入，需先 source lib.sh。
 
 # --- `--home` 的真實語意（實測，別踩） -------------------------------------
 # `t-engine64 --home <dir>` 只覆寫 fs.getUserPath()；引擎會**無條件再接上**
 # `/.t-engine/4.0`。所以真正的 settings / profiles / addons 根目錄是
 #     <dir>/.t-engine/4.0/{settings,addons,profiles}/
 # 不是 <dir>/4.0/...
+#
+# 本檔的參數一律叫 <actual_home>，指的是 <scratch>/.t-engine 這一層；
+# 而傳給 t-engine64 的 --home 是它的上一層 <scratch>。別搞混。
 # ---------------------------------------------------------------------------
 
-# 挑一個沒被佔用的 X display（":97" → ":98" → ...）
-pick_free_display() {
-    local d="$1" n
-    n="${d#:}"
-    while [ -e "/tmp/.X${n}-lock" ]; do
-        n=$((n + 1))
-        d=":$n"
-    done
-    printf '%s' "$d"
-}
-
-# prepare_scratch_home <actual_home> <keep_addon_short_name> <w> <h> [locale]
+# prepare_scratch_home <actual_home> <保留啟用的 addon short_name> <w> <h> [locale]
 #
-# 在 <actual_home>（也就是 <scratch>/.t-engine）底下寫好所有能「少一個彈窗」的狀態。
+# 在 <actual_home> 底下寫好所有能「少一個彈窗」的狀態。
 # 每一項都是實測必要的，刪掉任何一項自動化就會卡在某個對話框上。
 prepare_scratch_home() {
     local actual_home="$1" keep_addon="$2" w="$3" h="$4" locale="${5:-zh_hant}"
@@ -95,32 +86,22 @@ enable_cheat_mode() {
     printf 'cheat = true\n' > "$actual_home/4.0/settings/cheat.cfg"
 }
 
-# launch_game <actual_home_parent(scratch)> <display> <run_log> <pid_file> [timeout_secs]
+# write_autobirth_spec <actual_home> <race> <subrace> <class> <subclass> [name]
 #
-# 兩件事改動前先讀：
-#  1) 不可加 --no-debug。它會讓引擎吞掉 Lua 的 print 輸出，於是 addon 的
-#     "[X] selfcheck ... = OK" / "[X] hook complete" 一行都不會出現，
-#     連引擎自己的 "Checking addon" 也會消失——看起來像 addon 沒載入，其實只是我們瞎了。
-#  2) cwd 必須是 TOME_GAME_DIR。執行檔靠相對路徑找 game/ 資料。
-#     （--logtofile 也不要用：它把輸出轉去 te4_log.txt 並改變啟動行為。）
-launch_game() {
-    local scratch="$1" disp="$2" run_log="$3" pid_file="$4" tmo="${5:-600}"
-    (
-        cd "$TOME_GAME_DIR" || exit 1
-        DISPLAY="$disp" LIBGL_ALWAYS_SOFTWARE=1 setsid timeout "$tmo" ./t-engine64 \
-            --no-steam --no-web --flush-stdout --home "$scratch" \
-            </dev/null >"$run_log" 2>&1 &
-        echo $! > "$pid_file"
-    )
+# 寫 tome-autobirth 夾具讀的規格檔。放 home 根目錄，因為
+# game/loader/init.lua:22 `fs.mount(homepath, "/")` 把 <home>/4.0 掛在 PhysFS 的 "/"，
+# 所以夾具用 "/autobirth.lua" 就讀得到。
+# descriptor 一律用**英文原名**（_t() 翻譯前），定義在 M/data/birth/。
+write_autobirth_spec() {
+    local actual_home="$1" race="$2" subrace="$3" class="$4" subclass="$5" name="${6:-autotest}"
+    cat > "$actual_home/4.0/autobirth.lua" <<EOF
+-- 由 tools/lib/scratch.sh write_autobirth_spec() 產生。
+return {
+    name       = "$name",
+    race       = "$race",
+    subrace    = "$subrace",
+    class      = "$class",
+    subclass   = "$subclass",
 }
-
-# wait_log_file <run_log> <regex> <timeout_secs> —— 輪詢 log，不要用固定 sleep
-wait_log_file() {
-    local log="$1" pat="$2" tmo="$3" i=0
-    while [ "$i" -lt "$tmo" ]; do
-        grep -qE "$pat" "$log" 2>/dev/null && return 0
-        sleep 1
-        i=$((i + 1))
-    done
-    return 1
+EOF
 }

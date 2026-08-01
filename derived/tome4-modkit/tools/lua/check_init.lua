@@ -1,5 +1,5 @@
 -- 檢查 addon 的 init.lua 是否宣告了引擎真的會讀的欄位。
--- 用法： lua check_init.lua <addon_dir>
+-- 用法： lua tools/lua/check_init.lua <addon_dir>（一般由 tools/lint.sh 呼叫）
 -- 退出碼：0 全過；1 有錯。
 --
 -- 欄位語意來源（1.7.6，全部實地複驗過行號）：
@@ -12,12 +12,12 @@
 --   engine/version.lua:90-97   version_nearly_same：主版號需相同，且 addon 版本不得高於模組
 
 local TARGET = { 1, 7, 6 }
--- 確保 require 能找到同目錄下的 lib/，不管從哪個目錄執行
+-- 確保 require 找得到同目錄的 check_lib.lua，不管從哪個目錄執行
 package.path = (arg[0]:match("^(.*/)") or ".") .. "?.lua;" .. package.path
-local check = require("lib.check_lib")
+local check = require("check_lib")
 
 local dir = ...
-if not dir then io.stderr:write("用法: lua check_init.lua <addon_dir>\n"); os.exit(2) end
+if not dir then io.stderr:write("用法: lua tools/lua/check_init.lua <addon_dir>\n"); os.exit(2) end
 
 local env = {}
 local f, err = loadfile(dir .. "/init.lua")
