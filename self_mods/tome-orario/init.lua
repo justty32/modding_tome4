@@ -2,7 +2,7 @@ long_name = "Orario"
 short_name = "orario"
 for_module = "tome"
 version = { 1, 7, 6 }
-addon_version = { 0, 3, 0 }
+addon_version = { 0, 4, 0 }
 weight = 100
 author = { "tome4-modkit" }
 homepage = "-"
@@ -16,7 +16,8 @@ description = [[歐拉麗（Orario）——「在地下城邂逅」風味的異�
 
 v0.1：中央廣場 hub + 巴別塔大迷宮 + Eyal 大地圖入口。
 v0.2：冒險者公會受付孃（廣場左上）發討伐委託，打倒巴別塔第 1 層階層主後回報領賞。
-v0.3：酒館「豐饒女主人」（廣場右上）三名可招募冒險者（劍士/弓手/法師），對話即入隊、可操控、隨你成長。市集/眷族為後續增量。]]
+v0.3：酒館「豐饒女主人」（廣場右上）三名可招募冒險者（劍士/弓手/法師），對話即入隊、可操控、隨你成長。
+v0.4：巴別塔市集（廣場頂中建築，武具/雜貨/鍛造材料三家商店，真的能買賣）＋三眷族據點（廣場底部三棟建築，赫斯緹雅/洛基/芙蕾雅，各含劇情 NPC、見面禮與 lore 書）。]]
 tags = { "campaign", "zone", "worldmap", "town", "dungeon" }
 
 data = true  -- zones/ 與 maps/ 由 changeLevel 惰性載入

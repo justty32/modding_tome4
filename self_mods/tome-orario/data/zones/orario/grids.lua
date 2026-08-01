@@ -23,3 +23,40 @@ newEntity{
 	change_level = 1,
 	change_zone = "wilderness",
 }
+
+-- ── 眷族據點傳送門（廣場底部三棟建築的門內，data/maps/orario.lua 的 p/q/r）──────────
+-- 走上去按 '>' 進入各眷族據點。外觀抄原版 Angolwen 傳送門的 maze_teleport 疊圖
+-- （wilderness/grids.lua:527）。
+
+newEntity{
+	base = "FLOOR", define_as = "ORARIO_FAM_HEARTH",
+	name = "赫斯緹雅眷族 據點",
+	desc = "一扇泛著暖光的傳送門，通往赫斯緹雅眷族的據點——歐拉麗最樸素也最有人情味的家。",
+	display = '&', color = colors.LIGHT_RED,
+	image = "terrain/marble_floor.png", add_mos = { { image = "terrain/maze_teleport.png" } },
+	always_remember = true, notice = true,
+	change_level = 1,
+	change_zone = "orario+fam-hearth",
+}
+
+newEntity{
+	base = "FLOOR", define_as = "ORARIO_FAM_LOKI",
+	name = "洛基眷族 據點",
+	desc = "一座氣派的傳送門，通往洛基眷族的據點——掌控巴別塔中層秩序的頂尖眷族。",
+	display = '&', color = colors.LIGHT_RED,
+	image = "terrain/marble_floor.png", add_mos = { { image = "terrain/maze_teleport.png" } },
+	always_remember = true, notice = true,
+	change_level = 1,
+	change_zone = "orario+fam-loki",
+}
+
+newEntity{
+	base = "FLOOR", define_as = "ORARIO_FAM_FREYA",
+	name = "芙蕾雅眷族 據點",
+	desc = "一道半掩在陰影裡的傳送門，通往芙蕾雅眷族的據點——歐拉麗最深不可測的地方。",
+	display = '&', color = colors.LIGHT_RED,
+	image = "terrain/marble_floor.png", add_mos = { { image = "terrain/maze_teleport.png" } },
+	always_remember = true, notice = true,
+	change_level = 1,
+	change_zone = "orario+fam-freya",
+}
