@@ -31,7 +31,7 @@ tools/playtest.sh stop                                        # 一定要收尾
 | 跑工具 | [tools/README.md](tools/README.md) |
 | 引擎到底怎麼運作 | [docs/knowledge/](docs/knowledge/README.md) — **本 repo 的引擎真相層**，每條附行號 |
 | repo 佈局 / 找檔案在哪 | [INDEX.md](wf/INDEX.md)、[workflows/common/code-map/CODE_MAP.md](wf/workflows/common/code-map/CODE_MAP.md) |
-| 正體中文化（第三方 addon 的 `zh_hant` 伴生 addon） | [`sub_proj/tome4-ch/`](sub_proj/tome4-ch/README.md) — 18 個 `tome-*-zh` 伴生 addon + 翻譯管線 |
+| 正體中文化（第三方 addon 的 `zh_hant` 伴生 addon） | [`sub_proj/zh_mods/`](sub_proj/zh_mods/README.md) — 18 個 `tome-*-zh` 伴生 addon + 翻譯管線 |
 
 ## 目錄
 
@@ -43,7 +43,7 @@ tools/playtest.sh stop                                        # 一定要收尾
 | `tools/` | 工具鏈。bash 進入點 + `lib/`（行程與檔案系統）+ `lua/`（判讀邏輯）+ `probes/`（遊戲內狀態探測）|
 | `self_mods/` | **自製 addon 原始碼**（一個子目錄一個 addon）＋ `build/`（打包暫存，已 gitignore）＋ `dist/`（帶版本的交付成品）|
 | `docs/` | `knowledge/` 引擎真相層（附行號）+ `analysis/` 早期架構分析（**非權威**，只當索引）+ `html/` 導覽層 |
-| `sub_proj/` | 次要專案：`tome4-ch/`（正體中文化，18 個 `tome-*-zh` 伴生 addon + 翻譯管線）|
+| `sub_proj/` | 次要專案：`zh_mods/`（**第三方 addon 的正體中文化**：18 個 `tome-*-zh` 伴生 addon + 翻譯管線）|
 | `vendor/` | **唯讀**第三方素材：`t-engine4/`（引擎+模組 Lua 源碼）、`orig/`（25 個實裝 addon）、`chn-mod/` |
 | `wf/` | 工作流 kernel：`WORKFLOWS`/`INDEX`/`DEV-GUIDE`/`SESSION-LOG`/`WAIT_USER` + `workflows/` + `session_log/` + `inbox/` |
 | `.claude/` | skill 與 slash 指令定義 |

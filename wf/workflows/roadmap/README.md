@@ -18,7 +18,7 @@
 | 共鳴的實際戰鬥效果 | 已落地 | 4 個共鳴皆有宣告式 effects，實機驗證 mana_regen 加成生效 |
 | playtest 無法施放「升級後新學」的天賦 | 排隊 | 快捷鍵只有 1-5 綁定、Minimalist UI 不顯示快捷鍵列。解法：改綁鍵 / 測試用 birth talents / Classic uiset |
 | 彈道、範圍、光束特效未經人眼確認 | 排隊 | 程式碼已對齊原版慣用法，但只親眼看過 arcane_power 光環 |
-| i18n：技能與描述接進 `~/repo/moddings/tome4/sub_proj/tome4-ch` 漢化管線 | 冷凍 | 等內容穩定 |
+| i18n：技能與描述接進 `~/repo/moddings/tome4/sub_proj/zh_mods` 漢化管線 | 冷凍 | 等內容穩定 |
 | Windows 支援 | 冷凍 | 目前全部標「未複驗」 |
 
 ### 符文盤 UI — 已預留的約束（不要破壞）

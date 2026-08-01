@@ -16,7 +16,7 @@ tome4/
   tools/     一條龍工具鏈
   self_mods/ 自製 addon 原始碼（+ build/ 暫存、dist/ 成品）
   docs/      knowledge（引擎真相層）+ analysis（索引，非權威）+ html（導覽層）
-  sub_proj/  tome4-ch（漢化）
+  sub_proj/  zh_mods（第三方 addon 中文化）
   vendor/    唯讀第三方素材（不做版控）
   wf/        工作流 kernel（本檔所在）
   .claude/   skills + commands
@@ -37,14 +37,14 @@ tome4/
 
 | 路徑 | 內容 |
 |------|------|
-| `sub_proj/tome4-ch/` | 正體中文化：18 個第三方 addon 的 `zh_hant` 伴生 addon 源碼 + `_tools/` 翻譯管線 + `build/*.teaa`。動手前先讀它的 `README.md` / `GUIDE.md`。|
+| `sub_proj/zh_mods/` | **第三方 addon 的正體中文化**：18 個 `zh_hant` 伴生 addon 源碼 + `_tools/` 翻譯管線 + `build/*.teaa`。動手前先讀它的 `README.md` / `GUIDE.md`。|
 
 ### `vendor/` — 唯讀第三方素材（不做版控）
 
 | 路徑 | 內容 |
 |------|------|
 | `vendor/t-engine4/` | Steam 版解壓的引擎 + ToME 模組 Lua 源碼（126MB）。**權威真相層**，還原步驟見 [AGENTS.md](../AGENTS.md)「Fresh clone / 環境還原」。|
-| `vendor/orig/` | 25 個實裝過的第三方職業包 / QoL addon 解壓（105MB）。`sub_proj/tome4-ch/_reference/` 以 symlink 指回此處。|
+| `vendor/orig/` | 25 個實裝過的第三方職業包 / QoL addon 解壓（105MB）。`sub_proj/zh_mods/_reference/` 以 symlink 指回此處。|
 | `vendor/chn-mod/` | 簡體翻譯包範本。|
 
 ### `wf/` — 工作流 kernel（本檔所在）

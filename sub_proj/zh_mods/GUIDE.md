@@ -18,7 +18,7 @@
 
 ## 交付物
 
-輸出到 `~/repo/moddings/tome4/sub_proj/tome4-ch/tome-<name>-zh/`（`<name>` 見任務指派）：
+輸出到 `~/repo/moddings/tome4/sub_proj/zh_mods/tome-<name>-zh/`（`<name>` 見任務指派）：
 
 ```
 tome-<name>-zh/
@@ -131,9 +131,9 @@ src 必須等於**執行期**的字串內容：
 ## 驗證（必跑，過了才算完工）
 
 ```bash
-lua5.1 ~/repo/moddings/tome4/sub_proj/tome4-ch/_tools/check_locale.lua \
-    ~/repo/moddings/tome4/sub_proj/tome4-ch/tome-<name>-zh/data/locales/zh_hant.lua \
-    ~/repo/moddings/tome4/sub_proj/tome4-ch/_reference/orig/<name>/
+lua5.1 ~/repo/moddings/tome4/sub_proj/zh_mods/_tools/check_locale.lua \
+    ~/repo/moddings/tome4/sub_proj/zh_mods/tome-<name>-zh/data/locales/zh_hant.lua \
+    ~/repo/moddings/tome4/sub_proj/zh_mods/_reference/orig/<name>/
 ```
 
 檢查項目：locale 檔 Lua 語法、每條 src 是否逐字存在於原 addon 原始碼、

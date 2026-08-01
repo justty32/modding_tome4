@@ -23,7 +23,7 @@ vendor/
 - **消費者一：主體工具鏈**——`docs/knowledge/` 的真相層代號 `E`/`M` 指向 `vendor/t-engine4/` 的引擎與模組源碼，
   `R` 指向 `vendor/orig/`（見 [docs/knowledge/README.md](../docs/knowledge/README.md)），作為「實裝過的第三方 addon，唯讀」對照。
   `tools/lib/paths.sh` 的 `TOME_SRC` 預設值也指向 `vendor/t-engine4`。
-- **消費者二：在地化子專案** `sub_proj/tome4-ch/`——其 `_reference/orig`、`_reference/chn-mod` 是指回這裡的
+- **消費者二：在地化子專案** `sub_proj/zh_mods/`——其 `_reference/orig`、`_reference/chn-mod` 是指回這裡的
   symlink（`../../../vendor/...`），所以該子專案的相對路徑管線（`_tools/check_locale.lua _reference/orig/<name>/`、
   `resume_agy.sh`）照舊可用，不必改腳本。
 

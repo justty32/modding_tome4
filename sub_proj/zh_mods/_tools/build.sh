@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 把 tome4-ch 下所有 tome-*-zh/ 打包成 build/tome-*-zh.teaa（zip 格式、內容在封存根層）
+# 把 zh_mods 下所有 tome-*-zh/ 打包成 build/tome-*-zh.teaa（zip 格式、內容在封存根層）
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 mkdir -p "$ROOT/build"

@@ -1,4 +1,4 @@
-# tome4-ch — ToME4 Addon 正體中文化工作區
+# zh_mods — 第三方 ToME4 addon 的正體中文化工作區
 
 以**非侵入式翻譯伴生 addon** 的方式，為已安裝的 ToME 4 (1.7.6) 第三方 addon 提供正體中文化。原 addon 檔案一律不動。
 
@@ -14,7 +14,7 @@
 ## 目錄結構
 
 ```
-tome4-ch/
+zh_mods/
 ├── README.md              # 本檔
 ├── GUIDE.md               # 漢化 agent 工作指南（格式、tag 規則、驗證）
 ├── _tools/
@@ -67,7 +67,7 @@ addon-dev / remote-designer（開發工具，暫緩）。
 ## 打包與安裝
 
 ```bash
-~/repo/moddings/tome4/sub_proj/tome4-ch/_tools/build.sh        # 產出 build/*.teaa
+~/repo/moddings/tome4/sub_proj/zh_mods/_tools/build.sh        # 產出 build/*.teaa
 # 安裝：把 build/*.teaa 複製到
 #   ~/.local/share/Steam/steamapps/common/TalesMajEyal/game/addons/
 # 移除：刪掉對應 tome-*-zh.teaa 即可，原 addon 不受影響

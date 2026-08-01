@@ -26,6 +26,6 @@
   你的 `~/.t-engine/4.0/settings/addons.cfg` 已把它設為 false，目前不影響遊玩——**別再打開**。
 
 - **`.teaa` 暫存 build 的發佈策略未定**。`build/` 下的自製 addon 與
-  `sub_proj/tome4-ch/build/` 的 18 個在地化 `.teaa` 都屬「暫存 build，未升格 dist」，
+  `sub_proj/zh_mods/build/` 的 18 個在地化 `.teaa` 都屬「暫存 build，未升格 dist」，
   哪天要一起決定發佈策略。
 

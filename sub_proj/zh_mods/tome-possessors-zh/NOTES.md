@@ -91,9 +91,9 @@ superload、5 個粒子特效檔）確認無任何玩家可見字串，故無條
 ## 驗證結果
 
 ```
-lua5.1 ~/repo/moddings/tome4/sub_proj/tome4-ch/_tools/check_locale.lua \
-  ~/repo/moddings/tome4/sub_proj/tome4-ch/tome-possessors-zh/data/locales/zh_hant.lua \
-  ~/repo/moddings/tome4/sub_proj/tome4-ch/_reference/orig/possessors/
+lua5.1 ~/repo/moddings/tome4/sub_proj/zh_mods/_tools/check_locale.lua \
+  ~/repo/moddings/tome4/sub_proj/zh_mods/tome-possessors-zh/data/locales/zh_hant.lua \
+  ~/repo/moddings/tome4/sub_proj/zh_mods/_reference/orig/possessors/
 
 entries=258  unmatched=0  badspec=0  empty=0
 ```

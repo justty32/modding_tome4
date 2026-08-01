@@ -102,7 +102,7 @@ AGENTS.md → wf/WORKFLOWS.md / wf/INDEX.md → 各工作流入口 → 工作流
    - `te4-1.7.6.teae` → `vendor/t-engine4/engines/te4-1.7.6/`
    - `tome.team` → `vendor/t-engine4/modules/tome/`
 4. `vendor/orig/`（第三方 addon 解壓參考）與 `vendor/chn-mod/`（簡體翻譯包範本）另從各 addon 的
-   `.teaa` 解壓；`sub_proj/tome4-ch/_reference/` 以 symlink 指回此處。
+   `.teaa` 解壓；`sub_proj/zh_mods/_reference/` 以 symlink 指回此處。
 5. **待補**：確切解壓指令未留檔重現。下次做這件事時應固化成 `tools/` 下的腳本。
 
 ## 使用者必須親自做的事

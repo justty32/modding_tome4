@@ -11,7 +11,7 @@ dist/
 
 ToME4 modding 目前只有 addon 一種產物類型;若日後出現對外文檔、可重用 library 等,再加 `docs/`、`libs/` 子目錄並更新本檔與根 README。
 
-> **在地化(zh_hant)成品在哪**:`sub_proj/tome4-ch/` 已把 18 個 `tome-*-zh` 翻譯伴生 addon 打包成 `.teaa`,放在 `sub_proj/tome4-ch/build/`(等同開發迴圈暫存產物,與本 repo 的 `self_mods/build/` 同性質)。**尚未升格為此處的版本化正式成品**——比照 `self_mods/build/` 的處理,發佈(cut release)是使用者觸發的動作。要正式發佈時,對選定的 `tome-*-zh` 各建一個 `dist/addons/<name>-zh-<版本>/`(含 `.teaa` 與 `SOURCE.md`,由 `sub_proj/tome4-ch/_tools/build.sh` 重建)。在那之前,要拿在地化 addon 去部署直接用 `sub_proj/tome4-ch/build/*.teaa`。
+> **在地化(zh_hant)成品在哪**:`sub_proj/zh_mods/` 已把 18 個 `tome-*-zh` 翻譯伴生 addon 打包成 `.teaa`,放在 `sub_proj/zh_mods/build/`(等同開發迴圈暫存產物,與本 repo 的 `self_mods/build/` 同性質)。**尚未升格為此處的版本化正式成品**——比照 `self_mods/build/` 的處理,發佈(cut release)是使用者觸發的動作。要正式發佈時,對選定的 `tome-*-zh` 各建一個 `dist/addons/<name>-zh-<版本>/`(含 `.teaa` 與 `SOURCE.md`,由 `sub_proj/zh_mods/_tools/build.sh` 重建)。在那之前,要拿在地化 addon 去部署直接用 `sub_proj/zh_mods/build/*.teaa`。
 
 ## 慣例
 

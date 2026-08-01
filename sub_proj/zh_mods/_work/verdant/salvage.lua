@@ -1,6 +1,6 @@
 -- Verdant Class Pack 正體中文化
 -- 非侵入式 locale patch，翻譯 addon "verdant" 的玩家可見字串。
--- 內容規則見 ~/repo/moddings/tome4/sub_proj/tome4-ch/GUIDE.md
+-- 內容規則見 ~/repo/moddings/tome4/sub_proj/zh_mods/GUIDE.md
 
 locale "zh_hant"
 

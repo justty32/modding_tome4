@@ -23,7 +23,7 @@
     `VERSION` / `LICENSE` / `commands/`）。**`LICENSE` 寫的是「Private/internal-use template」，
     是模板的授權而非本工作的授權，一併刪除——要給本 repo 一個真的 LICENSE 是待決事項。**
   - `tools/lib/paths.sh` 的 `MODKIT_ROOT` 由檔案自身位置推導，搬家零成本；
-    `TOME_SRC` 已改指 `vendor/t-engine4`。`sub_proj/tome4-ch/_reference/` 的 symlink 已重指 `vendor/`。
+    `TOME_SRC` 已改指 `vendor/t-engine4`。`sub_proj/zh_mods/_reference/` 的 symlink 已重指 `vendor/`。
   - 相關背景：稍早討論過把 modkit 昇華成獨立專案 + 引進 `~/repo/workflows` 模板，
     **使用者決定不做**。這次是另一個方向（不分家，改主從）。若日後仍要導入 `~/repo/workflows`，
     對象就是本 repo 而非 modkit。

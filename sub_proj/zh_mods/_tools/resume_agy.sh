@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # agy 額度監視器：額度回復後自動補翻 verdant + arcanum 並組裝驗證
-cd ~/repo/moddings/tome4/sub_proj/tome4-ch
+cd ~/repo/moddings/tome4/sub_proj/zh_mods
 echo "[$(date +%H:%M:%S)] 監視啟動" >> _work/resume_result.txt
 while true; do
   r=$(agy --dangerously-skip-permissions --print-timeout 2m -p 'Reply with exactly: OK' 2>/dev/null | tr -d '[:space:]')
