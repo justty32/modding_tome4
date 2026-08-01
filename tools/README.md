@@ -88,9 +88,35 @@ tools/playtest.sh probe actors           # 本層生物（名稱/座標/血量/�
 tools/playtest.sh probe talents          # 天賦與剩餘點數
 tools/playtest.sh probe learn T_WEAPONS_MASTERY      # 加一點天賦
 tools/playtest.sh probe attack "large white snake"   # 走過去打它，印前後血量
+tools/playtest.sh probe director                     # 演出系統狀態＋殘留木偶＋殘留對話框偵測
+tools/playtest.sh probe director_selftest            # 演出系統 21 項自我驗證（非同步，要等）
+tools/playtest.sh probe director_say                 # 演出系統 7 項台詞對話框驗證（非同步）
+tools/playtest.sh probe director_recovery            # 演出系統 6 項讀檔復原驗證
 ```
 
 `probe` 會自動把該次執行新增的輸出撈回來，不用再跑一次 `log`。
+
+⚠️ 三支 director 測試都是**非同步**的，而且會**故意延後 6 秒才開演**
+（`playtest.sh` 收尾送的 Escape 正是演出的跳過鍵，馬上開演會被自己跳掉）。
+所以要 `sleep 24` / `sleep 16` / `sleep 6` 再 `tools/playtest.sh log | grep 'DIRECTOR.TEST'`。
+細節見 [scripted-scenes.md](../docs/knowledge/scripted-scenes.md) §7。
+
+## ⚠️ 平行跑 playtest 一定要設 `TOME_PLAYTEST_STATE`
+
+`playtest.sh` 的 state 目錄預設是**固定路徑** `/tmp/tome4-playtest`
+（`tools/playtest.sh:45`）。兩個 session 同時跑的話會互相把對方的 scratch home
+`rm -rf` 掉，症狀是**假綠燈**：`start` 印「已自動建角並進入遊戲」，
+但實際上 addon 沒被載入、`probe` 全部報「Lua console 沒拿到焦點」，
+而送進去的 Lua 打到主選單背景的 demo 上，噴出一串跟你完全無關的
+`Lua Error: /mod/class/Game.lua:541`。
+
+2026-08-01 三個並行的 agent 各自獨立踩到一次。**平行時每個 session 給自己一個路徑：**
+
+```bash
+TOME_PLAYTEST_STATE=/tmp/my-session tools/playtest.sh start <addon> --cheat --birth default
+```
+
+（同一個變數要一路帶到 `probe` / `lua` / `log` / `stop`，否則後續指令會找錯 session。）
 
 ### 寫新探測
 

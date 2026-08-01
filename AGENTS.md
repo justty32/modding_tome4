@@ -97,13 +97,21 @@ AGENTS.md → wf/WORKFLOWS.md / wf/INDEX.md → 各工作流入口 → 工作流
 `vendor/` 是 231MB 外部素材，可重新取得，不做版控。在新機器還原本工作區後，須手動補回：
 
 1. 取得 Tales of Maj'Eyal 1.7.6 的 Steam 安裝。
-2. 從遊戲目錄找出 `te4-1.7.6.teae`（引擎層）與 `tome.team`（ToME 模組內容層）——兩者都是 zip。
-3. 解壓到：
-   - `te4-1.7.6.teae` → `vendor/t-engine4/engines/te4-1.7.6/`
-   - `tome.team` → `vendor/t-engine4/modules/tome/`
-4. `vendor/orig/`（第三方 addon 解壓參考）與 `vendor/chn-mod/`（簡體翻譯包範本）另從各 addon 的
+2. 跑 `tools/fetch-vendor.sh`。它會自動偵測 Steam 安裝目錄（找不到就用 `--steam-dir <路徑>`
+   或 `TOME_GAME_DIR` 環境變數指定），把下面四包全都是 zip 的素材解進 `vendor/`：
+
+   | 來源 | 解到 | 內容 |
+   |---|---|---|
+   | `game/engines/te4-1.7.6.teae` | `vendor/t-engine4/engines/te4-1.7.6/` | 引擎層 |
+   | `game/modules/tome.team` | `vendor/t-engine4/modules/tome/` | ToME 模組 Lua（35MB）|
+   | **`game/modules/tome-gfx.team`** | **`vendor/t-engine4/modules/tome/`**（疊上去）| **美術資產（306MB）**——`data/gfx/` 在這包，不在 `tome.team` |
+   | `game/dlcs/{orcs,cults,ashes-urhrok}.teaac` | `vendor/dlc/` | 三包官方 DLC（338MB，`.teaac` 也是純 zip）|
+
+   腳本**冪等**：已存在且完整的步驟會跳過，`--force` 才會重解；`--only <步驟>` 可單獨跑一步
+   （例如 `--only gfx`，這包 306MB 最慢）。`tome-gfx.team` 漏解的症狀：`M/data/gfx/` 是空的，
+   所有貼圖相關調查都做不了（2026-08-01 踩過）。DLC 內含 `data/locales/zh_hant.lua`，可當在地化範本。
+3. `vendor/orig/`（第三方 addon 解壓參考）與 `vendor/chn-mod/`（簡體翻譯包範本）另從各 addon 的
    `.teaa` 解壓；`sub_proj/zh_mods/_reference/` 以 symlink 指回此處。
-5. **待補**：確切解壓指令未留檔重現。下次做這件事時應固化成 `tools/` 下的腳本。
 
 ## 使用者必須親自做的事
 
