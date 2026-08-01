@@ -8,57 +8,43 @@
 
 ## 最新進度
 
-- **2026-08-01 repo 以 modkit 為主體重整完成**——`derived/tome4-modkit/` 的內容整包上移到 repo 根，
-  成為主體（`tools/` `self_mods/` `docs/knowledge/` `workflows/` `docs/html/` `.claude/`）。
-  - 新佈局三層：**主體**（addon 開發本身）／**`sub_proj/`**（`tome4-ch` 漢化、`dist` 成品、
-    `analysis` 引擎分析索引）／**`vendor/`**（唯讀第三方素材：`t-engine4/` `orig/` `chn-mod/`，
-    原 `projects/` + `external/`，共 231MB，仍由 `.gitignore` 排除）。
-  - **路徑問題已解**：使用者說的「`~/repo/tome4`」是簡稱。`~/repo/moddings/` 底下是
-    elin / rimworld / skyrim / starbound / taiwu / tome4 一整排遊戲 mod 專案，tome4 留在原位不搬家。
-  - 六份重複文件（根與 modkit 各一套 `AGENTS` / `WORKFLOWS` / `DEV-GUIDE` / `SESSION-LOG` /
-    `WAIT_USER` / `README` + 兩個 `workflows/`）已合併成一份。兩份 `conventions.md` 是**互補**的
-    （根有「真相層優先級」、modkit 有「CODE_MAP 維護鏈」），合併保留兩者。
-  - 順手刪掉 modkit 頂層 13 項舊模板殘留（`ADOPTION` / `SYNC` / `UNINSTALL` / `TEMPLATE-MANIFEST` /
-    `INIT-QUESTIONS` / `MAINTENANCE` / `PRINCIPLES` / `DOGFOOD` / `workflows-index` / `CHANGELOG` /
-    `VERSION` / `LICENSE` / `commands/`）。**`LICENSE` 寫的是「Private/internal-use template」，
-    是模板的授權而非本工作的授權，一併刪除——要給本 repo 一個真的 LICENSE 是待決事項。**
-  - `tools/lib/paths.sh` 的 `MODKIT_ROOT` 由檔案自身位置推導，搬家零成本；
-    `TOME_SRC` 已改指 `vendor/t-engine4`。`sub_proj/zh_mods/_reference/` 的 symlink 已重指 `vendor/`。
-  - 相關背景：稍早討論過把 modkit 昇華成獨立專案 + 引進 `~/repo/workflows` 模板，
-    **使用者決定不做**。這次是另一個方向（不分家，改主從）。若日後仍要導入 `~/repo/workflows`，
-    對象就是本 repo 而非 modkit。
+> 2026-08-01 的重整、工具拆檔、女巫職業、agent 驅動工作流等**已完成項目已移除**
+> （見 git log `ea9b503..a9617ff`）。這裡只留還沒完成的。
 
-- **2026-08-01 tools 重構完成**——`tools/` 拆成
-  `lib/`（bash：只做行程與檔案系統編排）＋`lua/`（判讀邏輯）＋`probes/`（遊戲內狀態探測）＋6 個進入口。
-  - 分工線的理由是**能力邊界**：本機沒有 `lfs`／`luaposix`，純 Lua 5.1 沒有目錄列舉、
-    mkdir、spawn/signal，硬搬過去只會變成一堆 `os.execute`。
-  - 消掉 verify/playtest 之間四處重複；順帶修掉 `playtest.sh stop` 用全域 `pkill -x t-engine64`
-    會誤殺使用者桌面遊戲的地雷（改成殺 setsid 建立的 process group）。
-  - 入口文件 `tools/README.md`（決策表）；每支腳本 `-h` 從檔頭生成。
-  - 回歸：lint ×9、`verify.sh tome-relics`、`playtest --birth` + probe ×6 全綠，無殘留行程。
+- **2026-08-01 使用者實機回報：盧恩術士有技能特效殘留（未修）**
+  - 症狀：某些技能的特效在技能結束、角色離開後仍留在原地。使用者說「先不管」，下次再處理。
+  - **已有線索**：掃描自製 addon 用到的粒子名時，`arcane_power` 確實出現在用字裡——
+    那正是 `docs/knowledge/visuals-and-sounds.md` 點名「更新函式無條件 emit、永不停止」的粒子。
+    **從它查起**。
+  - 同一天已修掉女巫 `T_WITCH_BREW` 的同類 bug（把飛行粒子 `bolt_slime` 當成命中粒子填進
+    `projectile()` 第 6 參數）。判定方法與三粒子角色對照表都已寫進 knowledge，照著查即可。
 
-- **2026-08-01 無頭測試鏈補上最後一環：程式化建角**——`self_mods/tome-autobirth/` 是**開發用測試夾具**
-  （superload `mod/dialogs/Birther.lua`），由 `tools/playtest.sh start --birth <race>/<subrace>/<class>/<subclass>`
-  自動加掛。整條 playtest 現在完全不需要滑鼠座標，不再受語系/解析度影響。
-  - **這個 addon 永遠不進 `dist/`**，也不列入升格批次；它沒有 hook，`verify.sh` 對它不適用。
-    所以「8 個 addon」的盤點數字不變，`self_mods/` 下多的那個目錄是夾具。
-  - 手法與踩到的坑（原版 `makeDefault` 漏設 `base` 導致 `atEnd` 被擋、建角對話框吃掉 ctrl+L
-    所以 Lua console 進不去、ToME 覆寫掉引擎的 `auto_birth` 流程）全記在
-    `docs/knowledge/playtesting-parts/03-state-probes.md`。
+- **2026-08-01 `tome-witchwood`（女巫森林）只跑過 verify，沒實機 playtest**
+  - 三 agent 平行產出：三隻怪 + zone + 支線任務 `witchwood-curse`，verify 三項 selfcheck 全過，
+    美術（3 怪 + 5 地形）已通過使用者肉眼審核。
+  - **但沒有人真的走進去玩過**——大地圖入口是否出現、葛薇是否真的生成在可達位置、
+    任務能否走完，全部未驗。下次要跑 `tools/playtest.sh` 實機確認。
+  - 也**還沒 deploy** 到真實 home（女巫 `tome-witch` 已 deploy）。
 
-- **2026-07-29 addon 升格 dist 計畫（回家後執行，需 Linux+遊戲環境）**——盤點 8 個 addon 源碼成熟度後定案，解 [WAIT_USER.md](WAIT_USER.md) 的發佈策略項。
-  - 前提結論：7/10 那 3 個 `.teaa`（runeisles/runewright/talent-tutor）**確定過時，一律重建**——build 產物從沒進 git（只活在 Linux 那台），且源碼在 7/10 後還被改過。
-  - **升格批次（6 個夠格）**：runewright / runeisles / talent-tutor / relics / crafting / companions（皆 addon_version 完整、指向 tome 1.7.6、無 TODO）。
-  - **先不升**：orario（v0.3 進行中，市集/眷族未做）、camp（草稿，進階功能未實現）。
-  - **唯一卡關**：runewright 升格前要先完成 [WAIT_USER.md](WAIT_USER.md) 的實機手感/平衡驗證（進遊戲看 ᛏ Tiwaz 節奏）；其他 5 個 verify.sh 綠燈即可升。
-  - 執行步驟：
+- **`docs/knowledge/visuals-and-sounds.md` 已 380+ 行，超過 DEV-GUIDE 的 300 行門檻，待拆**
+  - 它有 12 個清楚章節（特效 API／路徑／自製資產／物品貼圖／職業圖示／音效／粒子／失敗模式／字型），
+    該拆成 `visuals-and-sounds-parts/`，與 `class-parts/`、`particles-parts/` 一致。
+  - 沒有立刻拆是因為它剛被大幅改寫兩次，跟內容新增混在一起難以檢視。單獨做比較乾淨。
+
+- **本 repo 沒有 LICENSE**（重整時刪掉的那份是舊模板的「Private/internal-use template」，
+  不是本工作的授權）。repo 是公開的，要不要補一份真的由使用者決定。
+
+- **2026-07-29 addon 升格 dist 計畫（6 個夠格，仍卡關）**
+  - 批次：runewright / runeisles / talent-tutor / relics / crafting / companions
+  - **唯一卡關**：runewright 的實機手感/平衡驗證（見 [WAIT_USER.md](WAIT_USER.md)）。
+    其他 5 個 verify.sh 綠燈即可升。注意上面那條特效殘留可能也要一併修掉再升。
+  - 步驟：
     ```bash
     cd ~/repo/moddings/tome4
     for a in runewright runeisles talent-tutor relics crafting companions; do
       tools/lint.sh tome-$a && tools/verify.sh tome-$a
     done
-    tools/deploy.sh runewright   # runewright 額外做實機手感驗證
-    # verify 全綠 + runewright 手感 OK 後，逐個 build 帶版本+SOURCE.md 落 self_mods/dist/addons/
+    # 全綠 + 手感 OK 後，逐個 build 帶版本+SOURCE.md 落 self_mods/dist/addons/
     ```
 
 ## 各工作流 session-log
