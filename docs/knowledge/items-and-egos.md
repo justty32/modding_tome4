@@ -69,6 +69,34 @@ end)
 `on_wear(self, who, inven_id)`（`M/mod/class/Actor.lua:4630`）、`on_takeoff` 同形（`E/interface/ActorInventory.lua:611`）、
 `on_pickup(self, who, num)`（`E/interface/ActorInventory.lua:244`）、`on_drop(self, who)` 回傳 true 可擋丟棄（:352）。
 
+## 物品的美術成本：低到幾乎不用考慮
+
+物品有**兩套互相獨立**的外觀，可以只做其中一套：
+
+| | 欄位 | 是什麼 | 成本 |
+|---|---|---|---|
+| **圖示** | `image = "object/artifact/xxx.png"` | 背包／地上看到的樣子 | **1 張 64×64** |
+| **身上疊圖** | `moddable_tile` | 裝備穿在角色身上畫出來的樣子 | 見下 |
+
+實測 `M/data/gfx/shockbolt/object/artifact/` 共 348 張，**除 1 張外全是 64×64**。
+自製 PNG 放 `overload/data/gfx/shockbolt/object/...`，引用寫 `image = "object/..."`
+（不含 `shockbolt/`）——規則見 [visuals-and-sounds-parts/02](visuals-and-sounds-parts/02-asset-paths-and-overload.md)。
+
+**身上疊圖多數情況成本是 0**：用 `resolvers.moddable_tile("<27 種 slot 之一>")`
+就能重用既有的 per-race 貼圖，還自動依 `material_level` 給五階外觀。
+只有要獨一無二外觀的神器才需要 `special/%s_...`，那才是每族一張 × 16 族。
+完整清單與判斷方式見 [races-and-tiles.md §3](races-and-tiles.md)。
+
+沒給 `moddable_tile` 的裝備會**靜默不畫疊圖**，功能完全正常（`M/mod/class/Actor.lua:4383-4388`）。
+
+### ego 詞綴**完全不碰貼圖**
+
+`M/data/general/objects/egos/weapon.lua` 全檔沒有 `image` / `add_mos` / `moddable_tile`。
+ego 只改：名字前後綴（`name` + `prefix=true` / `suffix=true`）、`wielder` 數值、
+`keywords`、`rarity`、`cost`。
+
+→ **新增詞綴的美術成本是 0**，這是內容量產性價比最高的一塊。
+
 ## 套裝（set）機制
 
 **偵測邏輯全在 `Actor:onWear`（`M/mod/class/Actor.lua:4549-4626`）／`onTakeoff`（:4754-4788），Object.lua 只負責顯示（`M/mod/class/Object.lua:1280-1288`）。**
@@ -100,6 +128,39 @@ end)
   boss 前例 `M/data/zones/dreadfell/npcs.lua:60-61`。randart 版 `resolvers.drop_randart`（:488）。
 - **商店**：`Store:loadup`（`E/Store.lua:62`）——`filters` 走 makeEntity 隨機進貨（:83）、`fixed`/`defined` 保證上架（:84,:103-104）。
   新物品只要 type/subtype/rarity 對，會被既有商店 filter 自動選中，不必改商店。`not_in_stores` 可擋（:85）。
+
+### 自製商店：hook 載入，機制與原版同一條
+
+商店定義就是一個帶 `store = {...}` 的 `newEntity`。addon 用
+`M/mod/class/Store.lua:28` 的 `loadStores` 掛進 `Store.stores_def`——
+與原版 `M/mod/load.lua:242` 的 `Store:loadStores("/data/general/stores/basic.lua")` 同機制：
+
+```lua
+-- hooks/load.lua，ToME:load 裡
+require("mod.class.Store"):loadStores("/data-<addon>/stores/market.lua")
+```
+
+擺到地圖上照原版寫法：zone 的 `traps.lua` 放 `BASE_STORE` +
+`resolvers.store("DEF_NAME", faction, door, sign)`（抄 `M/data/zones/town-derth/traps.lua`）。
+
+⚠️ **商店是 trap 層的實體，不在 `game.level.entities` 裡。**
+要取實體用 `game.level.map(x, y, Map.TRAP)`；
+`map:checkEntity(x, y, Map.TRAP, "is_store")` 回傳的是**那個欄位的值**（`true`），不是實體。
+（2026-08-01 實測：用 `level.entities` 掃 `is_store` 會得到 0 家店，害你以為商店沒生成。）
+
+### 無頭驗證買賣（繞過模態彈窗）
+
+商店 UI 的購買確認是 `yesnoPopup`，自動化按不到。用底層 API 直接走完整流程：
+
+```lua
+local price = store:getObjectPrice(o, "buy")        -- M/mod/class/Store.lua:249
+store:onBuy(who, o, idx, 1, true)                   -- :154，before=true
+store:transfer(store, who, idx, 1)                  -- E/Store.lua:149
+who:incMoney(-price)
+store:onBuy(who, o, idx, 1, false)                  -- after
+```
+
+賣出反向。實測價格關係：買價約物品 cost 的 1.23–1.35 倍，賣價約 5%（寶石約 40%）。
 - **地圖保底**：`game.zone:makeEntityByName(level,"object","X")` + `game.zone:addEntity(level,o,"object",x,y)`
   （前例 `M/data/zones/slazish-fen/zone.lua:108-109`）。
 

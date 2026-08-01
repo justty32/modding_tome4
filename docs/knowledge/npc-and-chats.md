@@ -99,6 +99,69 @@ if game.level.map:checkAllEntities(x, y, "change_level") then return false end
 
 大地圖座標可查 `M/data/maps/wilderness/eyal.lua` 的 `addSpot`（德斯城在 `(25,17)`，`:177`）。
 
+## 4.5 特殊／獨特 NPC：定義與貼圖
+
+> 「怪物」與「種族」是兩種不同的東西，差別見
+> [races-and-tiles.md §1.5](races-and-tiles.md)。**NPC 的美術成本比種族低兩個數量級。**
+
+### 定義：就是一個 `newEntity`，繼承基底
+
+原版獨特 orc 的完整寫法（`M/data/general/npcs/orc.lua:279-315`，`nice_tile` 在 `:282`）：
+
+```lua
+newEntity{ base = "BASE_NPC_ORC",
+  name = "Kra'Tor the Gluttonous", unique = true,
+  color = colors.DARK_KHAKI,
+  resolvers.nice_tile{image="invis.png", add_mos = {{image="npc/humanoid_orc_kra_tor_the_gluttonous.png", display_h=2, display_y=-1}}},
+  desc = _t[[...]],
+  level_range = {38, nil}, exp_worth = 2,
+  rarity = 50,          -- 沒有 rarity 就永不隨機生成
+  rank = 3.5,           -- 3.5 = boss 級
+  max_life = resolvers.rngavg(600, 800), life_rating = 22,
+  resolvers.auto_equip_filters("Berserker"),
+  resolvers.equip{ {type="weapon", subtype="battleaxe", defined="GAPING_MAW", autoreq=true}, ... },
+  resolvers.drops{chance=100, nb=2, {tome_drops="boss"}},
+  autolevel = "wyrmic",
+}
+```
+
+⚠️ `resolvers.equip` 要 zone 的 `object_list` 非空，否則**靜默空手**——見 §6。
+⚠️ 少了 `name` 欄位，玩家一殺就 `all_kills[nil]` 崩潰（`M/mod/class/Actor.lua:3451`）。
+
+### 貼圖：一般怪 1 張，大型怪也是 1 張
+
+實測 `M/data/gfx/shockbolt/npc/` 共 636 張，尺寸分佈：
+
+| 尺寸 | 張數 | 用法 |
+|---|---|---|
+| **64×64** | 455 | 一般怪。直接 `image = "npc/xxx.png"` |
+| **64×128** | 176 | **大型／boss**。要配 `nice_tile`（見下）|
+| 更大（128×256 等） | 3 | 極少數巨物 |
+
+**所以做一隻特殊 NPC 的美術成本是「一張 PNG」**，跟種族的 ~780 張完全不是一回事。
+
+### 佔兩格高的大型怪：`resolvers.nice_tile` 的固定咒語
+
+64×128 的圖不能直接塞 `image`——格子只有 64×64，會被壓扁。要走 `add_mos` 疊圖並宣告高度：
+
+```lua
+resolvers.nice_tile{image="invis.png", add_mos={{image="npc/xxx.png", display_h=2, display_y=-1}}}
+```
+
+- `image="invis.png"` 讓本體那格透明，真正的圖走 `add_mos`（`E/Entity.lua:412-417`）。
+- `display_h=2` ＝佔兩格高、`display_y=-1` ＝向上長一格（`E/Entity.lua:388-390, 417`）。
+- `resolvers.calc.nice_tile`（`M/mod/resolvers.lua:1375-1384`）也提供簡寫：
+  傳 `{tall=true}` / `{wide=true}` / 兩者，它會自動展開成上面那組（`:1377-1379`），
+  並把 `e.image` 填進 `=BASE=TILE=` 佔位（`:1380`）。
+- ⚠️ **整段只在 `nicer_tiles` 開啟時生效**（`:1376`）。關掉美化貼圖的玩家看到的是 `image` 本身。
+
+### 自製 NPC 的 PNG 放哪
+
+`overload/data/gfx/shockbolt/npc/<你的檔>.png`，**不是** addon 的 `data/`
+（私有掛載點，見 [addon-loading.md §0](addon-loading.md)）。
+引用時寫 `image = "npc/<你的檔>.png"`（不含 `shockbolt/`，那層由 tileset 決定）。
+完整規則見 [visuals-and-sounds-parts/02](visuals-and-sounds-parts/02-asset-paths-and-overload.md)。
+
 ## 5. 技能樹的授予
 
 ```lua

@@ -89,3 +89,42 @@ end
 
 `levels[n]` 是**深合併**進 zone 資料的（`E/Zone.lua:867` 的 `table.merge(res, ..., true)`），
 所以 `levels[1] = { generator = { map = { up = "X" } } }` 不會把 `generator.map.class` 洗掉。
+
+### ⚠️ `objects.lua` 空著 ≠「用隨機掉落就好」
+
+上表說 `objects.lua` 缺席「不崩，清單為空」——但那個空表的後果比看起來嚴重。
+`E/Zone.lua:176` 只從 zone 自己的 `objects.lua` 建 `self.object_list`，而**兩條完全獨立的路徑
+都吃同一個 `object_list`**：
+
+1. `generator.object.Random` 的地板隨機掉落。
+2. NPC 的 `resolvers.equip` / `resolvers.drops`（經 `M/mod/resolvers.lua:105`
+   的 `game.zone:makeEntity(level, "object", filter)`）。
+
+清單空的話兩者都**靜默失敗**，沒有 Lua Error，只在 run.log 印
+`[resolveObject] **FAILED**`。症狀是 NPC 光著手、地上什麼都沒有。
+
+除非真的要「這個 zone 一件物品都不該有」，否則一律補上：
+
+```lua
+load("/data/general/objects/objects-maj-eyal.lua")   -- 抄 town-derth/objects.lua
+```
+
+> 2026-08-01 `tome-witchwood` 實際踩到：註解寫著「走隨機掉落，不需要專屬物品清單」
+> ——那句話是從 runeisles 抄來的誤判。修正後七隻林中老嫗全部拿到法杖，
+> `**FAILED**` 歸零。同一個坑的 NPC 面向見 [npc-and-chats.md §6](../npc-and-chats.md)。
+
+### ⚠️ `guardian` 預設**只在最深那層**生成
+
+```lua
+-- E/generator/actor/Random.lua:51-56
+local glevel = self.zone.max_level
+if self.guardian_level then glevel = self.guardian_level end
+if self.guardian and self.level.level == glevel then self:generateGuardian(self.guardian) end
+```
+
+沒設 `guardian_level` 的話，`guardian` 只會出現在 `zone.max_level` 那一層，**不是每層都有**。
+`max_level = 3` 的 zone 想讓 boss 在第 1 層守著，必須明寫 `guardian_level = 1`。
+
+2026-08-01 由兩個獨立的 agent 在 `tome-witchwood` 各自撞到同一件事：
+第 1 層只刷得到雜兵，具名怪要下到第 3 層——**看起來像刻意的深度設計，其實是沒設 `guardian_level`**。
+要哪一種是設計決定，但要知道預設值是什麼。

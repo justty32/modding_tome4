@@ -29,6 +29,46 @@ hook 執行時機在**所有** addon 的 superload/overload 掛載完之後（`E
 
 **唯一例外**：locale 檔會自動載入（`E/Module.lua:505-508`），`data/locales/<locale>.lua` 不需手動呼叫。
 
+### ⚠️⚠️ `/data-<short_name>/` **不在 `package.path` 上——`require` 一定失敗**
+
+`E/Module.lua:498-503` 只做 `fs.mount(..., "/data-"..short_name, true)`，
+**沒有任何一處把它加進 `package.path`**（`grep -rn package.path E/` 零命中，2026-08-01 複驗）。
+`package.path` 只有 `/?.lua`，所以：
+
+```lua
+require("data.lib.mylib")     -- ✗ 去找「模組自己的」/data/lib/mylib.lua → not found
+```
+
+addon 自己 `data/` 底下的東西**只能用絕對 VFS 路徑**取：
+
+| 要載什麼 | 用什麼 |
+|---|---|
+| 純資料／純函式模組 | `dofile("/data-<addon>/lib/x.lua")` |
+| 天賦定義檔串接 | `load("/data-<addon>/talents/.../x.lua")` |
+
+`load` 是 `loadDefinition` 注入到 env 裡的那個（`E/interface/ActorTalents.lua:40`），
+**必須沿用同一份 env 才拿得到 `newTalent`**；原版 `M/data/talents.lua:300-311` 就是這個寫法。
+
+`overload/` 底下的檔案**一樣適用**：`overload/mod/dialogs/X.lua` 掛到 `/mod/dialogs/`，
+但它要讀 addon 自己的 `data/` 時仍然只能 `dofile` 絕對路徑。
+
+**這個 bug 特別陰**，兩種症狀都不好認：
+
+- 失敗點被 `pcall` 包住 → 只有某個 selfcheck 印 FAIL，**沒有 Lua Error**。
+- 沒包 `pcall` → **在 hook 中途炸掉，之後所有 `loadDefinition` 都不執行**，整個職業靜默消失。
+
+`lint.sh` **抓不到**（語法完全正確），只有 `verify.sh` 抓得到。
+2026-08-01 在 `tome-runewright` 實際踩到：`resonance.lua:20` 的 `require` 讓 hook 第 19 行就爆，
+技能樹／共鳴／符文盤／Birther 條目**全部沒註冊**。
+
+### ⚠️ 把單一天賦檔拆成目錄後，要同步改 `hooks/load.lua`
+
+`loadDefinition` **不認目錄、不會自動找 `init.lua`**——`E/interface/ActorTalents.lua:42`
+直接 `util.loadfilemods(file, env)` → `loadfile`。
+
+`futhark-freyr.lua` 拆成 `futhark-freyr/init.lua` 之後，`load.lua` 還指著已不存在的單檔，
+結果同上：hook 炸在半路。**重構天賦檔時務必回頭改 hook。**
+
 ### ⚠️ `ActorTalents` / `Birther` 這些**不是全域**
 
 在 `M/mod/load.lua:60-70`，它們是 `local`。hook 函式的閉包看不到，
@@ -98,5 +138,8 @@ return false
 4. **資料夾名前綴不符 → 靜默忽略**（`E/Module.lua:409`）。
 5. **hook 檔裡 `ActorTalents` / `Birther` 不是全域**，要自己 require，否則 runtime nil index。
 6. `requires_addons` 循環依賴會被一起剔除，只印 missing，容易誤判成缺檔（`E/Module.lua:652-675`）。
+7. **`require("data.…")` 取自己 addon 的檔一定失敗**——私有掛載點不在 `package.path`（見 §0）。
+   用 `dofile("/data-<addon>/…")` 或 `load(...)`。`lint.sh` 抓不到，只有 `verify.sh` 抓得到。
+8. **天賦檔拆成目錄後忘了改 `hooks/load.lua` 的路徑** → hook 炸在半路，整個職業消失（見 §0）。
 
 > 以上第 1–5 條全部由 `tools/lua/check_init.lua` 自動擋下。

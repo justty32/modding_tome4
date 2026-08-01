@@ -51,7 +51,7 @@ tools/playtest.sh log '\[T\]'
 `e:die(game.player)` 走的是 `E/interface/ActorLife.lua:91` 的 `self:check("on_die", src)`，
 **跟玩家真的把它砍死是同一條路徑**，所以拿來驗 `on_die` 掛的任務推進是有效的。
 
-### 三個實測出來的坑
+### 四個實測出來的坑
 
 1. **`xdotool key --clearmodifiers ctrl+l` 在 Xvfb 下時靈時不靈。**
    它會在按鍵送達前就放掉 Ctrl，遊戲只收到一個 `l`（變成一個遊戲指令，畫面上看起來像亂動）。
@@ -66,6 +66,20 @@ tools/playtest.sh log '\[T\]'
    於是 `start` 送出的第一個 Return 可能落在選單畫出來之前而完全沒生效。
    `cmd_start` 已改成「按了沒反應就重按，最多 4 次」——這個競態在非 cheat 模式下也一直存在，
    只是以前運氣好。
+
+4. **後續按鍵全部「失效」＝多半是殘留的對話框在吃鍵盤。**
+   `lua` 送完程式碼後那個收尾的 Escape 有時沒把 console 關掉（xdotool 不穩），
+   `game.dialogs` 裡就留著一個 `engine.DebugConsole`，之後所有
+   `do <名字> key <鍵>` 都被它吞掉——**表現是「按鍵沒反應」，不是報錯**。
+   送鍵前先清乾淨：
+
+   ```lua
+   while #game.dialogs > 0 do game:unregisterDialog(game.dialogs[#game.dialogs]) end
+   ```
+
+   （2026-08-01 pi 做 orario 市集時實測。同一類問題還有一種變形：**演出系統的跳過彈窗**
+   會吃掉 `lua` 收尾的那個 Return，害你剛啟動的場景瞬間被跳過——
+   見 [scripted-scenes.md](../scripted-scenes.md) §5。）
 
 ### 什麼時候**不要**開 cheat
 
