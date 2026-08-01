@@ -12,6 +12,14 @@
 
 ## Open
 
+- **實機確認女巫（手感／平衡）**。無頭測試證明：建角成功（Cornac/Witch）、草藥樹四技註冊、
+  被動生效（毒/疾病免疫 20%、治療加成 +10%）、生命藥露回血（90→55→90＋regen）、
+  女巫魔藥命中並毒殺 16HP 棕蛇（log：`巨型棕蛇中毒了`）。
+  畫面、手感、數值平衡必須人眼看。
+  已佈署 `tools/deploy.sh witch`（`~/.t-engine/4.0/addons/tome-witch/`），
+  移除 `tools/deploy.sh witch --undeploy`。進遊戲選 class 分類「女巫」（Cornac/Witch）即可。
+  目前只有草藥一棵樹（起手 3 點、升級會沒地方花點數是已知限制）。
+
 - **實機確認盧恩術士（手感／平衡）**。無頭測試只能證明 addon 載入、定義註冊成功、沒有 Lua Error；
   畫面、手感、數值平衡必須人眼看。
   佈署 `tools/deploy.sh runewright`（裝到 `~/.t-engine/4.0/addons/tome-runewright/`），

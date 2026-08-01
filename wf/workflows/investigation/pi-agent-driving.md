@@ -1,0 +1,213 @@
+# finding — 用 stdin 驅動外部 coding agent（pi）做完一個職業 addon
+
+2026-08-01。**結論：跑得通，而且不需要人在中間接手。**
+
+一次冷啟動、兩次 stdin 注入，pi 就從「沒看過這個 repo」做到
+「addon 寫完、lint 綠、verify 綠、playtest 實際建角放技能、build、deploy、文件補回知識層」。
+
+產物：`self_mods/tome-witch/`（女巫 + 草藥樹），已獨立複驗。
+
+---
+
+## 環境
+
+| 項目 | 值 |
+|---|---|
+| CLI | `pi` 0.83.0（`~/.local/share/fnm/.../bin/pi`）|
+| 模型 | `deepseek-v4-flash`（`--provider deepseek`，吃 `DEEPSEEK_API_KEY`）|
+| 輔助 | `agy` 1.1.7（文本／圖像生成，本次未實際動用）|
+
+驅動指令（`printf` 而非 `echo`，避免尾端換行被當成送出）：
+
+```bash
+printf '%s' "$PROMPT" | timeout 1800 pi -p \
+  --provider deepseek --model deepseek-v4-flash \
+  --session-id witch-experiment
+```
+
+- `-p`／`--print`：非互動，處理完就結束。
+- `--session-id <id>`：**多步驟驅動的關鍵**。同一個 id 會延續上下文，
+  第二次注入不必重述背景。第一次會警告 `No project session found`，正常。
+- pi 會自動探索 `AGENTS.md` / `CLAUDE.md`（除非 `-nc`）。本 repo 的
+  非侵入式佈局（頂層只有 `AGENTS.md`）對它完全沒造成困擾。
+- **本次沒有下任何 slash command**，純自然語言就足夠。
+
+## 實測時間
+
+| 步驟 | 內容 | 耗時 |
+|---|---|---|
+| 1 | 冷啟動定位（只讀不寫，回報計畫）| 171 秒 |
+| 2 | 寫 addon → lint → verify → playtest → build → deploy → 補文件 | 1282 秒（約 21 分）|
+
+---
+
+## 步驟 1：冷啟動定位
+
+注入的 stdin（節錄要點）：
+
+```text
+我要你在這個 repo 裡做一個新的 ToME4 職業 addon：女巫（Witch），先只做一棵特色技能樹「草藥」。
+這一步先不要寫任何檔案。請你先自己把這個 repo 摸清楚，然後回報：
+1. 你讀了哪些檔案…  2. 有沒有做新職業的專門指引…  3. 最少需要哪些檔案…
+4. 有哪些會讓你踩坑的規則…  5. 完整驗證流程…  6. 你的計畫…
+7. 你現在還缺什麼資訊、或覺得哪裡文件不清楚？講白話，這題很重要。
+```
+
+**它自己找到的東西**（沒有任何提示）：
+
+- 走對工作流：`wf/WORKFLOWS.md` → `wf/workflows/addon-dev/README.md`
+- 知識層全讀：`docs/knowledge/{README,addon-loading,class-parts/*,playtesting}.md`
+- 自家範本：`self_mods/tome-runewright/` 全套
+- **自己去翻 `vendor/orig/`**，挖到 `verdant/data/talents/cunning/herbalism.lua`
+  （現成的草藥樹）與 `neka_therianthropy_summoner`（全新 class 的唯一實證範本）
+- 回引擎原始碼複驗 `worlds.lua` / `Birther.lua`
+
+**它指出的文件缺口**（原話）：
+
+> 「全新 class（type="class"）」的完整套路 repo 沒有成文文件——我是在引擎原始碼裡自己挖出來的。
+> `docs/knowledge/class-parts/01` 只教「子職業掛進既有 class」。
+
+這個缺口**經查證屬實**，見下方「文件缺口」一節。
+
+**問題**：它列了 7 個待拍板的設計問題就停住了。這是精簡 prompt 模式下最大的摩擦點——
+見「怎麼下 prompt」。
+
+## 步驟 2：精簡指令，讓它自己做完
+
+注入的 stdin（全文）：
+
+```text
+設計上的事你自己決定，不用問我，照你第 6 點的計畫做。
+
+規則：能自己查、自己試、自己決定的，就不要停下來問。只有在「做下去會不可逆地弄壞使用者環境」時才停下來問。
+
+現在開始動手，一路做到驗證通過：
+1. 寫出 addon
+2. tools/lint.sh 過
+3. tools/verify.sh 過（貼出輸出）
+4. tools/playtest.sh 真的建出女巫、真的學到草藥樹、真的放技能看到數值變化
+
+做壞了沒關係，這是實驗，我隨時可以 git restore。
+
+補充：如果需要生成文本或圖像（例如職業圖示、背景故事），機器上有 `agy` CLI 可以用
+（`agy -p "..."`）。但美術非必要，缺圖示不影響驗證，自己判斷要不要做。
+```
+
+加上那段「不要停下來問」之後，它一路做到底沒再回頭問任何事。
+
+### 它在遊戲裡自己 debug
+
+最有價值的一段。它沒有用 `probe`，而是**自己寫臨時 Lua 探測**丟進 Lua console，
+用對照組定位問題：
+
+```text
+[WITCH] DamageType=nil require=function            ← 發現 DamageType 不是全域
+[WITCH] fire  ok=table pre=20 post=-30 dead=true    ← 火焰：生效，直接打死
+[WITCH] proj POISON ok=table pre=16 post=16 dead=nil ← 毒：看起來完全沒作用
+[WITCH] actor ... poisoned=false （本層 23 隻全部）
+```
+
+它拿「火焰能生效」當對照組證明毒這條路有問題，最後自己得出真因（**不是 bug**）：
+
+> `projectile` 是飛行彈道，傷害要等主迴圈結算（讀太快會看到 0 傷害）
+
+後續 log 出現「巨型棕蛇中毒了！」→ 蛇死亡消失，確認毒其實是好的。
+
+### 它自己踩到並解掉的坑
+
+- `--birth` 的種族要用 descriptor 英文原名（`Human` 大寫；小寫 `human` 會在建角 `setTile` 炸掉）
+- `p:takeHit` 被 Player 覆寫需要 `src`，改用直接改 `p.life` 測回血
+- 上述 projectile 結算時機
+
+---
+
+## 獨立複驗（不採信它的自我回報）
+
+| 項目 | 結果 |
+|---|---|
+| `tools/lint.sh tome-witch` | 5 個 `.lua` 語法通過、`init.lua` 欄位 0 警告，退出碼 0 |
+| `tools/verify.sh tome-witch` | `selfcheck tree/class/subclass/worlds` 四項全 OK，`hook complete`，驗收通過 |
+| 它寫的知識層引用行號 | 實質正確，**行號有 6–9 行偏移**，已由本 session 修正 |
+
+它寫的 `hooks/load.sh` 品質值得一提：selfcheck 用了 `verify.sh` 抓得到的格式、
+註解附引擎行號、`require ActorTalents` 的理由還引了 `arcanum`/`nullpack` 的實證。
+
+---
+
+## 文件缺口（已補）
+
+**全新 class（`type="class"`）比子職業多一道「世界白名單」閘門，而且失敗是靜默的。**
+
+`Maj'Eyal` / `Infinite` / `Arena` 三個世界共用 `default_eyal_descriptors`
+（`M/data/birth/worlds.lua:20-62`，分別在 `:78`／`:136`／`:211` 引用），其中
+`class` 是 `__ALL__ = "disallow"` 白名單（`:36-38`）。沒 allow 的話
+`Birther:generateClasses`（`M/mod/dialogs/Birther.lua:943`）裡的
+`isDescriptorAllowed`（`:952`）直接不放行——**建角畫面上這個 class 根本不存在，
+沒有任何錯誤訊息**。
+
+已補進 `docs/knowledge/class-parts/01-birth-and-talents.md`。
+
+---
+
+## 心得：怎麼下 prompt 更好
+
+### 1. 一定要明講「不要停下來問」
+
+**最重要的一條。** 預設它會把設計決定攤出來等你拍板（本次列了 7 題）。
+精簡 prompt 模式下這等於卡死。固定加這句：
+
+```text
+能自己查、自己試、自己決定的，就不要停下來問。
+只有在「做下去會不可逆地弄壞使用者環境」時才停下來問。
+```
+
+後半句是必要的煞車——不能無條件叫它別問，否則它可能對真桌面動手。
+
+### 2. 明說「做壞了可以 git restore」
+
+它會因此放手去試（例如直接改 `p.life`、反覆重跑 playtest），
+而不是保守地只做最小改動。前提是**你自己要先 commit**。
+
+### 3. 驗證關卡要逐條列出來，並要求貼輸出
+
+列成編號清單（lint → verify → playtest → 要看到什麼）比說「請驗證」有效得多。
+「貼出輸出」這句會讓它真的去跑，而不是宣稱跑過。
+
+### 4. 先來一輪「只讀不寫的定位」很划算
+
+步驟 1 只花 171 秒，但換到：它的計畫、它找到的範本、**它主動指出的文件缺口**。
+缺口那題（第 7 題「你覺得哪裡文件不清楚？講白話」）是整個實驗回報最高的一問，
+以後每次都該問。
+
+### 5. 多步驟一定要用 `--session-id`
+
+否則第二次注入等於冷啟動，前面 171 秒白花。
+
+### 6. 要求它複查自己引用的行號
+
+它的行號會漂 6–9 行（通常指到函式起點而非實際那一行）。
+這個 repo 的規矩是行號必須可複驗，所以要補一句：
+
+```text
+寫進 knowledge/ 的每個 檔案:行號，都要回去 sed -n 確認那一行真的是你說的東西。
+```
+
+### 7. 不需要 slash command
+
+純自然語言就夠。本次沒用到任何 slash command。
+
+---
+
+## 還沒測到的
+
+- **`agy` 實際整合**：本次它判斷美術非必要，沒有動用。要測文本／圖像生成
+  得指定「這次一定要做職業圖示」。
+- **多棵技能樹、跨 addon 互動、自訂資源池**：本次只做一棵樹、用現成法力池。
+- **它自己寫 `tools/probes/*.lua`**：它是丟臨時 Lua 而非固化成探測。
+  下次可要求「把用到的探測固化進 `tools/probes/`」。
+
+## 未決
+
+- `self_mods/tome-witch/` 是**實驗產物**，要不要留在 repo、要不要升格 `dist/`，等使用者決定。
+- pi 已把它 deploy 到真實 home（`~/.t-engine/4.0/addons/tome-witch/`）——
+  那是照 repo 文件的指示做的。不要的話跑 `tools/deploy.sh witch --undeploy`。

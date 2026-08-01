@@ -79,6 +79,15 @@
 | `hooks/load.lua` | `Game:changeLevel` → 在大地圖德斯城旁放置 NPC（避開 `change_zone` 入口格）；結尾印 selfcheck |
 | `data/chats/tutor.lua` | 對話。每次開啟重新執行 → 技能樹清單動態產生。**結尾必須 `return "welcome"`** |
 
+## Addon（`self_mods/tome-witch/`）
+
+| 檔案 | 職責 |
+|------|------|
+| `hooks/load.lua` | `ToME:load` 手動 `loadDefinition`：天賦 → 職業（有依賴順序）；結尾印 selfcheck 供 `verify.sh` 判定 |
+| `data/talents/spell/herbalism.lua` | 招牌樹「草藥」四技：藥草知識（被動）/ 女巫魔藥（毒彈）/ 生命藥露（回血+regen）/ 草藥大師（強化） |
+| `data/birth/classes/witch.lua` | **全新 class 範本**：`type="class"` + `type="subclass"` + 三個世界的 class 白名單 allow（`worlds.lua:36-38` 是 `__ALL__="disallow"`） |
+| `data/locales/zh_hant.lua` | 職業顯示名「女巫」（`data/` 底下唯一自動載入的檔） |
+
 ## Addon（`self_mods/tome-runewright/`）
 
 | 檔案 | 職責 |

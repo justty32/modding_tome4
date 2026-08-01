@@ -73,3 +73,16 @@
 ## 不屬任何工作流的進度
 
 - 無。
+## 最新進度
+
+- **2026-08-01 女巫（Witch）addon 完成第一版（草藥樹）**——`self_mods/tome-witch/`。
+  - **全新 class 範本**：本 repo 第一個 `type="class"` 職業（runewright 只是 Mage 子職業）。
+    關鍵新知：「新 class 要進世界白名單」——`M/data/birth/worlds.lua:20-62` 的
+    `default_eyal_descriptors` 對 class 是 `__ALL__="disallow"`，已寫進
+    `docs/knowledge/class-parts/01-birth-and-talents.md`。
+  - 驗證全過：lint 0；verify 4/4 selfcheck（tree/class/subclass/worlds）；
+    playtest 實機建角 Cornac/Witch、被動數值（毒免 20%、healing_factor 1.1）、
+    生命藥露 90→55→90、女巫魔藥毒殺 16HP 棕蛇。build 打包 12K。
+  - 已佈署 `tools/deploy.sh witch`；手感/平衡待使用者實機確認（WAIT_USER.md）。
+  - 踩過的坑：`--birth` 的 race 要用 descriptor 英文原名（`Human` 大寫，`human` 會炸）；
+    `p:takeHit` 在 Player 覆寫下需要 src；`projectile` 是飛行彈道，傷害要等主迴圈結算。

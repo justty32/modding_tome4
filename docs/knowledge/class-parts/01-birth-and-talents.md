@@ -44,6 +44,27 @@ getBirthDescriptor("class", "Mage").descriptor_choices.subclass.Arcanist = "allo
 
 `descriptor_choices` 的值，裸引擎只認 4 種（`E/Birther.lua:236-243`）；ToME superload 過的 Birther 另支援 `"nolore"`、`"allow-nochange"`（`M/mod/dialogs/Birther.lua:760-789`）。
 
+### 新增**全新 class**（type="class"）：比子職業多兩道白名單閘門
+
+本 repo 自家範本（runewright）只示範了「子職業掛進既有 class」。真正的全新 class
+（建角畫面的 class 分類直接出現新職業）還有兩道閘門：
+
+1. class 自己的 `descriptor_choices.subclass`：`__ALL__="disallow"` + 自家 subclass allow
+   （`M/mod/dialogs/Birther.lua:954-956` 只把 allow／allow-nochange／nolore 的子職業掛到 class 底下）。
+2. **世界白名單**：Maj'Eyal / Infinite / Arena 三個世界共用 `default_eyal_descriptors`，
+   其 `class` 是 `__ALL__="disallow"` 白名單（`M/data/birth/worlds.lua:36-38`，函式本體 `:20-62`，三個世界分別在 `:78`／`:136`／`:211` 引用它）。不 allow 的話
+   `Birther:generateClasses`（`M/mod/dialogs/Birther.lua:943`）裡的 `isDescriptorAllowed`（呼叫在 `:952`，定義在 `:760-789`）
+   直接不放行，建角畫面**看不到**這個 class：
+
+```lua
+for _, world in ipairs { "Maj'Eyal", "Infinite", "Arena" } do
+    getBirthDescriptor("world", world).descriptor_choices.class.Witch = "allow"
+end
+```
+
+實證範本：`vendor/orig/neka_therianthropy_summoner/data/birth/classes/summon.lua:986-988`；
+本 repo 的 `self_mods/tome-witch/`（女巫）也走這條路，通過 verify + playtest。
+
 ## 2. `newTalentType` / `newTalent`
 
 `E/interface/ActorTalents.lua:49-98`。
