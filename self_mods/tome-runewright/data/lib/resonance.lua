@@ -17,7 +17,11 @@
 --   這個 bug 只有實機跑中文語系才會現形——靜態檢查與載入驗證都抓不到。
 
 local M = {}
-local defs = require("data.lib.resonance_defs")
+-- ⚠️ 不可用 require("data.lib.resonance_defs")。addon 的 data/ 掛在私有的
+-- /data-runewright/（engine/Module.lua:498-503），而 package.path 只有 /?.lua，
+-- 所以 require 會去找模組自己的 /data/lib/resonance_defs.lua 而拋
+-- 「module 'data.lib.resonance_defs' not found」。私有掛載點只能用絕對 VFS 路徑 dofile。
+local defs = dofile("/data-runewright/lib/resonance_defs.lua")
 M.defs = defs.defs
 M.hasId = defs.hasId
 

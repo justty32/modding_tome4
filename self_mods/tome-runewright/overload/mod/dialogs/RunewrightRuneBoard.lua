@@ -4,7 +4,9 @@ require "engine.class"
 local Dialog, ListColumns = require "engine.ui.Dialog", require "engine.ui.ListColumns"
 local TextzoneList, Textzone = require "engine.ui.TextzoneList", require "engine.ui.Textzone"
 local Separator = require "engine.ui.Separator"
-local Data = require "data.lib.rune_board_data"
+-- ⚠️ 同 data/lib/resonance.lua 的理由：addon 的 data/ 在 /data-runewright/，
+-- require 只認 package.path 的 /?.lua，搆不到私有掛載點。只能絕對路徑 dofile。
+local Data = dofile("/data-runewright/lib/rune_board_data.lua")
 
 module(..., package.seeall, class.inherit(Dialog))
 

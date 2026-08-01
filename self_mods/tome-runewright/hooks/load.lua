@@ -32,8 +32,9 @@ class:bindHook("ToME:load", function(self, data)
     ActorTalents:loadDefinition("/data-runewright/talents/spells/runecraft.lua")
     ActorTalents:loadDefinition("/data-runewright/talents/spells/runic-mastery.lua")
     ActorTalents:loadDefinition("/data-runewright/talents/spells/inscription-lore.lua")
-    ActorTalents:loadDefinition("/data-runewright/talents/spells/futhark-freyr.lua")
-    ActorTalents:loadDefinition("/data-runewright/talents/spells/futhark-heimdall.lua")
+    -- 這兩族拆成目錄了，入口是各自的 init.lua（裡面用 load() 串子檔）。
+    ActorTalents:loadDefinition("/data-runewright/talents/spells/futhark-freyr/init.lua")
+    ActorTalents:loadDefinition("/data-runewright/talents/spells/futhark-heimdall/init.lua")
     ActorTalents:loadDefinition("/data-runewright/talents/spells/futhark-tyr.lua")
 
     -- 6) 職業。必須最後——它的 talents 表要參照上面已定義的天賦 id。
