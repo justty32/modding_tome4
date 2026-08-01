@@ -1,6 +1,6 @@
 # pi coding agent 實驗紀錄 — 讓外部 agent 做一個新職業 mod
 
-> 逐字紀錄。分析與心得見 [pi-cookbook.md](pi-cookbook.md)。
+> 逐字紀錄。分析與心得見 [pi-cookbook.md](../pi-cookbook.md)。
 
 - 目標：女巫（Witch）職業 + 一棵特色技能樹「草藥」
 - 驅動方式：`printf '%s' "$PROMPT" | pi -p --provider deepseek --model deepseek-v4-flash --session-id witch-experiment`

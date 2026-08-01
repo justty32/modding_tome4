@@ -101,6 +101,31 @@ unzip -p $G/game/modules/tome-gfx.team data/gfx/particles/ball_teleport.lua | gr
 2026-07-10 使用者回報「某個技能的特效施放後不會消失」，就是把它丟給了 `game.level.map:particleEmitter`。
 一次性施法特效請用 `ball_*`。
 
+#### 同一個坑的第二種形態：把「飛行粒子」拿去當「命中粒子」
+
+2026-08-01 使用者實機回報女巫的 `T_WITCH_BREW` 特效抵達目標後不消失。根因同上，
+但入口不是 `particleEmitter`，而是 **`projectile()` 的第 6 參數**：
+
+```lua
+-- ✗ 錯：bolt_slime 是飛行用的，無條件 emit(30)，永遠 isAlive → 落點永久殘留
+self:projectile(tg, x, y, DamageType.POISON, dam, { type = "bolt_slime" })
+-- ✓ 對：slime 是爆點用的，有 `if self.nb < 6` 守衛會自己停
+self:projectile(tg, x, y, DamageType.POISON, dam, { type = "slime" })
+```
+
+一發彈道其實有**三個不同角色的粒子**，名字相近但不可互換
+（原版三者並列的寫法見 `M/data/talents/spells/staff-combat.lua:60`）：
+
+| 角色 | 填在哪 | 例 |
+|---|---|---|
+| 飛行中 | `target.display.particle` | `bolt_slime` |
+| 拖尾 | `target.display.trail` | `slimetrail` |
+| **命中爆開** | **`projectile()` 第 6 參數** | **`slime`** |
+
+原版 9 處用到 `bolt_slime` 的地方**全部只放在 `target.display`**，
+沒有任何一處把它當第 6 參數（`grep -rn 'bolt_slime' M/data/talents/` 自己看）。
+實際呼叫前例：`M/data/talents/gifts/slime.lua:38` 的 `{type="slime"}`。
+
 判定方法（不用猜）：
 
 ```bash

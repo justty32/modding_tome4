@@ -76,10 +76,24 @@ newTalent {
         local tg = self:getTalentTarget(t)
         local x, y = self:getTarget(tg)
         if not x or not y then return nil end
-        -- projectile()＝會飛的彈道（engine/interface/ActorProject.lua:406），
-        -- 第 6 參數是彈體自身的粒子。
+        -- projectile()＝會飛的彈道（E/interface/ActorProject.lua:406）。
+        --
+        -- ⚠️ 第 6 參數是**命中爆點**的粒子，不是飛行中的粒子。飛行的長相由上面
+        --    target.display 決定，兩者是不同角色，不可混用：
+        --      display.particle = "bolt_slime"   飛行中
+        --      display.trail    = "slimetrail"   拖尾
+        --      第 6 參數         = "slime"        命中爆開
+        --    原版三者並列的寫法見 M/data/talents/spells/staff-combat.lua:60
+        --    （explosion="slime" / particle="bolt_slime" / trail="slimetrail"），
+        --    實際呼叫前例 M/data/talents/gifts/slime.lua:38 也是 {type="slime"}。
+        --
+        -- ⚠️ 這裡曾經誤填 "bolt_slime"，導致特效抵達目標後**永久留在地圖上**
+        --    （2026-08-01 使用者實機回報）。原因是 bolt_slime 的更新函式是無條件的
+        --    `self.ps:emit(30)`，永遠 isAlive，Map 不會回收（E/Map.lua:1488-1496）；
+        --    而 slime 有 `if self.nb < 6` 的守衛會自己停。
+        --    判定方法與同類坑見 docs/knowledge/visuals-and-sounds.md。
         self:projectile(tg, x, y, DamageType.POISON, self:spellCrit(t.getDamage(self, t)),
-            { type = "bolt_slime" })
+            { type = "slime" })
         game:playSoundNear(self, "talents/slime")
         game.logSeen(self, "%s 擲出一瓶劇毒魔藥！", self:getName():capitalize())
         return true
