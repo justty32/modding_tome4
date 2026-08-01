@@ -69,17 +69,93 @@ return {
 	-- （runeisles 的守碑人是靠 town 靜態圖放的，這裡走不通），
 	-- 所以照原版隨機 zone 的作法在 post_process 指名生成 + 找空格放。
 	-- 前例：M/data/zones/arena-unlock/zone.lua:40-45（makeEntityByName + addEntity）
-	--       M/data/zones/noxious-caldera/zone.lua:108（util.findFreeGrid 找空格）
+	--       M/data/zones/slime-tunnels/zone.lua:72-78（post_process 裡用 Astar 驗連通）
+	--
+	-- ⚠️ 修過的坑 1：post_process 是 zone 等級的欄位，E/Zone.lua:1163-1164 每生成一層
+	-- 都會呼叫一次——max_level=3 的這個 zone 會在 3 層樓各放一個葛薇，
+	-- 變成同一個「守根人」同時出現在 3 個地方（playtest 實測抓到）。
+	-- 她的設定是「守著唯一一條老樹根、走不開」，只該出現在玩家踏進來的那一層。
+	--
+	-- ⚠️ 修過的坑 2（2026-08-01 實機回報「守根人卡在入口」）：舊版用
+	--   util.findFreeGrid(up.x, up.y, 6, true, {ACTOR=true})
+	-- 找位置，有兩個致命問題：
+	--   a) findFreeGrid（E/utils.lua:2966-2978）依距離**升序**排序後回傳最近的一格，
+	--      而 up 那格自己也是「可走、沒有 actor」→ 距離 0 → 她被放在**入口樓梯格上**。
+	--      玩家進場時 M/mod/class/Game.lua:1301-1306 偵測到樓梯上有人，force move 她
+	--      到最近的空格；`edge_entrances = {4,6}` 讓入口是**地圖邊緣**的樓梯，
+	--      往內只有一條**一格寬**的隧道（E/generator/map/Roomer.lua:117-145），
+	--      所以她被推到那條隧道唯一的一格上，整個入口被她堵死。
+	--      她是 never_move + cant_be_moved + can_talk：
+	--        - M/mod/class/interface/Combat.lua:41-45 撞到 can_talk 的目標會**開對話**，
+	--          走不到 :50 那條 swap 分支，玩家永遠換不掉她的位置；
+	--        - M/mod/class/interface/ActorAI.lua:332 never_move/cant_be_moved 直接
+	--          讓 canBumpDisplace 回 false，NPC 也推不動她。
+	--      實測證據：玩家 (0,33)，她 (0,34)，八方只有 (0,34) 可走，canMove(0,34)=false；
+	--      A* 只看地形時 entrance→(9,36) 有 11 步，把 actor 也算進去就是 NIL。
+	--   b) findFreeGrid 內部查的是 `game.level.map`，但 post_process 跑在
+	--      E/Zone.lua:1163（`game.level` 還是**上一張**地圖，見 Game:changeLevel 的
+	--      賦值順序）——它其實在對錯的地圖做 isBound / ACTOR / block_move 判斷。
+	--
+	-- 現在的做法：自己掃 `level.map`（唯一保證正確的那張），只挑滿足下列條件的格子，
+	-- 依離入口的距離升序取第一個能過驗證的：
+	--   * 可走、沒有 actor、不是樓梯也沒有 change_zone / change_level
+	--   * 離入口至少 2 格（不站在入口旁邊跟玩家搶格子）
+	--   * 八方至少 5 格可走 → 是房間內的開闊地，不是一格寬的通道
+	--   * 硬保證：把她那格當牆，A* 仍能從入口走到下樓梯；且入口走得到她
 	post_process = function(level)
+		if level.level ~= 1 then return end
+		local Map = require "engine.Map"
+		local Astar = require "engine.Astar"
+		local map = level.map
+		local up, down = level.default_up, level.default_down
+		if not map or not up then return end
+
+		local function walkable(x, y)
+			return map:isBound(x, y) and not map:checkEntity(x, y, Map.TERRAIN, "block_move")
+		end
+
+		-- 便宜的篩選：地形／占用／不是出入口／不是一格寬通道
+		local function plausible(x, y)
+			if not walkable(x, y) then return false end
+			if map(x, y, Map.ACTOR) then return false end
+			if x == up.x and y == up.y then return false end
+			if down and x == down.x and y == down.y then return false end
+			local t = map(x, y, Map.TERRAIN)
+			if not t or t.change_zone or t.change_level then return false end
+			local open = 0
+			for i = -1, 1 do for j = -1, 1 do
+				if (i ~= 0 or j ~= 0) and walkable(x + i, y + j) then open = open + 1 end
+			end end
+			return open >= 5
+		end
+
+		-- 昂貴的驗證：她既走得到，又不會把入口到下樓梯的路切斷
+		local a = Astar.new(map, game:getPlayer())
+		local function connectivity_ok(x, y)
+			if not a:calc(up.x, up.y, x, y) then return false end
+			if down and (down.x ~= up.x or down.y ~= up.y) then
+				local not_her = function(cx, cy) return not (cx == x and cy == y) end
+				if not a:calc(up.x, up.y, down.x, down.y, nil, nil, not_her) then return false end
+			end
+			return true
+		end
+
+		local cands = {}
+		for x = 0, map.w - 1 do for y = 0, map.h - 1 do
+			local d = core.fov.distance(up.x, up.y, x, y)
+			if d >= 2 and plausible(x, y) then cands[#cands + 1] = { x = x, y = y, d = d } end
+		end end
+		table.sort(cands, function(p, q) return p.d < q.d end)
+
 		local m = game.zone:makeEntityByName(level, "actor", "WITCHWOOD_CRONE")
 		if not m then return end
-		-- 從上樓梯往外找空格：玩家一進圖就看得到她，又不會壓在 change_zone 格上
-		-- （壓在出口格的坑見 docs/knowledge/npc-and-chats.md）。
-		local up = level.default_up
-		if not up then return end
-		local x, y = util.findFreeGrid(up.x, up.y, 6, true, { [engine.Map.ACTOR] = true })
-		if x and y then
-			game.zone:addEntity(level, m, "actor", x, y)
+		for _, c in ipairs(cands) do
+			if connectivity_ok(c.x, c.y) then
+				game.zone:addEntity(level, m, "actor", c.x, c.y)
+				print(("[WITCHWOOD] crone placed at %d,%d up=%d,%d dist=%d"):format(c.x, c.y, up.x, up.y, c.d))
+				return
+			end
 		end
+		print(("[WITCHWOOD] crone placement FAILED: %d candidates, none connectivity-safe"):format(#cands))
 	end,
 }

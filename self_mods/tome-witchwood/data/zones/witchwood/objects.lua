@@ -1,2 +1,18 @@
--- 女巫森林的物品：走隨機掉落（zone.lua 的 generator.object.Random），
--- 不需要專屬物品清單（照 runeisles 石陣範本，物件會從原版資料挑）。
+-- 女巫森林的物品：走隨機掉落（zone.lua 的 generator.object.Random）。
+--
+-- ⚠️ 2026-08-01 實機修正：上面那句「不需要專屬物品清單」是錯的，是抄 runeisles
+-- 石陣範本的註解沿用下來的誤判。engine/Zone.lua:176 讀 zone 自己的 objects.lua
+-- 建 self.object_list；沒有 load 任何清單時 object_list 就是空表，跟
+-- generator.object.Random（隨機地板掉落）能不能生成東西完全無關——那是兩條
+-- 各自獨立的路徑，都吃同一個空 object_list。
+--
+-- 症狀（run.log）：
+--   [resolveObject] FAILED for 40642 林中老嫗 filter: {type="money"}
+--   [resolveObject] FAILED for 40642 林中老嫗 filter: {type="weapon", ..., subtype="staff", ...}
+-- 兩者都是 M/mod/resolvers.lua:105 的 game.zone:makeEntity(level, "object", filter)
+-- 從空 object_list 裡怎麼撈都撈不到東西，靜默失敗（沒有 Lua Error）。
+-- 對照 docs/knowledge/npc-and-chats.md §6。
+--
+-- 補這行載入原版基底物品清單（抄 town-derth/objects.lua），地板隨機掉落物與
+-- NPC 的 resolvers.equip / resolvers.drops 才有東西可挑：
+load("/data/general/objects/objects-maj-eyal.lua")
