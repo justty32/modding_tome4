@@ -10,6 +10,9 @@
 #   lib/scratch.sh  prepare_scratch_home / enable_cheat_mode / write_autobirth_spec
 #   lib/game.sh     pick_free_display / start_xvfb / launch_game / stop_game / wait_log
 #
+# 只放**共用**的部分。單一進入口專屬的實作放自己的子目錄，由該進入口自己 source：
+#   lib/playtest/  只有 playtest.sh 需要（session / screen / console 三塊）
+#
 # Lua 那一側的邏輯（判讀、欄位檢查、探測）在 tools/lua/ 與 tools/probes/，
 # 不由本檔載入——各進入口自己呼叫。分工理由見 tools/README.md。
 

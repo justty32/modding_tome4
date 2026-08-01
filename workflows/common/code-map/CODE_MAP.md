@@ -19,7 +19,7 @@
 | `build.sh` | 打包成 `.teaa`（zip）。會先跑 lint |
 | `deploy.sh` | 冪等佈署到 `~/.t-engine/4.0/addons/`。`--home` 指向 scratch、`--undeploy` 移除 |
 | `verify.sh` | Xvfb 無頭啟動遊戲，判定 addon 真的載入（判讀交給 `lua/verdict.lua`）|
-| `playtest.sh` | Xvfb 裡**實際遊玩**。子命令 `start/probe/lua/log/do/shot/zoom/status/stop`；`start --birth` 自動建角 |
+| `playtest.sh` | Xvfb 裡**實際遊玩**。只留狀態路徑與派發，實作在 `lib/playtest/`。子命令 `start/probe/lua/log/do/shot/zoom/status/stop`；`start --birth` 自動建角 |
 | `run.sh` | 在**使用者真實桌面**開遊戲（先問過才准跑）|
 
 ### bash 共用層（`tools/lib/`，`source lib.sh` 會照相依順序全載入）
@@ -32,6 +32,16 @@
 | `lib/addon.sh` | `resolve_addon_dir` / `addon_names`（推 `ADDON_DIR/BASE/SHORT/UPPER`）/ `addon_field` |
 | `lib/scratch.sh` | 拋棄式 t-engine home：跳彈窗的 cfg、`enable_cheat_mode`、`write_autobirth_spec` |
 | `lib/game.sh` | `pick_free_display` / `start_xvfb` / `launch_game` / `stop_game`（殺 process group）/ `wait_log` |
+
+### playtest 專屬層（`tools/lib/playtest/`，只由 `playtest.sh` 自己 source）
+
+刻意不進 `lib.sh` 聚合入口——`lint.sh`、`build.sh` 沒理由載入這些。
+
+| 檔案 | 職責 |
+|------|------|
+| `playtest/session.sh` | `start` / `status` / `stop`：scratch home、autobirth 夾具、過主選單、等建角完成 |
+| `playtest/screen.sh` | `shot` / `do` / `zoom`：截圖與 X11 輸入。**產物是給使用者看的** |
+| `playtest/console.sh` | `probe` / `lua` / `log`：ctrl+L 進 Lua console、送單行 ASCII、從 `run.log` 撈回。**AI 取得狀態的唯一通道** |
 
 ### Lua 邏輯層（`tools/lua/`）
 

@@ -41,9 +41,10 @@ lint  →  verify（載入 + selfcheck）  →  playtest（建角 + 程式化操
 ```
 tools/
   lint.sh build.sh deploy.sh verify.sh playtest.sh run.sh   ← 6 個進入口，只有這層該被直接執行
-  lib/      bash 共用層：只做行程與檔案系統編排
-  lua/      Lua 邏輯層：判讀、檢查、壓平
-  probes/   探測庫：給 playtest.sh probe 用
+  lib/            bash 共用層：只做行程與檔案系統編排
+    playtest/     playtest.sh 專屬，不進共用聚合入口
+  lua/            Lua 邏輯層：判讀、檢查、壓平
+  probes/         探測庫：給 playtest.sh probe 用
 ```
 
 ### 為什麼是 bash + Lua 混編
@@ -63,13 +64,18 @@ tools/
 | | `lib/addon.sh` | `resolve_addon_dir` / `addon_names` / `addon_field` |
 | | `lib/scratch.sh` | 拋棄式 t-engine home：跳彈窗的 cfg、cheat 開關、autobirth 規格 |
 | | `lib/game.sh` | Xvfb、啟動遊戲、等 log、殺 process group |
+| playtest 專屬 | `lib/playtest/session.sh` | `start` / `status` / `stop`：session 生命週期 |
+| | `lib/playtest/screen.sh` | `shot` / `do` / `zoom`：截圖與 X11 輸入（**產給使用者看**）|
+| | `lib/playtest/console.sh` | `probe` / `lua` / `log`：送 Lua 進遊戲並撈回純文字（**給 AI 用**）|
 | Lua 邏輯 | `lua/check_init.lua` | init.lua 欄位語意（引擎行號都在檔頭） |
 | | `lua/verdict.lua` | 判讀 run.log 決定驗收成敗 |
 | | `lua/addon_field.lua` | 用 Lua 求值取 init.lua 欄位（不是 grep） |
 | | `lua/flatten_probe.lua` | 把探測壓成單行 ASCII，並擋掉非 ASCII 與語法錯誤 |
 | 探測 | `probes/*.lua` | 見下 |
 
-`lib.sh` 是聚合入口，`source` 它就會照相依順序載入整個 `lib/`。
+`lib.sh` 是聚合入口，`source` 它就會照相依順序載入 `lib/` 的**共用**部分。
+`lib/playtest/` 刻意**不**進聚合入口——只有 `playtest.sh` 需要它，
+沒理由讓 `lint.sh`、`build.sh` 也載進來。
 
 ## 探測庫（probes/）
 
