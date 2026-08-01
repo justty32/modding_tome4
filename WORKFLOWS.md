@@ -10,13 +10,39 @@
 
 | 觸發（你說…）| 工作流 | 入口檔（先讀這個）|
 |--------------|--------|-------------------|
+| 「做 / 改一個 ToME4 addon（職業、技能、物品、UI）」 | **addon-dev** | [workflows/addon-dev/README.md](workflows/addon-dev/README.md) |
 | 「我想開發 / 修改某個功能」「**修 bug**」 | **feature-dev** | [workflows/feature-dev/README.md](workflows/feature-dev/README.md) |
+| 「重構 / 拆檔 / 整理結構」 | refactor | [workflows/refactor/README.md](workflows/refactor/README.md) |
 | 「跑測試 / 驗證」 | **testing** | [workflows/testing.md](workflows/testing.md) |
 | 「**記 / 查踩坑**」 | **gotchas** | [workflows/common/gotchas.md](workflows/common/gotchas.md) |
 
-碰原始碼的工作流共用 [common/conventions](workflows/common/conventions.md)（程式碼慣例）。實際 addon 開發另有更細的一條龍流程在 `derived/tome4-modkit/AGENTS.md`。
+### 調查 / 規劃 flavor
 
-> 需要更多開發類工作流時才加一列（入口檔第一次用到才建，從單檔開始長——見 [DEV-GUIDE](DEV-GUIDE.md) 四級成長軌跡）：**refactor**（重構/拆檔）、**investigation**（調查外部系統/可行性）、**spec**（把 idea 討論成方案）、**plan**（把方案展開成計畫）、**idea**（記奇思妙想）、**roadmap**（記確定會做、不確定何時）、**tooling**（外部工具/env）、**dev-env**（環境/fresh clone/出貨）。規劃管線：idea → roadmap → spec → plan → build（feature-dev）。
+| 觸發（你說…）| 工作流 | 入口檔 |
+|--------------|--------|--------|
+| 「調查現有系統 / 外部專案 / 可行性」 | investigation | [workflows/investigation/README.md](workflows/investigation/README.md) |
+| 「初次接觸陌生專案，建立可延續分析」 | analysis | [workflows/analysis.md](workflows/analysis.md) |
+| 「讀 paper / 長文 / 技術資料並建索引」 | research | [workflows/research/README.md](workflows/research/README.md) |
+| 「記一個不確定要不要做的想法」 | idea | [workflows/idea/ideas.md](workflows/idea/ideas.md) |
+| 「記一件確定會做、不確定何時的事」 | roadmap | [workflows/roadmap/README.md](workflows/roadmap/README.md) |
+| 「把 idea 討論成設計方案」 | spec | [workflows/specs/README.md](workflows/specs/README.md) |
+| 「把設計方案展開成動工計畫」 | plan | [workflows/plans/README.md](workflows/plans/README.md) |
+
+### 產出 / 環境 flavor
+
+| 觸發（你說…）| 工作流 | 入口檔 |
+|--------------|--------|--------|
+| 「基於分析產物做獨立衍生小專案」 | create | [workflows/create/README.md](workflows/create/README.md) |
+| 「做一包可套用到原專案的 patch」 | patch | [workflows/patch/README.md](workflows/patch/README.md) |
+| 「.md 太多，想做瀏覽導覽層」 | html-guide | [workflows/html-guide/README.md](workflows/html-guide/README.md) |
+| 「設定 / 了解開發環境」 | dev-env | [workflows/dev-env.md](workflows/dev-env.md) |
+| 「使用 / 設定外部工具、env var、依賴」 | tooling | [workflows/tooling/README.md](workflows/tooling/README.md) |
+
+碰原始碼的工作流共用 [common/conventions](workflows/common/conventions.md)（程式碼慣例 + 真相層優先級 + CODE_MAP 維護鏈）。
+**實際 addon 開發的一條龍鐵律在 [AGENTS.md](AGENTS.md)，工具用法在 [tools/README.md](tools/README.md)。**
+
+規劃管線：`idea → roadmap → spec → plan → addon-dev / feature-dev`
+外部材料管線：`analysis / research → create 或 patch 或 roadmap/spec`
 
 **都不符 → 看 [INDEX.md](INDEX.md)**（repo 頂層結構地圖）。
 

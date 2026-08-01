@@ -1,7 +1,9 @@
-# Third-party / upstream source (not our work)
-projects/t-engine4/
-external/orig/
-external/chn-mod/
+# 第三方 / 上游素材（不是我們的工作，可重新取得，見 vendor/README.md）
+vendor/*
+!vendor/README.md
+
+# 開發迴圈暫存產物（build→deploy→測試，隨時被覆蓋）
+build/
 
 # OS / editor cruft
 .DS_Store

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tome4-modkit — SOP／計畫文件</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+.s-card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:16px 18px;display:flex;flex-direction:column;gap:8px;}
+.s-card h3{font-size:.9rem;font-weight:700;color:var(--text);}
+.s-card .when{font-size:.78rem;color:var(--muted);line-height:1.6;flex:1;}
+.group-label{font-size:.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin:28px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+.route-flow{display:flex;align-items:center;gap:0;flex-wrap:wrap;
+  background:var(--card);border:1px solid var(--border);border-radius:9px;padding:16px 20px;}
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-brand">tome4-modkit</span>
+  <a href="index.html">首頁</a>
+  <a href="toolchain.html">工具鏈</a>
+  <a href="knowledge.html">引擎知識庫</a>
+  <a href="mods.html">mod 產物</a>
+  <a href="sop.html" class="active">SOP／計畫文件</a>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto;">
+
+<div class="page-header">
+  <h1>SOP／計畫文件</h1>
+  <p>agent 該從哪裡進來、遇到不同意圖時該讀哪個工作流入口，以及目前未動工的下一步建置計畫。
+  本 repo 的主體就是 addon 開發本身（<code>tools/</code>、<code>mods/</code>、<code>knowledge/</code>、
+  <code>workflows/</code>）；漢化、成品、引擎分析降為 <code>sub_proj/</code>，唯讀第三方素材在
+  <code>vendor/</code>。專案專屬規則集中在 <code>AGENTS.md</code>、<code>workflows/addon-dev/</code>
+  與 <code>knowledge/</code>。</p>
+</div>
+
+<!-- 進入路徑 -->
+<div class="section">
+  <div class="section-title">agent 該從哪裡進來</div>
+  <div class="route-flow">
+    <span class="pipe-step pipe-purple">AGENTS.md<br><span style="font-weight:400;font-size:.72rem;">always-on 鐵律</span></span>
+    <span class="pipe-arrow">→</span>
+    <span class="pipe-step pipe-blue">WORKFLOWS.md<br><span style="font-weight:400;font-size:.72rem;">依意圖派發</span></span>
+    <span class="pipe-arrow">→</span>
+    <span class="pipe-step pipe-cyan">各工作流入口<br><span style="font-weight:400;font-size:.72rem;">如 addon-dev/README.md</span></span>
+  </div>
+  <p style="font-size:.78rem;color:var(--dim);margin-top:10px;">
+    做／改 ToME4 addon 時，<code>WORKFLOWS.md</code> 會指到
+    <a href="../workflows/addon-dev/README.md">workflows/addon-dev/README.md</a>——
+    那份才是「做一個 addon」的權威 SOP（本站 <a href="toolchain.html">工具鏈頁</a> 只是它的導覽摘要）。
+  </p>
+</div>
+
+<!-- 核心文件 -->
+<div class="group-label">核心（日常會用到）</div>
+<div class="g3">
+
+  <a class="s-card card-accent-purple" href="../AGENTS.md">
+    <h3>AGENTS.md</h3>
+    <p class="when"><b>什麼時候讀：</b>每次 session 一開始。always-on 鐵律（絕不在真桌面跑 t-engine64、
+    sub_proj/analysis/t-engine 不是權威、佈署目標等）與「先讀哪裡」路由表。</p>
+    <span class="md-link">→ AGENTS.md</span>
+  </a>
+
+  <a class="s-card card-accent-purple" href="../WORKFLOWS.md">
+    <h3>WORKFLOWS.md</h3>
+    <p class="when"><b>什麼時候讀：</b>不確定現在該用哪個工作流時。依「使用者想做什麼」對照到入口檔的派發表。</p>
+    <span class="md-link">→ WORKFLOWS.md</span>
+  </a>
+
+  <a class="s-card card-accent-purple" href="../INDEX.md">
+    <h3>INDEX.md</h3>
+    <p class="when"><b>什麼時候讀：</b>要確認 repo 佈局、某個東西該去哪找時。
+    三層地圖：主體／<code>sub_proj/</code>／<code>vendor/</code>，含唯讀真相層路徑。</p>
+    <span class="md-link">→ INDEX.md</span>
+  </a>
+
+  <a class="s-card card-accent-purple" href="../workflows/addon-dev/README.md">
+    <h3>workflows/addon-dev/README.md</h3>
+    <p class="when"><b>什麼時候讀：</b>要做／改一個 ToME4 addon 時的權威 SOP。
+    含前置讀本、驗證管線圖、各關卡證明表、Done-when。</p>
+    <span class="md-link">→ addon-dev/README.md</span>
+  </a>
+
+  <a class="s-card card-accent-purple" href="../workflows/common/conventions.md">
+    <h3>workflows/common/conventions.md</h3>
+    <p class="when"><b>什麼時候讀：</b>碰原始碼前。程式碼慣例、真相層優先序
+    （<code>vendor/t-engine4 &gt; knowledge/ &gt; sub_proj/analysis</code>）、CODE_MAP 維護鏈、多 agent 並行規則。</p>
+    <span class="md-link">→ common/conventions.md</span>
+  </a>
+
+  <a class="s-card card-accent-purple" href="../workflows/plans/PLAN-camp-and-isekai.md">
+    <h3>PLAN-camp-and-isekai.md</h3>
+    <p class="when"><b>什麼時候讀：</b>要接著做營地系統進階（農作計時器）或歐拉麗異世界剩餘增量
+    （酒館招募、市集、眷族）時。含可直接照做的檔案結構、落點/回程/nice_tiler 等已知坑、建置序。</p>
+    <span class="md-link">→ PLAN-camp-and-isekai.md</span>
+  </a>
+
+</div>
+
+<!-- 進度追蹤 -->
+<div class="group-label">進度追蹤</div>
+<div class="g2">
+
+  <a class="s-card card-accent-cyan" href="../SESSION-LOG.md">
+    <h3>SESSION-LOG.md</h3>
+    <p class="when"><b>什麼時候讀：</b>接手時看還有哪些跨工作流的 open 項（目前為空——各工作流自己的
+    <code>session-log.md</code> 也都無 open 項）。</p>
+    <span class="md-link">→ SESSION-LOG.md</span>
+  </a>
+
+  <a class="s-card card-accent-cyan" href="../session_log/">
+    <h3>session_log/</h3>
+    <p class="when"><b>什麼時候讀：</b>要知道「最近幾次 session 具體做了什麼、踩了什麼坑」的一句話流水帳
+    （PAS 慣例，按月分檔封存）。<a href="mods.html">mod 產物頁</a>的狀態標籤即整理自此。</p>
+    <span class="md-link">→ session_log/</span>
+  </a>
+
+</div>
+
+<!-- 框架自帶文件 -->
+<div class="group-label">頂層文件</div>
+<div class="card" style="padding:0;overflow-x:auto;">
+  <table>
+    <tr><th>文件</th><th>用途</th></tr>
+    <tr><td><a href="../README.md">README.md</a></td><td>專案簡介、30 秒上手、目錄地圖、三條鐵律</td></tr>
+    <tr><td><a href="../INDEX.md">INDEX.md</a></td><td>repo 佈局三層地圖：主體／<code>sub_proj/</code>／<code>vendor/</code></td></tr>
+    <tr><td><a href="../AGENTS.md">AGENTS.md</a></td><td>always-on 鐵律、本地專案規則、fresh clone 環境還原</td></tr>
+    <tr><td><a href="../WORKFLOWS.md">WORKFLOWS.md</a></td><td>依意圖派發到工作流的對照表</td></tr>
+    <tr><td><a href="../tools/README.md">tools/README.md</a></td><td>工具鏈決策表：我想做 X 就跑哪支、要多久</td></tr>
+    <tr><td><a href="../DEV-GUIDE.md">DEV-GUIDE.md</a></td><td>被動參考：檔案／資料夾何時該拆分整理</td></tr>
+    <tr><td><a href="../WAIT_USER.md">WAIT_USER.md</a></td><td>需要使用者親自做／驗證才能繼續的 open 項</td></tr>
+    <tr><td><a href="../SESSION-LOG.md">SESSION-LOG.md</a></td><td>跨 session 的 open 進度</td></tr>
+  </table>
+</div>
+
+<p style="opacity:.7;font-size:.85rem;margin-top:.8rem;">
+  2026-08-01 起本 repo 以 addon 開發為主體重整，原先那套從可移植工作流模板帶進來的說明書
+  （ADOPTION／SYNC／UNINSTALL／TEMPLATE-MANIFEST／INIT-QUESTIONS／MAINTENANCE／PRINCIPLES／DOGFOOD）
+  已全數移除——它們描述的是模板本身，不是這個專案。
+</p>
+
+</div><!-- /max-width -->
+</body>
+</html>

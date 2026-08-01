@@ -1,81 +1,107 @@
 # tome4 — Agent 專案備忘
 
-這份檔案是最頂層路由器，只放 always-on 規則與入口連結；細節放到各工作流。
+最頂層路由器：只放 always-on 鐵律與入口連結，細節在各工作流。
 
 ## 專案摘要
 
-- 專案一句話：ToME4 (Tales of Maj'Eyal) modding 工作區——`derived/tome4-modkit/` 是讓 agent 自主開發 addon 的工具鏈與知識庫（開發→靜態檢查→打包→佈署→無頭測試一條龍），`analysis/t-engine/` 是引擎架構分析索引。
-- 主要語言/框架：Lua 5.1 / LuaJIT（T-Engine4 VM）＋ Bash（工具腳本）。
-- 主要 build 指令：`derived/tome4-modkit/tools/build.sh <addon>` → `build/tome-<name>.teaa`
-- 主要 test 指令：`derived/tome4-modkit/tools/verify.sh <addon>`（Xvfb 無頭載入驗證）
-- 其他常用工具腳本（皆在 `derived/tome4-modkit/tools/`）：`lint.sh`（靜態檢查）、`deploy.sh`（冪等佈署到 `~/.t-engine/4.0/addons/`）、`playtest.sh`（無頭實機遊玩：`--birth` 自動建角、`lua` 在活著的遊戲裡跑一行 Lua 取狀態）、`run.sh`（真桌面開遊戲留 log）。
-- **實機測試的分工鐵律**：AI 要的狀態一律走 `playtest.sh lua` + `print()` 這條回傳純文字的路（手法見 `derived/tome4-modkit/knowledge/playtesting-parts/03-state-probes.md`）；**畫面、渲染、手感、平衡交給使用者判斷，AI 不自己讀截圖**——圖片吃 token，而且人眼在這件事上本來就比較可靠。截圖照產，但是產給使用者看的。
-- 實際工作先讀 `derived/tome4-modkit/AGENTS.md`——那份文件的 always-on 鐵律更細（例如「絕不在真實桌面裸跑 t-engine64」），本檔只是頂層索引。
+- 專案一句話：讓 AI agent **自主開發 Tales of Maj'Eyal (ToME 4, 1.7.6) addon** 的工具鏈與知識庫——開發 → 靜態檢查 → 打包 → 佈署 → 無頭測試，一條龍。
+- 主要語言：Lua 5.1 / LuaJIT（T-Engine4 VM）＋ Bash（工具進入點）
+- lint：`tools/lint.sh <addon>`
+- build：`tools/build.sh <addon>` → `build/tome-<name>.teaa`
+- deploy：`tools/deploy.sh <addon>`（目錄形式，改檔即生效）
+- test：`tools/verify.sh <addon>`（Xvfb 無頭）／`tools/playtest.sh`（無頭實機遊玩）
 
 ## 先讀哪裡
 
-- 使用者要你動手做某件事 → [WORKFLOWS.md](WORKFLOWS.md)：依意圖派發到對應工作流。
-- 想看 repo 結構 → 專案自己的 `INDEX.md` 或 `README.md`。
-- 碰原始碼 → 先讀 [workflows/common/conventions.md](workflows/common/conventions.md)；程式碼導航以 `derived/tome4-modkit/knowledge/` 為準。
+- 要動手做某件事 → [WORKFLOWS.md](WORKFLOWS.md)：依意圖派發到對應工作流
+- 要做 addon → [workflows/addon-dev/README.md](workflows/addon-dev/README.md)
+- **要跑工具 → [tools/README.md](tools/README.md)**（決策表：我想做 X 就跑哪支；每支腳本也吃 `-h`）
+- 引擎真實行為 → [knowledge/](knowledge/README.md)（每條附 `檔案:行號`）
+- repo 結構 → [INDEX.md](INDEX.md)｜程式碼導航 → [workflows/common/code-map/CODE_MAP.md](workflows/common/code-map/CODE_MAP.md)
 
 ## Always-on 鐵律
 
-- 重構/整理必須 behavior-preserving；改完跑對應測試。
+### 本專案專屬（違反會壞事）
+
+1. **絕不在真實桌面執行 `t-engine64`。** 它沒有 `--help`；任何參數都直接開遊戲視窗，會在使用者桌面彈出對話框。自動化一律走 `tools/verify.sh` / `tools/playtest.sh`（它們自己開 Xvfb）：
+   ```bash
+   xvfb-run -a env LIBGL_ALWAYS_SOFTWARE=1 timeout 90 \
+     ./t-engine64 --no-steam --no-web --flush-stdout --home <scratch>
+   ```
+   要用真桌面的滑鼠／鍵盤或 `tools/run.sh` 前**先問使用者**。
+2. **`sub_proj/analysis/t-engine/` 不是權威**，那是索引。任何 API 結論都要回 `vendor/t-engine4/` 原始碼複驗，並在文件裡附 `檔案:行號`。
+3. **唯讀區不准寫**：`vendor/`（含 `t-engine4/`、`orig/`、`chn-mod/`）、`~/.steam/.../TalesMajEyal/`。
+4. **佈署目標是 `~/.t-engine/4.0/addons/`**，不是 Steam 的 `game/addons/`。理由與行號見 `tools/deploy.sh` 檔頭。
+5. **改完必跑** `tools/lint.sh`；要宣稱「能動」必須跑過 `tools/verify.sh` 並貼出輸出。沒跑就說沒跑。
+6. **實機測試時，AI 取得狀態一律用 `tools/playtest.sh probe`（回傳純文字）**；截圖照產但那是**給使用者看的**——畫面、渲染、手感、平衡由使用者判斷，AI 不自己讀圖（人眼更可靠，圖片也很吃 token）。
+7. **`verify.sh` / `playtest.sh` 跑的是拋棄式 scratch home。** 要交給使用者玩，得另外明確跑一次 `tools/deploy.sh <addon>`（不帶 `--home`），否則他的遊戲裡什麼都沒有。
+8. **使用者不能從 Steam 開遊戲**——引擎自身的工坊同步回呼會 SIGSEGV，與 addon 無關。用 `tools/run.sh`（帶 `--no-steam`）。詳見 `knowledge/real-machine.md`。
+
+### 通用
+
+- 重構必須 behavior-preserving；改完跑對應檢查。
 - 未經使用者確認，不 push、不開新大型工作。
-- 不 revert 使用者或其他 agent 的未確認變更；遇到衝突先停下說明。
-- 各工作流的具體流程在自己的 README，不在本檔重複。
+- 不 revert 使用者或其他 agent 的未確認變更；遇衝突先停下說明。
+- 各工作流的具體流程在自己的入口檔，不在本檔重複。
 - 小事可以跳流程；工作流只在能降低交接／同步／設計風險時才啟用（見 [WORKFLOWS.md](WORKFLOWS.md)）。
 - 非微小工作先定義 `Done when:`。
-- 需要使用者親自驗證、外部環境、權限、實機、帳號或手動操作時，記到 [WAIT_USER.md](WAIT_USER.md)。
-- 跨 session 的 open 狀態記到 [SESSION-LOG.md](SESSION-LOG.md) 或對應工作流的 `session-log.md`。
-- 引用外部專案程式碼或技術結論時，盡量附來源位置：`path/to/file:line`、函式名、URL、paper id、或命令輸出摘要。
-- 架構圖/流程圖優先用 Mermaid、表格、列點；不要用需要字元對齊的 ASCII 框線圖。
+- 需要使用者親自驗證／實機確認 → 記到 [WAIT_USER.md](WAIT_USER.md)。
+- 跨 session 的 open 狀態 → [SESSION-LOG.md](SESSION-LOG.md) 或對應工作流的 `session-log.md`。
+- 引用外部程式碼或技術結論時附來源位置：`path/to/file:line`、函式名、URL、命令輸出摘要。
+- 架構圖／流程圖用 Mermaid、表格、列點；**不要 ASCII 框線圖**（中文全形寬度對不齊）。
+- 輸出語言：繁體中文。
 
 ## 分層思想
 
-整個 repo 是分層樹，每一層只指向下一層：
-
 ```text
-AGENTS.md → WORKFLOWS.md / INDEX.md → 各工作流入口 → 工作流內容 → 子工作流
+AGENTS.md → WORKFLOWS.md / INDEX.md → 各工作流入口 → 工作流內容
+                        ↘ knowledge/  （引擎事實，附行號）
+                        ↘ mods/       （實際 addon 原始碼）
+                        ↘ tools/      （冪等腳本）
+                        ↘ sub_proj/   （次要專案：漢化 / 成品 / 分析）
+                        ↘ vendor/     （唯讀第三方素材）
 ```
 
-- `README.md` = 初入一個資料夾先讀的入口/導引。
+- `README.md` = 初入一個資料夾先讀的入口／導引。
 - `INDEX.md` = 描述該資料夾頂層結構的索引。
 - 小資料夾可以 README 兼 index；變大後才拆出獨立 INDEX。
 - durable 知識歸到它所屬的工作流，不堆在頂層。
 
 ## 本地專案規則
 
-把專案專屬規則放這裡，保持精簡；太長就移到對應工作流。
-
-- **目錄佈局**：`derived/tome4-modkit/`（addon 開發工具鏈＋知識庫＋8 個 addon 原始碼，實際開發的主場）、`derived/tome4-ch/`（正體中文化工作區：第三方 addon 的 `zh_hant` 伴生 addon 源碼＋翻譯管線＋打包好的 `build/*.teaa`；2026-07-18 自 `~/code/tome4-ch` 搬遷整合，原目錄已刪除）、`analysis/t-engine/`（引擎架構分析與教程，索引性質）、`projects/t-engine4/`（Steam 版解壓的引擎/模組 Lua 源碼，唯讀真相層）、`external/`（第三方 addon 參考素材：`orig/` 25 個實裝 addon 解壓＋`chn-mod/`，`derived/tome4-ch/_reference/` 以 symlink 指回此處，modkit 知識庫真相層代號 `R` 亦指向 `external/orig`）、`dist/`（自製成品：打包好的 `.teaa` addon；在地化 `.teaa` 目前仍在 `derived/tome4-ch/build/`，升格與否見其 README）。
-- **根 README.md 是外來 agent 的入口**（設計情境：`~/notes` 側的 agent 被派來「找做好的 addon 去部署」，會先讀 README.md）——它必須永遠答得出「成品在哪」（`dist/`）與「部署狀態歸 `~/notes` 側管」。新增產物類型或改佈局時同步更新它。
-- **本資料夾現在是 git repo**（2026-07-20 建立並推到 `github.com/justty32/modding_tome4`，`main` 分支）：第三方大樹（`projects/t-engine4/`、`external/orig/`、`external/chn-mod/`）由 `.gitignore` 排除，只版控自製工作（文檔、`dist/`、`derived/`、`analysis/`、`workflows/`）。commit / push 須經使用者確認（見上方鐵律）。子專案 `derived/tome4-modkit`、`derived/tome4-ch` 目前隨本 repo 一起版控；commit 訊息沿用既有慣例：`feat(runewright): ...` / `feat(tools): ...` / `docs(knowledge): ...`。
-- **測試環境限制**：無頭測試（`verify.sh`／`playtest.sh`）需要 `xvfb-run`，本機 Manjaro 已有；Windows 未複驗。跑 `t-engine64` 一律經 Xvfb，絕不在真實桌面裸跑（它沒有 `--help`，任何參數都直接開遊戲視窗）：
-  ```bash
-  xvfb-run -a env LIBGL_ALWAYS_SOFTWARE=1 timeout 90 \
-    ./t-engine64 --no-steam --no-web --flush-stdout --home <scratch>
-  ```
-- **生成檔/二進位檔是暫存**：`derived/tome4-modkit/build/` 是開發迴圈暫存產物，不保證與源碼同步；要交付的成品放 `dist/addons/`（帶版本＋`SOURCE.md`）。
-- **release/package 注意事項**：addon 的 `version` 必須與目標模組版本相容（現以 ToME 1.7.6 為準），否則 `engine/Module.lua` 的 `natural_compatible` 檢查會為 false，addon 被靜默移除；佈署目標是 `~/.t-engine/4.0/addons/`，不是 Steam 的 `game/addons/`。
-- **`projects/t-engine4/` 是唯讀真相層**：C 層原始碼（`src/`）不在本地——本地只有 Steam 版隨附的 Lua 層。要對照 C 碼需另從官方 git（te4.org）取得。
-- **`analysis/t-engine/` 不是權威**，只是索引；任何 API 結論都要回 `projects/t-engine4/` 原始碼複驗，並在文件裡附 `檔案:行號`。`derived/tome4-modkit/knowledge/` 是比 `analysis/t-engine/` 更可信的引擎真相層（同樣附行號）。
+- **目錄佈局**：主體（`tools/` `mods/` `knowledge/` `workflows/`）就是 addon 開發本身；
+  次要專案在 `sub_proj/`；唯讀第三方素材在 `vendor/`。完整說明見 [INDEX.md](INDEX.md)。
+- **`vendor/t-engine4/` 是唯讀真相層**：C 層原始碼（`src/`）不在本地——本地只有 Steam 版隨附的 Lua 層。
+  要對照 C 碼需另從官方 git（te4.org）取得。
+- **`knowledge/` 是比 `sub_proj/analysis/t-engine/` 更可信的引擎真相層**（同樣附行號）。
+- **根 `README.md` 是外來 agent 的入口**（設計情境：`~/notes` 側的 agent 被派來「找做好的 addon 去部署」）
+  ——它必須永遠答得出「成品在哪」（`sub_proj/dist/`）與「部署狀態歸 `~/notes` 側管」。改佈局時同步更新它。
+- **本機部署狀態**（已裝 addon 清單、`~/.t-engine/4.0/addons/` 現況）**不在本 repo**，歸 `~/notes` 側管理。
+- **生成檔不 commit**：`build/` 已在 `.gitignore`，它是開發迴圈暫存產物，不保證與源碼同步。
+  要交付的成品放 `sub_proj/dist/addons/`（帶版本＋`SOURCE.md`）。
+- **git**：2026-07-20 起推到 `github.com/justty32/modding_tome4`（`main`）。`vendor/` 全部由 `.gitignore` 排除。
+  commit / push 須經使用者確認。
+- **commit 訊息**：`feat(runewright): ...` / `feat(tools): ...` / `docs(knowledge): ...`
+- **測試環境限制**：無頭測試需要 `xvfb-run`；本機 Manjaro 已有。Windows 未複驗。
+- **版本綁定**：addon 的 `version` 必須與模組 1.7.6 相容，否則 `engine/Module.lua:394` 的
+  `natural_compatible` 為 false，addon 會被**靜默移除**（沒有任何錯誤訊息）。
 
 ## Fresh clone / 環境還原
 
-`projects/t-engine4/` 是 126MB 外部解壓源碼，可重新取得，不做版控。在新機器搬移/還原本工作區後，若要做需要引擎原始碼的工作，須手動還原：
+`vendor/` 是 231MB 外部素材，可重新取得，不做版控。在新機器還原本工作區後，須手動補回：
 
-1. 取得 Tales of Maj'Eyal 1.7.6 的 Steam 安裝（或對應版本的遊戲本體）。
-2. 從遊戲目錄找到 `te4-1.7.6.teae`（引擎層）與 `tome.team`（ToME 模組內容層）——這兩者是 zip 格式的封包。
+1. 取得 Tales of Maj'Eyal 1.7.6 的 Steam 安裝。
+2. 從遊戲目錄找出 `te4-1.7.6.teae`（引擎層）與 `tome.team`（ToME 模組內容層）——兩者都是 zip。
 3. 解壓到：
-   - `te4-1.7.6.teae` → `projects/t-engine4/engines/te4-1.7.6/`
-   - `tome.team` → `projects/t-engine4/modules/tome/`
-4. 待補：確切解壓指令（`unzip` 參數、Steam 安裝目錄的確切路徑）未留檔重現，2026-07-05 那次操作只在 `analysis/t-engine/session_log.md` 留了一句話紀錄，沒有留腳本。下次做這件事時應把指令固化成 `derived/tome4-modkit/tools/` 下的腳本。
-5. `derived/tome4-modkit/mods/` 下的實裝 addon（runewright / talent-tutor / runeisles）若要佈署測試，另需 `tools/deploy.sh`，佈署目標是 `~/.t-engine/4.0/addons/`（不是 Steam 目錄，理由見 `tools/deploy.sh` 檔頭）。
+   - `te4-1.7.6.teae` → `vendor/t-engine4/engines/te4-1.7.6/`
+   - `tome.team` → `vendor/t-engine4/modules/tome/`
+4. `vendor/orig/`（第三方 addon 解壓參考）與 `vendor/chn-mod/`（簡體翻譯包範本）另從各 addon 的
+   `.teaa` 解壓；`sub_proj/tome4-ch/_reference/` 以 symlink 指回此處。
+5. **待補**：確切解壓指令未留檔重現。下次做這件事時應固化成 `tools/` 下的腳本。
 
 ## 使用者必須親自做的事
 
-- 提供／維護 Tales of Maj'Eyal 的 Steam 安裝（本工作區不含遊戲本體授權內容）。
-- 任何要用到真實桌面滑鼠/鍵盤操作 `t-engine64` 的驗證，須先徵得同意（見上方鐵律）。
-- 若要在 Windows 上使用本工作區的腳本，需自行複驗——目前只驗證過 Manjaro/Linux。
-- 待補：`derived/tome4-modkit/WAIT_USER.md` 內可能還有其他待人工確認事項，遷移後尚未逐條複核，之後工作應先讀該檔。
+- 提供／維護 Tales of Maj'Eyal 的 Steam 安裝（本 repo 不含遊戲本體授權內容）。
+- 任何要用到真實桌面滑鼠／鍵盤操作 `t-engine64` 的驗證，須先徵得同意（見上方鐵律 1）。
+- 畫面、渲染、手感、數值平衡的判斷（見上方鐵律 6）。
+- 若要在 Windows 上使用本 repo 的腳本，需自行複驗——目前只驗證過 Manjaro/Linux。

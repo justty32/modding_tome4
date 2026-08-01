@@ -1,21 +1,46 @@
 # INDEX — tome4 專案地圖
 
-整個專案的頂層導航。tome4 = **ToME4 (Tales of Maj'Eyal) modding 工作區——addon 開發工具鏈＋知識庫＋引擎架構分析**。AGENTS.md 只放主工作流 + 指向本檔；細節從這裡分流出去。
+整個專案的頂層導航。tome4 = **ToME4 (Tales of Maj'Eyal) addon 開發工作區**——工具鏈＋引擎知識庫＋addon 原始碼是主體，其餘降為 `sub_proj/`。AGENTS.md 只放鐵律 + 指向本檔；細節從這裡分流出去。
 
 ---
 
 ## Repo 佈局
 
+三層：**主體**（addon 開發本身）／**`sub_proj/`**（次要專案）／**`vendor/`**（唯讀第三方素材）。
+
+### 主體
+
 | 路徑 | 內容 |
 |------|------|
-| `derived/tome4-modkit/` | addon 開發主場：一條龍工具鏈（開發→lint→打包→部署→無頭測試）+ 引擎知識庫（`knowledge/`）+ addon 原始碼（`mods/`）。動手前先讀它的 `AGENTS.md`（更細的鐵律）。|
-| `derived/tome4-ch/` | 正體中文化工作區：第三方 addon 的 `zh_hant` 伴生 addon 源碼 + 翻譯管線 + 打包好的 `build/*.teaa`。動手前先讀它的 `README.md` / `GUIDE.md`。|
-| `analysis/t-engine/` | T-Engine4 架構分析與 addon 開發教程（索引性質，非權威；API 結論回 `projects/t-engine4/` 複驗）。|
-| `projects/t-engine4/` | Steam 版解壓的引擎/模組 Lua 源碼（**唯讀真相層**，不做版控，還原步驟見 [AGENTS.md](AGENTS.md)）。|
-| `external/` | 第三方 addon 參考素材（`orig/` 實裝 addon 解壓 + `chn-mod/`；不做版控）。|
-| `dist/` | 自製成品：打包好的 `.teaa` addon（帶版本 + `SOURCE.md`）。|
+| `tools/` | 一條龍工具鏈：lint→build→deploy→verify→playtest。bash 進入點 + `lib/`（行程與檔案系統）+ `lua/`（判讀邏輯）+ `probes/`（遊戲內狀態探測）。決策表見 [tools/README.md](tools/README.md)。|
+| `mods/` | 實戰 addon 原始碼（含開發用測試夾具 `tome-autobirth`）。|
+| `knowledge/` | **引擎真相層**：引擎的實際行為，每條附 `檔案:行號`。比 `sub_proj/analysis/` 可信。|
 | `workflows/` | 開發工作流（入口見 [WORKFLOWS.md](WORKFLOWS.md)）。|
-| `.claude/commands/` | slash 指令（如 [`/wf-tick`](.claude/commands/wf-tick.md) 驅動定期心跳）。|
+| `html/` | knowledge / 工具鏈 / SOP 的 HTML 導覽層。|
+| `.claude/` | [skills](.claude/skills/)（冷啟動 agent 的觸發定義）+ [commands](.claude/commands/)（slash 指令，如 `/wf-tick`）。|
+| `build/` | 打包產物，**是暫存**，不保證與源碼同步（已 gitignore）。|
+| `session_log/` | 一句話日誌的歷史封存（按月分檔）；活狀態在 [SESSION-LOG.md](SESSION-LOG.md)。|
+
+### `sub_proj/` — 次要專案
+
+| 路徑 | 內容 |
+|------|------|
+| `sub_proj/tome4-ch/` | 正體中文化：18 個第三方 addon 的 `zh_hant` 伴生 addon 源碼 + `_tools/` 翻譯管線 + `build/*.teaa`。動手前先讀它的 `README.md` / `GUIDE.md`。|
+| `sub_proj/dist/` | 自製成品：打包好的 `.teaa`（帶版本 + `SOURCE.md`）。|
+| `sub_proj/analysis/t-engine/` | T-Engine4 架構分析與 17 篇 addon 教程。**索引性質，非權威**；API 結論一律回 `vendor/t-engine4/` 複驗。|
+
+### `vendor/` — 唯讀第三方素材（不做版控）
+
+| 路徑 | 內容 |
+|------|------|
+| `vendor/t-engine4/` | Steam 版解壓的引擎 + ToME 模組 Lua 源碼（126MB）。**權威真相層**，還原步驟見 [AGENTS.md](AGENTS.md)「Fresh clone / 環境還原」。|
+| `vendor/orig/` | 25 個實裝過的第三方職業包 / QoL addon 解壓（105MB）。`sub_proj/tome4-ch/_reference/` 以 symlink 指回此處。|
+| `vendor/chn-mod/` | 簡體翻譯包範本。|
+
+### 其他
+
+| 路徑 | 內容 |
+|------|------|
 | `inbox/` | agent 之間的**信件**收件匣（放信處，保持乾淨；使用方式見 [workflows/inbox/](workflows/inbox/README.md)）。|
 
 > 某目錄內部複雜就在該目錄放它自己的 README / INDEX，本檔只留一句話 + 連結——永遠只描述「頂層」。
@@ -30,7 +55,7 @@
 
 | 路徑 | 內容 |
 |------|------|
-| [common/README](workflows/common/README.md) | 跨工作流共通：[gotchas](workflows/common/gotchas.md) 踩坑 + [conventions](workflows/common/conventions.md) 程式碼慣例 |
+| [common/README](workflows/common/README.md) | 跨工作流共通：[gotchas](workflows/common/gotchas.md) 踩坑、[conventions](workflows/common/conventions.md) 程式碼慣例 + 真相層優先級 + CODE_MAP 維護鏈、[code-map](workflows/common/code-map/CODE_MAP.md) 程式碼導航 |
 
 ## 活狀態（只列還沒完成的）
 

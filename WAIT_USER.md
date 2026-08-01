@@ -12,7 +12,20 @@
 
 ## Open
 
-- 2026-07-20 工作區重新納入 git（根目錄成為 repo，推到 `github.com/justty32/modding_tome4`；第三方大樹經 `.gitignore` 排除）。`derived/tome4-modkit/` 現隨此根 repo 一起版控——若仍想給它**獨立** repo（與根 repo 分開發布/歷史）是尚未決定的選項。(2) `derived/tome4-modkit/build/` 現存三個 `.teaa`（runeisles/runewright/talent-tutor，7/10 建）早於部分源碼的後續修改，可能過時，是否重建並升級為 `dist/addons/` 正式成品？
+- **實機確認盧恩術士（手感／平衡）**。無頭測試只能證明 addon 載入、定義註冊成功、沒有 Lua Error；
+  畫面、手感、數值平衡必須人眼看。
+  佈署 `tools/deploy.sh runewright`（裝到 `~/.t-engine/4.0/addons/tome-runewright/`），
+  移除 `tools/deploy.sh runewright --undeploy`。進遊戲選 Mage → 子職業應出現「盧恩術士」。
+  機制正確性已實機驗過（充能 13/13 → 0/13、泉湧共鳴讓法力回復 +0.5 顯示為 +1.00），
+  但數值好不好玩只有你能判斷——特別是 ᛏ Tiwaz 吃光充能換傷害倍率的節奏。
+  **這是 6 個 addon 升格 `sub_proj/dist/` 批次的唯一卡關項**（見 [SESSION-LOG.md](SESSION-LOG.md)）。
 
-  補充（2026-07-18）：`derived/tome4-ch/build/` 的 18 個在地化 `.teaa` 同屬「暫存 build，未升格 dist」，與上方 (2) 同性質；哪天要一起決定發佈策略。
+- **`Odyssey of The Summoner` 這個既有 addon 是壞的**，與本 repo 無關。
+  它在 New Game 時必定拋 `EFF_EXHAUSTION` 重複定義的 Lua Error
+  （`neka_therianthropy_summoner/timed_effects/fire-drake.lua:216`），桌面版一樣會炸。
+  你的 `~/.t-engine/4.0/settings/addons.cfg` 已把它設為 false，目前不影響遊玩——**別再打開**。
+
+- **`.teaa` 暫存 build 的發佈策略未定**。`build/` 下的自製 addon 與
+  `sub_proj/tome4-ch/build/` 的 18 個在地化 `.teaa` 都屬「暫存 build，未升格 dist」，
+  哪天要一起決定發佈策略。
 

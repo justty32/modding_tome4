@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tome4-modkit — 首頁</title>
+<link rel="stylesheet" href="_shared.css">
+</head>
+<body>
+<nav>
+  <span class="nav-brand">tome4-modkit</span>
+  <a href="index.html" class="active">首頁</a>
+  <a href="toolchain.html">工具鏈</a>
+  <a href="knowledge.html">引擎知識庫</a>
+  <a href="mods.html">mod 產物</a>
+  <a href="sop.html">SOP／計畫文件</a>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto;">
+
+<!-- Hero -->
+<div class="hero">
+  <h1>tome4-modkit</h1>
+  <p class="sub">讓 AI agent 自主開發 Tales of Maj'Eyal（ToME 4）addon 的工具鏈與知識庫<br>
+  開發 → 靜態檢查 → 打包 → 佈署 → 無頭測試，一條龍</p>
+  <p class="sub2">— 本 repo 主體 · HTML 導覽層（.md 才是唯一真相來源）—</p>
+  <div class="badge-row">
+    <span class="badge badge-purple">Lua 5.1 / LuaJIT</span>
+    <span class="badge badge-blue">Bash 工具腳本</span>
+    <span class="badge badge-cyan">Xvfb 無頭測試</span>
+    <span class="badge badge-orange">ToME 1.7.6</span>
+    <span class="badge badge-gray">給 agent 用，不是給人用的 GUI</span>
+  </div>
+</div>
+
+<!-- One-liner -->
+<div class="oneliner">
+  這不是給人操作的圖形工具，是給 <strong>agent</strong> 用的一條龍：<code>.claude/skills/</code> 描述何時該做什麼、
+  <code>tools/</code> 提供冪等的可重複動作、<code>knowledge/</code> 記錄引擎真實行為（附 <code>檔案:行號</code>）。
+  已用它產出 8 個實戰 addon（見 <a href="mods.html">mod 產物目錄</a>）。
+</div>
+
+<!-- 5 分鐘上手 -->
+<div class="section">
+  <div class="section-title">5 分鐘上手 — 做一個 addon 的最短迴圈</div>
+  <div class="card" style="padding:8px 20px;">
+    <div class="step-row">
+      <span class="step-num">1</span>
+      <div class="step-body">
+        <h4>先讀 <code>knowledge/</code>，不要憑記憶寫 API</h4>
+        <p>依 <a href="knowledge.html">引擎知識庫</a> 索引找對應主題；沒有就去原始碼 grep，讀完補回 knowledge/。</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <span class="step-num">2</span>
+      <div class="step-body">
+        <h4><code>tools/lint.sh &lt;addon&gt;</code> — 語法 + init.lua 欄位</h4>
+        <p>證明語法正確、欄位語意正確；證明不了任何 runtime 行為。</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <span class="step-num">3</span>
+      <div class="step-body">
+        <h4><code>tools/deploy.sh &lt;addon&gt; --home &lt;scratch&gt;</code> → <code>tools/verify.sh &lt;addon&gt;</code></h4>
+        <p>目錄形式佈署到拋棄式 scratch home，Xvfb 無頭啟動一次，確認 addon 被載入、無 Lua Error。</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <span class="step-num">4</span>
+      <div class="step-body">
+        <h4>觸及遊戲邏輯 → <code>tools/playtest.sh start/do/shot/lua/stop</code></h4>
+        <p>verify 綠燈 ≠ 做完。真的建角、真的按技能、真的看數值，抓「載入成功但行為錯誤」的坑。</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <span class="step-num">5</span>
+      <div class="step-body">
+        <h4>交付前 <code>tools/deploy.sh &lt;addon&gt;</code>（不帶 <code>--home</code>）</h4>
+        <p>佈署到真 <code>~/.t-engine/4.0/addons/</code>。verify/playtest 用的都是拋棄式 home，不會自動進到這裡。</p>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:.78rem;color:var(--dim);margin-top:10px;">
+    完整管線圖與各關卡的「證明了什麼／證明不了什麼」表 → <a href="toolchain.html">工具鏈頁</a>；
+    原始 SOP → <a href="../workflows/addon-dev/README.md">workflows/addon-dev/README.md</a>
+  </p>
+</div>
+
+<!-- 四大分類 -->
+<div class="section">
+  <div class="section-title">從這裡開始</div>
+  <div class="nav-cards">
+
+    <a class="nav-card" href="toolchain.html">
+      <div class="nc-icon">🛠</div>
+      <h3>① 工具鏈</h3>
+      <p>lint / build / deploy / verify / playtest / run 六支冪等腳本：各自的用途、怎麼呼叫、輸出代表什麼，
+      以及 lint→verify→playtest→deploy 的驗證流水線。</p>
+      <span class="nc-arrow">→ toolchain.html</span>
+    </a>
+
+    <a class="nav-card" href="knowledge.html">
+      <div class="nc-icon">📚</div>
+      <h3>② 引擎知識庫</h3>
+      <p>14 份逐條附 <code>檔案:行號</code> 的引擎事實，按「做職業／做 UI／做 NPC／做地圖／測試」等主題分類，
+      每張卡片標明「什麼時候讀」。</p>
+      <span class="nc-arrow">→ knowledge.html</span>
+    </a>
+
+    <a class="nav-card" href="mods.html">
+      <div class="nc-icon">🎮</div>
+      <h3>③ mod 產物目錄</h3>
+      <p>8 個已完成的實戰 addon：新職業盧恩術士、全新大地圖符文諸島、同伴／營地／工匠系統、
+      歐拉麗異世界……各自的一句話介紹與狀態。</p>
+      <span class="nc-arrow">→ mods.html</span>
+    </a>
+
+    <a class="nav-card" href="sop.html">
+      <div class="nc-icon">🗺</div>
+      <h3>④ SOP／計畫文件</h3>
+      <p>agent 該從哪裡進來（AGENTS.md → WORKFLOWS.md → 各工作流）、專案 Done-when 定義、
+      以及下一步建置計畫（營地＋歐拉麗）。</p>
+      <span class="nc-arrow">→ sop.html</span>
+    </a>
+
+  </div>
+</div>
+
+<!-- 貫穿全部的一件事 -->
+<div class="section">
+  <div class="section-title">上手前先知道：這個引擎很愛靜默失敗</div>
+  <div class="highlight-box hl-red">
+    寫錯了通常不會拋錯，只是安靜地什麼都不發生（addon 消失、東西不存在、特效沒停止……）。
+    這是本專案要有「lint → verify → playtest → 實機」四層驗證的根本原因——
+    完整的症狀對照表見 <a href="../knowledge/README.md">knowledge/README.md</a>。
+  </div>
+</div>
+
+<!-- 快速數字 -->
+<div class="section">
+  <div class="section-title">工作區快照</div>
+  <div class="g4">
+    <div class="card card-accent-purple">
+      <h3>工具腳本</h3>
+      <p>lint / build / deploy / verify / playtest / run，外加 lib.sh / lib_scratch.sh / check_init.lua 支援層。</p>
+      <div style="margin-top:8px"><span class="badge badge-purple">6 支主腳本</span></div>
+    </div>
+    <div class="card card-accent-cyan">
+      <h3>引擎知識庫</h3>
+      <p>每條都在原始碼複驗過並附行號，比 <code>sub_proj/analysis/t-engine/</code> 可信（那份只是索引）。</p>
+      <div style="margin-top:8px"><span class="badge badge-cyan">14 份 .md</span></div>
+    </div>
+    <div class="card card-accent-green">
+      <h3>mod 產物</h3>
+      <p>新職業、新大地圖、同伴／營地／工匠系統、異世界 campaign、神器套裝、技藝導師 NPC。</p>
+      <div style="margin-top:8px"><span class="badge badge-green">8 個 addon</span></div>
+    </div>
+    <div class="card card-accent-orange">
+      <h3>驗證分層</h3>
+      <p>lint（語法）→ verify（Xvfb 無頭載入）→ playtest（真的建角操作）→ 實機（使用者手感）。</p>
+      <div style="margin-top:8px"><span class="badge badge-orange">4 層</span></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</body>
+</html>

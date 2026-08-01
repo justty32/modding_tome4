@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tome4-modkit — mod 產物目錄</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+.m-card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:18px 20px;display:flex;flex-direction:column;gap:8px;}
+.m-card h3{font-size:.95rem;font-weight:700;color:var(--text);}
+.m-card .desc{font-size:.8rem;color:var(--muted);line-height:1.7;flex:1;}
+.m-card .tagrow{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px;}
+.m-card .footrow{display:flex;justify-content:space-between;align-items:center;margin-top:6px;}
+.group-label{font-size:.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin:28px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-brand">tome4-modkit</span>
+  <a href="index.html">首頁</a>
+  <a href="toolchain.html">工具鏈</a>
+  <a href="knowledge.html">引擎知識庫</a>
+  <a href="mods.html" class="active">mod 產物</a>
+  <a href="sop.html">SOP／計畫文件</a>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto;">
+
+<div class="page-header">
+  <h1>mod 產物目錄 — <code>mods/</code></h1>
+  <p>8 個用本工具鏈實際做出來的 ToME4 addon。一句話介紹取自各自 <code>init.lua</code> 的
+  <code>description</code> 欄位；完整內容請點卡片連到 <code>init.lua</code> 或原始碼目錄。
+  狀態標籤依 <a href="../session_log/">session_log/</a> 的最新實機驗證紀錄整理，非全部逐次覆核。</p>
+</div>
+
+<div class="group-label">職業與系統</div>
+<div class="g2">
+
+  <div class="m-card card-accent-purple">
+    <h3>tome-runewright — 盧恩術士</h3>
+    <p class="desc">把銘文系統從消耗品插槽變成職業核心的奧術職業：他不是使用符文，他書寫符文。
+    觸發任何銘文都會累積「符文充能」，特定銘文組合會產生「共鳴」，帶來湧現式的被動效果。含符文盤 UI 面板。</p>
+    <div class="tagrow"><span class="chip">class</span><span class="chip">arcane</span></div>
+    <div class="footrow">
+      <span class="badge badge-green">已完成 · 實機驗證 · 已 deploy</span>
+      <a class="md-link" href="../mods/tome-runewright/init.lua">→ init.lua</a>
+    </div>
+  </div>
+
+  <div class="m-card card-accent-blue">
+    <h3>tome-companions — 同伴系統</h3>
+    <p class="desc">「契約召募」天賦（建角自動學會）：對準附近非傳奇生物即可收為契約夥伴——
+    加入隊伍成為可操控同伴、立即拉到同級並隨主人升級成長、完全免疫主人造成的傷害（含 AOE）但仍受敵傷。</p>
+    <div class="tagrow"><span class="chip">companion</span><span class="chip">party</span></div>
+    <div class="footrow">
+      <span class="badge badge-green">已完成 · 實機驗證</span>
+      <a class="md-link" href="../mods/tome-companions/init.lua">→ init.lua</a>
+    </div>
+  </div>
+
+  <div class="m-card card-accent-blue">
+    <h3>tome-crafting — 工匠之藝</h3>
+    <p class="desc">附魔與煉製，全職業通用。建角自動學會兩個天賦：附魔（寶石鑲入武器／防具，沿用煉金師
+    Imbue Item 機制）、煉製（消耗 3 顆寶石煉出 1 顆隨機寶石，材料→產物配方骨架）。</p>
+    <div class="tagrow"><span class="chip">crafting</span><span class="chip">enchant</span></div>
+    <div class="footrow">
+      <span class="badge badge-green">已完成 · 實機驗證</span>
+      <a class="md-link" href="../mods/tome-crafting/init.lua">→ init.lua</a>
+    </div>
+  </div>
+
+  <div class="m-card card-accent-blue">
+    <h3>tome-camp — 營地系統</h3>
+    <p class="desc">持久的私人據點（Homestead Camp）。「返回營地」天賦：野外傳送到私人營地並在營火旁全體回血；
+    v0.2 大地圖入口貼在德斯城旁；v0.3 儲物箱；v0.4 建造系統（花錢蓋儲物箱／營火）。狀態持久存檔。</p>
+    <div class="tagrow"><span class="chip">camp</span><span class="chip">base</span><span class="chip">zone</span></div>
+    <div class="footrow">
+      <span class="badge badge-green">已完成 v0.1–v0.4 · 實機驗證</span>
+      <a class="md-link" href="../mods/tome-camp/init.lua">→ init.lua</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="group-label">世界與地圖</div>
+<div class="g2">
+
+  <div class="m-card card-accent-cyan">
+    <h3>tome-runeisles — 符文諸島</h3>
+    <p class="desc">全新大世界地圖＋三階段主線劇情。德斯城西側符文石環通往北方冰封海上的群島；
+    古代刻名師以符文石陣鎮壓「無銘之物」，石陣正在崩解。承接盧恩術士設定但不需安裝它也能遊玩。</p>
+    <div class="tagrow"><span class="chip">campaign</span><span class="chip">zone</span><span class="chip">worldmap</span><span class="chip">quest</span></div>
+    <div class="footrow">
+      <span class="badge badge-green">已完成 · 全流程實機驗證 · 已打包 deploy</span>
+      <a class="md-link" href="../mods/tome-runeisles/init.lua">→ init.lua</a>
+    </div>
+  </div>
+
+  <div class="m-card card-accent-cyan">
+    <h3>tome-orario — 歐拉麗</h3>
+    <p class="desc">「在地下城邂逅」風味異世界。德斯城旁的門通往迷宮都市歐拉麗——中央廣場 hub 四面是
+    冒險者公會、酒館、市集與眷族據點，中央大迷宮「巴別塔」。世界觀取材但劇情人物不刻意還原。</p>
+    <div class="tagrow"><span class="chip">campaign</span><span class="chip">zone</span><span class="chip">worldmap</span><span class="chip">town</span><span class="chip">dungeon</span></div>
+    <div class="footrow">
+      <span class="badge badge-orange">進行中 · v0.1 基礎＋v0.2 公會/討伐已驗證；酒館/市集/眷族待做</span>
+      <a class="md-link" href="../mods/tome-orario/init.lua">→ init.lua</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="group-label">物品與 NPC</div>
+<div class="g2">
+
+  <div class="m-card card-accent-orange">
+    <h3>tome-relics — 失落挖掘者的遺物</h3>
+    <p class="desc">考古主題的物品／神器 addon：拓印牆上銘文的燈、成套穿戴才顯真章的護目鏡與手套、
+    會「記錄」每次擊殺愈用愈利的銘紀之鎬，以及可能出現在同年代武器防甲上的考古匠人詞綴。純加法，不覆寫原版檔案。</p>
+    <div class="tagrow"><span class="chip">items</span><span class="chip">artifact</span><span class="chip">ego</span></div>
+    <div class="footrow">
+      <span class="badge badge-gray">狀態未見於 session_log — 使用前建議先跑 lint → verify</span>
+      <a class="md-link" href="../mods/tome-relics/init.lua">→ init.lua</a>
+    </div>
+  </div>
+
+  <div class="m-card card-accent-orange">
+    <h3>tome-talent-tutor — 技藝導師</h3>
+    <p class="desc">大地圖 NPC（德斯城附近），免費傳授遊戲中全部約 300 棵技能樹。對話依大類分頁，
+    技能樹清單在對話開啟時動態產生，其他 addon 新增的技能樹也會自動出現。</p>
+    <div class="tagrow"><span class="chip">trainer</span><span class="chip">talent</span><span class="chip">unlock</span><span class="chip">cheat</span></div>
+    <div class="footrow">
+      <span class="badge badge-green">已完成 · 實機驗證</span>
+      <a class="md-link" href="../mods/tome-talent-tutor/init.lua">→ init.lua</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="section" style="margin-top:8px;">
+  <div class="highlight-box hl-blue">
+    要看某個 mod 是怎麼做出來的（踩過哪些坑、用了哪個引擎接點）→ 對應主題的
+    <a href="knowledge.html">知識庫</a> 頁；要照著做下一個系統（營地進階、歐拉麗剩餘增量）→
+    <a href="sop.html">SOP／計畫文件</a> 頁的 <code>PLAN-camp-and-isekai.md</code>。
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</body>
+</html>
