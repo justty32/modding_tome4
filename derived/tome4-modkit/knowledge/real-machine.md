@@ -6,7 +6,7 @@
 ## 0. 最容易犯的錯：測了老半天，東西根本沒進使用者的 home
 
 `verify.sh` 與 `playtest.sh` 都呼叫 `prepare_scratch_home`，各自建一個**拋棄式**的 home
-（`lib_scratch.sh:26`），把 addon 複製進去、跑完就丟。
+（`tools/lib/scratch.sh:19`），把 addon 複製進去、跑完就丟。
 
 **它們從來不碰 `~/.t-engine/4.0/addons/`。**
 

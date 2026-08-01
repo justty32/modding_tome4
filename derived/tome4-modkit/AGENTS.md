@@ -13,6 +13,7 @@
 
 - 要動手做某件事 → [WORKFLOWS.md](WORKFLOWS.md)
 - 要做 addon → [workflows/addon-dev/README.md](workflows/addon-dev/README.md)
+- **要跑工具 → [tools/README.md](tools/README.md)**（決策表：我想做 X 就跑哪支；每支腳本也吃 `-h`）
 - 引擎真實行為 → [knowledge/](knowledge/)（每條附 `檔案:行號`）
 - repo 結構 → [workflows/common/code-map/CODE_MAP.md](workflows/common/code-map/CODE_MAP.md)
 
@@ -30,6 +31,7 @@
 3. **唯讀區不准寫**：`projects/t-engine4/`、`~/.steam/.../TalesMajEyal/`、`~/repo/moddings/tome4/external/orig/`。
 4. **佈署目標是 `~/.t-engine/4.0/addons/`**，不是 Steam 的 `game/addons/`。理由與行號見 `tools/deploy.sh` 檔頭。
 5. **改完必跑** `tools/lint.sh`；要宣稱「能動」必須跑過 `tools/verify.sh` 並貼出輸出。沒跑就說沒跑。
+6. **實機測試時，AI 取得狀態一律用 `tools/playtest.sh probe`（回傳純文字）**；截圖照產但那是**給使用者看的**——畫面、渲染、手感、平衡由使用者判斷，AI 不自己讀圖（人眼更可靠，圖片也很吃 token）。
 
 ### 通用
 

@@ -142,4 +142,4 @@ image = "talents/manathrust.png",
   只能放在原始碼註解與文件裡，不要放進 `info` / `desc` / log 訊息。
 - 中文本身沒問題，**但要 `locale = "zh_hant"`**。英文語系的字型缺 CJK 字符，
   中文的技能樹名會渲染成**空白**。無頭測試的 scratch home 記得設
-  （`tools/lib_scratch.sh` 的 `prepare_scratch_home` 預設就是 `zh_hant`）。
+  （`tools/lib/scratch.sh` 的 `prepare_scratch_home` 預設就是 `zh_hant`）。

@@ -44,7 +44,7 @@ local Birther = require "engine.Birther"
 local DamageType = require "engine.DamageType"
 ```
 
-`tools/check_init.lua` 會擋下這個錯。
+`tools/lua/check_init.lua` 會擋下這個錯。
 
 ## 1. `init.lua` 欄位
 
@@ -99,4 +99,4 @@ return false
 5. **hook 檔裡 `ActorTalents` / `Birther` 不是全域**，要自己 require，否則 runtime nil index。
 6. `requires_addons` 循環依賴會被一起剔除，只印 missing，容易誤判成缺檔（`E/Module.lua:652-675`）。
 
-> 以上第 1–5 條全部由 `tools/check_init.lua` 自動擋下。
+> 以上第 1–5 條全部由 `tools/lua/check_init.lua` 自動擋下。

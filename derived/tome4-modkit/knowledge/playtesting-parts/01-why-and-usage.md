@@ -21,13 +21,17 @@
 驗證分層，越後面越貴也越真：
 
 ```
-lint  →  verify（載入 + selfcheck）  →  playtest（建角 + 施放 + 截圖）  →  使用者實機
-靜態      無頭，~1-3 分鐘              無頭，~3-5 分鐘                   人眼判斷手感
+lint  →  verify（載入 + selfcheck）  →  playtest（建角 + 程式化操控 + 文字斷言）  →  使用者看畫面
+靜態      無頭，~1-3 分鐘              無頭，~3-5 分鐘                              人眼判斷手感/渲染
 ```
+
+playtest 這一層的狀態取得**優先走 Lua 探測而非截圖判讀**——見
+[03-state-probes.md](03-state-probes.md)。截圖仍然照產，但是產給使用者看的。
 
 ## 1. 用法
 
 ```bash
+tools/playtest.sh start <addon> --cheat --birth default   # ← 建議：自動建角，直接停在遊戲內
 tools/playtest.sh start <addon>      # 開遊戲，停在建角畫面，截圖
 tools/playtest.sh do <名字> <動作...>  # 動作: click X Y | key K | type TEXT | wait N
 tools/playtest.sh shot <名字>
@@ -42,6 +46,9 @@ tools/playtest.sh stop                # 一定要收尾
 **`stop` 是必要的**，遊戲以 `setsid` 脫離 shell，不收尾會一直留在背景。
 
 ## 2. 建角座標速查（1024x768，`locale = zh_hant`）
+
+> **加了 `--birth` 就不需要這一節**（見 [03-state-probes.md](03-state-probes.md) §0）。
+> 以下只在要手動走 UI、或要驗建角畫面本身的呈現時才用得到。
 
 ⚠️ **座標隨語系變動**：中文與英文的清單行距不同（中文 25px，英文 27px）。
 `prepare_scratch_home` 預設寫 `zh_hant`，與使用者真實環境一致。

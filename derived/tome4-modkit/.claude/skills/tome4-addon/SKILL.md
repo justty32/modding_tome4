@@ -26,12 +26,13 @@ description: 開發、檢查、打包、佈署、無頭測試 Tales of Maj'Eyal 
 tools/lint.sh   <addon>   # 語法 + init.lua 欄位語意
 tools/deploy.sh <addon>   # 目錄形式佈署，改檔即生效
 tools/verify.sh <addon>   # Xvfb 無頭啟動，確認真的載入且無 Lua Error
-tools/playtest.sh start <addon>   # Xvfb 裡真的建角、真的按技能、截圖
+tools/playtest.sh start <addon> --cheat --birth default   # 自動建角進遊戲
 tools/build.sh  <addon>   # 要交付 .teaa 時才跑
 tools/run.sh              # 在使用者真桌面開遊戲（先問過才准跑）
 ```
 
 `<addon>` 可以是 `runewright`、`tome-runewright` 或完整路徑。
+每支腳本都吃 `-h`；決策表與工具鏈佈局見 **`tools/README.md`**。
 
 開發時走 `lint → deploy → verify` 短迴圈。`verify.sh` 約需 1–3 分鐘（真的把遊戲開起來點過主選單）。
 
@@ -46,21 +47,32 @@ tools/run.sh              # 在使用者真桌面開遊戲（先問過才准跑�
 **只要改動觸及遊戲邏輯（天賦效果、資源、判定、UI 文字），就要跑 playtest。**
 
 ```bash
-tools/playtest.sh start <addon>          # 開到建角畫面並截圖
-tools/playtest.sh do <名字> click 600 350 wait 2 key Return
-tools/playtest.sh zoom <名字> 400 240 110 90   # 放大看資源條數字
-tools/playtest.sh log                    # 撈 addon 自報的行
+tools/playtest.sh start <addon> --cheat --birth default   # 自動建角，直接停在遊戲內
+tools/playtest.sh probe --list           # 看有哪些探測
+tools/playtest.sh probe logmirror        # ★ 先裝：之後每條遊戲訊息都變成純文字
+tools/playtest.sh probe state            # 我是誰、我在哪、剩幾點天賦
+tools/playtest.sh probe actors           # 本層生物（名稱/座標/血量/距離）
+tools/playtest.sh probe attack "large white snake"   # 打它，印前後血量與傷害
 tools/playtest.sh stop                   # 一定要收尾
 ```
 
-截圖路徑會印出來，用 Read 工具直接看。座標速查與陷阱：`knowledge/playtesting.md`。
+`--birth` 也吃 `<race>/<subrace>/<class>/<subclass>`（英文原名），例如
+`--birth Elf/Shalore/Mage/Archmage`——**測自訂職業就用這個**。
+
+**取得狀態一律用 `probe`／`lua`（回傳純文字），不要靠讀截圖判斷。**
+截圖照產，但那是**給使用者看的**：畫面、渲染、手感、平衡由使用者判斷，
+那是人眼比 AI 可靠的地方，而且圖片很吃 token。要秀畫面就把路徑給使用者。
+
+探測手法全集與原理：`knowledge/playtesting-parts/03-state-probes.md`。
+要加新的固定手法，就在 `tools/probes/` 放一支 `.lua`（規矩見 `tools/README.md`），
+不要每次手打 `lua '<一行>'`。
 
 看不到的內部狀態**不要猜**——在 superload/hook 塞暫時的 `print`，跑一輪用 `playtest.sh log` 撈出來，
 看完刪掉再重跑 lint + verify。那三個 bug 全是這樣抓到的。
 
 ## 三個會浪費你半天的坑
 
-這三個都已經被 `tools/check_init.lua` 自動擋下，但你要知道為什麼：
+這三個都已經被 `tools/lua/check_init.lua` 自動擋下，但你要知道為什麼：
 
 1. **addon 的 `data/` 不會被自動掃描。** 它掛在私有的 `/data-<short_name>/`（`engine/Module.lua:498-503`），不是合併進 `/data`。所有 `birth/classes`、`talents`、`timed_effects` 都必須在 `hooks/load.lua` 的 `ToME:load` hook 裡手動 `loadDefinition`。**唯一例外是 `data/locales/*.lua`，那個會自動載入。**
 2. **`version` 與模組不相容時，addon 是靜默消失的**，沒有任何錯誤訊息（`engine/Module.lua:390` → `:595`）。對 1.7.6 而言 `{1,7,6}` 可以，`{1,7,7}` 不行。

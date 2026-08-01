@@ -24,6 +24,9 @@ tools/playtest.sh lua 'game.player:useTalent(game.player.T_你的天賦短名)'
 
 ## 3.5 Developer Mode 與 Lua console（最強的一把工具）
 
+> 實際可用的一行 probe 全部收在 [03-state-probes.md](03-state-probes.md)——
+> 讀地圖、列生物、讀配天賦、操控移動、攔截 `game.log` 觀察回合結果。本節只講機制。
+
 `tools/playtest.sh start <addon> --cheat` 會在 scratch home 寫下 `settings/cheat.cfg`
 （`cheat = true`，遊戲自己也是這樣存的，見 `E/dialogs/GameMenu.lua:117`）。
 開了之後多兩個鍵（`E/data/keybinds/debug.lua:20-33`）：

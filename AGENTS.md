@@ -8,7 +8,8 @@
 - 主要語言/框架：Lua 5.1 / LuaJIT（T-Engine4 VM）＋ Bash（工具腳本）。
 - 主要 build 指令：`derived/tome4-modkit/tools/build.sh <addon>` → `build/tome-<name>.teaa`
 - 主要 test 指令：`derived/tome4-modkit/tools/verify.sh <addon>`（Xvfb 無頭載入驗證）
-- 其他常用工具腳本（皆在 `derived/tome4-modkit/tools/`）：`lint.sh`（靜態檢查）、`deploy.sh`（冪等佈署到 `~/.t-engine/4.0/addons/`）、`playtest.sh`（無頭實際操作截圖）、`run.sh`（真桌面開遊戲留 log）。
+- 其他常用工具腳本（皆在 `derived/tome4-modkit/tools/`）：`lint.sh`（靜態檢查）、`deploy.sh`（冪等佈署到 `~/.t-engine/4.0/addons/`）、`playtest.sh`（無頭實機遊玩：`--birth` 自動建角、`lua` 在活著的遊戲裡跑一行 Lua 取狀態）、`run.sh`（真桌面開遊戲留 log）。
+- **實機測試的分工鐵律**：AI 要的狀態一律走 `playtest.sh lua` + `print()` 這條回傳純文字的路（手法見 `derived/tome4-modkit/knowledge/playtesting-parts/03-state-probes.md`）；**畫面、渲染、手感、平衡交給使用者判斷，AI 不自己讀截圖**——圖片吃 token，而且人眼在這件事上本來就比較可靠。截圖照產，但是產給使用者看的。
 - 實際工作先讀 `derived/tome4-modkit/AGENTS.md`——那份文件的 always-on 鐵律更細（例如「絕不在真實桌面裸跑 t-engine64」），本檔只是頂層索引。
 
 ## 先讀哪裡

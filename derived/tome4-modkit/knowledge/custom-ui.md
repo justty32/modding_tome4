@@ -19,7 +19,7 @@ overload/mod/dialogs/MyPanel.lua   →  require("mod.dialogs.MyPanel")
 第三方前例：`zomnibus`、`possessors`、`items-vault` 的自訂 dialog 全部放 `overload/mod/dialogs/`；
 `superload/mod/dialogs/` 則是拿來**覆寫**原版既有 dialog 的（`no-talent-caps`、`ignore_rc_locks`）。
 
-別忘了 `init.lua` 要加 `overload = true`，否則目錄不會被掛載（`tools/check_init.lua` 會擋）。
+別忘了 `init.lua` 要加 `overload = true`，否則目錄不會被掛載（`tools/lua/check_init.lua` 會擋）。
 
 ## 2. 最小面板骨架
 

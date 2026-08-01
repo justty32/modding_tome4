@@ -1,94 +1,63 @@
-# workflow — 可移植專案工作流
+# tome4-modkit
 
-這份目錄是從 ModForge 抽出的通用 `.md` 工作流骨架，用來放進其他專案後快速建立同一套工作方式。
+讓 AI agent **自主開發 Tales of Maj'Eyal (ToME 4, 1.7.6) addon** 的工具鏈與知識庫：
+開發 → 靜態檢查 → 打包 → 佈署 → 無頭測試，一條龍。
 
-## Quickstart
+不是給人用的 GUI 工具，是給 agent 用的——skill 描述何時該做什麼、腳本提供冪等的可重複動作、
+知識庫記錄引擎的**真實行為**（每條都附 `檔案:行號`，而不是憑印象）。
+
+## 30 秒上手
 
 ```bash
-# 最小導入
-scripts/install.sh ~/repo/target --minimal
-
-# 標準導入（預設）
-scripts/install.sh ~/repo/target
-
-# 完整導入
-scripts/install.sh ~/repo/target --full
-
-# 健康檢查
-scripts/check-workflow.sh ~/repo/target
-
-# 模板自身 smoke test
-tests/smoke.sh
+tools/lint.sh   tome-relics                              # 語法 + init.lua 欄位（秒級）
+tools/verify.sh tome-relics                              # Xvfb 無頭啟動，確認真的載入（1-3 分）
+tools/playtest.sh start tome-relics --cheat --birth default   # 自動建角，直接進遊戲（3-5 分）
+tools/playtest.sh probe actors                           # 取得遊戲內狀態（純文字）
+tools/playtest.sh stop                                   # 一定要收尾
 ```
 
-核心思想：
+**完整決策表、工具鏈佈局、探測庫寫法 → [`tools/README.md`](tools/README.md)。**
+每支腳本都吃 `-h`（說明從檔頭生成，不會與實作脫節）。
 
-- 頂層只做路由，不堆細節。
-- durable 知識放在所屬工作流，不往上層塞。
-- open 狀態只列還沒完成的事，完成後移除或濃縮到 landed/archive。
-- 碰原始碼時維持「程式碼 → CODE_MAP → 文檔」一致。
-- 重構必須行為不變，一次只動一個面向。
-- 小事可以跳流程；工作流只在它能降低交接、同步或設計風險時啟用。
+## 先讀哪裡
 
-## 怎麼放進新專案
+| 你要做什麼 | 讀這裡 |
+|---|---|
+| 動手做某件事 | [AGENTS.md](AGENTS.md) → [WORKFLOWS.md](WORKFLOWS.md) |
+| 做／改一個 addon | [workflows/addon-dev/README.md](workflows/addon-dev/README.md) |
+| 跑工具 | [tools/README.md](tools/README.md) |
+| 引擎到底怎麼運作 | [knowledge/](knowledge/README.md) — **本專案的引擎真相層**，每條附行號 |
+| 找檔案在哪 | [workflows/common/code-map/CODE_MAP.md](workflows/common/code-map/CODE_MAP.md) |
 
-1. 先讀 [ADOPTION.md](ADOPTION.md)，選最小導入、標準導入或研究導入。
-2. 把需要的 `.md` 和 `workflows/` 複製到目標 repo 根目錄。
-3. 依專案改寫 `AGENTS.md` 的「專案摘要」「開發環境」「本地鐵律」。
-4. 依 repo 結構填 `workflows/common/code-map/CODE_MAP.md`。
-5. 把測試、build、lint、package 指令填進 `workflows/testing.md` 和 `workflows/dev-env.md`。
-6. 開始工作前從 `WORKFLOWS.md` 選工作流入口。
+## 目錄
 
-## 檔案角色
+| 路徑 | 內容 |
+|---|---|
+| `tools/` | 工具鏈。bash 進入口 + `lib/`（行程與檔案系統）+ `lua/`（判讀邏輯）+ `probes/`（遊戲內狀態探測）|
+| `knowledge/` | 引擎行為知識庫。比 `~/repo/moddings/tome4/analysis/t-engine/` 可信 |
+| `mods/` | 實戰 addon 原始碼 |
+| `workflows/` | 工作流入口與 durable 知識 |
+| `.claude/skills/` | 冷啟動 agent 的 skill 定義 |
+| `build/` | 打包產物，**是暫存**，不保證與源碼同步（已 gitignore）|
 
-| 路徑 | 用途 |
-|------|------|
-| `AGENTS.md` | agent 最頂層備忘：專案摘要、always-on 鐵律、路由入口 |
-| `WORKFLOWS.md` | 依使用者意圖派發到工作流 |
-| `PRINCIPLES.md` | 輕量使用原則：何時啟用/跳過流程、Done when |
-| `ADOPTION.md` | 導入既有 repo 的分階段方式 |
-| `MAINTENANCE.md` | 定期清理、刪除規則、CODE_MAP/session-log 維護 |
-| `SYNC.md` | 已導入 repo 如何跟模板更新 |
-| `INIT-QUESTIONS.md` | 新 repo 導入問答 |
-| `TEMPLATE-MANIFEST.md` | minimal/standard/full 檔案清單 |
-| `UNINSTALL.md` | 移除/降級策略 |
-| `DOGFOOD.md` | 實戰導入摩擦與下一版候選 |
-| `DEV-GUIDE.md` | 被動參考：結構整理原則 |
-| `SESSION-LOG.md` | open 進度 hub |
-| `WAIT_USER.md` | 需要使用者親自做/驗證的事 |
-| `workflows/` | 各工作流入口與 durable 知識 |
+## `mods/` 現況
 
-## Core
+| addon | 內容 |
+|---|---|
+| `tome-runewright` | 新職業**盧恩術士**：3 技能樹 + 自訂資源 + 共鳴系統 |
+| `tome-runeisles` | **符文諸島**：全新大世界地圖 + 城鎮 + 兩個地城 + 三階段主線 |
+| `tome-talent-tutor` | 大地圖 NPC，免費傳授全部約 300 棵技能樹 |
+| `tome-relics` | 考古主題的物品／神器／ego，純加法不覆寫原版 |
+| `tome-crafting` / `tome-companions` | 製作系統 / 隊友系統 |
+| `tome-orario` / `tome-camp` | 進行中，尚未完成 |
+| `tome-autobirth` | **開發用測試夾具，不是給玩家的 addon**。由 `playtest.sh --birth` 自動加掛，用來程式化建角；沒有規格檔就完全 no-op。永遠不進 `dist/` |
 
-新專案優先導入這些：
+## 三條鐵律
 
-| 工作流 | 用途 |
-|--------|------|
-| `AGENTS.md` | always-on 鐵律與入口 |
-| `WORKFLOWS.md` | 工作流派發 |
-| `PRINCIPLES.md` | 輕量使用原則 |
-| `feature-dev` | 在本 repo 新增/修改功能 |
-| `refactor` | behavior-preserving 拆分與整理 |
-| `investigation` | bug 真因、可行性、現有系統調查 |
-| `testing.md` | 測試/驗證命令 |
-| `dev-env.md` | 開發環境矩陣 |
-| `common/` | conventions + CODE_MAP |
+1. **絕不在真實桌面裸跑 `t-engine64`。** 它沒有 `--help`，任何參數都直接開遊戲視窗。
+   自動化一律走 `verify.sh` / `playtest.sh`（自己開 Xvfb）；要用 `run.sh` 先問使用者。
+2. **要宣稱「能動」必須跑過 `verify.sh` 並貼出輸出。沒跑就說沒跑。**
+3. **AI 取得狀態用 `probe`（純文字）；截圖是產給使用者看的。**
+   畫面、渲染、手感、平衡由使用者判斷。
 
-## Optional
-
-需要時再導入：
-
-| 工作流 | 用途 |
-|--------|------|
-| `analysis` | 初次接觸陌生專案，建立 Level 1-6 分析 |
-| `create` | 基於分析產物建立獨立衍生小專案 |
-| `patch` | 建立冷啟動 agent 可套用的 patch 包 |
-| `research` | paper/長文閱讀、摘要、翻譯、索引 |
-| `html-guide` | 大量 `.md` 的 HTML 導覽層 |
-| `commands/` | 可選 agent command 模板 |
-| `scripts/` | 安裝、健康檢查 |
-| `tests/` | smoke test |
-
-## 範例
-
-本 repo 以 `--standard` 導入，未包含模板的 `examples/`。填寫實例直接看本專案的 [AGENTS.md](AGENTS.md)。
+完整鐵律見 [AGENTS.md](AGENTS.md)。

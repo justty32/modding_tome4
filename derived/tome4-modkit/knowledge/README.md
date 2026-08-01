@@ -58,7 +58,7 @@
 | 設了 `wda.script` 但腳本檔不存在 | **崩潰**，且是玩家走第一步的時候才炸 |
 | 只在 scratch home 測過，忘了 `deploy.sh` 到真 home | 三層驗證全綠，使用者的遊戲裡什麼都沒有 |
 
-上表前三條已由 `tools/check_init.lua` 自動擋下。其餘只能靠 `verify.sh` 與 `playtest.sh`。
+上表前三條已由 `tools/lua/check_init.lua` 自動擋下。其餘只能靠 `verify.sh` 與 `playtest.sh`。
 
 ## 新增知識的規矩
 

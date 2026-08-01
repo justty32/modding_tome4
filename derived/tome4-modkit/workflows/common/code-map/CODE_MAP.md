@@ -5,16 +5,48 @@
 
 ## 工具鏈（`tools/`）
 
+**入口說明與決策表在 [`tools/README.md`](../../../tools/README.md)**，每支腳本也都吃 `-h`
+（說明從檔頭生成，不會與實作脫節）。這裡只給定位用的一句話。
+
+分工線：bash 只做**行程與檔案系統編排**，一切**判讀與邏輯**在 Lua——
+因為本機沒有 `lfs`／`luaposix`，純 Lua 做不到 spawn/signal/目錄列舉。
+
+### 進入口（只有這層該被直接執行）
+
 | 檔案 | 職責 |
 |------|------|
-| `lib.sh` | 共用路徑與偵測。`source` 引入。所有路徑可用同名環境變數覆寫 |
-| `lib_scratch.sh` | 共用：準備可拋棄的 scratch home（關彈窗、關第三方 addon、設語系）、挑空 X display、啟動遊戲。`verify.sh` 與 `playtest.sh` 都用它 |
-| `lint.sh` | 每個 `.lua` 過 `luajit -b` 語法檢查，再跑 `check_init.lua` |
-| `check_init.lua` | `init.lua` 欄位語意：必填、版本相容、`weight`、旗標↔目錄一致、`data/` 是否有對應的 `loadDefinition` |
+| `lint.sh` | 每個 `.lua` 過 `luajit -b` 語法檢查，再跑 `lua/check_init.lua` |
 | `build.sh` | 打包成 `.teaa`（zip）。會先跑 lint |
-| `deploy.sh` | 冪等佈署到 `~/.t-engine/4.0/addons/`。`--home` 指向 scratch（verify 用）、`--undeploy` 移除 |
-| `verify.sh` | Xvfb 無頭啟動遊戲，grep log 判定 addon 真的載入 |
-| `playtest.sh` | Xvfb 裡**實際遊玩**：建角、按技能、截圖。子命令 `start/do/shot/zoom/log/status/stop` |
+| `deploy.sh` | 冪等佈署到 `~/.t-engine/4.0/addons/`。`--home` 指向 scratch、`--undeploy` 移除 |
+| `verify.sh` | Xvfb 無頭啟動遊戲，判定 addon 真的載入（判讀交給 `lua/verdict.lua`）|
+| `playtest.sh` | Xvfb 裡**實際遊玩**。子命令 `start/probe/lua/log/do/shot/zoom/status/stop`；`start --birth` 自動建角 |
+| `run.sh` | 在**使用者真實桌面**開遊戲（先問過才准跑）|
+
+### bash 共用層（`tools/lib/`，`source lib.sh` 會照相依順序全載入）
+
+| 檔案 | 職責 |
+|------|------|
+| `lib/log.sh` | `die`/`info`/`ok`/`warn`；`--help` 從檔頭生成 |
+| `lib/paths.sh` | 所有路徑常數，皆可用同名環境變數覆寫；`MODKIT_ROOT` 由檔案位置推導 |
+| `lib/deps.sh` | `require_lua` / `require_game` / `require_headless_tools` / `require_screenshot_tools` |
+| `lib/addon.sh` | `resolve_addon_dir` / `addon_names`（推 `ADDON_DIR/BASE/SHORT/UPPER`）/ `addon_field` |
+| `lib/scratch.sh` | 拋棄式 t-engine home：跳彈窗的 cfg、`enable_cheat_mode`、`write_autobirth_spec` |
+| `lib/game.sh` | `pick_free_display` / `start_xvfb` / `launch_game` / `stop_game`（殺 process group）/ `wait_log` |
+
+### Lua 邏輯層（`tools/lua/`）
+
+| 檔案 | 職責 |
+|------|------|
+| `check_init.lua` | `init.lua` 欄位語意：必填、版本相容、`weight`、旗標↔目錄一致、`data/` 是否有對應的 `loadDefinition` |
+| `verdict.lua` | 判讀 `run.log` 決定驗收成敗（Lua Error 一票否決 → 自報 hook → 通用載入痕跡）|
+| `addon_field.lua` | 用 `loadfile`+`setfenv` 求值取 `init.lua` 欄位，不是 grep |
+| `flatten_probe.lua` | 把探測壓成單行 ASCII，並擋掉行尾註解、非 ASCII、語法錯誤 |
+
+### 探測庫（`tools/probes/`）
+
+給 `playtest.sh probe <名字>` 用。`state` / `map` / `actors` / `talents` /
+`logmirror`（攔 `game.log` 鏡射到 stdout）/ `learn <天賦>` / `attack <生物名>`。
+寫法規矩見 `tools/README.md`。
 
 ## 知識層（`knowledge/`）
 
