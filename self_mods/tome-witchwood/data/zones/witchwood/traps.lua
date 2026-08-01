@@ -1,0 +1,2 @@
+-- 女巫森林沒有陷阱（zone.lua 的 generator.trap 設 nb_trap = {0, 0}）。
+-- 檔案留著是為了 engine/Zone.lua:177 的 loadBaseLists 找得到 trap_list。

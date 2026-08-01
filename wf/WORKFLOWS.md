@@ -37,6 +37,7 @@
 | 「.md 太多，想做瀏覽導覽層」 | html-guide | [workflows/html-guide/README.md](workflows/html-guide/README.md) |
 | 「設定 / 了解開發環境」 | dev-env | [workflows/dev-env.md](workflows/dev-env.md) |
 | 「使用 / 設定外部工具、env var、依賴」 | tooling | [workflows/tooling/README.md](workflows/tooling/README.md) |
+| 「**開 agent 幫我產出整包內容**（職業／地圖／劇情／怪物）」 | **agent-driving** | [workflows/agent-driving/README.md](workflows/agent-driving/README.md) |
 
 碰原始碼的工作流共用 [common/conventions](workflows/common/conventions.md)（程式碼慣例 + 真相層優先級 + CODE_MAP 維護鏈）。
 **實際 addon 開發的一條龍鐵律在 [AGENTS.md](../AGENTS.md)，工具用法在 [tools/README.md](../tools/README.md)。**

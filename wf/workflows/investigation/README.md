@@ -35,8 +35,6 @@ Done when: <可行/不可行/缺口/下一步已明確，finding 已落檔>
 | 路徑 | 內容 |
 |------|------|
 | `findings/` | 調查結果，按需建立 |
-| [`pi-agent-driving.md`](pi-agent-driving.md) | **用 stdin 驅動外部 coding agent（pi）做完一個職業 addon**——結論、文件缺口、怎麼下 prompt |
-| [`pi-agent-transcript.md`](pi-agent-transcript.md) | 上者的逐字紀錄（注入的 stdin + pi 回應）|
 | `gotchas.md` | 調查踩坑，按需建立 |
 | `session-log.md` | 本工作流 open/in-flight 調查 |
 | `archive/` | 過時調查文檔 |

@@ -1,0 +1,2 @@
+-- 女巫森林的物品：走隨機掉落（zone.lua 的 generator.object.Random），
+-- 不需要專屬物品清單（照 runeisles 石陣範本，物件會從原版資料挑）。

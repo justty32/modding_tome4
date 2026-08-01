@@ -20,7 +20,7 @@
 |---|---|
 | [addon-loading.md](addon-loading.md) | 建 addon 骨架、`init.lua` 欄位、為什麼東西沒被載入 |
 | [class-and-talents.md](class-and-talents.md) | 做職業、技能、自訂資源、i18n、找不到 hook 時 |
-| [visuals-and-sounds.md](visuals-and-sounds.md) | 加特效、音效、天賦圖示（叫**現成**粒子） |
+| [visuals-and-sounds.md](visuals-and-sounds.md) | 加特效、音效、圖示（叫**現成**粒子）；**自製美術／音效資產放哪、引用字串怎麼寫**、職業圖示 |
 | [particles.md](particles.md) | 寫**新**粒子檔、發射幾何速查、劍氣／枝枒蔓延、自製紋理 |
 | [custom-ui.md](custom-ui.md) | 做自訂面板／Dialog、開啟入口、測 UI |
 | [npc-and-chats.md](npc-and-chats.md) | 放 NPC、寫對話、授予技能樹 |
@@ -46,6 +46,9 @@
 | 銘文欄位已滿還想再塞 | 靜默丟棄 |
 | i18n 的 tag 對不上 | 翻譯不生效，顯示原文 |
 | 粒子／音效名稱寫錯 | 什麼都不發生 |
+| 天賦 `image` 指到不存在的檔 | 靜默換成 `talents/default.png`，log 也沒有訊息 |
+| 自製 PNG 放進 addon 的 `data/` 而不是 `overload/data/gfx/` | `image="talents/x.png"` 永遠找不到（`data/` 是私有掛載點） |
+| 職業圖示檔名沒照 class 英文 `name` 推導 | 靜默換成 `unknown_*_bg.png`；只檢查 32 那張，128 一起陪葬 |
 | 遊戲邏輯拿 `t.name` 比對英文 | 在非英文語系永遠不成立 |
 | 對話檔忘了 `return "welcome"` | 一跟 NPC 說話就 nil index 崩潰（這個**會**報錯） |
 | NPC 放在城鎮入口格 | 玩家進不了城，無訊息 |

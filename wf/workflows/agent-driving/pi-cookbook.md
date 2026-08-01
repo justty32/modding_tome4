@@ -211,3 +211,33 @@ printf '%s' "$PROMPT" | timeout 1800 pi -p \
 - `self_mods/tome-witch/` 是**實驗產物**，要不要留在 repo、要不要升格 `dist/`，等使用者決定。
 - pi 已把它 deploy 到真實 home（`~/.t-engine/4.0/addons/tome-witch/`）——
   那是照 repo 文件的指示做的。不要的話跑 `tools/deploy.sh witch --undeploy`。
+
+---
+
+## 第二次實測：三 agent 平行做 `tome-witchwood`（2026-08-01）
+
+| 項目 | 值 |
+|---|---|
+| 編排 | 一個 addon、三個 pi 平行、共用 `CONTRACT.md` |
+| 分工 | A 怪物／B 地圖／C 劇情，檔案樹互不重疊 |
+| 隔離 | 各自 `TOME_PLAYTEST_STATE=/tmp/tome4-playtest-{a,b,c}`，啟動錯開 20 秒 |
+| 結果 | 三個都跑完並各自 verify 綠燈；**但整合後才發現兩個接縫 bug** |
+
+### 三個 agent 各自的表現
+
+- **A（怪物）**：完全照契約走——agy 生圖 → 從 scratch `cp` 出 → 補 alpha → `identify` 驗證。
+  三隻怪 + 三張 64×64 圖。**唯一漏的是沒給 `name` 欄位**（契約沒要求，不算違約）。
+- **B（地圖）**：zone 七件套 + 五張地形圖。**主動抓到契約寫錯的 `change_zone`** 並帶
+  `engine/Zone.lua:159-164` 的證據偏離、回報。因為契約禁止改 `hooks/load.lua`，
+  它把大地圖入口的 hook 程式碼寫好交回給編排者代掛。
+- **C（劇情）**：任務 + 對話 + 任務 NPC，還**自己用 LuaJIT 模擬引擎載入環境跑了一輪
+  流程冒煙測試**（授予→進度→完成→領賞→重複對話）。並抓出上面兩個接縫 bug。
+
+### 教訓（已寫進 [README](README.md)）
+
+1. 契約防 id 衝突，**防不住接縫**——要有整合者，且讓相依性最高的最後跑。
+2. 共用檔要留**擴充點**，不要禁止修改，否則變成回報－代改的往返。
+3. 契約可能是錯的，要明確**授權 agent 帶證據推翻它**。
+4. `identify %[channels]` 顯示 `srgba` **不等於有透明**，要用 `-alpha extract` 看 minima。
+5. 地面圖**不要**透明、樹和怪物**要**透明——三類需求不同。
+6. `agy` 會宣稱生成成功但實際沒產出檔案，要 `ls` 驗。

@@ -51,7 +51,7 @@ tome4/
 
 | 路徑 | 內容 |
 |------|------|
-| `workflows/` | 各工作流的入口與 durable 知識（派發表見 [WORKFLOWS.md](WORKFLOWS.md)）。|
+| `workflows/` | 各工作流的入口與 durable 知識（派發表見 [WORKFLOWS.md](WORKFLOWS.md)）。含 [agent-driving](workflows/agent-driving/README.md)——驅動外部 coding agent 產出內容的編排／監控／複驗流程。|
 | `session_log/` | 一句話日誌的歷史封存（按月分檔）；活狀態在 [SESSION-LOG.md](SESSION-LOG.md)。|
 | `inbox/` | agent 之間的**信件**收件匣（放信處，保持乾淨；使用方式見 [workflows/inbox/](workflows/inbox/README.md)）。|
 | `WORKFLOWS.md` `INDEX.md` `DEV-GUIDE.md` `SESSION-LOG.md` `WAIT_USER.md` | kernel 的五份頂層文件 |
