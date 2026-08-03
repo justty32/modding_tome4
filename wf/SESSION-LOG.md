@@ -12,16 +12,32 @@
 > visuals-and-sounds 拆檔、witchwood 實機驗證、runewright 特效稽核。見 git log。
 > **這裡只留還沒完成的。**
 
-- **2026-08-01 三個大構想已寫成 spec，等使用者定案後才動工**
-  - [organic-talents-design.md](workflows/specs/organic-talents-design.md)——生長式天賦
-    （POE 式節點，但靠遊戲行為長出來）。引擎可行性已驗完（`__show_special_talents`）。
-    **卡在使用者要回答 §6 的四題**，最關鍵是規模與「自我練習」的累積方式。
-  - [orario-complete-design.md](workflows/specs/orario-complete-design.md)——歐拉麗完全版。
-    使用者目標是「把地錯劇情整個搬進來」。**卡在 §4「玩家是誰」**（建議 B：同時代的另一名
-    冒險者，理由是 roguelike 的永久死亡與自訂建角與「演貝爾」根本衝突）。
-  - 製作系統（WoW 式鍛造/鑲嵌/附魔/釀造）——調查已落在
-    [crafting-and-imbue.md](../docs/knowledge/crafting-and-imbue.md)，還沒寫成 spec。
-  - **三者底層是同一套機制**（見 orario spec §8），要不要合併是使用者要拍板的第一題。
+- **2026-08-03 兩題最關鍵的定案，`tome-orario` v0.5「Falna」可以開工**
+  - **玩家是誰**（orario §4）：**B 同時代的另一名冒險者**。C（自己眷族的團長）沒有另外採用。
+  - **三構想要不要合併**（orario §8）：**歐拉麗當試驗場**——先在歐拉麗把 Falna 做出來、
+    跑得通再抽成通用框架。[organic-talents-design.md](workflows/specs/organic-talents-design.md)
+    與 [crafting-professions-design.md](workflows/specs/crafting-professions-design.md) 的獨立
+    實作**暫不動工**，§6／§8 的細節問題留著但不急。
+  - **下一步**：orario spec §5（Falna：偉業升級／五能力值／魔石經濟／技能覺醒／眷族）
+    是接下來要落地的部分，且要接上 §4 定案後的「玩家＝另一名冒險者」設定。
+    這需要實際開發環境（`vendor/` + luajit + verify.sh），本機 Windows 辦公室機器缺兩者，
+    留到能碰 Manjaro 開發機時再動工。
+  - orario §10 剩三題未答（做到第幾卷、巴別塔幾層、原文素材整理），見 [WAIT_USER.md](WAIT_USER.md)。
+
+- **2026-08-03 新 spec：[型月魔術體系 fate-magecraft](workflows/specs/fate-magecraft-design.md)**
+  - 使用者構想：FGO 世界觀的魔術體系，**全新、與 ToME 天賦體系不同**，位置**在歐拉麗隔壁**
+    （Eyal 大地圖 (28,18)，待複驗）。
+  - 本次對話已拍板兩題：**玩法主軸＝兩層都要**（自己是魔術師＋能召喚英靈）、
+    **取得途徑＝區域門檻，任何角色可學**（不做專屬職業）。
+  - 「不同」的五條具體差異：組成式術式（不花天賦點）／多回合詠唱可被打斷／
+    魔力戰鬥中不回／全域回路過熱取代逐技能冷卻／刻印槽有限可重組。
+  - 技術核心是 **8 個泛用「刻印槽」天賦 + 行為存在 actor 資料裡**——繞開
+    「天賦定義是全域靜態、不能執行期生成」（`E/interface/ActorTalents.lua:26,91`）。
+  - **⚠️ 這份 spec 寫於辦公室 Windows 機，`vendor/` 是空的、無法複驗任何行號。**
+    §11 有 7 項複驗清單，其中 #1（`max_od` 吃不吃 `addTemporaryValue`）與
+    #2（有沒有多回合詠唱的原版前例）**沒結論就別開工**。
+  - **工序**：它是通用框架的第二個使用者，建議排在 Falna v0.7 之後。
+    §16 有 5 題待使用者決定，見 [WAIT_USER.md](WAIT_USER.md)。
 
 - **2026-08-01 `tome-director` v0.2：依實機回報大改，但還沒有任何劇情用它**
   - 讓 NPC 照腳本表演的可重用框架。38 項自我驗證通過、verify 8/8、已 deploy。

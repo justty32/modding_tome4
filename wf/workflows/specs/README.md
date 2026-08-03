@@ -23,9 +23,14 @@ idea → roadmap → spec → plan → feature-dev
 | [生長式天賦 organic-talents](organic-talents-design.md) | 2026-08-01 | （直接由使用者構想起） | 可行性已驗，待使用者決定 §6 四題後進 plan |
 | [歐拉麗完全版 orario-complete](orario-complete-design.md) | 2026-08-01 | 前身 [PLAN-camp-and-isekai §B](../plans/PLAN-camp-and-isekai.md) | 可行性已驗，**卡在 §4「玩家是誰」** |
 | [生產職業 crafting-professions](crafting-professions-design.md) | 2026-08-01 | （直接由使用者構想起） | 可行性已驗，待使用者決定 §8 四題後進 plan |
+| [型月魔術體系 fate-magecraft](fate-magecraft-design.md) | 2026-08-03 | （直接由使用者構想起） | **可行性未驗**（寫於無 `vendor/` 的辦公室機），§11 複驗清單待跑 |
 
-> 這三份底層共用同一套機制（見 orario spec §8）。**要不要合併成一個通用框架，
-> 是使用者要拍板的第一題**——它決定接下來全部的工序。
+> 前三份底層共用同一套機制（見 orario spec §8）。**已於 2026-08-03 拍板方案 3：
+> 歐拉麗當試驗場**——先做 Falna，跑通再抽通用框架。
+>
+> fate-magecraft 是那個框架的**第二個使用者**（見該文件 §15），
+> 位置在歐拉麗隔壁（Eyal 大地圖 (28,18)，待複驗）。
+> 建議不在 Falna v0.7 之前開工。
 
 ## 何時不用
 
