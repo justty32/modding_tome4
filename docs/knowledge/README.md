@@ -29,7 +29,7 @@
 | [visuals-and-sounds.md](visuals-and-sounds.md) | 加特效、音效、圖示（叫**現成**粒子）；**自製美術／音效資產放哪、引用字串怎麼寫**、職業圖示 |
 | [particles.md](particles.md) | 寫**新**粒子檔、發射幾何速查、劍氣／枝枒蔓延、自製紋理 |
 | [custom-ui.md](custom-ui.md) | 做自訂面板／Dialog、開啟入口、測 UI |
-| [npc-and-chats.md](npc-and-chats.md) | 放 NPC、寫對話、授予技能樹 |
+| [npc-and-chats.md](npc-and-chats.md) | **做新怪物／生物**（`newEntity` 繼承基底）；放 NPC、寫對話、授予技能樹 |
 | [crafting-and-imbue.md](crafting-and-imbue.md) | 附魔（gem→applyEgo）、配方煉製骨架（材料→產物） |
 | [companions-and-party.md](companions-and-party.md) | 招募同伴、隨主人成長（清 max_level）、對主人免傷（superload onTakeHit） |
 | [items-and-egos.md](items-and-egos.md) | 做神器、ego 詞綴、套裝、可成長物品、掉落／商店整合 |

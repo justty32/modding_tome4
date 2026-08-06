@@ -10,6 +10,15 @@
 
 - **共用檔擴充點還沒實作**。之前契約禁止 agent 改 `hooks/load.lua`，
   造成 B「回報 → 我代改」的往返。下個 addon 試 `hooks/parts/<agent>.lua` + 迴圈載入。
+  ⚠️ **[CONTRACT.template.md](CONTRACT.template.md) 已經把這個機制寫成契約條文了**
+  （2026-08-06），所以**開工前編排者必須先把迴圈載入寫進 `hooks/load.lua`**，
+  否則 agent 照契約寫的 `parts/*.lua` 會靜默不被載入。這是下次平行開工的第一步。
+
+- **2026-08-06 補了兩份模板**（[PROMPT](PROMPT.template.md) / [CONTRACT](CONTRACT.template.md)）。
+  動機：要交給能力較弱的模型大量產內容，心得型文檔（pi-cookbook）不夠用，要可複製的成品。
+  兩份都是在**辦公室 Windows 機**寫的（`vendor/` 空、無 luajit/magick/xvfb-run），
+  裡面的行號與指令**全部沿用 repo 既有已複驗結論，沒有新增未複驗的行號**，但也**沒有實跑驗證過**。
+  第一次照它開工時順手複驗。
 
 ## 2026-08-01 新增：sonnet subagent 也跑得通，而且很划算
 

@@ -115,5 +115,5 @@
 
 - **`vendor/` 2026-08-01 補齊了兩包**：`vendor/dlc/`（三包官方 DLC，338MB）與
   `tome-gfx.team` 的美術資產（331MB，解進 `vendor/t-engine4/modules/tome/data/gfx/`）。
-  還原步驟已寫進 [AGENTS.md](../AGENTS.md) 的「Fresh clone / 環境還原」，
-  但**還沒固化成 `tools/` 下的腳本**。
+  還原步驟寫在 [AGENTS.md](../AGENTS.md) 的「Fresh clone / 環境還原」，
+  並已固化成 `tools/fetch-vendor.sh`（冪等、`--only` / `--force`）。**此項已完成。**

@@ -69,6 +69,15 @@ repo 鐵律「要宣稱能動必須跑過 verify 並貼出輸出」**對 agent �
 2. 它寫進 `docs/knowledge/` 的每個 `檔案:行號`，用 `sed -n '<行號>p'` 抽驗
 3. 它有沒有動到**真實環境**（`~/.t-engine/4.0/addons/`）——照文件它會 deploy，要讓使用者知道
 
+## 直接開工：兩份模板
+
+不必自己組 prompt 或契約，複製這兩份填空即可——對能力較弱的模型，模板比心得有用得多：
+
+| 我要… | 用哪份 |
+|---|---|
+| 開一隻 agent 做一整包內容 | [PROMPT.template.md](PROMPT.template.md)——兩段式注入、監控、複驗清單 |
+| 開多隻 agent 平行做同一個 addon | 上面那份的「平行版」＋ [CONTRACT.template.md](CONTRACT.template.md) |
+
 ## 兩份延伸規則
 
 | 什麼時候讀 | 讀哪份 |
@@ -94,6 +103,8 @@ AI 不判斷畫面——這是 [AGENTS.md](../../../AGENTS.md) 的鐵律，對�
 
 | 檔案 | 內容 |
 |---|---|
+| [PROMPT.template.md](PROMPT.template.md) | **可直接複製的注入 prompt**：定位／動手／平行三版 + 監控 + 複驗 |
+| [CONTRACT.template.md](CONTRACT.template.md) | **可直接複製的平行契約**：分工、id、依賴宣告、擴充點、美術驗收 |
 | [parallel.md](parallel.md) | 平行開多個 agent：state 隔離、接縫、整合者、契約可推翻 |
 | [assets.md](assets.md) | 美術與音效：三類資產分工、`agy` 的坑、透明度驗收 |
 | [pi-cookbook.md](pi-cookbook.md) | `pi` 的指令與 prompt 心得 |

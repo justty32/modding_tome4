@@ -1,5 +1,10 @@
 # tome-witchwood — 三個 agent 的共用契約
 
+> ⚠️ **這是歷史文件，不要當範本抄。** 要寫新契約請用
+> [wf/workflows/agent-driving/CONTRACT.template.md](../../wf/workflows/agent-driving/CONTRACT.template.md)。
+> 這份缺三節（共用檔擴充點、依賴宣告、必填欄位），而那三項正是這次整合失敗的原因；
+> 下方「生圖」一節的去背做法也已於 2026-08-01 被推翻。
+
 **動工前必讀。** 三個 agent 平行做同一個 addon，靠這份契約避免撞車。
 違反契約會導致整合失敗，而且多半是**靜默**的（id 不符 → 東西不出現，沒有錯誤訊息）。
 
@@ -69,13 +74,23 @@ hook 會自己偵測哪些檔案存在並跳過缺的，所以你可以在別人
 agy --dangerously-skip-permissions -p "生成一張 64x64 …，像素風格，存成 xxx.png"
 ```
 
-兩個實測出來的坑：
+> ⚠️ **下面這段的去背做法已於 2026-08-01 被實測推翻，不要照做。**
+> 正確做法見 [assets.md](../../wf/workflows/agent-driving/assets.md)：
+> 要透明的圖一律叫它畫在純洋紅 `#FF00FF` 底上再 `-transparent '#FF00FF'` key 掉；
+> 驗收要看 `magick x.png -alpha extract -format 'min=%[fx:minima*255]\n' info:` 的
+> `min` 是不是 0——**`identify %[channels]` 顯示 `srgba` 只證明通道存在，不證明有透明**。
+> 本 addon 的兩張樹貼圖就是照下面這段做壞的（1-bit alpha，殘邊清不掉），
+> 最後改成從原版資產色調位移才乾淨。
+
+三個實測出來的坑：
 
 1. **它存到自己的 scratch**（`~/.gemini/antigravity-cli/scratch/`），**不是**你的工作目錄。要自己 `cp` 出來。
-2. **它給的 PNG 沒有 alpha 通道**（即使你要求透明背景）。要自己補：
+2. **它會宣稱生成成功但實際沒產出檔案。** 生完一定要 `ls` 確認檔案真的在、mtime 是新的。
+3. ~~**它給的 PNG 沒有 alpha 通道**（即使你要求透明背景）。要自己補：~~
    ```bash
+   # ↓ 已作廢，見上方警告
    magick in.png -fuzz 12% -transparent white out.png
-   magick identify -format '%[channels]\n' out.png   # 要看到 srgba，不是 srgb
+   magick identify -format '%[channels]\n' out.png   # 這條驗收是無效的
    ```
 
 尺寸：地圖用的 npc/terrain 圖是 **64×64**。
