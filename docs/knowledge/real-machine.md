@@ -106,3 +106,120 @@ tr '\0' '\n' < /proc/$p/environ | grep -E '^(DISPLAY|XAUTHORITY)='
 - `~/.steam/.../TalesMajEyal/`：遊戲安裝，唯讀。
 - `~/.t-engine/4.0/settings/addons.cfg`、`~/.t-engine/4.0/tome/save/`：使用者的設定與存檔。
   要鏡像他的 addon 組合來重現問題，**複製**這個檔到 scratch home，不要改原檔。
+
+## 5. 滑鼠滾輪在 Linux 上全死：自帶的 SDL 2.0.3 太舊（2026-08-06 查清並修好）
+
+**症狀**：遊戲裡**每一處**吃滾輪的 UI 都沒反應——背包／裝備清單、左下訊息列、天賦樹、
+快捷列換頁。使用者回報「在 Windows 上明明有用」。
+（注意：**地圖上滾輪本來就沒功能**，縮放那段在 `engine/interface/PlayerMouse.lua:148-150`
+是被註解掉的，別拿地圖當測試點。）
+
+**判斷方向的第一步**：Lua 層兩平台是同一份程式碼，收滾輪的地方有 20 幾處
+（`engine/ui/List.lua:76-77`、`engine/LogDisplay.lua:202-203`、`engine/HotkeysDisplay.lua:193`…），
+所以「Windows 有、Linux 沒有」的差異**只可能在 C／SDL 輸入層**。
+
+**成因**：遊戲自帶 SDL **2.0.3**（2014 年；`strings lib64/libSDL2-usemeyousilly-2.0.so.0`
+可見 `SDL2-2.0.3`、`hg-8628:b558f99d48f0`、建置路徑 `/opt/SDL2-2.0.3/`）。
+它的 `src/video/x11/SDL_x11events.c` 判滾輪的方式是：
+
+```c
+static SDL_bool X11_IsWheelEvent(Display *display, XEvent *event, int *ticks) {
+    XEvent relevent;
+    if (X11_XPending(display)) {                      // 佇列裡「當下」得有東西
+        if (X11_XCheckIfEvent(display, &relevent, X11_IsWheelCheckIfEvent, (XPointer) event)) {
+            if (event->xbutton.button == Button4) *ticks = 1;
+            else if (event->xbutton.button == Button5) *ticks = -1;
+            return SDL_TRUE;
+        }
+    }
+    return SDL_FALSE;
+}
+case ButtonPress: {
+    int ticks = 0;
+    if (X11_IsWheelEvent(display, &xevent, &ticks)) SDL_SendMouseWheel(data->window, 0, 0, ticks);
+    else SDL_SendMouseButton(data->window, 0, SDL_PRESSED, xevent.xbutton.button);  // ← 退化
+}
+```
+
+**只有在 ButtonPress 進來的那一瞬間、配對的 ButtonRelease 已經躺在 X 事件佇列裡**，
+才會發出 `SDL_MOUSEWHEEL`；否則走 else 分支發成普通按鍵 4／5，Lua 端收到的是
+`button4`／`button5`（`engine/KeyBind.lua:197` 的 `sym:gsub("button","b")` 證明 `buttonN`
+是引擎的正規命名），而**沒有任何 UI 在監聽 `button4`** → 那一格滾動無聲消失。
+Windows 走 `WM_MOUSEWHEEL`，沒有這個配對條件，所以一直是好的。
+**SDL 2.0.5 起改成無條件認 button 4-7**（順帶才有橫向滾輪；引擎早就有 `wheelleft`/`wheelright`
+這兩個名字，但 2.0.3 根本產不出來）。
+
+**實測（Xvfb + Lua 間諜 monkeypatch `engine.Mouse:receiveMouse`，同一套注入 protocol）**：
+
+| 組 | SDL | 注入 | 結果 |
+|---|---|---|---|
+| B | 自帶 2.0.3 | `xdotool mousedown 4` → 0.3s → `mouseup 4` × 10 | **20/20 `button4`，0 次 `wheelup`** |
+| C | 真 SDL2 2.32.10 | 完全相同 | **20/20 `wheelup`，0 次 `button4`** |
+
+只換 SDL 一個變數 → 100% 翻轉。用 `xdotool click 4`（press+release 一起送）則時好時壞，
+因為那剛好有機會滿足佇列條件——**所以測滾輪一定要用 `mousedown`/`mouseup` 拉開**，
+`click 4` 會給你假的綠燈。
+
+### 修法：`LD_PRELOAD` 攔事件佇列，**不要換 SDL**
+
+```bash
+tools/run.sh --build-wheel-fix   # 編一次就好
+tools/run.sh                     # 之後自動掛上
+```
+
+源碼在 `tools/src/sdl_wheel_fix.c`（40 行）：攔 `SDL_PollEvent` / `SDL_WaitEvent`，
+把 `SDL_MOUSEBUTTONDOWN(button=4..7)` 原地改寫成 `SDL_MOUSEWHEEL`、把配對的 UP 吞掉。
+**SDL 2.0.3 與整條渲染路徑一個字節都沒動**，所以不可能影響畫面。順手把橫向滾輪
+（button 6/7 → `wheelleft`/`wheelright`，引擎早就有這兩個名字）也接上了。
+
+攔得到的理由：`nm -D --undefined-only t-engine64` 可見 `U SDL_PollEvent`、`U SDL_WaitEvent`，
+LD_PRELOAD 的物件在全域符號搜尋順序上早於那份改名的 SDL。
+結構偏移實測一致：`sizeof(SDL_Event)=56`、`wheel{type=0,timestamp=4,windowID=8,which=12,x=16,y=20}`。
+
+無頭實測（同一套 `mousedown 4`/`mouseup 4` protocol）：
+`RESULT=left,left, wheelup ×20, wheeldown ×10`（10 次上滾 + 5 次下滾）、0 個 `Lua Error`，
+`/proc/<pid>/maps` 同時可見補丁與**原本那份** `libSDL2-usemeyousilly-2.0.so.0`。
+一次滾動產生 2 個事件是引擎正常行為（`engine/Mouse.lua:111-113` 的 `delegate` 派
+`button-down` 與 `button` 各一次），B 組的 `button4` 也是 20 個對 10 次注入。
+
+**已知取捨**：綁在 button 4-7 上的按鍵繫結會失效。那些繫結在滾輪壞掉的狀態下本來就綁不起來。
+
+### 換掉整個 SDL 也能修滾輪，但**在 NVIDIA 上畫面全白**（別走這條）
+
+`tools/run.sh --make-sdl-shim` + `TOME_USE_SDL_SHIM=1` 保留了這條路，只為對照實驗。
+原理是遊戲把 SDL 的 SONAME 改名成 `libSDL2-usemeyousilly-2.0.so.0` 以防被系統 SDL 覆蓋，
+但改名只改檔名，動態載入器照檔名找 → `LD_LIBRARY_PATH` 裡放一份同名的新版就換掉了
+（**不必動 Steam 安裝目錄**）。三個候選的實測結果：
+
+| 候選 | 版本 | 底層 | 結果 |
+|---|---|---|---|
+| `/usr/lib/libSDL2-2.0.so.0` | sdl2-compat 2.32.70 | **SDL3**（dlopen `libSDL3.so.0`）| ❌ 滾輪好了，但**技能圖標與大量貼圖壞掉**（自帶的 `libSDL2_image` 是 2014 年的，表面格式對不上）；無頭還會挑 wayland driver，畫面不畫在給定的 `DISPLAY` 上（截圖只有 233 bytes）|
+| Steam Runtime 的 `libSDL2-2.0.so.0` | release-2.32.10（真 SDL2、純 X11 編譯）| 真 SDL2 | ⚠️ 無頭 20/20 `wheelup`、截圖正常，但**使用者真實桌面全白**（RTX 5060 Ti / NVIDIA 610.43.03、全螢幕；遊戲邏輯照跑，log 裡玩家在放技能、怪在行動，只有 GL 輸出壞）|
+| archive.archlinux.org 的 `sdl2-2.0.10-1-x86_64.pkg.tar.xz` | 2.0.10（2019）| 真 SDL2 | 無頭 20/20 `wheelup`、截圖 490KB/746KB 正常；真實桌面未採用（已改走 preload）|
+
+**教訓**：2.0.3 → 2.32 跨了十年的 GL context／FBO 行為差異，無頭（softpipe）驗不出來——
+`LIBGL_ALWAYS_SOFTWARE=1` 的 Xvfb 跟真實 NVIDIA 驅動是兩條不同的 GL 路徑。
+**「無頭截圖不是 233 bytes」只能證明沒有完全不畫，不能證明畫得對。**
+
+（`--make-sdl-shim` 那條路另外把 `SDL_VIDEODRIVER=x11` 釘住，因為 2.0.10 與 sdl2-compat
+都把 wayland／KMSDRM 編了進去，不釘住可能被誤選。走 preload 就沒這問題——自帶的 2.0.3
+本來就只有 X11。）
+
+**認指紋**（要判斷某次啟動到底載到哪份 SDL）：
+
+```bash
+grep -i libSDL2- /proc/$(pgrep -x t-engine64 | head -1)/maps | awk '{print $6}' | sort -u
+grep -a "Available video driver" <log>
+#   x11 / dummy （只兩項）                          → 自帶 2.0.3 ← 走 preload 時應該看到這個
+#   dummy / evdev / offscreen / x11                 → 真 SDL2 2.32.10（Steam Runtime）
+#   dummy / KMSDRM / wayland / x11                  → 真 SDL2 2.0.10（arch 封存）
+#   wayland / x11 / KMSDRM / offscreen / dummy / evdev → sdl2-compat（SDL3），不要用
+```
+
+走 preload 的正常樣貌：`maps` 裡**同時**有 `tome4-wheel-fix.so` 與
+`.../TalesMajEyal/lib64/libSDL2-usemeyousilly-2.0.so.0`（原本那份 2.0.3 還在）。
+
+**Steam 的「啟動選項」塞不進去，別浪費時間**：ToME 是跑在 Steam Linux Runtime
+（pressure-vessel）容器裡的，容器會**重建**環境。實測從 Steam 啟動的行程
+`/proc/<pid>/environ` 裡 `LD_LIBRARY_PATH` 全是 `SteamLinuxRuntime/var/steam-runtime/…` 與
+`/usr/lib/pressure-vessel/overrides/…`，我們設的路徑不見了。要修滾輪就走 `tools/run.sh`。

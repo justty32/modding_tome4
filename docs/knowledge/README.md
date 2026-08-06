@@ -38,7 +38,7 @@
 | [scripted-scenes.md](scripted-scenes.md) | **讓 NPC 照腳本演出**（過場／分鏡）；引擎沒有，要自己造，這份是怎麼造 |
 | [headless-testing.md](headless-testing.md) | 跑 `verify.sh`、無頭啟動出問題 |
 | [playtesting.md](playtesting.md) | 跑 `playtest.sh`、要在遊戲裡實際操作 |
-| [real-machine.md](real-machine.md) | 要交給使用者實機玩、遊戲從 Steam 開會崩、在真桌面開遊戲 |
+| [real-machine.md](real-machine.md) | 要交給使用者實機玩、遊戲從 Steam 開會崩、在真桌面開遊戲、**滑鼠滾輪全死（自帶 SDL 2.0.3 太舊）** |
 
 ## 貫穿全部的一件事：這個引擎**很愛靜默失敗**
 

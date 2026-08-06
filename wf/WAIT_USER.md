@@ -12,6 +12,25 @@
 
 ## Open
 
+- **★ 用 `tools/run.sh` 開一次，確認滑鼠滾輪好了、而畫面沒被弄壞**（2026-08-06）。
+  成因與修法都已查清，見 [real-machine.md §5](../docs/knowledge/real-machine.md)。
+  **最終採用的是 `LD_PRELOAD` 補丁**（`tools/src/sdl_wheel_fix.c`），SDL 2.0.3 與整條渲染
+  路徑一個字節都沒動，所以理論上不可能再白畫面。已編好，`tools/run.sh` 會自動掛。
+  **要你判斷的是**：滾輪在四處（清單／訊息列／天賦樹／快捷列換頁）是否都活了、
+  畫面／技能圖標一切正常。（若滑鼠有橫向滾輪，順手看看它是不是也活了。）
+  走過的兩條死路別再試：**換成 sdl2-compat** → 貼圖壞；**換成真 SDL2 2.32** → 你實測全白；
+  **Steam 啟動選項** → pressure-vessel 會重建環境，塞不進去。
+  ⚠️ `tools/run.sh` 會在你桌面開視窗，**agent 執行前必須先問你**。
+
+- **要不要追 `tome-steamwitch` 的建角崩潰？**（2026-08-06 使用者實機撞到）
+  `Lua Error: ActorTalents.lua:553: Learning unknown talent: nil`，
+  來自 `data-steamwitch/talents/magic/mysticbirthright.lua:125` 的 `on_learn`
+  去學 `T_SWX_TOUCH_OF_CLOTHO` 而它是 nil。**與本 repo 無關、也與 SDL 無關**
+  （那次啟動用的是自帶 2.0.3）。已查明：三個 `SWX_TOUCH_OF_*` 就定義在同一個檔的
+  第 26/56/87 行，比呼叫它的第 125 行還早，紙上讀起來應該要能用；`tome-zomnibus`
+  沒有夾帶副本、`tome-steamwitch-zh` 只有一個 locale 檔。所以是**你那 45 個 addon 的
+  載入期干擾**，要繼續查只能逐個關 addon 二分。**要不要花這個時間由你決定。**
+
 - **★ 下載 Fall from Heaven（《文明 IV》mod）本體**（2026-08-06 使用者決定）。
   取得後交給 agent 拆包到 `vendor/ffh/`（唯讀、不進版控）。
   預期能拿到兩樣關鍵素材：**原作的 Erebus 世界地圖**（WorldBuilder 存檔是純文字逐格資料，
