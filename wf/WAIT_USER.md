@@ -12,6 +12,15 @@
 
 ## Open
 
+- **★ 下載 Fall from Heaven（《文明 IV》mod）本體**（2026-08-06 使用者決定）。
+  取得後交給 agent 拆包到 `vendor/ffh/`（唯讀、不進版控）。
+  預期能拿到兩樣關鍵素材：**原作的 Erebus 世界地圖**（WorldBuilder 存檔是純文字逐格資料，
+  可機械式轉成 ToME 的 ASCII 大地圖，省掉「畫一張大陸」的全部工作）與
+  **全套遊戲文本**（`Assets/XML/Text/`）。
+  拆包前的預期清單與待辦見 [erebus/09-source-mod-unpack.md](workflows/specs/erebus/09-source-mod-unpack.md)。
+  ⚠️ 在拿到本體之前，[erebus 的世界觀](workflows/specs/erebus/01-world.md)是根據
+  `C:/code/mine/gameplots` 的二手抽取寫的，拿到一手素材後以一手為準。
+
 - **★ 三份設計方案，兩題最關鍵的已拍板（2026-08-03），還剩細節待答**：
   1. ✅ **玩家是誰**（orario §4）：**B 同時代的另一名冒險者**。
   2. ✅ **三構想要不要合併**（orario §8）：**歐拉麗當試驗場**——先在歐拉麗做出 Falna，

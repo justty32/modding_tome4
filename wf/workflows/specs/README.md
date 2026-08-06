@@ -24,6 +24,7 @@ idea → roadmap → spec → plan → feature-dev
 | [歐拉麗完全版 orario-complete](orario-complete-design.md) | 2026-08-01 | 前身 [PLAN-camp-and-isekai §B](../plans/PLAN-camp-and-isekai.md) | 可行性已驗，**卡在 §4「玩家是誰」** |
 | [生產職業 crafting-professions](crafting-professions-design.md) | 2026-08-01 | （直接由使用者構想起） | 可行性已驗，待使用者決定 §8 四題後進 plan |
 | [型月魔術體系 fate-magecraft](fate-magecraft-design.md) | 2026-08-03 | （直接由使用者構想起） | **可行性未驗**（寫於無 `vendor/` 的辦公室機），§11 複驗清單待跑 |
+| [埃瑞布斯 erebus](erebus/README.md) | 2026-08-06 | （使用者指定取材 Fall from Heaven） | **初步規劃，可行性未驗**（同上）。自成新世界地圖；等拆包 FFH 本體後修正 |
 
 > 前三份底層共用同一套機制（見 orario spec §8）。**已於 2026-08-03 拍板方案 3：
 > 歐拉麗當試驗場**——先做 Falna，跑通再抽通用框架。
