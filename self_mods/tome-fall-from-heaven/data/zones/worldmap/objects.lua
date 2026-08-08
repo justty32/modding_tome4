@@ -1,0 +1,1 @@
+-- No random worldmap objects in the first import slice.

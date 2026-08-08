@@ -1,0 +1,1 @@
+-- Reserved for encounter hazards around the beachhead.

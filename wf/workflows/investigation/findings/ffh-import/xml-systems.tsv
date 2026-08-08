@@ -1,0 +1,15 @@
+system	files	bytes	top_files
+<root>	3	32230	GlobalDefinesAlt.xml, GlobalTypes.xml, PythonCallbackDefines.xml
+Art	13	1194228	CIV4ArtDefines_Unit.xml, CIV4ArtDefines_Building.xml, CIV4RouteModelInfos.xml, CIV4ArtDefines_Interface.xml, CIV4ArtDefines_Feature.xml
+Audio	4	2376821	Audio3DScripts.xml, Audio2DScripts.xml, AudioDefines.xml, AudioSoundscapeScripts.xml
+Basicinfos	8	27930	CIV4BasicInfoSchema.xml, CIV4UnitAIInfos.xml, CIV4MemoryInfos.xml, CIV4BasicInfos.xml, CIV4UnitCombatInfos.xml
+Buildings	6	2345095	CIV4BuildingInfos.xml, CIV4PlotLSystem.xml, CIV4CityLSystem.xml, CIV4BuildingClassInfos.xml, CIV4BuildingsSchema.xml
+Civilizations	5	2733241	CIV4LeaderHeadInfos.xml, CIV4CivilizationInfos.xml, CIV4UnitArtStyleTypeInfos.xml, CIV4TraitInfos.xml, CIV4CivilizationsSchema.xml
+Events	3	3551807	CIV4EventInfos.xml, CIV4EventTriggerInfos.xml, CIV4EventSchema.xml
+Gameinfo	24	1727942	CIV4DiplomacyInfos.xml, CIV4CivicInfos.xml, CIV4GameInfoSchema.xml, CIV4HandicapInfo.xml, CIV4EraInfos.xml
+Interface	4	78106	CIV4WorldPickerInfos.xml, CIV4ColorVals.xml, CIV4PlayerColorInfos.xml, CIV4InterfaceModeInfos.xml
+Misc	3	146392	CIV4EffectInfos.xml, CIV4AttachableInfos.xml, CIV4RouteInfos.xml
+Technologies	2	281005	CIV4TechInfos.xml, CIV4TechnologiesSchema.xml
+Terrain	6	678086	CIV4ImprovementInfos.xml, CIV4BonusInfos.xml, CIV4TerrainInfos.xml, CIV4FeatureInfos.xml, CIV4TerrainSchema.xml
+Text	1	7584559	CIV4GameText_FFH2.xml
+Units	13	4069624	CIV4UnitInfos.xml, CIV4PromotionInfos.xml, CIV4SpellInfos.xml, CIV4UnitClassInfos.xml, CIV4FormationInfos.xml

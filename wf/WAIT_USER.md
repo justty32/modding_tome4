@@ -31,14 +31,21 @@
   沒有夾帶副本、`tome-steamwitch-zh` 只有一個 locale 檔。所以是**你那 45 個 addon 的
   載入期干擾**，要繼續查只能逐個關 addon 二分。**要不要花這個時間由你決定。**
 
-- **★ 下載 Fall from Heaven（《文明 IV》mod）本體**（2026-08-06 使用者決定）。
-  取得後交給 agent 拆包到 `vendor/ffh/`（唯讀、不進版控）。
-  預期能拿到兩樣關鍵素材：**原作的 Erebus 世界地圖**（WorldBuilder 存檔是純文字逐格資料，
-  可機械式轉成 ToME 的 ASCII 大地圖，省掉「畫一張大陸」的全部工作）與
-  **全套遊戲文本**（`Assets/XML/Text/`）。
-  拆包前的預期清單與待辦見 [erebus/09-source-mod-unpack.md](workflows/specs/erebus/09-source-mod-unpack.md)。
-  ⚠️ 在拿到本體之前，[erebus 的世界觀](workflows/specs/erebus/01-world.md)是根據
-  `C:/code/mine/gameplots` 的二手抽取寫的，拿到一手素材後以一手為準。
+- **實機看 Fall from Heaven 大地圖與中層 import**（2026-08-08）。
+  已拆 `/home/lorkhan/Downloads/FallfromHeaven2041n.exe`，分析與索引在
+  [ffh-import](workflows/investigation/findings/ffh-import/README.md)。
+  已做 `tome-fall-from-heaven` 第一版：把 Civ4 劇本
+  `Assets/XML/Scenarios/The Black Tower.CivBeyondSwordWBSave` 轉成 ToME 第二張 wilderness 大地圖
+  `Erebus: The Black Tower`，並抽出 9 座城市與 1 個 Lanun 登陸營地資料表。
+  目前 `C` 城市格可進 `fall-from-heaven+city` 原型，`S` 起始格可進
+  `fall-from-heaven+landing-camp` 原型；也有第一版大地圖 AI tick，能讓城市生產 warband、
+  並把 AI 部隊投影成 worldmap marker；
+  部隊朝敵城移動。第一批 FFH DDS unit button 已轉 PNG 並接到地標圖示；
+  3D `.nif` 目前有 manifest，且其中 8 個已有 texture-derived proxy sprite，尚待 renderer 轉成真正 2D sprite。已 `lint`、`verify`、無頭底層生成測試、`probe ffh_ai_step`、
+  `build`，並已 `tools/deploy.sh tome-fall-from-heaven` 到真 home。
+  **要你判斷的是**：大地圖視覺是否像 FFH、地形轉譯是否合理、入口位置是否合適、
+  城市/登陸營地中層原型的空間尺度與氣氛是否對。AI 已驗證載入與生成，
+  但不替你做人眼畫面與遊玩節奏判斷。
 
 - **★ 三份設計方案，兩題最關鍵的已拍板（2026-08-03），還剩細節待答**：
   1. ✅ **玩家是誰**（orario §4）：**B 同時代的另一名冒險者**。
@@ -149,3 +156,14 @@
   `sub_proj/zh_mods/build/` 的 18 個在地化 `.teaa` 都屬「暫存 build，未升格 dist」，
   哪天要一起決定發佈策略。
 
+- **實機確認 Fall from Heaven 大地圖/戰術層雛形**。**已 deploy。**
+  目前 FFH 已能從 Civ4 `The Black Tower` worldbuilder 檔生成 84x52 ToME worldmap，
+  Eyal 入口、9 城、Lanun 登陸營地、城市/營地中層 zone、Civ-style world AI、
+  world unit sprite projection 都已接上。2026-08-08 追加：world unit 已升級為
+  ToME `WorldNPC` actor，遭遇會落到 `fall-from-heaven+skirmish` 戰術場景；
+  無頭 probe 證明 `placed=1 counted=1 actors=1 actor=true`，skirmish 場景生成
+  4 個 FFH proxy 敵人。再下一步已接上 skirmish → world AI 回寫：
+  `player_won` 會移除對應 world unit，probe 證明 `before=1 after=0 removed=true`；
+  `player_retreat` 會保留 world unit，只記錄 retreat log，probe 證明 `before=1 after=1 removed=false`。
+  **要你判斷的是**：FFH 大地圖比例、城市/營地/單位圖標可讀性、NIF texture proxy sprite 能不能先頂著用、
+  以及「撞 world unit 進 skirmish」這個節奏是否符合你想要的三層地圖設計。

@@ -1,0 +1,40 @@
+local Talents = require "engine.interface.ActorTalents"
+
+newEntity{
+    define_as = "FFH_SKIRMISH_RAIDER",
+    type = "humanoid", subtype = "ffh", faction = "enemies",
+    name = "FFH warband raider",
+    display = "w", color = colors.LIGHT_RED,
+    image = "ffh/sprites/nif-proxy/chariot.png",
+    desc = [[A fast raiding detachment projected from the Fall from Heaven strategic layer.]],
+    level_range = {1, nil}, exp_worth = 1,
+    max_life = 36, life_rating = 8, fixed_rating = true,
+    stats = { str = 14, dex = 12, cun = 10, mag = 8, con = 12 },
+    rank = 2,
+    size_category = 3,
+    infravision = 10,
+    body = { INVEN = 10, MAINHAND = 1, OFFHAND = 1, BODY = 1 },
+    combat = { dam = 8, atk = 12, apr = 2, dammod = { str = 0.6 } },
+    autolevel = "warrior",
+    ai = "dumb_talented_simple", ai_state = { talent_in = 2, ai_move = "move_astar" },
+}
+
+newEntity{
+    define_as = "FFH_SKIRMISH_ARCHER",
+    type = "humanoid", subtype = "ffh", faction = "enemies",
+    name = "FFH warband archer",
+    display = "a", color = colors.ORANGE,
+    image = "ffh/sprites/nif-proxy/archer.png",
+    desc = [[An archer proxy built from Fall from Heaven model textures.]],
+    level_range = {1, nil}, exp_worth = 1,
+    max_life = 28, life_rating = 7, fixed_rating = true,
+    stats = { str = 10, dex = 16, cun = 12, mag = 8, con = 10 },
+    rank = 2,
+    size_category = 3,
+    infravision = 10,
+    body = { INVEN = 10, MAINHAND = 1, OFFHAND = 1, BODY = 1 },
+    combat = { dam = 6, atk = 14, apr = 1, dammod = { dex = 0.6 } },
+    autolevel = "rogue",
+    ai = "dumb_talented_simple", ai_state = { talent_in = 2, ai_move = "move_astar" },
+    resolvers.talents{ [Talents.T_SHOOT] = 1 },
+}

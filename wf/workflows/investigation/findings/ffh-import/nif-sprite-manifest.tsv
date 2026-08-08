@@ -1,0 +1,69 @@
+path	size_bytes	nearby_textures	status	proxy_png
+Art/Structures/Buildings/Adularia Chamber/gaurishrine.nif	15235		needs_nif_renderer	
+Art/Structures/Buildings/Dwarven Smithy/GauriFoundry.NIF	36632		needs_nif_renderer	
+Art/Structures/Buildings/Palisade/BoundShape.nif	2150	palisade.dds,wall_01shadow.dds,wood.dds	needs_nif_renderer	
+Art/Structures/Buildings/Palisade/palisade.nif	5946	palisade.dds,wall_01shadow.dds,wood.dds	needs_nif_renderer	
+Art/Structures/Buildings/Palisade/post01_afro.nif	2687	palisade.dds,wall_01shadow.dds,wood.dds	needs_nif_renderer	
+Art/Structures/Buildings/Palisade/wall01_afro.nif	20808	palisade.dds,wall_01shadow.dds,wood.dds	needs_nif_renderer	
+Art/Structures/Buildings/Palisade/wall02_afro.nif	40608	palisade.dds,wall_01shadow.dds,wood.dds	needs_nif_renderer	
+Art/Structures/Buildings/Palisade/wall04_afro.nif	98928	palisade.dds,wall_01shadow.dds,wood.dds	needs_nif_renderer	
+Art/Units/Civs/Balseraphs/Chariot/Chariot_Celtic.nif	149301	Celtic_Chariot_128.dds,Celtic_Chariot_Horse_128.dds,Celtic_Chariot_Rider_128.dds,Orangutan_Adult_F_Hair.dds,Orangutan_Adult_M.dds	texture_proxy_generated	sprites/nif-proxy/chariot.png
+Art/Units/Civs/Calabim/Adept/IncanQuechua.nif	49327	adeptweapons.dds,samurai_128.dds,spy_128.dds	needs_nif_renderer	
+Art/Units/Civs/Calabim/Archmage/Pikeman.nif	96539	archmage_body.dds,archmage_face.dds,coll2.dds,crachat_faiblesse.dds,fx_explosion_toxic_01.dds,fx_explosiontoxic_002a.dds,fx_explosiontoxic_002b.dds,fx_explosiontoxic_002c.dds	needs_nif_renderer	
+Art/Units/Civs/Calabim/Mage/spy.nif	66484	coll2.dds,fx_explosion_toxic_01.dds,fx_explosiontoxic_002a.dds,fx_explosiontoxic_002b.dds,fx_explosiontoxic_002c.dds,fx_explotoxic_002a.dds,fx_explotoxic_002c.dds,fx_explotoxic_002d.dds	texture_proxy_generated	sprites/nif-proxy/mage-spy.png
+Art/Units/Civs/Calabim/Mage/spy_freeze1000.nif	23542	coll2.dds,fx_explosion_toxic_01.dds,fx_explosiontoxic_002a.dds,fx_explosiontoxic_002b.dds,fx_explosiontoxic_002c.dds,fx_explotoxic_002a.dds,fx_explotoxic_002c.dds,fx_explotoxic_002d.dds	needs_nif_renderer	
+Art/Units/Civs/Calabim/Mage/spy_freeze1021.nif	23542	coll2.dds,fx_explosion_toxic_01.dds,fx_explosiontoxic_002a.dds,fx_explosiontoxic_002b.dds,fx_explosiontoxic_002c.dds,fx_explotoxic_002a.dds,fx_explotoxic_002c.dds,fx_explotoxic_002d.dds	needs_nif_renderer	
+Art/Units/Civs/Calabim/Vampire Lord/Unique_Sumerian_Vulture.nif	70203	Vampire Lord.dds,coll2.dds,fx_explosion_toxic_01.dds,fx_explosiontoxic_002a.dds,fx_explosiontoxic_002b.dds,fx_explosiontoxic_002c.dds,fx_explotoxic_002a.dds,fx_explotoxic_002c.dds	texture_proxy_generated	sprites/nif-proxy/vampire-lord.png
+Art/Units/Civs/Elohim/Adept/IncanQuechua.nif	42608	adept Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Archer/archer.nif	68001	archer_128.dds,elohimarcher Kopie.dds	texture_proxy_generated	sprites/nif-proxy/archer.png
+Art/Units/Civs/Elohim/Axeman/Spearman.nif	58209	AO_gear Kopie.dds,Spearman Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Champion/knightstemplar.nif	63439	AO_gear Kopie.dds,Lancer Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Chariot/Chariot_Celtic.nif	134218	AO_gear Kopie.dds,Celtic_Chariot_128.dds,Celtic_Chariot_Horse_128.dds,Celtic_Chariot_Rider_128.dds,Lancer Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Horse Archer/Horsearcher.nif	81254	elohimarcher Kopie.dds,horsearcher-horse.dds,horsearcher_weapons_64.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Horseman/Unique_Byzantine_Cataphract.nif	84764	AO_gear Kopie.dds,Horse.dds,Spearman Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Hunter/Hunter.nif	42414	hunter1 Kopie.dds,settler_child_128.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Longbowman/Unique_Babylon_Bowman.nif	63933	AO_gear Kopie.dds,Elohimarcher Kopie.dds,Unique_Babylon_Bowman_128.dds,Unique_Babylon_Bowman_128_Gloss.dds,Unique_Babylon_Bowman_Arrow_64.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Mage/AncientSpy.nif	37903	Elohimmage1 Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Elohim/Scout/scout.nif	61351	scout Kopie.dds,torch.dds,torch_gloss.dds	needs_nif_renderer	
+Art/Units/Civs/Grigori/Adept/AncientSpy.nif	55835	grigori adept kopie.dds,spy_128.dds	needs_nif_renderer	
+Art/Units/Civs/Grigori/Archmage/AncientSpy.nif	103072	grigori Mage Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Grigori/Mage/AncientSpy.nif	103027	grigori adept Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Illians/Adept/IncanQuechua.nif	71469	barmaid_e.dds,berseker.dds,devout kopie.dds,illianspriest_256.dds,sphere.dds	needs_nif_renderer	
+Art/Units/Civs/Illians/Archmage/ancientspy.nif	108402	devout kopie.dds,sphere.dds	needs_nif_renderer	
+Art/Units/Civs/Illians/Mage/Unique_Sumerian_Vulture.nif	70966	devout kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Kuriotates/Assassin/Scout.nif	51095	MUSTEVALAssassin Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Kuriotates/Beastmaster/Scout.nif	55504	MUSTEVALBeastmaster Kopie.dds,RepentantAngel Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Kuriotates/Hunter/Scout.nif	49391	MUSTEVALHunter Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Kuriotates/Ranger/Scout.nif	43875	MUSTEVALRanger Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Kuriotates/Scout/Scout.nif	37411	MUSTEVALbasic Kopie.dds	needs_nif_renderer	
+Art/Units/Civs/Malakim/Adept/maceman.nif	57149	efreet.dds,head.dds,spy_128.dds	needs_nif_renderer	
+Art/Units/Civs/Malakim/Archmage/AncientSpy.nif	61765	efreet.dds	needs_nif_renderer	
+Art/Units/Civs/Malakim/Mage/grenadier.nif	134399	efreet.dds,grenadier_128.dds	needs_nif_renderer	
+Art/Units/Civs/Malakim/Mage/grenadiergrenade.nif	54930	efreet.dds,grenadier_128.dds	needs_nif_renderer	
+Art/Units/Civs/Mercurians/Seraph/Deathangel.nif	141485	angelwings.dds,angelwingsglow.dds,archangel256.dds,environment_fx.dds,sword.dds	needs_nif_renderer	
+Art/Units/Disciple of Acheron/grenadier.nif	104720	christian_missionary.dds,grenadier_128.dds,lowhood.dds,lowhood_gloss.dds,shoulderpad.dds,shoulderpad_glass.dds,wcape.dds,wcape_gloss.dds	needs_nif_renderer	
+Art/Units/Disciple of Acheron/grenadiergrenade.nif	54930	christian_missionary.dds,grenadier_128.dds,lowhood.dds,lowhood_gloss.dds,shoulderpad.dds,shoulderpad_glass.dds,wcape.dds,wcape_gloss.dds	needs_nif_renderer	
+Art/Units/Druid/Unique_Sumerian_Vulture.nif	86422	druid.dds,druid_tex.dds	needs_nif_renderer	
+Art/Units/Heroes/Avatar of Wrath/Abaddon.nif	57689	AbaddonBase.dds,AbaddonFire1.dds,AbaddonGlow.dds,AbaddonSmoke.dds,Beams.dds,BlackVortexClean.dds,Blast.dds,Bloom.dds	texture_proxy_generated	sprites/nif-proxy/abaddon.png
+Art/Units/Heroes/Avatar of Wrath/AbaddonBirthEffect.nif	37264	AbaddonBase.dds,AbaddonFire1.dds,AbaddonGlow.dds,AbaddonSmoke.dds,Beams.dds,BlackVortexClean.dds,Blast.dds,Bloom.dds	needs_nif_renderer	
+Art/Units/Heroes/Avatar of Wrath/AbaddonDeathEffect.nif	74380	AbaddonBase.dds,AbaddonFire1.dds,AbaddonGlow.dds,AbaddonSmoke.dds,Beams.dds,BlackVortexClean.dds,Blast.dds,Bloom.dds	needs_nif_renderer	
+Art/Units/Heroes/Avatar of Wrath/AbaddonDevastateEffect.nif	58392	AbaddonBase.dds,AbaddonFire1.dds,AbaddonGlow.dds,AbaddonSmoke.dds,Beams.dds,BlackVortexClean.dds,Blast.dds,Bloom.dds	needs_nif_renderer	
+Art/Units/Heroes/Avatar of Wrath/AbaddonMeleeFire.nif	7741	AbaddonBase.dds,AbaddonFire1.dds,AbaddonGlow.dds,AbaddonSmoke.dds,Beams.dds,BlackVortexClean.dds,Blast.dds,Bloom.dds	needs_nif_renderer	
+Art/Units/Religions/Ashen Veil/Beast of Agares/panther.nif	178323	beast Kopie.dds,beastgloss Kopie.dds,environment_fx_greymetal.dds	texture_proxy_generated	sprites/nif-proxy/beast-of-agares.png
+Art/Units/Religions/Ashen Veil/high priest/grenadier.nif	112991	Copy of greatprophet_128.dds,epic_wpn_warlock_st.dds,greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Ashen Veil/high priest/grenadiergrenade.nif	54930	Copy of greatprophet_128.dds,epic_wpn_warlock_st.dds,greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Ashen Veil/high priest/spearman.nif	118833	Copy of greatprophet_128.dds,epic_wpn_warlock_st.dds,greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Empyrean/high priest/Pikeman.nif	173399	Prodromoi_128.dds,epic_wpn_eldritch_st.dds,fx_fire_glow_bright.dds,fx_shooting_cone_02.dds,greatprophet_128.dds,greatprophet_glow.dds,greatprophet_white_glow.dds,orangestreak2.dds	needs_nif_renderer	
+Art/Units/Religions/Empyrean/high priest/mid_thane1_sum.nif	25762	Prodromoi_128.dds,epic_wpn_eldritch_st.dds,fx_fire_glow_bright.dds,fx_shooting_cone_02.dds,greatprophet_128.dds,greatprophet_glow.dds,greatprophet_white_glow.dds,orangestreak2.dds	needs_nif_renderer	
+Art/Units/Religions/Empyrean/priest/Pikeman.nif	147702	Prodromoi_128.dds,epic_wpn_eldritch_st.dds,greatprophet_128.dds,greatprophet_glow.dds,priest_empy.dds,priest_empy_sumerian.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Fellowship of Leaves/high priest/ancientspy.nif	102726	Priest Kopie.dds,epic_wpn_wizard_st.dds,fx_fire_glow_green.dds,greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Fellowship of Leaves/priest/ancientspy.nif	66929	Priest Kopie.dds,greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Octopus Overlords/high priest/spearman.nif	99735	barekehead.dds,bigarc2.tga,elecglow.tga,epic_wpn_spiritmaster_st.dds,greatprophet_128.dds,greatprophet_glow.dds,plasrng2.tga,sim2.dds	needs_nif_renderer	
+Art/Units/Religions/Octopus Overlords/priest/spearman.nif	40494	barekehead.dds,greatprophet_128.dds,greatprophet_glow.dds,sim2.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Order/high priest/spearman.nif	102151	epic_wpn_valkyrie_spear.dds,fx_blingbling_001.dds,fx_explosion_glow_01.dds,fx_muzzleblast002.dds,greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Runes of Kilmorph/High Priest/Dwarf/Spearman.nif	109216	championweapon_hibmauler_staff01.dds,greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Runes of Kilmorph/High Priest/Spearman.nif	148363	championweapon_hibmauler_staff01.dds,greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Religions/Runes of Kilmorph/Priest/Dwarf/Spearman.nif	57002	greatprophet_128.dds,greatprophet_glow.dds,spearman_128.dds	needs_nif_renderer	
+Art/Units/Scorpion/scorp.nif	23363	ScorpionBase.dds	texture_proxy_generated	sprites/nif-proxy/scorpion.png
+Art/Units/Son of the Inferno/grenadier.nif	113389	christian_missionary.dds,grenadier_128.dds,lowhood.dds,lowhood_gloss.dds,shoulderpad.dds,shoulderpad_glass.dds,wcape.dds,wcape_gloss.dds	texture_proxy_generated	sprites/nif-proxy/son-of-the-inferno.png
+Art/Units/Son of the Inferno/grenadiergrenade.nif	54930	christian_missionary.dds,grenadier_128.dds,lowhood.dds,lowhood_gloss.dds,shoulderpad.dds,shoulderpad_glass.dds,wcape.dds,wcape_gloss.dds	needs_nif_renderer	

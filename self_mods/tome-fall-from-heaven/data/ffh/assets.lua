@@ -1,0 +1,25 @@
+return {
+    icons = {
+        city_sheaim = "ffh/icons/proxy/city-sheaim.png",
+        city_clan = "ffh/icons/proxy/city-clan.png",
+        landing_camp = "ffh/icons/proxy/landing-camp.png",
+        warband = "ffh/icons/proxy/warband.png",
+        archer = "ffh/icons/units/archer-elohim.png",
+        beast = "ffh/icons/units/beast-of-agares.png",
+        inferno = "ffh/icons/units/son-of-the-inferno.png",
+        scorpion = "ffh/icons/units/scorpion.png",
+        vampire = "ffh/icons/units/vampire.png",
+        wrath = "ffh/icons/units/wrath.png",
+        fallen_angel = "ffh/icons/proxy/fallen-angel.png",
+    },
+    sprites = {
+        abaddon = "ffh/sprites/nif-proxy/abaddon.png",
+        archer = "ffh/sprites/nif-proxy/archer.png",
+        beast = "ffh/sprites/nif-proxy/beast-of-agares.png",
+        chariot = "ffh/sprites/nif-proxy/chariot.png",
+        inferno = "ffh/sprites/nif-proxy/son-of-the-inferno.png",
+        mage_spy = "ffh/sprites/nif-proxy/mage-spy.png",
+        scorpion = "ffh/sprites/nif-proxy/scorpion.png",
+        vampire_lord = "ffh/sprites/nif-proxy/vampire-lord.png",
+    },
+}

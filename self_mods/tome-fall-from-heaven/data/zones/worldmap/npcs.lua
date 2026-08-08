@@ -1,0 +1,1 @@
+-- No random worldmap NPCs in the first import slice.

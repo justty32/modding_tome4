@@ -1,0 +1,1954 @@
+category	ext	size	path
+art_media	.bmp	12344	icon.bmp
+text_xml_python	.rtf	71105	Readme 041.rtf
+tools_binaries	.xlsm	3463487	FfH Editor.xlsm
+tools_binaries	.lnk	2273	Fall from Heaven.lnk
+text_xml_python	.ini	763	Fall from Heaven 2.ini
+other	.thm	216	Resource/Civ4.thm
+maps_scenarios	.civbeyondswordwbsave	86144	PrivateMaps/Fall From Heaven II Scenarios.CivBeyondSwordWBSave
+maps_scenarios	.py	136863	PrivateMaps/Erebus.py
+art_media	.fpk	347488788	Assets/Pak0.FPK
+tools_binaries	.dll	5312512	Assets/CvGameCoreDLL.dll
+text_xml_python	.py	14125	Assets/python/Trophies.py
+text_xml_python	.py	150114	Assets/python/ScenarioFunctions.py
+text_xml_python	.py	6859	Assets/python/OOSLogger.py
+text_xml_python	.py	16992	Assets/python/CvUtil.py
+text_xml_python	.py	247838	Assets/python/CvGameUtils.py
+text_xml_python	.py	141217	Assets/python/CvEventManager.py
+text_xml_python	.py	42493	Assets/python/CvAdvisorUtils.py
+text_xml_python	.py	82384	Assets/python/CustomFunctions.py
+text_xml_python	.xml	3462	Assets/XML/PythonCallbackDefines.xml
+text_xml_python	.xml	13882	Assets/XML/GlobalTypes.xml
+text_xml_python	.xml	14886	Assets/XML/GlobalDefinesAlt.xml
+art_media	.psd	94889	Assets/Art/Interface/Buttons/buttontemplate.psd
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Wrath.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Warrior Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Vampire.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Vampire Lord.dds
+art_media	.dds	4224	Assets/Art/Interface/Buttons/Units/Son of the Inferno.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Scout Kuriotates.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Scout Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Scorpion.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Ranger Kuriotates.dds
+art_media	.dds	4224	Assets/Art/Interface/Buttons/Units/Mage Malakim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Mage Illians.dds
+art_media	.dds	4224	Assets/Art/Interface/Buttons/Units/Mage Grigori.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Mage Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Mage Calabim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Longbowman Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Hunter Kuriotates.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Hunter Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Horseman Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Horsearcher Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/High Priest of the Veil.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/High Priest of the Overlords.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/High Priest of the Order.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/High Priest of the Empyrean.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/High Priest of Leaves.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/High Priest of Kilmorph.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Druid.dds
+art_media	.dds	4224	Assets/Art/Interface/Buttons/Units/Disciple of Acheron.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Chariot Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Champion Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Beastmaster Kuriotates.dds
+art_media	.dds	4224	Assets/Art/Interface/Buttons/Units/Beast of Agares.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Axeman Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Assassin Kuriotates.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Archmage Malakim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Archmage Illians.dds
+art_media	.dds	4224	Assets/Art/Interface/Buttons/Units/Archmage Grigori.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Archmage Calabim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Archer Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Adept Malakim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Adept Illians.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Adept Grigori.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Adept Elohim.dds
+art_media	.dds	2176	Assets/Art/Interface/Buttons/Units/Adept Calabim.dds
+art_media	.dds	524416	Assets/Art/Interface/Main Menu/Fallen Angel/carre.dds
+art_media	.bik	159428	Assets/Art/Movies/Wonder/Tower of the Elements.bik
+art_media	.bik	149756	Assets/Art/Movies/Wonder/Tower of Necromancy.bik
+art_media	.bik	150436	Assets/Art/Movies/Wonder/Tower of Eyes.bik
+art_media	.bik	173724	Assets/Art/Movies/Wonder/Tower of Divination.bik
+art_media	.bik	234792	Assets/Art/Movies/Wonder/Tower of Complacency.bik
+art_media	.bik	164556	Assets/Art/Movies/Wonder/Tower of Alteration.bik
+art_media	.bik	289272	Assets/Art/Movies/Wonder/Temple of Temporence.bik
+art_media	.bik	574456	Assets/Art/Movies/Wonder/Sylivens Perfect Lyre.bik
+art_media	.bik	518780	Assets/Art/Movies/Wonder/Soul Forge.bik
+art_media	.bik	195724	Assets/Art/Movies/Wonder/Shrine of the Champion.bik
+art_media	.bik	321392	Assets/Art/Movies/Wonder/Prophecy of Ragnarok.bik
+art_media	.bik	381440	Assets/Art/Movies/Wonder/National Epic.bik
+art_media	.bik	403004	Assets/Art/Movies/Wonder/Mokkas Cauldron.bik
+art_media	.bik	377020	Assets/Art/Movies/Wonder/Mines of Galdur.bik
+art_media	.bik	290460	Assets/Art/Movies/Wonder/Infernal Grimoire.bik
+art_media	.bik	391496	Assets/Art/Movies/Wonder/Heroic Epic.bik
+art_media	.bik	369280	Assets/Art/Movies/Wonder/Hall of Kings.bik
+art_media	.bik	262684	Assets/Art/Movies/Wonder/Great Lighthouse.bik
+art_media	.bik	241972	Assets/Art/Movies/Wonder/Grand Menagerie.bik
+art_media	.bik	267392	Assets/Art/Movies/Wonder/Form of the Titan.bik
+art_media	.bik	110380	Assets/Art/Movies/Wonder/Forbidden Palace.bik
+art_media	.bik	224044	Assets/Art/Movies/Wonder/Crown of Akharien.bik
+art_media	.bik	562908	Assets/Art/Movies/Wonder/Celestial Compass.bik
+art_media	.bik	405228	Assets/Art/Movies/Wonder/Aquae Sucellus.bik
+art_media	.bik	372108	Assets/Art/Movies/Victory/ffh2_mastery.bik
+art_media	.bik	380016	Assets/Art/Movies/Victory/ffh2_dominion.bik
+art_media	.bik	615528	Assets/Art/Movies/Victory/ffh2_culture.bik
+art_media	.bik	254512	Assets/Art/Movies/Victory/ffh2_conquest.bik
+art_media	.bik	437988	Assets/Art/Movies/Victory/ffh2_altar.bik
+art_media	.bik	5914864	Assets/Art/Movies/Religion/Empyrean.bik
+art_media	.bik	3011272	Assets/Art/Movies/Religion/Council_of_Esus.bik
+art_media	.bik	517620	Assets/Art/Movies/Projects/Rites of Oghma.bik
+art_media	.bik	232940	Assets/Art/Movies/Projects/Purge the Unfaithful.bik
+art_media	.bik	265380	Assets/Art/Movies/Projects/Natures Revolt.bik
+art_media	.bik	2874716	Assets/Art/Movies/Intros/intro.bik
+art_media	.dds	1398228	Assets/Art/Movies/Religion/taoism/Taoism_DIFF.dds
+art_media	.dds	1398228	Assets/Art/Movies/Religion/judaism/Judaism_DIFF.dds
+art_media	.dds	1398228	Assets/Art/Movies/Religion/islam/Islam_DIFF.dds
+art_media	.dds	2796332	Assets/Art/Movies/Religion/christianity/WallAndFloor_1024.dds
+art_media	.dds	349652	Assets/Art/Movies/Religion/buddhism/Buddha_ENV_Mask.dds
+art_media	.dds	1398228	Assets/Art/Movies/Religion/buddhism/Buddha_DIFF.dds
+art_media	.dds	1398228	Assets/Art/Movies/Religion/Confucianism/Confucianism_DIFF.dds
+art_media	.dds	174928	Assets/Art/Structures/Buildings/Palisade/wood.dds
+art_media	.dds	11064	Assets/Art/Structures/Buildings/Palisade/wall_01shadow.dds
+art_media	.nif	98928	Assets/Art/Structures/Buildings/Palisade/wall04_afro.nif
+art_media	.nif	40608	Assets/Art/Structures/Buildings/Palisade/wall02_afro.nif
+art_media	.nif	20808	Assets/Art/Structures/Buildings/Palisade/wall01_afro.nif
+art_media	.nif	2687	Assets/Art/Structures/Buildings/Palisade/post01_afro.nif
+art_media	.nif	5946	Assets/Art/Structures/Buildings/Palisade/palisade.nif
+art_media	.dds	65664	Assets/Art/Structures/Buildings/Palisade/palisade.dds
+art_media	.nif	2150	Assets/Art/Structures/Buildings/Palisade/BoundShape.nif
+art_media	.nif	36632	Assets/Art/Structures/Buildings/Dwarven Smithy/GauriFoundry.NIF
+art_media	.nif	15235	Assets/Art/Structures/Buildings/Adularia Chamber/gaurishrine.nif
+art_media	.kf	20276	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionWalk.kf
+art_media	.kf	18239	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionMelee2.kf
+art_media	.kf	25152	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionMelee1.kf
+art_media	.kf	14178	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionIdleMelee2.kf
+art_media	.kf	14178	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionIdleMelee1.kf
+art_media	.kf	18502	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionIdle.kf
+art_media	.kf	22545	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionHurt2.kf
+art_media	.kf	22545	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionHurt1.kf
+art_media	.kf	14178	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionFortify2.kf
+art_media	.kf	14178	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionFortify1.kf
+art_media	.kf	22578	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionFidget2.kf
+art_media	.kf	24034	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionFidget1.kf
+art_media	.kf	6662	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionDieFade2.kf
+art_media	.kf	6662	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionDieFade1.kf
+art_media	.kf	20060	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionDie2.kf
+art_media	.kf	20060	Assets/Art/Units/Scorpion/scorp_Bip01_ScorpionDie1.kf
+art_media	.nif	23363	Assets/Art/Units/Scorpion/scorp.nif
+art_media	.kfm	2442	Assets/Art/Units/Scorpion/scorp.kfm
+art_media	.dds	22000	Assets/Art/Units/Scorpion/ScorpionBase.dds
+art_media	.dds	65664	Assets/Art/Units/Druid/druid_tex.dds
+art_media	.dds	4224	Assets/Art/Units/Druid/druid.dds
+art_media	.nif	86422	Assets/Art/Units/Druid/Unique_Sumerian_Vulture.nif
+other	.db	31744	Assets/Art/Units/Religions/Thumbs.db
+art_media	.nif	113389	Assets/Art/Units/Son of the Inferno/grenadier.nif
+art_media	.dds	16512	Assets/Art/Units/Son of the Inferno/christian_missionary.dds
+art_media	.dds	2176	Assets/Art/Units/Son of the Inferno/wcape_gloss.dds
+art_media	.dds	8320	Assets/Art/Units/Son of the Inferno/wcape.dds
+art_media	.dds	4224	Assets/Art/Units/Son of the Inferno/shoulderpad.dds
+art_media	.dds	4224	Assets/Art/Units/Son of the Inferno/lowhood.dds
+art_media	.kf	1255	Assets/Art/Units/Son of the Inferno/grenadiergrenade_md_grenaderun.kf
+art_media	.kf	1336	Assets/Art/Units/Son of the Inferno/grenadiergrenade_md_grenade_explode.kf
+art_media	.nif	54930	Assets/Art/Units/Son of the Inferno/grenadiergrenade.nif
+art_media	.kfm	210	Assets/Art/Units/Son of the Inferno/grenadiergrenade.kfm
+art_media	.kf	962	Assets/Art/Units/Son of the Inferno/grenadier_md_xfadeout.kf
+art_media	.kf	1027	Assets/Art/Units/Son of the Inferno/grenadier_md_xfadein.kf
+art_media	.kf	8501	Assets/Art/Units/Son of the Inferno/grenadier_md_strikeb.kf
+art_media	.kf	8624	Assets/Art/Units/Son of the Inferno/grenadier_md_strikea.kf
+art_media	.kf	8562	Assets/Art/Units/Son of the Inferno/grenadier_md_run.kf
+art_media	.kf	8662	Assets/Art/Units/Son of the Inferno/grenadier_md_rangedstrike.kf
+art_media	.kf	8377	Assets/Art/Units/Son of the Inferno/grenadier_md_rangedreturnb.kf
+art_media	.kf	8471	Assets/Art/Units/Son of the Inferno/grenadier_md_rangedreturna.kf
+art_media	.kf	5803	Assets/Art/Units/Son of the Inferno/grenadier_md_rangeddie_fade.kf
+art_media	.kf	13947	Assets/Art/Units/Son of the Inferno/grenadier_md_rangeddie.kf
+art_media	.kf	22600	Assets/Art/Units/Son of the Inferno/grenadier_md_ranged_idle.kf
+art_media	.kf	7977	Assets/Art/Units/Son of the Inferno/grenadier_md_ranged_fortify.kf
+art_media	.kf	23431	Assets/Art/Units/Son of the Inferno/grenadier_md_idle.kf
+art_media	.kf	8770	Assets/Art/Units/Son of the Inferno/grenadier_md_hurtb.kf
+art_media	.kf	8599	Assets/Art/Units/Son of the Inferno/grenadier_md_hurta.kf
+art_media	.kf	11143	Assets/Art/Units/Son of the Inferno/grenadier_md_heal.kf
+art_media	.kf	17016	Assets/Art/Units/Son of the Inferno/grenadier_md_fortifyb_idle.kf
+art_media	.kf	8429	Assets/Art/Units/Son of the Inferno/grenadier_md_fortifyb.kf
+art_media	.kf	15684	Assets/Art/Units/Son of the Inferno/grenadier_md_fortifya_idle.kf
+art_media	.kf	7813	Assets/Art/Units/Son of the Inferno/grenadier_md_fortifya.kf
+art_media	.kf	17141	Assets/Art/Units/Son of the Inferno/grenadier_md_fidgetb.kf
+art_media	.kf	16626	Assets/Art/Units/Son of the Inferno/grenadier_md_fidgeta.kf
+art_media	.kf	5834	Assets/Art/Units/Son of the Inferno/grenadier_md_dieb_fade.kf
+art_media	.kf	11158	Assets/Art/Units/Son of the Inferno/grenadier_md_dieb.kf
+art_media	.kf	5834	Assets/Art/Units/Son of the Inferno/grenadier_md_diea_fade.kf
+art_media	.kf	14872	Assets/Art/Units/Son of the Inferno/grenadier_md_diea.kf
+art_media	.dds	16512	Assets/Art/Units/Son of the Inferno/grenadier_128.dds
+art_media	.kfm	5550	Assets/Art/Units/Son of the Inferno/grenadier.kfm
+art_media	.dds	4224	Assets/Art/Units/Son of the Inferno/shoulderpad_glass.dds
+art_media	.dds	4224	Assets/Art/Units/Son of the Inferno/lowhood_gloss.dds
+art_media	.dds	2176	Assets/Art/Units/Disciple of Acheron/wcape_gloss.dds
+art_media	.dds	8320	Assets/Art/Units/Disciple of Acheron/wcape.dds
+art_media	.dds	4224	Assets/Art/Units/Disciple of Acheron/shoulderpad.dds
+art_media	.dds	4224	Assets/Art/Units/Disciple of Acheron/lowhood.dds
+art_media	.nif	104720	Assets/Art/Units/Disciple of Acheron/grenadier.nif
+art_media	.dds	21632	Assets/Art/Units/Disciple of Acheron/christian_missionary.dds
+art_media	.kf	1255	Assets/Art/Units/Disciple of Acheron/grenadiergrenade_md_grenaderun.kf
+art_media	.kf	1336	Assets/Art/Units/Disciple of Acheron/grenadiergrenade_md_grenade_explode.kf
+art_media	.nif	54930	Assets/Art/Units/Disciple of Acheron/grenadiergrenade.nif
+art_media	.kfm	210	Assets/Art/Units/Disciple of Acheron/grenadiergrenade.kfm
+art_media	.kf	962	Assets/Art/Units/Disciple of Acheron/grenadier_md_xfadeout.kf
+art_media	.kf	1027	Assets/Art/Units/Disciple of Acheron/grenadier_md_xfadein.kf
+art_media	.kf	8501	Assets/Art/Units/Disciple of Acheron/grenadier_md_strikeb.kf
+art_media	.kf	8624	Assets/Art/Units/Disciple of Acheron/grenadier_md_strikea.kf
+art_media	.kf	8562	Assets/Art/Units/Disciple of Acheron/grenadier_md_run.kf
+art_media	.kf	8662	Assets/Art/Units/Disciple of Acheron/grenadier_md_rangedstrike.kf
+art_media	.kf	8377	Assets/Art/Units/Disciple of Acheron/grenadier_md_rangedreturnb.kf
+art_media	.kf	8471	Assets/Art/Units/Disciple of Acheron/grenadier_md_rangedreturna.kf
+art_media	.kf	5803	Assets/Art/Units/Disciple of Acheron/grenadier_md_rangeddie_fade.kf
+art_media	.kf	13947	Assets/Art/Units/Disciple of Acheron/grenadier_md_rangeddie.kf
+art_media	.kf	22600	Assets/Art/Units/Disciple of Acheron/grenadier_md_ranged_idle.kf
+art_media	.kf	7977	Assets/Art/Units/Disciple of Acheron/grenadier_md_ranged_fortify.kf
+art_media	.kf	23431	Assets/Art/Units/Disciple of Acheron/grenadier_md_idle.kf
+art_media	.kf	8770	Assets/Art/Units/Disciple of Acheron/grenadier_md_hurtb.kf
+art_media	.kf	8599	Assets/Art/Units/Disciple of Acheron/grenadier_md_hurta.kf
+art_media	.kf	11143	Assets/Art/Units/Disciple of Acheron/grenadier_md_heal.kf
+art_media	.kf	17016	Assets/Art/Units/Disciple of Acheron/grenadier_md_fortifyb_idle.kf
+art_media	.kf	8429	Assets/Art/Units/Disciple of Acheron/grenadier_md_fortifyb.kf
+art_media	.kf	15684	Assets/Art/Units/Disciple of Acheron/grenadier_md_fortifya_idle.kf
+art_media	.kf	7813	Assets/Art/Units/Disciple of Acheron/grenadier_md_fortifya.kf
+art_media	.kf	17141	Assets/Art/Units/Disciple of Acheron/grenadier_md_fidgetb.kf
+art_media	.kf	16626	Assets/Art/Units/Disciple of Acheron/grenadier_md_fidgeta.kf
+art_media	.kf	5834	Assets/Art/Units/Disciple of Acheron/grenadier_md_dieb_fade.kf
+art_media	.kf	11158	Assets/Art/Units/Disciple of Acheron/grenadier_md_dieb.kf
+art_media	.kf	5834	Assets/Art/Units/Disciple of Acheron/grenadier_md_diea_fade.kf
+art_media	.kf	14872	Assets/Art/Units/Disciple of Acheron/grenadier_md_diea.kf
+art_media	.dds	16512	Assets/Art/Units/Disciple of Acheron/grenadier_128.dds
+art_media	.kfm	5550	Assets/Art/Units/Disciple of Acheron/grenadier.kfm
+art_media	.dds	4224	Assets/Art/Units/Disciple of Acheron/shoulderpad_glass.dds
+art_media	.dds	4224	Assets/Art/Units/Disciple of Acheron/lowhood_gloss.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Balseraphs/Chariot/Orangutan_Adult_M.dds
+art_media	.dds	87536	Assets/Art/Units/Civs/Balseraphs/Chariot/Orangutan_Adult_F_Hair.dds
+art_media	.nif	149301	Assets/Art/Units/Civs/Balseraphs/Chariot/Chariot_Celtic.nif
+art_media	.dds	22000	Assets/Art/Units/Civs/Balseraphs/Chariot/Celtic_Chariot_Rider_128.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Balseraphs/Chariot/Celtic_Chariot_Horse_128.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Balseraphs/Chariot/Celtic_Chariot_128.dds
+art_media	.dds	4224	Assets/Art/Units/Civs/Elohim/Scout/torch_gloss.dds
+art_media	.dds	4224	Assets/Art/Units/Civs/Elohim/Scout/torch.dds
+art_media	.nif	61351	Assets/Art/Units/Civs/Elohim/Scout/scout.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Scout/scout Kopie.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Mage/Elohimmage1 Kopie.dds
+art_media	.nif	37903	Assets/Art/Units/Civs/Elohim/Mage/AncientSpy.nif
+art_media	.dds	1552	Assets/Art/Units/Civs/Elohim/Longbowman/Unique_Babylon_Bowman_Arrow_64.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Elohim/Longbowman/Unique_Babylon_Bowman_128_Gloss.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Elohim/Longbowman/Unique_Babylon_Bowman_128.dds
+art_media	.nif	63933	Assets/Art/Units/Civs/Elohim/Longbowman/Unique_Babylon_Bowman.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Longbowman/Elohimarcher Kopie.dds
+art_media	.dds	87508	Assets/Art/Units/Civs/Elohim/Longbowman/AO_gear Kopie.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Elohim/Hunter/settler_child_128.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Hunter/hunter1 Kopie.dds
+art_media	.nif	42414	Assets/Art/Units/Civs/Elohim/Hunter/Hunter.nif
+art_media	.dds	5248	Assets/Art/Units/Civs/Elohim/Horse Archer/horsearcher_weapons_64.dds
+art_media	.dds	87508	Assets/Art/Units/Civs/Elohim/Horse Archer/horsearcher-horse.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Horse Archer/elohimarcher Kopie.dds
+art_media	.nif	81254	Assets/Art/Units/Civs/Elohim/Horse Archer/Horsearcher.nif
+art_media	.nif	63439	Assets/Art/Units/Civs/Elohim/Champion/knightstemplar.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Champion/Lancer Kopie.dds
+art_media	.dds	87508	Assets/Art/Units/Civs/Elohim/Champion/AO_gear Kopie.dds
+art_media	.nif	84764	Assets/Art/Units/Civs/Elohim/Horseman/Unique_Byzantine_Cataphract.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Horseman/Horse.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Horseman/Spearman Kopie.dds
+art_media	.dds	87508	Assets/Art/Units/Civs/Elohim/Horseman/AO_gear Kopie.dds
+art_media	.nif	58209	Assets/Art/Units/Civs/Elohim/Axeman/Spearman.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Axeman/Spearman Kopie.dds
+art_media	.dds	87508	Assets/Art/Units/Civs/Elohim/Axeman/AO_gear Kopie.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Archer/elohimarcher Kopie.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Elohim/Archer/archer_128.dds
+art_media	.nif	68001	Assets/Art/Units/Civs/Elohim/Archer/archer.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Adept/adept Kopie.dds
+art_media	.nif	42608	Assets/Art/Units/Civs/Elohim/Adept/IncanQuechua.nif
+art_media	.nif	134218	Assets/Art/Units/Civs/Elohim/Chariot/Chariot_Celtic.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Elohim/Chariot/Lancer Kopie.dds
+art_media	.dds	87508	Assets/Art/Units/Civs/Elohim/Chariot/AO_gear Kopie.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Elohim/Chariot/Celtic_Chariot_Rider_128.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Elohim/Chariot/Celtic_Chariot_Horse_128.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Elohim/Chariot/Celtic_Chariot_128.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Calabim/Vampire Lord/swordsman_128.dds
+art_media	.dds	262272	Assets/Art/Units/Civs/Calabim/Vampire Lord/coll2.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/Vampire Lord.dds
+art_media	.nif	70203	Assets/Art/Units/Civs/Calabim/Vampire Lord/Unique_Sumerian_Vulture.nif
+other	.db	47104	Assets/Art/Units/Civs/Calabim/Vampire Lord/Thumbs.db
+art_media	.dds	5616	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_toxicswirl_02b.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_toxicswirl_02.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_toxicswirl_01b.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_toxicswirl_01.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_toxic_03b.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_spark_toxic_002.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_explotoxic_002d.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_explotoxic_002c.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_explotoxic_002a.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_explosiontoxic_002c.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_explosiontoxic_002b.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_explosiontoxic_002a.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Vampire Lord/fx_explosion_toxic_01.dds
+art_media	.kf	844	Assets/Art/Units/Civs/Calabim/Mage/spy_md_xfadeout.kf
+art_media	.kf	889	Assets/Art/Units/Civs/Calabim/Mage/spy_md_xfadein.kf
+art_media	.kf	14146	Assets/Art/Units/Civs/Calabim/Mage/spy_md_surrender.kf
+art_media	.kf	8713	Assets/Art/Units/Civs/Calabim/Mage/spy_md_run.kf
+art_media	.kf	53983	Assets/Art/Units/Civs/Calabim/Mage/spy_md_idle.kf
+art_media	.kf	39129	Assets/Art/Units/Civs/Calabim/Mage/spy_md_fortify_idle.kf
+art_media	.kf	7304	Assets/Art/Units/Civs/Calabim/Mage/spy_md_fortify.kf
+art_media	.kf	35626	Assets/Art/Units/Civs/Calabim/Mage/spy_md_fidget.kf
+art_media	.kf	37584	Assets/Art/Units/Civs/Calabim/Mage/spy_md_activateb.kf
+art_media	.kf	29020	Assets/Art/Units/Civs/Calabim/Mage/spy_md_activatea.kf
+art_media	.nif	23542	Assets/Art/Units/Civs/Calabim/Mage/spy_freeze1021.nif
+art_media	.nif	23542	Assets/Art/Units/Civs/Calabim/Mage/spy_freeze1000.nif
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/spy_128.dds
+art_media	.nif	66484	Assets/Art/Units/Civs/Calabim/Mage/spy.nif
+art_media	.kfm	860	Assets/Art/Units/Civs/Calabim/Mage/spy.kfm
+art_media	.dds	262272	Assets/Art/Units/Civs/Calabim/Mage/ski2.dds
+other	.db	8192	Assets/Art/Units/Civs/Calabim/Mage/Thumbs.db
+art_media	.dds	5616	Assets/Art/Units/Civs/Calabim/Mage/fx_toxicswirl_02b.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Mage/fx_toxicswirl_02.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Mage/fx_toxicswirl_01b.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Mage/fx_toxicswirl_01.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Mage/fx_toxic_03b.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/fx_spark_toxic_002.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/fx_explotoxic_002d.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/fx_explotoxic_002c.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/fx_explotoxic_002a.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/fx_explosiontoxic_002c.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/fx_explosiontoxic_002b.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/fx_explosiontoxic_002a.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Mage/fx_explosion_toxic_01.dds
+art_media	.dds	87536	Assets/Art/Units/Civs/Calabim/Mage/coll2.dds
+art_media	.dds	262272	Assets/Art/Units/Civs/Calabim/Archmage/ski2.dds
+art_media	.dds	5616	Assets/Art/Units/Civs/Calabim/Archmage/fx_toxicswirl_02b.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Archmage/fx_toxicswirl_02.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Archmage/fx_toxicswirl_01b.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Archmage/fx_toxicswirl_01.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Archmage/fx_toxic_03b.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/fx_spark_toxic_002.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/fx_explotoxic_002d.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/fx_explotoxic_002c.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/fx_explotoxic_002a.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/fx_explosiontoxic_002c.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/fx_explosiontoxic_002b.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/fx_explosiontoxic_002a.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/fx_explosion_toxic_01.dds
+art_media	.dds	5616	Assets/Art/Units/Civs/Calabim/Archmage/crachat_faiblesse.dds
+art_media	.dds	87536	Assets/Art/Units/Civs/Calabim/Archmage/coll2.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/archmage_face.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Archmage/archmage_body.dds
+other	.db	67584	Assets/Art/Units/Civs/Calabim/Archmage/Thumbs.db
+art_media	.nif	96539	Assets/Art/Units/Civs/Calabim/Archmage/Pikeman.nif
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Adept/spy_128.dds
+art_media	.dds	16512	Assets/Art/Units/Civs/Calabim/Adept/samurai_128.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Calabim/Adept/adeptweapons.dds
+other	.db	31232	Assets/Art/Units/Civs/Calabim/Adept/Thumbs.db
+art_media	.nif	49327	Assets/Art/Units/Civs/Calabim/Adept/IncanQuechua.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Grigori/Archmage/grigori Mage Kopie.dds
+art_media	.nif	103072	Assets/Art/Units/Civs/Grigori/Archmage/AncientSpy.nif
+art_media	.nif	103027	Assets/Art/Units/Civs/Grigori/Mage/AncientSpy.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Grigori/Mage/grigori adept Kopie.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Grigori/Adept/spy_128.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Grigori/Adept/grigori adept kopie.dds
+other	.db	17920	Assets/Art/Units/Civs/Grigori/Adept/Thumbs.db
+art_media	.nif	55835	Assets/Art/Units/Civs/Grigori/Adept/AncientSpy.nif
+art_media	.dds	262272	Assets/Art/Units/Civs/Illians/Mage/devout kopie.dds
+art_media	.nif	70966	Assets/Art/Units/Civs/Illians/Mage/Unique_Sumerian_Vulture.nif
+art_media	.dds	262272	Assets/Art/Units/Civs/Illians/Archmage/devout kopie.dds
+art_media	.nif	108402	Assets/Art/Units/Civs/Illians/Archmage/ancientspy.nif
+art_media	.dds	22000	Assets/Art/Units/Civs/Illians/Archmage/sphere.dds
+art_media	.dds	22000	Assets/Art/Units/Civs/Illians/Adept/sphere.dds
+art_media	.dds	87536	Assets/Art/Units/Civs/Illians/Adept/illianspriest_256.dds
+art_media	.dds	262272	Assets/Art/Units/Civs/Illians/Adept/devout kopie.dds
+art_media	.dds	87536	Assets/Art/Units/Civs/Illians/Adept/berseker.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Illians/Adept/barmaid_e.dds
+other	.db	30208	Assets/Art/Units/Civs/Illians/Adept/Thumbs.db
+art_media	.nif	71469	Assets/Art/Units/Civs/Illians/Adept/IncanQuechua.nif
+art_media	.nif	37411	Assets/Art/Units/Civs/Kuriotates/Scout/Scout.nif
+art_media	.dds	87536	Assets/Art/Units/Civs/Kuriotates/Scout/MUSTEVALbasic Kopie.dds
+art_media	.nif	43875	Assets/Art/Units/Civs/Kuriotates/Ranger/Scout.nif
+art_media	.dds	87536	Assets/Art/Units/Civs/Kuriotates/Ranger/MUSTEVALRanger Kopie.dds
+art_media	.nif	49391	Assets/Art/Units/Civs/Kuriotates/Hunter/Scout.nif
+art_media	.dds	87536	Assets/Art/Units/Civs/Kuriotates/Hunter/MUSTEVALHunter Kopie.dds
+art_media	.nif	55504	Assets/Art/Units/Civs/Kuriotates/Beastmaster/Scout.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Kuriotates/Beastmaster/RepentantAngel Kopie.dds
+art_media	.dds	87536	Assets/Art/Units/Civs/Kuriotates/Beastmaster/MUSTEVALBeastmaster Kopie.dds
+art_media	.nif	51095	Assets/Art/Units/Civs/Kuriotates/Assassin/Scout.nif
+art_media	.dds	87536	Assets/Art/Units/Civs/Kuriotates/Assassin/MUSTEVALAssassin Kopie.dds
+art_media	.kf	1255	Assets/Art/Units/Civs/Malakim/Mage/grenadiergrenade_md_grenaderun.kf
+art_media	.kf	1336	Assets/Art/Units/Civs/Malakim/Mage/grenadiergrenade_md_grenade_explode.kf
+art_media	.nif	54930	Assets/Art/Units/Civs/Malakim/Mage/grenadiergrenade.nif
+art_media	.kfm	210	Assets/Art/Units/Civs/Malakim/Mage/grenadiergrenade.kfm
+art_media	.kf	962	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_xfadeout.kf
+art_media	.kf	1027	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_xfadein.kf
+art_media	.kf	8501	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_strikeb.kf
+art_media	.kf	8624	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_strikea.kf
+art_media	.kf	8562	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_run.kf
+art_media	.kf	8662	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_rangedstrike.kf
+art_media	.kf	8377	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_rangedreturnb.kf
+art_media	.kf	8471	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_rangedreturna.kf
+art_media	.kf	5803	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_rangeddie_fade.kf
+art_media	.kf	13947	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_rangeddie.kf
+art_media	.kf	22600	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_ranged_idle.kf
+art_media	.kf	7977	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_ranged_fortify.kf
+art_media	.kf	23431	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_idle.kf
+art_media	.kf	8770	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_hurtb.kf
+art_media	.kf	8599	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_hurta.kf
+art_media	.kf	11143	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_heal.kf
+art_media	.kf	17016	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_fortifyb_idle.kf
+art_media	.kf	8429	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_fortifyb.kf
+art_media	.kf	15684	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_fortifya_idle.kf
+art_media	.kf	7813	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_fortifya.kf
+art_media	.kf	17141	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_fidgetb.kf
+art_media	.kf	16626	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_fidgeta.kf
+art_media	.kf	5834	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_dieb_fade.kf
+art_media	.kf	11158	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_dieb.kf
+art_media	.kf	5834	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_diea_fade.kf
+art_media	.kf	14872	Assets/Art/Units/Civs/Malakim/Mage/grenadier_md_diea.kf
+art_media	.dds	16512	Assets/Art/Units/Civs/Malakim/Mage/grenadier_128.dds
+art_media	.nif	134399	Assets/Art/Units/Civs/Malakim/Mage/grenadier.nif
+art_media	.kfm	5550	Assets/Art/Units/Civs/Malakim/Mage/grenadier.kfm
+art_media	.dds	86144	Assets/Art/Units/Civs/Malakim/Mage/efreet.dds
+art_media	.nif	61765	Assets/Art/Units/Civs/Malakim/Archmage/AncientSpy.nif
+art_media	.dds	86144	Assets/Art/Units/Civs/Malakim/Archmage/efreet.dds
+art_media	.dds	65664	Assets/Art/Units/Civs/Malakim/Adept/spy_128.dds
+art_media	.nif	57149	Assets/Art/Units/Civs/Malakim/Adept/maceman.nif
+art_media	.dds	65664	Assets/Art/Units/Civs/Malakim/Adept/head.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Malakim/Adept/efreet.dds
+art_media	.dds	21632	Assets/Art/Units/Civs/Mercurians/Seraph/sword.dds
+art_media	.dds	5504	Assets/Art/Units/Civs/Mercurians/Seraph/environment_fx.dds
+art_media	.kf	16105	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_strikea.kf
+art_media	.kf	10154	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_rundie_fade.kf
+art_media	.kf	15613	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_rundie.kf
+art_media	.kf	15853	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_run.kf
+art_media	.kf	41258	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_idle.kf
+art_media	.kf	15793	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_hurta.kf
+art_media	.kf	29777	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_heal.kf
+art_media	.kf	29965	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_fortifya_idle.kf
+art_media	.kf	13328	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_fortifya.kf
+art_media	.kf	38402	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_fidget.kf
+art_media	.kf	10940	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_diea_fade.kf
+art_media	.kf	21045	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel_md_diea.kf
+art_media	.kfm	1617	Assets/Art/Units/Civs/Mercurians/Seraph/deathangel.kfm
+art_media	.dds	87536	Assets/Art/Units/Civs/Mercurians/Seraph/archangel256.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Mercurians/Seraph/angelwingsglow.dds
+art_media	.dds	86144	Assets/Art/Units/Civs/Mercurians/Seraph/angelwings.dds
+art_media	.nif	141485	Assets/Art/Units/Civs/Mercurians/Seraph/Deathangel.nif
+art_media	.nif	178323	Assets/Art/Units/Religions/Ashen Veil/Beast of Agares/panther.nif
+art_media	.dds	21972	Assets/Art/Units/Religions/Ashen Veil/Beast of Agares/environment_fx_greymetal.dds
+art_media	.dds	86144	Assets/Art/Units/Religions/Ashen Veil/Beast of Agares/beastgloss Kopie.dds
+art_media	.dds	86144	Assets/Art/Units/Religions/Ashen Veil/Beast of Agares/beast Kopie.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Ashen Veil/high priest/spearman_128.dds
+art_media	.nif	118833	Assets/Art/Units/Religions/Ashen Veil/high priest/spearman.nif
+art_media	.nif	112991	Assets/Art/Units/Religions/Ashen Veil/high priest/grenadier.nif
+art_media	.dds	11064	Assets/Art/Units/Religions/Ashen Veil/high priest/greatprophet_glow.dds
+art_media	.dds	87528	Assets/Art/Units/Religions/Ashen Veil/high priest/epic_wpn_warlock_st.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Ashen Veil/high priest/greatprophet_128.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Ashen Veil/high priest/Copy of greatprophet_128.dds
+art_media	.nif	54930	Assets/Art/Units/Religions/Ashen Veil/high priest/grenadiergrenade.nif
+art_media	.dds	65664	Assets/Art/Units/Religions/Empyrean/priest/priest_empy_sumerian.dds
+art_media	.nif	147702	Assets/Art/Units/Religions/Empyrean/priest/Pikeman.nif
+art_media	.dds	65664	Assets/Art/Units/Religions/Empyrean/priest/priest_empy.dds
+art_media	.dds	21632	Assets/Art/Units/Religions/Empyrean/priest/greatprophet_glow.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Empyrean/priest/greatprophet_128.dds
+art_media	.dds	21992	Assets/Art/Units/Religions/Empyrean/priest/epic_wpn_eldritch_st.dds
+art_media	.dds	65664	Assets/Art/Units/Religions/Empyrean/priest/Prodromoi_128.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Empyrean/priest/spearman_128.dds
+art_media	.dds	65664	Assets/Art/Units/Religions/Empyrean/high priest/priest_empy.dds
+art_media	.dds	5616	Assets/Art/Units/Religions/Empyrean/high priest/orangestreak2.dds
+art_media	.nif	25762	Assets/Art/Units/Religions/Empyrean/high priest/mid_thane1_sum.nif
+art_media	.dds	8320	Assets/Art/Units/Religions/Empyrean/high priest/greatprophet_white_glow.dds
+art_media	.dds	21632	Assets/Art/Units/Religions/Empyrean/high priest/greatprophet_glow.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Empyrean/high priest/greatprophet_128.dds
+art_media	.dds	5616	Assets/Art/Units/Religions/Empyrean/high priest/fx_shooting_cone_02.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Empyrean/high priest/fx_fire_glow_bright.dds
+art_media	.dds	21992	Assets/Art/Units/Religions/Empyrean/high priest/epic_wpn_eldritch_st.dds
+art_media	.dds	65664	Assets/Art/Units/Religions/Empyrean/high priest/Prodromoi_128.dds
+art_media	.nif	173399	Assets/Art/Units/Religions/Empyrean/high priest/Pikeman.nif
+art_media	.dds	22000	Assets/Art/Units/Religions/Empyrean/high priest/spearman_128.dds
+art_media	.nif	66929	Assets/Art/Units/Religions/Fellowship of Leaves/priest/ancientspy.nif
+art_media	.dds	22000	Assets/Art/Units/Religions/Fellowship of Leaves/priest/greatprophet_glow.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Fellowship of Leaves/priest/greatprophet_128.dds
+art_media	.dds	196736	Assets/Art/Units/Religions/Fellowship of Leaves/priest/Priest Kopie.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Fellowship of Leaves/priest/spearman_128.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Fellowship of Leaves/high priest/greatprophet_glow.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Fellowship of Leaves/high priest/greatprophet_128.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Fellowship of Leaves/high priest/fx_fire_glow_green.dds
+art_media	.dds	21992	Assets/Art/Units/Religions/Fellowship of Leaves/high priest/epic_wpn_wizard_st.dds
+art_media	.nif	102726	Assets/Art/Units/Religions/Fellowship of Leaves/high priest/ancientspy.nif
+art_media	.dds	196736	Assets/Art/Units/Religions/Fellowship of Leaves/high priest/Priest Kopie.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Fellowship of Leaves/high priest/spearman_128.dds
+art_media	.nif	40494	Assets/Art/Units/Religions/Octopus Overlords/priest/spearman.nif
+art_media	.dds	32896	Assets/Art/Units/Religions/Octopus Overlords/priest/sim2.dds
+art_media	.dds	87508	Assets/Art/Units/Religions/Octopus Overlords/priest/greatprophet_glow.dds
+art_media	.dds	65664	Assets/Art/Units/Religions/Octopus Overlords/priest/greatprophet_128.dds
+art_media	.dds	8320	Assets/Art/Units/Religions/Octopus Overlords/priest/barekehead.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Octopus Overlords/priest/spearman_128.dds
+art_media	.nif	99735	Assets/Art/Units/Religions/Octopus Overlords/high priest/spearman.nif
+art_media	.dds	32896	Assets/Art/Units/Religions/Octopus Overlords/high priest/sim2.dds
+art_media	.tga	16428	Assets/Art/Units/Religions/Octopus Overlords/high priest/plasrng2.tga
+art_media	.dds	87508	Assets/Art/Units/Religions/Octopus Overlords/high priest/greatprophet_glow.dds
+art_media	.dds	65664	Assets/Art/Units/Religions/Octopus Overlords/high priest/greatprophet_128.dds
+art_media	.dds	87528	Assets/Art/Units/Religions/Octopus Overlords/high priest/epic_wpn_spiritmaster_st.dds
+art_media	.tga	4140	Assets/Art/Units/Religions/Octopus Overlords/high priest/elecglow.tga
+art_media	.tga	16428	Assets/Art/Units/Religions/Octopus Overlords/high priest/bigarc2.tga
+art_media	.dds	8320	Assets/Art/Units/Religions/Octopus Overlords/high priest/barekehead.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Octopus Overlords/high priest/spearman_128.dds
+art_media	.nif	102151	Assets/Art/Units/Religions/Order/high priest/spearman.nif
+art_media	.dds	87508	Assets/Art/Units/Religions/Order/high priest/greatprophet_glow.dds
+art_media	.dds	1520	Assets/Art/Units/Religions/Order/high priest/fx_muzzleblast002.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Order/high priest/fx_explosion_glow_01.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Order/high priest/fx_blingbling_001.dds
+art_media	.dds	43832	Assets/Art/Units/Religions/Order/high priest/epic_wpn_valkyrie_spear.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Order/high priest/greatprophet_128.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Order/high priest/spearman_128.dds
+art_media	.dds	87508	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/greatprophet_glow.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/greatprophet_128.dds
+art_media	.dds	87528	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/championweapon_hibmauler_staff01.dds
+art_media	.nif	148363	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/Spearman.nif
+art_media	.dds	22000	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/spearman_128.dds
+art_media	.dds	65664	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/Dwarf/greatprophet_128.dds
+art_media	.nif	109216	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/Dwarf/Spearman.nif
+art_media	.dds	87508	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/Dwarf/greatprophet_glow.dds
+art_media	.dds	87528	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/Dwarf/championweapon_hibmauler_staff01.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Runes of Kilmorph/High Priest/Dwarf/spearman_128.dds
+art_media	.nif	57002	Assets/Art/Units/Religions/Runes of Kilmorph/Priest/Dwarf/Spearman.nif
+art_media	.dds	65664	Assets/Art/Units/Religions/Runes of Kilmorph/Priest/Dwarf/greatprophet_128.dds
+art_media	.dds	87508	Assets/Art/Units/Religions/Runes of Kilmorph/Priest/Dwarf/greatprophet_glow.dds
+art_media	.dds	22000	Assets/Art/Units/Religions/Runes of Kilmorph/Priest/Dwarf/spearman_128.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/swirl.dds
+art_media	.kfm	1292	Assets/Art/Units/Heroes/Avatar of Wrath/abaddon.kfm
+art_media	.kf	77708	Assets/Art/Units/Heroes/Avatar of Wrath/abad_strike2.kf
+art_media	.kf	43427	Assets/Art/Units/Heroes/Avatar of Wrath/abad_strike.kf
+art_media	.kf	31728	Assets/Art/Units/Heroes/Avatar of Wrath/abad_run.kf
+art_media	.kf	44316	Assets/Art/Units/Heroes/Avatar of Wrath/abad_melee_idle.kf
+art_media	.kf	43390	Assets/Art/Units/Heroes/Avatar of Wrath/abad_idle.kf
+art_media	.kf	49182	Assets/Art/Units/Heroes/Avatar of Wrath/abad_hurt.kf
+art_media	.kf	25865	Assets/Art/Units/Heroes/Avatar of Wrath/abad_fortify.kf
+art_media	.kf	45066	Assets/Art/Units/Heroes/Avatar of Wrath/abad_fidget2.kf
+art_media	.kf	34771	Assets/Art/Units/Heroes/Avatar of Wrath/abad_fidget1.kf
+art_media	.kf	13233	Assets/Art/Units/Heroes/Avatar of Wrath/abad_die_fade.kf
+art_media	.kf	41114	Assets/Art/Units/Heroes/Avatar of Wrath/abad_die.kf
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/SphereGlowSwirl.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/SphereGlow.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/Shockwave.dds
+art_media	.dds	22000	Assets/Art/Units/Heroes/Avatar of Wrath/ShineParticles.dds
+art_media	.dds	5616	Assets/Art/Units/Heroes/Avatar of Wrath/MistDarkBlue.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/LightSwirl.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/LightSphereGlow.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/Haze.dds
+art_media	.dds	5616	Assets/Art/Units/Heroes/Avatar of Wrath/GradientGlow.dds
+art_media	.dds	824	Assets/Art/Units/Heroes/Avatar of Wrath/GlowPurple32x32.DDS
+art_media	.dds	824	Assets/Art/Units/Heroes/Avatar of Wrath/Glow32x32.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/Globe.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/Darkness.dds
+art_media	.dds	22000	Assets/Art/Units/Heroes/Avatar of Wrath/CircleGlow.dds
+art_media	.dds	5616	Assets/Art/Units/Heroes/Avatar of Wrath/Bloom.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/Blast.dds
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/BlackVortexClean.dds
+art_media	.dds	1520	Assets/Art/Units/Heroes/Avatar of Wrath/Beams.dds
+art_media	.dds	1520	Assets/Art/Units/Heroes/Avatar of Wrath/AbaddonSmoke.dds
+art_media	.nif	7741	Assets/Art/Units/Heroes/Avatar of Wrath/AbaddonMeleeFire.nif
+art_media	.dds	43832	Assets/Art/Units/Heroes/Avatar of Wrath/AbaddonGlow.dds
+art_media	.dds	2872	Assets/Art/Units/Heroes/Avatar of Wrath/AbaddonFire1.dds
+art_media	.nif	58392	Assets/Art/Units/Heroes/Avatar of Wrath/AbaddonDevastateEffect.nif
+art_media	.nif	74380	Assets/Art/Units/Heroes/Avatar of Wrath/AbaddonDeathEffect.nif
+art_media	.nif	37264	Assets/Art/Units/Heroes/Avatar of Wrath/AbaddonBirthEffect.nif
+art_media	.dds	87536	Assets/Art/Units/Heroes/Avatar of Wrath/AbaddonBase.dds
+art_media	.nif	57689	Assets/Art/Units/Heroes/Avatar of Wrath/Abaddon.nif
+text_xml_python	.xml	11372	Assets/XML/Units/CIV4UnitSpellSchema.xml
+text_xml_python	.xml	65425	Assets/XML/Units/CIV4UnitSchema.xml
+text_xml_python	.xml	3103252	Assets/XML/Units/CIV4UnitInfos.xml
+text_xml_python	.xml	93950	Assets/XML/Units/CIV4UnitClassInfos.xml
+text_xml_python	.xml	238640	Assets/XML/Units/CIV4SpellInfos.xml
+text_xml_python	.xml	1729	Assets/XML/Units/CIV4SpecialUnitInfos.xml
+text_xml_python	.xml	345887	Assets/XML/Units/CIV4PromotionInfos.xml
+text_xml_python	.xml	29209	Assets/XML/Units/CIV4MissionInfos.xml
+text_xml_python	.xml	81547	Assets/XML/Units/CIV4FormationInfos.xml
+text_xml_python	.xml	31427	Assets/XML/Units/CIV4ControlInfos.xml
+text_xml_python	.xml	6996	Assets/XML/Units/CIV4CommandInfos.xml
+text_xml_python	.xml	55880	Assets/XML/Units/CIV4BuildInfos.xml
+text_xml_python	.xml	4310	Assets/XML/Units/CIV4AutomateInfos.xml
+text_xml_python	.xml	7584559	Assets/XML/Text/CIV4GameText_FFH2.xml
+text_xml_python	.xml	27012	Assets/XML/Terrain/CIV4TerrainSchema.xml
+text_xml_python	.xml	88098	Assets/XML/Terrain/CIV4TerrainInfos.xml
+text_xml_python	.xml	309823	Assets/XML/Terrain/CIV4ImprovementInfos.xml
+text_xml_python	.xml	85162	Assets/XML/Terrain/CIV4FeatureInfos.xml
+text_xml_python	.xml	166829	Assets/XML/Terrain/CIV4BonusInfos.xml
+text_xml_python	.xml	1162	Assets/XML/Terrain/CIV4BonusClassInfos.xml
+text_xml_python	.xml	7808	Assets/XML/Technologies/CIV4TechnologiesSchema.xml
+text_xml_python	.xml	273197	Assets/XML/Technologies/CIV4TechInfos.xml
+maps_scenarios	.civbeyondswordwbsave	370422	Assets/XML/Scenarios/Wages of Sin Malakim.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	371294	Assets/XML/Scenarios/Wages of Sin Calabim.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	287104	Assets/XML/Scenarios/The Splintered Court.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	178505	Assets/XML/Scenarios/The Radiant Guard.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	115475	Assets/XML/Scenarios/The Momus.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	177360	Assets/XML/Scenarios/The Cult.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	376018	Assets/XML/Scenarios/The Black Tower.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	175040	Assets/XML/Scenarios/Return of Winter.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	392986	Assets/XML/Scenarios/Mulcarn Reborn.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	397761	Assets/XML/Scenarios/Lord of the Balors.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	230934	Assets/XML/Scenarios/Into the Desert Malakim.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	230628	Assets/XML/Scenarios/Into the Desert Calabim.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	91474	Assets/XML/Scenarios/Grand Menagerie.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	121194	Assets/XML/Scenarios/Gift of Kylorin.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	112691	Assets/XML/Scenarios/Fall of Cuantine.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	223230	Assets/XML/Scenarios/Blood of Angels.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	151345	Assets/XML/Scenarios/Beneath the Heel.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	195150	Assets/XML/Scenarios/Barbarian Assault.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	240472	Assets/XML/Scenarios/Against the Wall.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	109620	Assets/XML/Scenarios/Against the Grey Malakim.CivBeyondSwordWBSave
+maps_scenarios	.civbeyondswordwbsave	109510	Assets/XML/Scenarios/Against the Grey Calabim.CivBeyondSwordWBSave
+text_xml_python	.xml	1462	Assets/XML/Misc/CIV4RouteInfos.xml
+text_xml_python	.xml	120713	Assets/XML/Misc/CIV4EffectInfos.xml
+text_xml_python	.xml	24217	Assets/XML/Misc/CIV4AttachableInfos.xml
+text_xml_python	.xml	24055	Assets/XML/Interface/CIV4WorldPickerInfos.xml
+text_xml_python	.xml	18106	Assets/XML/Interface/CIV4PlayerColorInfos.xml
+text_xml_python	.xml	13983	Assets/XML/Interface/CIV4InterfaceModeInfos.xml
+text_xml_python	.xml	21962	Assets/XML/Interface/CIV4ColorVals.xml
+text_xml_python	.xml	7962	Assets/XML/Gameinfo/CIV4WorldInfo.xml
+text_xml_python	.xml	1221	Assets/XML/Gameinfo/CIV4VoteSourceInfos.xml
+text_xml_python	.xml	25477	Assets/XML/Gameinfo/CIV4VoteInfo.xml
+text_xml_python	.xml	6397	Assets/XML/Gameinfo/CIV4VictoryInfo.xml
+text_xml_python	.xml	10622	Assets/XML/Gameinfo/CIV4SpecialistInfos.xml
+text_xml_python	.xml	14457	Assets/XML/Gameinfo/CIV4ReligionInfo.xml
+text_xml_python	.xml	21929	Assets/XML/Gameinfo/CIV4ProjectInfo.xml
+text_xml_python	.xml	2073	Assets/XML/Gameinfo/CIV4ProcessInfo.xml
+text_xml_python	.xml	13607	Assets/XML/Gameinfo/CIV4Hints.xml
+text_xml_python	.xml	48442	Assets/XML/Gameinfo/CIV4HandicapInfo.xml
+text_xml_python	.xml	35556	Assets/XML/Gameinfo/CIV4GoodyInfo.xml
+text_xml_python	.xml	6079	Assets/XML/Gameinfo/CIV4GameSpeedInfo.xml
+text_xml_python	.xml	22401	Assets/XML/Gameinfo/CIV4GameOptionInfos.xml
+text_xml_python	.xml	68877	Assets/XML/Gameinfo/CIV4GameInfoSchema.xml
+text_xml_python	.xml	2078	Assets/XML/Gameinfo/CIV4EspionageMissionInfo.xml
+text_xml_python	.xml	36178	Assets/XML/Gameinfo/CIV4EraInfos.xml
+text_xml_python	.xml	5970	Assets/XML/Gameinfo/CIV4EmphasizeInfo.xml
+text_xml_python	.xml	1228049	Assets/XML/Gameinfo/CIV4DiplomacyInfos.xml
+text_xml_python	.xml	3127	Assets/XML/Gameinfo/CIV4CursorInfo.xml
+text_xml_python	.xml	5798	Assets/XML/Gameinfo/CIV4CultureLevelInfo.xml
+text_xml_python	.xml	354	Assets/XML/Gameinfo/CIV4CorporationInfo.xml
+text_xml_python	.xml	1888	Assets/XML/Gameinfo/CIV4CommerceInfo.xml
+text_xml_python	.xml	1192	Assets/XML/Gameinfo/CIV4CivicOptionInfos.xml
+text_xml_python	.xml	158208	Assets/XML/Gameinfo/CIV4CivicInfos.xml
+text_xml_python	.xml	1211010	Assets/XML/Events/CIV4EventTriggerInfos.xml
+text_xml_python	.xml	21912	Assets/XML/Events/CIV4EventSchema.xml
+text_xml_python	.xml	2318885	Assets/XML/Events/CIV4EventInfos.xml
+text_xml_python	.xml	146347	Assets/XML/Civilizations/CIV4UnitArtStyleTypeInfos.xml
+text_xml_python	.xml	53440	Assets/XML/Civilizations/CIV4TraitInfos.xml
+text_xml_python	.xml	2203280	Assets/XML/Civilizations/CIV4LeaderHeadInfos.xml
+text_xml_python	.xml	33607	Assets/XML/Civilizations/CIV4CivilizationsSchema.xml
+text_xml_python	.xml	296567	Assets/XML/Civilizations/CIV4CivilizationInfos.xml
+text_xml_python	.xml	948	Assets/XML/Buildings/CIV4SpecialBuildingInfos.xml
+text_xml_python	.xml	326450	Assets/XML/Buildings/CIV4PlotLSystem.xml
+text_xml_python	.xml	133514	Assets/XML/Buildings/CIV4CityLSystem.xml
+text_xml_python	.xml	31143	Assets/XML/Buildings/CIV4BuildingsSchema.xml
+text_xml_python	.xml	1786627	Assets/XML/Buildings/CIV4BuildingInfos.xml
+text_xml_python	.xml	66413	Assets/XML/Buildings/CIV4BuildingClassInfos.xml
+text_xml_python	.xml	2515	Assets/XML/Basicinfos/CIV4UnitCombatInfos.xml
+text_xml_python	.xml	6009	Assets/XML/Basicinfos/CIV4UnitAIInfos.xml
+text_xml_python	.xml	5216	Assets/XML/Basicinfos/CIV4MemoryInfos.xml
+text_xml_python	.xml	735	Assets/XML/Basicinfos/CIV4InvisibleInfos.xml
+text_xml_python	.xml	1780	Assets/XML/Basicinfos/CIV4DamageInfos.xml
+text_xml_python	.xml	4926	Assets/XML/Basicinfos/CIV4BasicInfos.xml
+text_xml_python	.xml	6010	Assets/XML/Basicinfos/CIV4BasicInfoSchema.xml
+text_xml_python	.xml	739	Assets/XML/Basicinfos/CIV4AlignmentInfos.xml
+text_xml_python	.xml	14106	Assets/XML/Audio/AudioSoundscapeScripts.xml
+text_xml_python	.xml	424655	Assets/XML/Audio/AudioDefines.xml
+text_xml_python	.xml	1052828	Assets/XML/Audio/Audio3DScripts.xml
+text_xml_python	.xml	885232	Assets/XML/Audio/Audio2DScripts.xml
+text_xml_python	.xml	58813	Assets/XML/Art/CIV4RouteModelInfos.xml
+text_xml_python	.xml	1845	Assets/XML/Art/CIV4MainMenus.xml
+text_xml_python	.xml	766978	Assets/XML/Art/CIV4ArtDefines_Unit.xml
+text_xml_python	.xml	28374	Assets/XML/Art/CIV4ArtDefines_Terrain.xml
+text_xml_python	.xml	11990	Assets/XML/Art/CIV4ArtDefines_Movie.xml
+text_xml_python	.xml	10054	Assets/XML/Art/CIV4ArtDefines_Misc.xml
+text_xml_python	.xml	18350	Assets/XML/Art/CIV4ArtDefines_Leaderhead.xml
+text_xml_python	.xml	55938	Assets/XML/Art/CIV4ArtDefines_Interface.xml
+text_xml_python	.xml	34143	Assets/XML/Art/CIV4ArtDefines_Improvement.xml
+text_xml_python	.xml	38545	Assets/XML/Art/CIV4ArtDefines_Feature.xml
+text_xml_python	.xml	17158	Assets/XML/Art/CIV4ArtDefines_Civilization.xml
+text_xml_python	.xml	123241	Assets/XML/Art/CIV4ArtDefines_Building.xml
+text_xml_python	.xml	28799	Assets/XML/Art/CIV4ArtDefines_Bonus.xml
+text_xml_python	.py	60158	Assets/python/pyWB/CvWBDesc.py
+text_xml_python	.py	150108	Assets/python/entrypoints/CvSpellInterface.py
+text_xml_python	.py	80275	Assets/python/entrypoints/CvSomniumInterface.py
+text_xml_python	.py	31225	Assets/python/entrypoints/CvScreensInterface.py
+text_xml_python	.py	237984	Assets/python/entrypoints/CvRandomEventInterface.py
+text_xml_python	.py	4783	Assets/python/entrypoints/CvPopupInterface.py
+text_xml_python	.py	9999	Assets/python/entrypoints/CvGameInterface.py
+text_xml_python	.py	10300	Assets/python/entrypoints/CvDataStorageInterface.py
+text_xml_python	.py	15701	Assets/python/Screens/CvWorldBuilderDiplomacyScreen.py
+text_xml_python	.py	6420	Assets/python/Screens/CvWonderMovieScreen.py
+text_xml_python	.py	46516	Assets/python/Screens/CvVictoryScreen.py
+text_xml_python	.py	4617	Assets/python/Screens/CvTrophyHall.py
+text_xml_python	.py	51902	Assets/python/Screens/CvTechChooser.py
+text_xml_python	.py	2623	Assets/python/Screens/CvScreenEnums.py
+text_xml_python	.py	18667	Assets/python/Screens/CvReligionScreen.py
+text_xml_python	.py	18711	Assets/python/Screens/CvPediaUnit.py
+text_xml_python	.py	11573	Assets/python/Screens/CvPediaTech.py
+text_xml_python	.py	7122	Assets/python/Screens/CvPediaSpell.py
+text_xml_python	.py	13112	Assets/python/Screens/CvPediaPromotion.py
+text_xml_python	.py	54762	Assets/python/Screens/CvPediaMain.py
+text_xml_python	.py	10030	Assets/python/Screens/CvPediaLeader.py
+text_xml_python	.py	12712	Assets/python/Screens/CvPediaImprovement.py
+text_xml_python	.py	8117	Assets/python/Screens/CvPediaCivilization.py
+text_xml_python	.py	19695	Assets/python/Screens/CvMilitaryAdvisor.py
+text_xml_python	.py	175872	Assets/python/Screens/CvMainInterface.py
+text_xml_python	.py	4337	Assets/python/Screens/CvIntroMovieScreen.py
+text_xml_python	.py	96226	Assets/python/Screens/CvInfoScreen.py
+text_xml_python	.py	45388	Assets/python/Screens/CvExoticForeignAdvisor.py
+text_xml_python	.py	28726	Assets/python/Screens/CvEspionageAdvisor.py
+text_xml_python	.py	40012	Assets/python/Screens/CvCorporationScreen.py
+text_xml_python	.py	15997	Assets/python/Screens/CvCivicsScreen.py
+art_media	.tga	524332	Assets/res/Fonts/GameFont_75.tga
+art_media	.tga	819244	Assets/res/Fonts/GameFont.tga
+other	.mp3	20506	Assets/sounds/tech/Tech_Ding.mp3
+other	.mp3	4981765	Assets/sounds/soundtrack/songofthedeadsun.mp3
+other	.mp3	1366948	Assets/sounds/soundtrack/TheGallowsJig.mp3
+other	.mp3	2781582	Assets/sounds/soundtrack/ShadowForest.mp3
+other	.mp3	1746651	Assets/sounds/soundtrack/RichDouglas2.mp3
+other	.mp3	1724126	Assets/sounds/soundtrack/RichDouglas1.mp3
+other	.mp3	1706135	Assets/sounds/soundtrack/OpeningMenu.mp3
+other	.mp3	1571911	Assets/sounds/soundtrack/ECTheHouse.mp3
+other	.mp3	2189270	Assets/sounds/soundtrack/ECDemo.mp3
+other	.mp3	2527206	Assets/sounds/soundtrack/DarklyEverafter.mp3
+other	.mp3	2103548	Assets/sounds/soundtrack/BlackSpires.mp3
+other	.mp3	164302	Assets/sounds/diplomacy/Svartalfar.mp3
+other	.mp3	645455	Assets/sounds/diplomacy/Sidar.mp3
+other	.mp3	326052	Assets/sounds/diplomacy/Sheaim.mp3
+other	.mp3	231175	Assets/sounds/diplomacy/Mercurians.mp3
+other	.mp3	251655	Assets/sounds/diplomacy/Malakim.mp3
+other	.mp3	262104	Assets/sounds/diplomacy/Luchuirp.mp3
+other	.mp3	538855	Assets/sounds/diplomacy/Ljosalfar.mp3
+other	.mp3	976898	Assets/sounds/diplomacy/Lanun.mp3
+other	.mp3	497477	Assets/sounds/diplomacy/Kuriotates.mp3
+other	.mp3	431023	Assets/sounds/diplomacy/Khazad.mp3
+other	.mp3	394241	Assets/sounds/diplomacy/Infernal.mp3
+other	.mp3	1072107	Assets/sounds/diplomacy/Illians.mp3
+other	.mp3	528344	Assets/sounds/diplomacy/Hippus.mp3
+other	.mp3	1139401	Assets/sounds/diplomacy/Grigori.mp3
+other	.mp3	498733	Assets/sounds/diplomacy/Elohim.mp3
+other	.mp3	931739	Assets/sounds/diplomacy/Doviello.mp3
+other	.mp3	107250	Assets/sounds/diplomacy/Decius.mp3
+other	.mp3	251237	Assets/sounds/diplomacy/Clanofembers.mp3
+other	.mp3	402182	Assets/sounds/diplomacy/Calabim.mp3
+other	.mp3	596890	Assets/sounds/diplomacy/Barbarian.mp3
+other	.mp3	825995	Assets/sounds/diplomacy/Bannor.mp3
+other	.mp3	849337	Assets/sounds/diplomacy/Balseraphs.mp3
+other	.mp3	453173	Assets/sounds/diplomacy/Amurites.mp3
+other	.mp3	56886	Assets/sounds/buildings/Carnival.mp3
+other	.mp3	92413	Assets/sounds/buildings/ArmageddonIncrease.mp3
+other	.mp3	81502	Assets/sounds/buildings/ArmageddonDecrease.mp3
+art_media	.wav	42044	Assets/sounds/ambient/UnitRises.wav
+art_media	.wav	48188	Assets/sounds/ambient/UnitFalls.wav
+art_media	.wav	61196	Assets/sounds/ambient/Fire.wav
+art_media	.wav	8710	Assets/sounds/units/hawk.wav
+art_media	.wav	53308	Assets/sounds/units/WraithSelect-002.wav
+art_media	.wav	62524	Assets/sounds/units/WraithSelect-001.wav
+art_media	.wav	63548	Assets/sounds/units/WraithSelect-000.wav
+art_media	.wav	102668	Assets/sounds/units/Wolf.wav
+art_media	.wav	61500	Assets/sounds/units/VampireSelect-002.wav
+art_media	.wav	53308	Assets/sounds/units/VampireSelect-001.wav
+art_media	.wav	42044	Assets/sounds/units/VampireSelect-000.wav
+art_media	.wav	94268	Assets/sounds/units/UndeadSelect-009.wav
+art_media	.wav	77884	Assets/sounds/units/UndeadSelect-008.wav
+art_media	.wav	25660	Assets/sounds/units/UndeadSelect-007.wav
+art_media	.wav	29756	Assets/sounds/units/UndeadSelect-006.wav
+art_media	.wav	44092	Assets/sounds/units/UndeadSelect-005.wav
+art_media	.wav	52284	Assets/sounds/units/UndeadSelect-004.wav
+art_media	.wav	62524	Assets/sounds/units/UndeadSelect-003.wav
+art_media	.wav	22588	Assets/sounds/units/UndeadSelect-002.wav
+art_media	.wav	31804	Assets/sounds/units/UndeadSelect-001.wav
+art_media	.wav	27708	Assets/sounds/units/UndeadSelect-000.wav
+art_media	.wav	24668	Assets/sounds/units/SuccubusSelect-001.wav
+art_media	.wav	441044	Assets/sounds/units/Spidersilk.wav
+art_media	.wav	480044	Assets/sounds/units/Spider.wav
+art_media	.wav	56380	Assets/sounds/units/SkeletonSelect-004.wav
+art_media	.wav	48188	Assets/sounds/units/SkeletonSelect-003.wav
+art_media	.wav	22588	Assets/sounds/units/SkeletonSelect-002.wav
+art_media	.wav	36924	Assets/sounds/units/SkeletonSelect-001.wav
+art_media	.wav	24636	Assets/sounds/units/SkeletonSelect-000.wav
+art_media	.wav	120546	Assets/sounds/units/SeaSerpent-002.wav
+art_media	.wav	91146	Assets/sounds/units/SeaSerpent-001.wav
+art_media	.wav	89676	Assets/sounds/units/SeaSerpent-000.wav
+art_media	.wav	41020	Assets/sounds/units/Raven.wav
+art_media	.wav	38764	Assets/sounds/units/Orcreadytowork.wav
+art_media	.wav	30780	Assets/sounds/units/OrcSelect-009.wav
+art_media	.wav	47164	Assets/sounds/units/OrcSelect-008.wav
+art_media	.wav	32828	Assets/sounds/units/OrcSelect-007.wav
+art_media	.wav	81980	Assets/sounds/units/OrcSelect-006.wav
+art_media	.wav	46140	Assets/sounds/units/OrcSelect-005.wav
+art_media	.wav	48188	Assets/sounds/units/OrcSelect-004.wav
+art_media	.wav	46140	Assets/sounds/units/OrcSelect-003.wav
+art_media	.wav	54332	Assets/sounds/units/OrcSelect-002.wav
+art_media	.wav	46140	Assets/sounds/units/OrcSelect-001.wav
+art_media	.wav	51260	Assets/sounds/units/OrcSelect-000.wav
+art_media	.wav	65596	Assets/sounds/units/OrcOrder-009.wav
+art_media	.wav	46140	Assets/sounds/units/OrcOrder-008.wav
+art_media	.wav	45116	Assets/sounds/units/OrcOrder-007.wav
+art_media	.wav	87100	Assets/sounds/units/OrcOrder-006.wav
+art_media	.wav	34876	Assets/sounds/units/OrcOrder-005.wav
+art_media	.wav	33852	Assets/sounds/units/OrcOrder-004.wav
+art_media	.wav	55356	Assets/sounds/units/OrcOrder-003.wav
+art_media	.wav	48188	Assets/sounds/units/OrcOrder-002.wav
+art_media	.wav	60476	Assets/sounds/units/OrcOrder-001.wav
+art_media	.wav	59452	Assets/sounds/units/OrcOrder-000.wav
+art_media	.wav	27708	Assets/sounds/units/LoshaSelect-010.wav
+art_media	.wav	47164	Assets/sounds/units/LoshaSelect-009.wav
+art_media	.wav	20540	Assets/sounds/units/LoshaSelect-008.wav
+art_media	.wav	52284	Assets/sounds/units/LoshaSelect-007.wav
+art_media	.wav	15420	Assets/sounds/units/LoshaSelect-006.wav
+art_media	.wav	11324	Assets/sounds/units/LoshaSelect-005.wav
+art_media	.wav	42044	Assets/sounds/units/LoshaSelect-004.wav
+art_media	.wav	20540	Assets/sounds/units/LoshaSelect-003.wav
+art_media	.wav	54332	Assets/sounds/units/LoshaSelect-002.wav
+art_media	.wav	23612	Assets/sounds/units/LoshaSelect-001.wav
+art_media	.wav	50236	Assets/sounds/units/LoshaSelect-000.wav
+art_media	.wav	39996	Assets/sounds/units/LoshaOrder-001.wav
+art_media	.wav	20540	Assets/sounds/units/LoshaOrder-000.wav
+art_media	.wav	58070	Assets/sounds/units/LizardmanSelect-007.wav
+art_media	.wav	72490	Assets/sounds/units/LizardmanSelect-006.wav
+art_media	.wav	64684	Assets/sounds/units/LizardmanSelect-005.wav
+art_media	.wav	54742	Assets/sounds/units/LizardmanSelect-004.wav
+art_media	.wav	89642	Assets/sounds/units/LizardmanSelect-003.wav
+art_media	.wav	31958	Assets/sounds/units/LizardmanSelect-002.wav
+art_media	.wav	40790	Assets/sounds/units/LizardmanSelect-001.wav
+art_media	.wav	65578	Assets/sounds/units/LizardmanSelect-000.wav
+art_media	.wav	7584	Assets/sounds/units/LionSelect-004.wav
+art_media	.wav	4446	Assets/sounds/units/LionSelect-003.wav
+art_media	.wav	2158	Assets/sounds/units/LionSelect-002.wav
+art_media	.wav	2158	Assets/sounds/units/LionSelect-001.wav
+art_media	.wav	29756	Assets/sounds/units/ImpSelect-002.wav
+art_media	.wav	78908	Assets/sounds/units/ImpSelect-001.wav
+art_media	.wav	86076	Assets/sounds/units/ImpSelect-000.wav
+art_media	.wav	30902	Assets/sounds/units/Hillgiant.wav
+art_media	.wav	233004	Assets/sounds/units/Gorilla-003.wav
+art_media	.wav	178552	Assets/sounds/units/Gorilla-002.wav
+art_media	.wav	33578	Assets/sounds/units/Gorilla-001.wav
+art_media	.wav	59050	Assets/sounds/units/Gorilla-000.wav
+art_media	.wav	29756	Assets/sounds/units/GolemSelect-003.wav
+art_media	.wav	26684	Assets/sounds/units/GolemSelect-002.wav
+art_media	.wav	53308	Assets/sounds/units/GolemSelect-001.wav
+art_media	.wav	34876	Assets/sounds/units/GolemSelect-000.wav
+art_media	.wav	17468	Assets/sounds/units/GoblinSelect-005.wav
+art_media	.wav	36924	Assets/sounds/units/GoblinSelect-004.wav
+art_media	.wav	24636	Assets/sounds/units/GoblinSelect-003.wav
+art_media	.wav	43068	Assets/sounds/units/GoblinSelect-002.wav
+art_media	.wav	50236	Assets/sounds/units/GoblinSelect-001.wav
+art_media	.wav	19516	Assets/sounds/units/GoblinSelect-000.wav
+art_media	.wav	49358	Assets/sounds/units/ElephantSelect-002.wav
+art_media	.wav	58404	Assets/sounds/units/ElephantSelect-001.wav
+art_media	.wav	72564	Assets/sounds/units/ElephantSelect-000.wav
+art_media	.wav	32828	Assets/sounds/units/DwarfSelect-007.wav
+art_media	.wav	15420	Assets/sounds/units/DwarfSelect-006.wav
+art_media	.wav	39996	Assets/sounds/units/DwarfSelect-005.wav
+art_media	.wav	39996	Assets/sounds/units/DwarfSelect-004.wav
+art_media	.wav	31804	Assets/sounds/units/DwarfSelect-003.wav
+art_media	.wav	13372	Assets/sounds/units/DwarfSelect-002.wav
+art_media	.wav	23612	Assets/sounds/units/DwarfSelect-001.wav
+art_media	.wav	29756	Assets/sounds/units/DwarfSelect-000.wav
+art_media	.wav	29756	Assets/sounds/units/DwarfOrder-004.wav
+art_media	.wav	34876	Assets/sounds/units/DwarfOrder-003.wav
+art_media	.wav	24636	Assets/sounds/units/DwarfOrder-002.wav
+art_media	.wav	46140	Assets/sounds/units/DwarfOrder-001.wav
+art_media	.wav	12348	Assets/sounds/units/DwarfOrder-000.wav
+art_media	.wav	68142	Assets/sounds/units/Dragonroar.wav
+art_media	.wav	40974	Assets/sounds/units/Dragonhurt.wav
+art_media	.wav	126384	Assets/sounds/units/Dragonbreathin.wav
+art_media	.wav	5270	Assets/sounds/units/Diseased.wav
+art_media	.wav	44092	Assets/sounds/units/Cowcatapultselect.wav
+art_media	.wav	95482	Assets/sounds/units/Cowcatapulthit.wav
+art_media	.wav	516344	Assets/sounds/units/BalorSelect-002.wav
+art_media	.wav	600676	Assets/sounds/units/BalorSelect-001.wav
+art_media	.wav	365388	Assets/sounds/units/BalorSelect-000.wav
+art_media	.wav	10066	Assets/sounds/units/Tigerroar.wav
+art_media	.wav	441044	Assets/sounds/Spells/Wraith.wav
+art_media	.wav	485144	Assets/sounds/Spells/Water.wav
+art_media	.wav	707068	Assets/sounds/Spells/Tsunami.wav
+art_media	.wav	99286	Assets/sounds/Spells/Train.wav
+art_media	.wav	10066	Assets/sounds/Spells/Tiger.wav
+art_media	.wav	49212	Assets/sounds/Spells/Stoneskin.wav
+art_media	.wav	488148	Assets/sounds/Spells/Spring.wav
+art_media	.wav	616244	Assets/sounds/Spells/Spectre.wav
+art_media	.wav	733798	Assets/sounds/Spells/Sing4.wav
+art_media	.wav	567596	Assets/sounds/Spells/Sing3.wav
+art_media	.wav	389749	Assets/sounds/Spells/Sing2.wav
+art_media	.wav	457112	Assets/sounds/Spells/Sing1.wav
+art_media	.wav	21192	Assets/sounds/Spells/Sanctify.wav
+art_media	.wav	15404	Assets/sounds/Spells/Sacrifice.wav
+art_media	.wav	194276	Assets/sounds/Spells/Revelation.wav
+art_media	.wav	63400	Assets/sounds/Spells/Resist.wav
+art_media	.wav	220328	Assets/sounds/Spells/Repair.wav
+art_media	.wav	35924	Assets/sounds/Spells/Recruit.wav
+art_media	.wav	55354	Assets/sounds/Spells/Pitbeast.wav
+art_media	.wav	186294	Assets/sounds/Spells/Piratecove.wav
+art_media	.wav	441044	Assets/sounds/Spells/Mutation.wav
+art_media	.wav	72312	Assets/sounds/Spells/Lightningelemental.wav
+art_media	.wav	441044	Assets/sounds/Spells/Kraken.wav
+art_media	.wav	56332	Assets/sounds/Spells/Inspiration.wav
+art_media	.wav	262976	Assets/sounds/Spells/Inquisition.wav
+art_media	.wav	441044	Assets/sounds/Spells/Imp.wav
+art_media	.wav	705504	Assets/sounds/Spells/HyboremsWhisper.wav
+art_media	.wav	43364	Assets/sounds/Spells/Hope.wav
+art_media	.wav	50236	Assets/sounds/Spells/Heal.wav
+art_media	.wav	281780	Assets/sounds/Spells/Haste.wav
+art_media	.wav	67644	Assets/sounds/Spells/Graftflesh.wav
+art_media	.wav	15170	Assets/sounds/Spells/Giftvampirism.wav
+art_media	.wav	103692	Assets/sounds/Spells/Foundtemple.wav
+art_media	.wav	87518	Assets/sounds/Spells/Fireelemental.wav
+art_media	.wav	38144	Assets/sounds/Spells/Fireball.wav
+art_media	.wav	12760	Assets/sounds/Spells/Feed.wav
+art_media	.wav	105236	Assets/sounds/Spells/Feast.wav
+art_media	.wav	485144	Assets/sounds/Spells/Escape.wav
+art_media	.wav	56024	Assets/sounds/Spells/Enchantment.wav
+art_media	.wav	480428	Assets/sounds/Spells/Einherjar.wav
+art_media	.wav	86744	Assets/sounds/Spells/Earthquake.wav
+art_media	.wav	69632	Assets/sounds/Spells/Earthelemental.wav
+art_media	.wav	1422276	Assets/sounds/Spells/Drown.wav
+art_media	.wav	485144	Assets/sounds/Spells/Domination.wav
+art_media	.wav	28180	Assets/sounds/Spells/Dispelmagic.wav
+art_media	.wav	87064	Assets/sounds/Spells/Destroyundead.wav
+art_media	.wav	480044	Assets/sounds/Spells/Defile.wav
+art_media	.wav	168182	Assets/sounds/Spells/Curedisease.wav
+art_media	.wav	407416	Assets/sounds/Spells/Crew.wav
+art_media	.wav	41172	Assets/sounds/Spells/Create Puppet.wav
+art_media	.wav	485144	Assets/sounds/Spells/Contagion.wav
+art_media	.wav	31424	Assets/sounds/Spells/Consumesoul.wav
+art_media	.wav	21392	Assets/sounds/Spells/Commandersplit.wav
+art_media	.wav	45692	Assets/sounds/Spells/Commanderjoin.wav
+art_media	.wav	480044	Assets/sounds/Spells/Charmperson.wav
+art_media	.wav	167244	Assets/sounds/Spells/Chaosmarauder.wav
+art_media	.wav	45208	Assets/sounds/Spells/Burningblood.wav
+art_media	.wav	485144	Assets/sounds/Spells/Breathfire.wav
+art_media	.wav	44656	Assets/sounds/Spells/Bloom.wav
+art_media	.wav	178166	Assets/sounds/Spells/Bless.wav
+art_media	.wav	193560	Assets/sounds/Spells/Airelemental.wav
+art_media	.wav	146116	Assets/sounds/Somnium/SomWin.wav
+art_media	.wav	41394	Assets/sounds/Somnium/SomShuffle.wav
+art_media	.wav	68900	Assets/sounds/Somnium/SomNewTurn.wav
+art_media	.wav	202846	Assets/sounds/Somnium/SomLose.wav
+art_media	.wav	91340	Assets/sounds/Somnium/SomFool.wav
+art_media	.wav	9588	Assets/sounds/Somnium/SomDraw.wav
+art_media	.wav	65476	Assets/sounds/Somnium/SomDiscard.wav
+art_media	.wav	17212	Assets/sounds/Somnium/SomDeath.wav
+art_media	.wav	3862	Assets/sounds/Somnium/SomClick.wav
+art_media	.wav	135512	Assets/sounds/Somnium/SomApplause.wav
+other	.mp3	80710	Assets/sounds/Religions/Runes of Kilmorph.mp3
+other	.mp3	185618	Assets/sounds/Religions/Runes of Kilmorph Full.mp3
+other	.mp3	104116	Assets/sounds/Religions/Order.mp3
+other	.mp3	287182	Assets/sounds/Religions/Order Full.mp3
+other	.mp3	106624	Assets/sounds/Religions/Octopus Overlords.mp3
+other	.mp3	377477	Assets/sounds/Religions/Octopus Overlords Full.mp3
+other	.mp3	125850	Assets/sounds/Religions/Fellowship of Leaves.mp3
+other	.mp3	339445	Assets/sounds/Religions/Fellowship of Leaves Full.mp3
+other	.mp3	58221	Assets/sounds/Religions/Empyrean.mp3
+other	.mp3	159495	Assets/sounds/Religions/Empyrean Full.mp3
+other	.mp3	49298	Assets/sounds/Religions/Council of Esus.mp3
+other	.mp3	197255	Assets/sounds/Religions/Council of Esus Full.mp3
+other	.mp3	66499	Assets/sounds/Religions/Ashen Veil.mp3
+other	.mp3	265030	Assets/sounds/Religions/Ashen Veil Full.mp3
+art_media	.wav	179174	Assets/sounds/BT/roar.wav
+art_media	.wav	72408	Assets/sounds/BT/idle-003.wav
+art_media	.wav	267320	Assets/sounds/BT/idle-002.wav
+art_media	.wav	267320	Assets/sounds/BT/idle-001.wav
+art_media	.wav	267320	Assets/sounds/BT/idle-000.wav
+art_media	.wav	102252	Assets/sounds/BT/hurt-003.wav
+art_media	.wav	132132	Assets/sounds/BT/hurt-002.wav
+art_media	.wav	102754	Assets/sounds/BT/hurt-001.wav
+art_media	.wav	142088	Assets/sounds/BT/hurt-000.wav
+art_media	.wav	73784	Assets/sounds/BT/footsteps-007.wav
+art_media	.wav	69688	Assets/sounds/BT/footsteps-006.wav
+art_media	.wav	89144	Assets/sounds/BT/footsteps-005.wav
+art_media	.wav	73784	Assets/sounds/BT/footsteps-004.wav
+art_media	.wav	74808	Assets/sounds/BT/footsteps-003.wav
+art_media	.wav	75832	Assets/sounds/BT/footsteps-002.wav
+art_media	.wav	73784	Assets/sounds/BT/footsteps-001.wav
+art_media	.wav	80952	Assets/sounds/BT/footsteps-000.wav
+art_media	.wav	87096	Assets/sounds/BT/flapwings-001.wav
+art_media	.wav	94264	Assets/sounds/BT/flapwings-000.wav
+art_media	.wav	315826	Assets/sounds/BT/fidget_scream.wav
+art_media	.wav	39948	Assets/sounds/BT/falldie.wav
+art_media	.wav	281490	Assets/sounds/BT/fade.wav
+art_media	.wav	101354	Assets/sounds/BT/deathhitshriek.wav
+art_media	.wav	69254	Assets/sounds/BT/breathshort.wav
+art_media	.wav	122826	Assets/sounds/BT/breath.wav
+art_media	.wav	139982	Assets/sounds/BT/attackvox-001.wav
+art_media	.wav	24596	Assets/sounds/BT/attackvox-000.wav
+art_media	.wav	183028	Assets/sounds/BT/Running.wav
+art_media	.wav	77992	Assets/sounds/BT/Fall.wav
+other	.mp3	2037679	Assets/sounds/soundtrack/veil/thevoid.mp3
+other	.mp3	2121603	Assets/sounds/soundtrack/veil/WidowsHarbor.mp3
+other	.mp3	1401486	Assets/sounds/soundtrack/veil/VeilOfDarkness.mp3
+other	.mp3	2252800	Assets/sounds/soundtrack/veil/Veil9.mp3
+other	.mp3	1339081	Assets/sounds/soundtrack/veil/Veil8.mp3
+other	.mp3	845113	Assets/sounds/soundtrack/veil/Veil6.mp3
+other	.mp3	1188093	Assets/sounds/soundtrack/veil/Veil5.mp3
+other	.mp3	2646543	Assets/sounds/soundtrack/veil/Veil4.mp3
+other	.mp3	732309	Assets/sounds/soundtrack/veil/Veil3.mp3
+other	.mp3	1974047	Assets/sounds/soundtrack/veil/Veil2.mp3
+other	.mp3	2420506	Assets/sounds/soundtrack/veil/Veil1.mp3
+other	.mp3	2113189	Assets/sounds/soundtrack/veil/Nocturne.mp3
+other	.mp3	2646196	Assets/sounds/soundtrack/veil/DarknessImmortal.mp3
+other	.mp3	4688548	Assets/sounds/soundtrack/rune/enigmaoftheabsolute.mp3
+other	.mp3	2838926	Assets/sounds/soundtrack/rune/TheSiege.mp3
+other	.mp3	1998725	Assets/sounds/soundtrack/rune/Rune6.mp3
+other	.mp3	1042435	Assets/sounds/soundtrack/rune/Rune5.mp3
+other	.mp3	2063848	Assets/sounds/soundtrack/rune/Rune4.mp3
+other	.mp3	1331244	Assets/sounds/soundtrack/rune/Rune3.mp3
+other	.mp3	1267323	Assets/sounds/soundtrack/rune/Rune2.mp3
+other	.mp3	1483800	Assets/sounds/soundtrack/rune/Rune1.mp3
+other	.mp3	2181682	Assets/sounds/soundtrack/rune/MistLoch.mp3
+other	.mp3	2841977	Assets/sounds/soundtrack/rune/HighlandStorm.mp3
+other	.mp3	2936879	Assets/sounds/soundtrack/rune/Alexander.mp3
+other	.mp3	2194375	Assets/sounds/soundtrack/orde/VeniVeniEmannuel.mp3
+other	.mp3	6855664	Assets/sounds/soundtrack/orde/The Last Embrace.mp3
+other	.mp3	2316081	Assets/sounds/soundtrack/orde/SkullandCrossbones.mp3
+other	.mp3	1452408	Assets/sounds/soundtrack/orde/Orde4.mp3
+other	.mp3	1672170	Assets/sounds/soundtrack/orde/Orde3.mp3
+other	.mp3	1725361	Assets/sounds/soundtrack/orde/Orde2.mp3
+other	.mp3	2432000	Assets/sounds/soundtrack/orde/Orde1.mp3
+other	.mp3	3284784	Assets/sounds/soundtrack/orde/DefendersOfTheRealm.mp3
+other	.mp3	2254800	Assets/sounds/soundtrack/orde/Crossfire.mp3
+other	.mp3	2303835	Assets/sounds/soundtrack/octo/Octo9.mp3
+other	.mp3	1110727	Assets/sounds/soundtrack/octo/Octo8.mp3
+other	.mp3	2055150	Assets/sounds/soundtrack/octo/Octo7.mp3
+other	.mp3	2835756	Assets/sounds/soundtrack/octo/Octo6.mp3
+other	.mp3	1635101	Assets/sounds/soundtrack/octo/Octo5.mp3
+other	.mp3	3111751	Assets/sounds/soundtrack/octo/Octo4.mp3
+other	.mp3	1551195	Assets/sounds/soundtrack/octo/Octo3.mp3
+other	.mp3	3235526	Assets/sounds/soundtrack/octo/Octo2.mp3
+other	.mp3	1866859	Assets/sounds/soundtrack/octo/Octo11.mp3
+other	.mp3	1785566	Assets/sounds/soundtrack/octo/Octo10.mp3
+other	.mp3	2082828	Assets/sounds/soundtrack/octo/Octo1.mp3
+other	.mp3	3514514	Assets/sounds/soundtrack/leaf/Leaf5.mp3
+other	.mp3	2195924	Assets/sounds/soundtrack/leaf/Leaf4.mp3
+other	.mp3	768593	Assets/sounds/soundtrack/leaf/Leaf3.mp3
+other	.mp3	1169625	Assets/sounds/soundtrack/leaf/Leaf2.mp3
+other	.mp3	2175000	Assets/sounds/soundtrack/leaf/Leaf1.mp3
+other	.mp3	2127901	Assets/sounds/soundtrack/leaf/LabyrinthOfDreams.mp3
+other	.mp3	2141794	Assets/sounds/soundtrack/leaf/Ebonshire.mp3
+other	.mp3	2415757	Assets/sounds/soundtrack/leaf/CrystalForest.mp3
+other	.mp3	4140493	Assets/sounds/soundtrack/empy/reminiscence.mp3
+other	.mp3	5488546	Assets/sounds/soundtrack/empy/Wings Of The Lost Soul.mp3
+other	.mp3	4807271	Assets/sounds/soundtrack/empy/Wings Of Gabriel.mp3
+other	.mp3	4074154	Assets/sounds/soundtrack/empy/Void Of Silence.mp3
+other	.mp3	869588	Assets/sounds/soundtrack/empy/The Song Of Preperation.mp3
+other	.mp3	5383914	Assets/sounds/soundtrack/empy/My Cold Sea.mp3
+other	.mp3	3198642	Assets/sounds/soundtrack/empy/Love Eternal.mp3
+other	.mp3	6366643	Assets/sounds/soundtrack/empy/Innocent Child.mp3
+other	.mp3	5560090	Assets/sounds/soundtrack/coun/leserpentrouge.mp3
+other	.mp3	6692670	Assets/sounds/soundtrack/coun/Through The Grey Horizon.mp3
+other	.mp3	4250229	Assets/sounds/soundtrack/coun/The Opening Of The Wound.mp3
+other	.mp3	3580961	Assets/sounds/soundtrack/coun/The Calm Before The Storm.mp3
+other	.mp3	6169116	Assets/sounds/soundtrack/coun/Maure.mp3
+other	.mp3	2584733	Assets/sounds/soundtrack/coun/Hymn of Absolute Deceit.mp3
+other	.mp3	3568532	Assets/sounds/soundtrack/coun/Ella Sheena.mp3
+other	.mp3	2783646	Assets/sounds/soundtrack/coun/Blood Of Angels.mp3
+other	.mp3	3823368	Assets/sounds/soundtrack/coun/Angel Of Sorrow.mp3
+other	.ttf	365264	Resource/Fonts/seguibk.ttf
+other	.ttf	296712	Resource/Fonts/arial.ttf
+text_xml_python	.txt	6078	Resource/Fonts/COPYRIGHT.TXT
+other	.ttf	221676	Resource/Fonts/sylfaen.ttf
+art_media	.tga	154268	Resource/Temp/temp_gandhi.tga
+art_media	.tga	21132	Resource/Temp/popup_lock.tga
+art_media	.tga	16028	Resource/Temp/popup_key.tga
+art_media	.tga	24444	Resource/Temp/popup_globe.tga
+art_media	.tga	28428	Resource/Temp/popup_disk.tga
+art_media	.tga	35068	Resource/Temp/popup_computer.tga
+art_media	.tga	18428	Resource/Temp/popup_civ4.tga
+art_media	.tga	27644	Resource/Temp/popup_buddyrequest.tga
+art_media	.tga	26588	Resource/Temp/popup_buddyremove.tga
+art_media	.tga	24828	Resource/Temp/popup_buddyinfo.tga
+art_media	.tga	26588	Resource/Temp/popup_buddyblock.tga
+art_media	.tga	26588	Resource/Temp/popup_buddyadd.tga
+art_media	.tga	28764	Resource/Temp/popup_profile.tga
+art_media	.tga	28764	Resource/Temp/passport.tga
+art_media	.tga	12852	Resource/Temp/gamespy.tga
+art_media	.dds	9344	Resource/Temp/civ4_title_small.dds
+art_media	.tga	82988	Resource/Temp/civ4_title.tga
+art_media	.dds	20864	Resource/Temp/civ4_title.dds
+art_media	.tga	360540	Resource/Temp/temp_world.tga
+art_media	.tga	16428	Resource/Temp/temp_texture.tga
+art_media	.tga	16428	Resource/Temp/temp_image.tga
+art_media	.tga	9260	Resource/Temp/select_r.tga
+art_media	.tga	9260	Resource/Temp/select_l.tga
+art_media	.tga	5228	Resource/Temp/select_c.tga
+art_media	.tga	2140	Resource/Temp/profile.tga
+art_media	.tga	2140	Resource/Temp/kick.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_r_04.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_r_03.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_r_02.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_r_01.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_r_05.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_l_05.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_l_04.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_l_03.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_l_02.tga
+art_media	.tga	1580	Resource/Temp/arrow_ani_l_01.tga
+art_media	.tga	8732	Resource/Civ4/win_winoff.tga
+art_media	.tga	4524	Resource/Civ4/win_titlebar_bg_min.tga
+art_media	.tga	3068	Resource/Civ4/win_titlebar_bg.tga
+art_media	.tga	6444	Resource/Civ4/win_title_x.tga
+art_media	.tga	6444	Resource/Civ4/win_title_mask.tga
+art_media	.tga	19244	Resource/Civ4/win_title.tga
+art_media	.tga	11276	Resource/Civ4/win_tb_mask.tga
+art_media	.tga	12944	Resource/Civ4/win_size_mask.tga
+art_media	.tga	908	Resource/Civ4/win_lr_mask.tga
+art_media	.tga	31260	Resource/Civ4/win_glyphs.tga
+art_media	.tga	92700	Resource/Civ4/win_glyph.tga
+art_media	.tga	247340	Resource/Civ4/win_border_tb_title.tga
+art_media	.tga	186412	Resource/Civ4/win_border_tb.tga
+art_media	.tga	12944	Resource/Civ4/win_border_size.tga
+art_media	.tga	8156	Resource/Civ4/win_border_rs.tga
+art_media	.tga	16268	Resource/Civ4/win_border_mask.tga
+art_media	.tga	65436	Resource/Civ4/win_border_lr.tga
+art_media	.tga	10124	Resource/Civ4/win_border_bg.tga
+art_media	.tga	32492	Resource/Civ4/win_border_x.tga
+art_media	.tga	32492	Resource/Civ4/win_border.tga
+art_media	.tga	5980	Resource/Civ4/win_bg_withtitlebar_max.tga
+art_media	.tga	7100	Resource/Civ4/win_bg_withtitlebar.tga
+art_media	.tga	9004	Resource/Civ4/win_bg_standardtitlebar.tga
+art_media	.tga	7212	Resource/Civ4/win_bg_notitlebar.tga
+art_media	.tga	6284	Resource/Civ4/win_bg_inner.tga
+art_media	.tga	13644	Resource/Civ4/win_bg_TBsides.tga
+art_media	.tga	6284	Resource/Civ4/win_bg_LRsides.tga
+art_media	.tga	16428	Resource/Civ4/white.tga
+art_media	.tga	1644	Resource/Civ4/tree_icons.tga
+art_media	.tga	2780	Resource/Civ4/toolwin_title.tga
+art_media	.tga	14444	Resource/Civ4/toolwin_border.tga
+art_media	.tga	2348	Resource/Civ4/tooltip_mask.tga
+art_media	.tga	2092	Resource/Civ4/tooltip.tga
+art_media	.tga	1004	Resource/Civ4/titlebar_ex.tga
+art_media	.tga	1004	Resource/Civ4/titlebar.tga
+art_media	.tga	360540	Resource/Civ4/temp_world.tga
+art_media	.tga	16428	Resource/Civ4/temp_texture.tga
+art_media	.tga	16428	Resource/Civ4/temp_image.tga
+art_media	.tga	205676	Resource/Civ4/temp_gandhi.tga
+art_media	.tga	51244	Resource/Civ4/tabpanel_t.tga
+art_media	.tga	51244	Resource/Civ4/tabpanel_r.tga
+art_media	.tga	51244	Resource/Civ4/tabpanel_l.tga
+art_media	.tga	51244	Resource/Civ4/tabpanel_b.tga
+art_media	.tga	51244	Resource/Civ4/tabpanel.tga
+art_media	.tga	2844	Resource/Civ4/table_sort_arrows.tga
+art_media	.tga	364	Resource/Civ4/table_insert_v.tga
+art_media	.tga	364	Resource/Civ4/table_insert_h.tga
+art_media	.tga	3612	Resource/Civ4/table_innerTB.tga
+art_media	.tga	3612	Resource/Civ4/table_innerLR.tga
+art_media	.tga	2076	Resource/Civ4/table_inner.tga
+art_media	.tga	15532	Resource/Civ4/table_corner.tga
+art_media	.tga	2348	Resource/Civ4/table_alt.tga
+art_media	.tga	2588	Resource/Civ4/tableRB.tga
+art_media	.tga	1308	Resource/Civ4/table.tga
+art_media	.tga	249372	Resource/Civ4/tab_r.tga
+art_media	.tga	249372	Resource/Civ4/tab_l.tga
+art_media	.tga	1052	Resource/Civ4/tab_disable_line.tga
+art_media	.tga	36044	Resource/Civ4/tab_btn_v.tga
+art_media	.tga	36044	Resource/Civ4/tab_btn_h.tga
+art_media	.tga	36044	Resource/Civ4/tab_btn.tga
+art_media	.tga	1212	Resource/Civ4/tab_baseline_v.tga
+art_media	.tga	1436	Resource/Civ4/tab_baseline_h.tga
+art_media	.tga	249372	Resource/Civ4/tab_b.tga
+art_media	.tga	12588	Resource/Civ4/tab_arrows.tga
+art_media	.tga	10028	Resource/Civ4/tabTB_focus.tga
+art_media	.tga	67244	Resource/Civ4/tabTB.tga
+art_media	.tga	10028	Resource/Civ4/tabLR_focus.tga
+art_media	.tga	67740	Resource/Civ4/tabLR.tga
+art_media	.tga	248876	Resource/Civ4/tab_t.tga
+art_media	.tga	248876	Resource/Civ4/tab.tga
+other	.ttf	118352	Resource/Civ4/sylfaeni.ttf
+other	.ttf	118332	Resource/Civ4/sylfaenbi.ttf
+other	.ttf	110352	Resource/Civ4/sylfaenb.ttf
+other	.ttf	221676	Resource/Civ4/sylfaen.ttf
+art_media	.tga	2948	Resource/Civ4/splitpanel_arrow_tb.tga
+art_media	.tga	2948	Resource/Civ4/splitpanel_arrow_lr.tga
+art_media	.tga	1052	Resource/Civ4/split_panel.tga
+art_media	.tga	9756	Resource/Civ4/split_arrows.tga
+art_media	.tga	1340	Resource/Civ4/spinbox_glyph.tga
+art_media	.tga	12524	Resource/Civ4/spinbox.tga
+art_media	.tga	28844	Resource/Civ4/spin_btn.tga
+art_media	.tga	1884	Resource/Civ4/slider_track_v.tga
+art_media	.tga	1884	Resource/Civ4/slider_track_h.tga
+art_media	.tga	108	Resource/Civ4/slider_tick_v.tga
+art_media	.tga	108	Resource/Civ4/slider_tick_h.tga
+art_media	.tga	24060	Resource/Civ4/slider_grip_v.tga
+art_media	.tga	24060	Resource/Civ4/slider_grip_h.tga
+art_media	.tga	1340	Resource/Civ4/slider_fill_v.tga
+art_media	.tga	1340	Resource/Civ4/slider_fill_h.tga
+art_media	.tga	604	Resource/Civ4/slider_fill.tga
+art_media	.tga	1564	Resource/Civ4/separator_v.tga
+art_media	.tga	1564	Resource/Civ4/separator_h.tga
+art_media	.tga	56	Resource/Civ4/separator.tga
+art_media	.tga	4652	Resource/Civ4/selection_cell.tga
+art_media	.tga	2348	Resource/Civ4/selection.tga
+art_media	.tga	9260	Resource/Civ4/select_r.tga
+art_media	.tga	9260	Resource/Civ4/select_l.tga
+art_media	.tga	5228	Resource/Civ4/select_c.tga
+art_media	.tga	33324	Resource/Civ4/scrollgrip_v.tga
+art_media	.tga	33324	Resource/Civ4/scrollgrip_h.tga
+art_media	.tga	1324	Resource/Civ4/scroll_v_track.tga
+art_media	.tga	12204	Resource/Civ4/scroll_v.tga
+art_media	.tga	6684	Resource/Civ4/scroll_track.tga
+art_media	.tga	12204	Resource/Civ4/scroll_table_v.tga
+art_media	.tga	12204	Resource/Civ4/scroll_table_h.tga
+art_media	.tga	1324	Resource/Civ4/scroll_h_track.tga
+art_media	.tga	12204	Resource/Civ4/scroll_h.tga
+art_media	.tga	4652	Resource/Civ4/scroll_grip.tga
+art_media	.tga	10268	Resource/Civ4/scroll_btn_v.tga
+art_media	.tga	10268	Resource/Civ4/scroll_btn_h.tga
+art_media	.tga	5340	Resource/Civ4/scroll_arrows.tga
+art_media	.tga	332	Resource/Civ4/scroll02_track.tga
+art_media	.tga	1196	Resource/Civ4/scroll02_grip.tga
+art_media	.tga	4140	Resource/Civ4/scroll02_btn.tga
+art_media	.tga	16172	Resource/Civ4/radio.tga
+art_media	.tga	2588	Resource/Civ4/progress_v_fill.tga
+art_media	.tga	3132	Resource/Civ4/progress_v.tga
+art_media	.tga	2588	Resource/Civ4/progress_h_fill.tga
+art_media	.tga	3132	Resource/Civ4/progress_h.tga
+art_media	.tga	110636	Resource/Civ4/progress.tga
+art_media	.tga	2140	Resource/Civ4/profile.tga
+art_media	.tga	2348	Resource/Civ4/panel_mask.tga
+art_media	.tga	620	Resource/Civ4/panel_bg.tga
+art_media	.tga	300	Resource/Civ4/menubar_selection.tga
+art_media	.tga	2092	Resource/Civ4/menu_selection.tga
+art_media	.tga	3404	Resource/Civ4/menu_scroll_track_bg_v.tga
+art_media	.tga	3308	Resource/Civ4/menu_scroll_track_bg_h.tga
+art_media	.tga	620	Resource/Civ4/menu_scroll_track.tga
+art_media	.tga	1196	Resource/Civ4/menu_scroll_grip.tga
+art_media	.tga	4636	Resource/Civ4/menu_scroll_btn.tga
+art_media	.tga	1772	Resource/Civ4/menu_radiobutton.tga
+art_media	.tga	20780	Resource/Civ4/menu_mask.tga
+art_media	.tga	1772	Resource/Civ4/menu_checkbox.tga
+art_media	.tga	2092	Resource/Civ4/menu_bg_inner.tga
+art_media	.tga	2220	Resource/Civ4/menu_bg_TB.tga
+art_media	.tga	4140	Resource/Civ4/menu_bg_LR.tga
+art_media	.tga	300	Resource/Civ4/menu_bg.tga
+art_media	.tga	380	Resource/Civ4/menu_arrow.tga
+art_media	.tga	65580	Resource/Civ4/mainmenufont.tga
+art_media	.tga	2140	Resource/Civ4/kick.tga
+art_media	.tga	9260	Resource/Civ4/header_v.tga
+art_media	.tga	1068	Resource/Civ4/header_sort.tga
+art_media	.tga	9756	Resource/Civ4/header_h.tga
+art_media	.tga	43804	Resource/Civ4/globe.tga
+art_media	.tga	12680	Resource/Civ4/gamespy.tga
+art_media	.tga	3644	Resource/Civ4/focus.tga
+art_media	.tga	1196	Resource/Civ4/edit_combo.tga
+art_media	.tga	7452	Resource/Civ4/edit.tga
+art_media	.tga	43804	Resource/Civ4/computer.tga
+art_media	.tga	2220	Resource/Civ4/combobox_glyph.tga
+art_media	.tga	2220	Resource/Civ4/combobox_flat_glyph.tga
+art_media	.tga	12540	Resource/Civ4/combobox_flat_btn.tga
+art_media	.tga	12540	Resource/Civ4/combobox_flat.tga
+art_media	.tga	7452	Resource/Civ4/combobox_edit.tga
+art_media	.tga	18044	Resource/Civ4/combobox_btn.tga
+art_media	.tga	7244	Resource/Civ4/combobox.tga
+art_media	.tga	16172	Resource/Civ4/check.tga
+art_media	.tga	16428	Resource/Civ4/button_press_bg.tga
+art_media	.tga	1612	Resource/Civ4/button_press.tga
+art_media	.tga	9644	Resource/Civ4/button.tga
+art_media	.tga	4652	Resource/Civ4/border_table.tga
+art_media	.tga	9260	Resource/Civ4/border_panel.tga
+art_media	.tga	300	Resource/Civ4/border_indent.tga
+art_media	.tga	4652	Resource/Civ4/border_external.tga
+art_media	.tga	2348	Resource/Civ4/black_25.tga
+art_media	.tga	2348	Resource/Civ4/black_19.tga
+art_media	.tga	77868	Resource/Civ4/bg_off.tga
+art_media	.tga	77868	Resource/Civ4/bg_header.tga
+art_media	.tga	77868	Resource/Civ4/bg.tga
+art_media	.tga	26140	Resource/Civ4/baseline_t.tga
+art_media	.tga	26140	Resource/Civ4/baseline_r.tga
+art_media	.tga	26140	Resource/Civ4/baseline_l.tga
+art_media	.tga	26140	Resource/Civ4/baseline_b.tga
+art_media	.tga	26140	Resource/Civ4/baseline.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_r_04.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_r_03.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_r_02.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_r_01.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_r_05.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_l_05.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_l_04.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_l_03.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_l_02.tga
+art_media	.tga	1580	Resource/Civ4/arrow_ani_l_01.tga
+art_media	.tga	6764	Resource/Civ4/Tool_Titlebar_Sys.tga
+art_media	.tga	9820	Resource/Civ4/Tool_Titlebar_Min.tga
+art_media	.tga	7436	Resource/Civ4/Tool_Titlebar_Max.tga
+art_media	.tga	3212	Resource/Civ4/Tool_Titlebar_Hit.tga
+art_media	.tga	8316	Resource/Civ4/Tool_Titlebar.tga
+art_media	.tga	23564	Resource/Civ4/Tool_InFrame_Border_Max.tga
+art_media	.tga	2780	Resource/Civ4/Tool_InFrame_Border_Hit.tga
+art_media	.tga	30124	Resource/Civ4/Tool_InFrame_Border.tga
+art_media	.tga	28204	Resource/Civ4/Tool_Glyphs.tga
+art_media	.tga	7148	Resource/Civ4/Titlebar_Border_Min_Hit.tga
+art_media	.tga	36492	Resource/Civ4/Titlebar_Border_Min.tga
+art_media	.tga	24116	Resource/Civ4/Titlebar_Border_Max.tga
+art_media	.tga	5228	Resource/Civ4/Titlebar_Border_Hit.tga
+art_media	.tga	31052	Resource/Civ4/Titlebar_Border.tga
+art_media	.tga	26444	Resource/Civ4/Titlebar01.tga
+art_media	.tga	108044	Resource/Civ4/Tabs2.tga
+art_media	.tga	103724	Resource/Civ4/Tabs1.tga
+art_media	.tga	1340	Resource/Civ4/Table_Scrolltrack.tga
+art_media	.tga	1340	Resource/Civ4/Table_Scrollbutton.tga
+art_media	.tga	2636	Resource/Civ4/Table_Scrollbar.tga
+art_media	.tga	5228	Resource/Civ4/Table_Scrollarrows.tga
+art_media	.tga	7788	Resource/Civ4/Table_Header_Side.tga
+art_media	.tga	7788	Resource/Civ4/Table_Header.tga
+art_media	.tga	15532	Resource/Civ4/Table_Corner_Panel_Disabled.tga
+art_media	.tga	15532	Resource/Civ4/Table_Corner_Panel.tga
+art_media	.tga	1804	Resource/Civ4/Table_Border.tga
+art_media	.tga	13340	Resource/Civ4/Tab_Panel.tga
+art_media	.tga	16428	Resource/Civ4/Tab_Buttons.tga
+art_media	.tga	24236	Resource/Civ4/Slider_Vertical.tga
+art_media	.tga	3116	Resource/Civ4/Slider_Track_Vertical_FillColor.tga
+art_media	.tga	3116	Resource/Civ4/Slider_Track_Vertical.tga
+art_media	.tga	3116	Resource/Civ4/Slider_Track_Horizontal_FillColor.tga
+art_media	.tga	3116	Resource/Civ4/Slider_Track_Horizontal.tga
+art_media	.tga	24236	Resource/Civ4/Slider_Horizontal.tga
+art_media	.tga	2636	Resource/Civ4/SizeGrip.tga
+art_media	.tga	16428	Resource/Civ4/Shine01.tga
+art_media	.tga	68	Resource/Civ4/SeparatorV.tga
+art_media	.tga	68	Resource/Civ4/SeparatorH.tga
+art_media	.tga	1340	Resource/Civ4/Select_V.tga
+art_media	.tga	1340	Resource/Civ4/Scrolltrack.tga
+art_media	.tga	1340	Resource/Civ4/Scrollbutton.tga
+art_media	.tga	1340	Resource/Civ4/Scrollbar.tga
+art_media	.tga	2636	Resource/Civ4/Scrollarrows.tga
+art_media	.tga	262188	Resource/Civ4/ScreenTitleFont.tga
+art_media	.tga	524332	Resource/Civ4/ScanLines_Selected.tga
+art_media	.tga	524332	Resource/Civ4/ScanLines.tga
+art_media	.tga	15724	Resource/Civ4/Radiobutton.tga
+art_media	.tga	2948	Resource/Civ4/Progress_VInner-Fill.tga
+art_media	.tga	2948	Resource/Civ4/Progress_HInner-Fill.tga
+art_media	.tga	5876	Resource/Civ4/Progress_Border.tga
+art_media	.tga	240828	Resource/Civ4/Paper_Border.tga
+art_media	.tga	36908	Resource/Civ4/Paper_Background_Disabled.tga
+art_media	.tga	131116	Resource/Civ4/NumberFont-Sylfaen64px.tga
+art_media	.tga	65580	Resource/Civ4/MonoSpacedConsoleFont.tga
+art_media	.tga	10252	Resource/Civ4/Minbox.tga
+art_media	.tga	22676	Resource/Civ4/Menu_Select.tga
+art_media	.tga	1340	Resource/Civ4/Menu_Hit.tga
+art_media	.tga	3116	Resource/Civ4/Menu.tga
+art_media	.tga	10252	Resource/Civ4/Maxbox.tga
+art_media	.tga	34972	Resource/Civ4/InFrame_Border_Max.tga
+art_media	.tga	4652	Resource/Civ4/InFrame_Border_Hit.tga
+art_media	.tga	47372	Resource/Civ4/InFrame_Border.tga
+art_media	.tga	5148	Resource/Civ4/HelpBox.tga
+art_media	.tga	844	Resource/Civ4/Header_VInsertIndicator.tga
+art_media	.tga	844	Resource/Civ4/Header_HInsertIndicator.tga
+art_media	.tga	524332	Resource/Civ4/GameFont_75.tga
+art_media	.tga	524332	Resource/Civ4/GameFont.tga
+art_media	.tga	2084	Resource/Civ4/Edit_Table.tga
+art_media	.tga	2084	Resource/Civ4/Combobox_Table.tga
+art_media	.tga	1792	Resource/Civ4/Combobox_Dropdown.tga
+art_media	.tga	224	Resource/Civ4/Combobox_Button_Glyph.tga
+art_media	.tga	556	Resource/Civ4/Combobox_Button.tga
+art_media	.tga	10252	Resource/Civ4/Collapsebox.tga
+art_media	.tga	5148	Resource/Civ4/Closebox.tga
+art_media	.tga	16044	Resource/Civ4/Checkbox.tga
+art_media	.tga	188	Resource/Civ4/Caret_Overwrite.tga
+art_media	.tga	188	Resource/Civ4/Caret_Insert.tga
+art_media	.tga	188	Resource/Civ4/Caret_Drag.tga
+art_media	.tga	1340	Resource/Civ4/Button_Toggle.tga
+art_media	.tga	4140	Resource/Civ4/Borders.tga
+art_media	.tga	1068	Resource/Civ4/Blank.tga
+art_media	.tga	32812	Resource/Civ4/Background.tga
+art_media	.tga	1820	Resource/Civ4/HUD/wb_toolpanel.tga
+art_media	.tga	130012	Resource/Civ4/HUD/wb_icons.tga
+art_media	.tga	9788	Resource/Civ4/HUD/wb_button.tga
+art_media	.tga	156844	Resource/Civ4/HUD/city_icons.tga
+art_media	.tga	9548	Resource/Civ4/HUD/city_btn11.tga
+art_media	.tga	8684	Resource/Civ4/HUD/city_btn10.tga
+art_media	.tga	9548	Resource/Civ4/HUD/city_btn09.tga
+art_media	.tga	8492	Resource/Civ4/HUD/city_btn08.tga
+art_media	.tga	7724	Resource/Civ4/HUD/city_btn07.tga
+art_media	.tga	8492	Resource/Civ4/HUD/city_btn06.tga
+art_media	.tga	14380	Resource/Civ4/HUD/city_btn05.tga
+art_media	.tga	14380	Resource/Civ4/HUD/city_btn04.tga
+art_media	.tga	14380	Resource/Civ4/HUD/city_btn03.tga
+art_media	.tga	14380	Resource/Civ4/HUD/city_btn02.tga
+art_media	.tga	29740	Resource/Civ4/HUD/city_btn01.tga
+other	.db	8192	Resource/Civ4/HUD/Thumbs.db
+art_media	.tga	20780	Resource/Civ4/HUD/HUD_zoom_btn.tga
+art_media	.tga	25964	Resource/Civ4/HUD/HUD_zoom.tga
+art_media	.tga	15724	Resource/Civ4/HUD/HUD_trophy.tga
+art_media	.tga	8172	Resource/Civ4/HUD/HUD_top_spires.tga
+art_media	.tga	1916	Resource/Civ4/HUD/HUD_map.tga
+art_media	.tga	16220	Resource/Civ4/HUD/HUD_log.tga
+art_media	.tga	4844	Resource/Civ4/HUD/HUD_jump_btn.tga
+art_media	.tga	5340	Resource/Civ4/HUD/HUD_jump.tga
+art_media	.tga	313644	Resource/Civ4/HUD/HUD_icons.tga
+art_media	.tga	5916	Resource/Civ4/HUD/HUD_evileye_btn.tga
+art_media	.tga	2476	Resource/Civ4/HUD/HUD_evileye.tga
+art_media	.tga	16428	Resource/Civ4/HUD/HUD_endturn_btn.tga
+art_media	.tga	16428	Resource/Civ4/HUD/HUD_endturn.tga
+art_media	.tga	12588	Resource/Civ4/HUD/HUD_button.tga
+art_media	.tga	78444	Resource/Civ4/HUD/HUD_BTS_icons.tga
+art_media	.dds	104804	Resource/Civ4/HUD/HUD_BTS_icons.dds
+art_media	.tga	118844	Resource/Civ4/HUD/stone_title.tga
+art_media	.tga	8316	Resource/Civ4/HUD/city_titlearrows.tga
+art_media	.tga	26540	Resource/Civ4/HUD/button_flat.tga
+art_media	.tga	1628	Resource/Civ4/HUD/HUD_top.tga
+art_media	.tga	1948	Resource/Civ4/HUD/HUD_stat.tga
+art_media	.tga	101916	Resource/Civ4/HUD/HUD_corners.tga
+art_media	.tga	764	Resource/Civ4/HUD/HUD_bottom.tga
+art_media	.tga	68124	Resource/Civ4/Custom/unit_stat_panel.tga
+art_media	.tga	2204	Resource/Civ4/Custom/topbar.tga
+art_media	.tga	16924	Resource/Civ4/Custom/temp_image.tga
+art_media	.tga	3040	Resource/Civ4/Custom/tech_panel02.tga
+art_media	.tga	12844	Resource/Civ4/Custom/tech_panel01.tga
+art_media	.tga	9756	Resource/Civ4/Custom/tan_panel.tga
+art_media	.tga	2844	Resource/Civ4/Custom/tan15.tga
+art_media	.tga	2348	Resource/Civ4/Custom/table_alt02.tga
+art_media	.tga	1508	Resource/Civ4/Custom/tab_close.tga
+art_media	.tga	118844	Resource/Civ4/Custom/stone_title.tga
+art_media	.tga	1068	Resource/Civ4/Custom/stone_panel_bg.tga
+art_media	.tga	73772	Resource/Civ4/Custom/stone_panel.tga
+art_media	.tga	786476	Resource/Civ4/Custom/stone_bg.tga
+art_media	.tga	28188	Resource/Civ4/Custom/staging_rows.tga
+art_media	.tga	4636	Resource/Civ4/Custom/split_arrows.tga
+art_media	.tga	95196	Resource/Civ4/Custom/res_monitor_top.tga
+art_media	.tga	44100	Resource/Civ4/Custom/res_monitor_bottom.tga
+art_media	.tga	28188	Resource/Civ4/Custom/progress.tga
+art_media	.tga	16924	Resource/Civ4/Custom/profile.tga
+art_media	.tga	12812	Resource/Civ4/Custom/plus_minus.tga
+art_media	.tga	29420	Resource/Civ4/Custom/multiListItem_big.tga
+art_media	.tga	18972	Resource/Civ4/Custom/multiListItem.tga
+art_media	.tga	19740	Resource/Civ4/Custom/metal_btn.tga
+art_media	.tga	118620	Resource/Civ4/Custom/map_panel.tga
+art_media	.tga	21020	Resource/Civ4/Custom/map_buttons.tga
+art_media	.tga	74268	Resource/Civ4/Custom/main_start.tga
+art_media	.tga	50716	Resource/Civ4/Custom/main_menu03.tga
+art_media	.tga	5804	Resource/Civ4/Custom/main_menu02a.tga
+art_media	.tga	12588	Resource/Civ4/Custom/main_menu02.tga
+art_media	.tga	74268	Resource/Civ4/Custom/main_menu01a.tga
+art_media	.tga	73772	Resource/Civ4/Custom/main_menu01.tga
+art_media	.tga	16924	Resource/Civ4/Custom/login_panel01.tga
+art_media	.tga	12140	Resource/Civ4/Custom/leader_button01.tga
+art_media	.tga	13084	Resource/Civ4/Custom/leader_border01.tga
+art_media	.tga	6684	Resource/Civ4/Custom/icon_panel01.tga
+art_media	.tga	5724	Resource/Civ4/Custom/i_combobox.tga
+art_media	.tga	620	Resource/Civ4/Custom/help_panel.tga
+art_media	.tga	764	Resource/Civ4/Custom/game_topbar.tga
+art_media	.tga	38172	Resource/Civ4/Custom/game_panel_tc.tga
+art_media	.tga	187420	Resource/Civ4/Custom/game_panel_t.tga
+art_media	.tga	806940	Resource/Civ4/Custom/game_panel_lr.tga
+art_media	.tga	24860	Resource/Civ4/Custom/game_panel_c.tga
+art_media	.tga	133020	Resource/Civ4/Custom/game_l_stat.tga
+art_media	.tga	36260	Resource/Civ4/Custom/discover_tech_glow.tga
+art_media	.tga	12748	Resource/Civ4/Custom/discover_tech.tga
+art_media	.tga	5660	Resource/Civ4/Custom/dip_top.tga
+art_media	.tga	5148	Resource/Civ4/Custom/dip_rows.tga
+art_media	.tga	12060	Resource/Civ4/Custom/dip_panel.tga
+art_media	.tga	35100	Resource/Civ4/Custom/dip_center03.tga
+art_media	.tga	474780	Resource/Civ4/Custom/dip_center02.tga
+art_media	.tga	64028	Resource/Civ4/Custom/dip_center01b.tga
+art_media	.tga	179820	Resource/Civ4/Custom/dip_center01a.tga
+art_media	.tga	5660	Resource/Civ4/Custom/dip_bottom.tga
+art_media	.tga	68124	Resource/Civ4/Custom/dip_bar02.tga
+art_media	.tga	76572	Resource/Civ4/Custom/dip_bar01.tga
+art_media	.tga	6812	Resource/Civ4/Custom/dip_LRheader.tga
+art_media	.tga	5724	Resource/Civ4/Custom/dip_CpanelMulti.tga
+art_media	.tga	96220	Resource/Civ4/Custom/dip_Cpanel.tga
+art_media	.tga	936	Resource/Civ4/Custom/dip_CheaderB.tga
+art_media	.tga	796	Resource/Civ4/Custom/dip_CheaderA.tga
+art_media	.tga	4636	Resource/Civ4/Custom/dawn02.tga
+art_media	.tga	50716	Resource/Civ4/Custom/dawn01.tga
+art_media	.tga	8316	Resource/Civ4/Custom/city_titlearrows.tga
+art_media	.tga	5580	Resource/Civ4/Custom/city_title.tga
+art_media	.tga	2652	Resource/Civ4/Custom/city_tan02.tga
+art_media	.tga	4636	Resource/Civ4/Custom/city_tan.tga
+art_media	.tga	636	Resource/Civ4/Custom/city_table_inner.tga
+art_media	.tga	15900	Resource/Civ4/Custom/city_table_header.tga
+art_media	.tga	1052	Resource/Civ4/Custom/city_stat.tga
+art_media	.tga	40476	Resource/Civ4/Custom/city_religion.tga
+art_media	.tga	19228	Resource/Civ4/Custom/city_panel_tb.tga
+art_media	.tga	9756	Resource/Civ4/Custom/city_panel_lr.tga
+art_media	.tga	3612	Resource/Civ4/Custom/city_panel_columns.tga
+art_media	.tga	1884	Resource/Civ4/Custom/city_lines.tga
+art_media	.tga	1564	Resource/Civ4/Custom/city_info.tga
+art_media	.tga	2844	Resource/Civ4/Custom/city_header.tga
+art_media	.tga	54300	Resource/Civ4/Custom/city_button03_lr.tga
+art_media	.tga	22940	Resource/Civ4/Custom/city_button03_c.tga
+art_media	.tga	54940	Resource/Civ4/Custom/city_button02.tga
+art_media	.tga	31260	Resource/Civ4/Custom/city_button01_lr.tga
+art_media	.tga	13340	Resource/Civ4/Custom/city_button01_c.tga
+art_media	.tga	8444	Resource/Civ4/Custom/city_btn04b.tga
+art_media	.tga	18844	Resource/Civ4/Custom/city_btn04a.tga
+art_media	.tga	7836	Resource/Civ4/Custom/city_btn03b.tga
+art_media	.tga	17436	Resource/Civ4/Custom/city_btn03a.tga
+art_media	.tga	14876	Resource/Civ4/Custom/city_btn02.tga
+art_media	.tga	30236	Resource/Civ4/Custom/city_btn01.tga
+art_media	.tga	28316	Resource/Civ4/Custom/button_top.tga
+art_media	.tga	47132	Resource/Civ4/Custom/button_start.tga
+art_media	.tga	47132	Resource/Civ4/Custom/button_next.tga
+art_media	.tga	26540	Resource/Civ4/Custom/button_flat.tga
+art_media	.tga	47132	Resource/Civ4/Custom/button_exit.tga
+art_media	.tga	47132	Resource/Civ4/Custom/button_back.tga
+art_media	.tga	22940	Resource/Civ4/Custom/button_arrows.tga
+art_media	.tga	2204	Resource/Civ4/Custom/bottombar.tga
+art_media	.tga	12844	Resource/Civ4/Custom/bluelarge.tga
+art_media	.tga	2348	Resource/Civ4/Custom/blue50.tga
+art_media	.tga	2348	Resource/Civ4/Custom/black50a.tga
+art_media	.tga	2348	Resource/Civ4/Custom/black50.tga
+art_media	.tga	2348	Resource/Civ4/Custom/black25_b.tga
+art_media	.tga	2348	Resource/Civ4/Custom/black25_a.tga
+art_media	.tga	2348	Resource/Civ4/Custom/black25.tga
+art_media	.tga	2588	Resource/Civ4/Custom/bg_solid.tga
+art_media	.tga	2588	Resource/Civ4/Custom/bg.tga
+other	.db	7168	Resource/Civ4/Custom/Thumbs.db
+art_media	.tga	1628	Resource/Civ4/Custom/HUD_top.tga
+art_media	.tga	1948	Resource/Civ4/Custom/HUD_stat.tga
+art_media	.tga	2412	Resource/Civ4/Custom/HUD_map.tga
+art_media	.tga	101916	Resource/Civ4/Custom/HUD_corners.tga
+art_media	.tga	764	Resource/Civ4/Custom/HUD_bottom.tga
+art_media	.tga	1052	Resource/Civ4/Custom/split_panel.tga
+art_media	.tga	4140	Resource/Icons/System/trash full_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/trash full_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/trash empty_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/trash empty_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/theme x_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/theme x_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/theme windows_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/theme windows_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/theme sf_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/theme sf_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/theme java_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/theme java_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/theme beos_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/theme beos_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/theme apple_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/theme apple_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/studio_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/studio_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/script text_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/script text_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/script image_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/script image_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/script audio_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/script audio_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/scanners & cameras_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/scanners & cameras_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/printers_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/printers_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/power_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/power_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/pda_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/pda_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/paint_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/paint_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/networks_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/networks_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/mouse_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/mouse_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/media_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/media_16x16.tga
+art_media	.tga	1068	Resource/Icons/System/logo_infinity_16x16.tga
+art_media	.tga	1068	Resource/Icons/System/logo x_16x16.tga
+art_media	.tga	1068	Resource/Icons/System/logo windows_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/logo sf_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/logo sf_16x16.tga
+art_media	.tga	1068	Resource/Icons/System/logo linux_16x16.tga
+art_media	.tga	1068	Resource/Icons/System/logo java_16x16.tga
+art_media	.tga	1068	Resource/Icons/System/logo beos_16x16.tga
+art_media	.tga	1068	Resource/Icons/System/logo apple_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/keyboard_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/keyboard_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/joysticks_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/joysticks_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/internet_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/internet_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/image_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/image_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/folder printers_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/folder printers_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/folder open_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/folder open_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/folder file_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/folder file_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/folder close_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/folder close_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/file unknown_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/file unknown_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/file text_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/file text_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/file studio_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/file studio_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/file paint_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/file paint_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/file new_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/file new_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/file internet_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/file internet_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/email_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/email_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/drive remove_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/drive remove_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/drive floppy_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/drive floppy_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/drive disk_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/drive disk_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/drive cd_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/drive cd_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/display_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/display_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/directory up_32x32.tga
+art_media	.tga	4140	Resource/Icons/System/desktop_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/desktop_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/control panel_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/control panel_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/contacts_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/contacts_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/computer_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/computer_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/chat_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/chat_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/cellphone_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/cellphone_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/cd_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/cd_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/cd video_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/cd video_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/cd audio_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/cd audio_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/calculator_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/calculator_16x16.tga
+art_media	.tga	4140	Resource/Icons/System/audio_32x32.tga
+art_media	.tga	1068	Resource/Icons/System/audio_16x16.tga
+art_media	.tga	7100	Resource/Icons/Smiles/Smiley_Winking_32x32.tga
+art_media	.tga	1808	Resource/Icons/Smiles/Smiley_Winking_16x16.tga
+art_media	.tga	7100	Resource/Icons/Smiles/Smiley_Tongue_32x32.tga
+art_media	.tga	1808	Resource/Icons/Smiles/Smiley_Tongue_16x16.tga
+art_media	.tga	7100	Resource/Icons/Smiles/Smiley_Normal_32x32.tga
+art_media	.tga	1808	Resource/Icons/Smiles/Smiley_Normal_16x16.tga
+art_media	.tga	7100	Resource/Icons/Smiles/Smiley_Cool_32x32.tga
+art_media	.tga	1808	Resource/Icons/Smiles/Smiley_Cool_16x16.tga
+art_media	.tga	1068	Resource/Icons/GFC/windows_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/window_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/window_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/watches_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/watches_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/watches custom_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/watches custom_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/variables_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/variables_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/updown_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/updown_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/tree_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/tree_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/tree & titlebar_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/tree & titlebar_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/titlebar_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/titlebar_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/tabs_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/tabs_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/table_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/table_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/stepto_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/stepto_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/stepover_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/stepover_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/statusbar_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/statusbar_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/splitter_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/splitter_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/slider_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/slider_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/select clear_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/select clear_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/select all_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/select all_16x16.tga
+art_media	.tga	1068	Resource/Icons/GFC/scrollpanel_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/scrollbar vert_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/scrollbar vert_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/scrollbar horz_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/scrollbar horz_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/resize_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/resize_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/radiobutton_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/radiobutton_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/progressbar_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/progressbar_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/play_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/play_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/pause_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/pause_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/panel_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/panel_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/overlay_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/overlay_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/objectfolder open_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/objectfolder open_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/objectfolder file_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/objectfolder file_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/objectfolder close_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/objectfolder close_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/object_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/object_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/object table_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/object table_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/object string_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/object string_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/object integer_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/object integer_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/object header_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/object header_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/object file_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/object file_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/object file blank_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/object file blank_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/moveup_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/moveup_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/moveup all_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/moveup all_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/movedown_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/movedown_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/movedown all_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/movedown all_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/message target_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/message target_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/message source_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/message source_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/message script_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/message script_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/message dispatch_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/message dispatch_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/menubar_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/menubar_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/menu_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/menu_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/listbox_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/listbox_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/label_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/label_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/image_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/image_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/header_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/header_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/gear_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/gear_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/effects_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/effects_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/effects point_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/effects point_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/effects line_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/effects line_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/effects image_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/effects image_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/effects font_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/effects font_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/effects fill_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/effects fill_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/editbox_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/editbox_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/dockable2_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/dockable2_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/dockable1_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/dockable1_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/controls_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/controls_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/control theme_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/control theme_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/control size_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/control size_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/control grid_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/control grid_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/control color_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/control color_16x16.tga
+art_media	.tga	1068	Resource/Icons/GFC/configure_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/combobox_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/combobox_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/checkbox_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/checkbox_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/callstack_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/callstack_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/button_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/button_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/breakpoint_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/breakpoint_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/border_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/border_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/barsize_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/barsize_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/array_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/array_16x16.tga
+art_media	.tga	4140	Resource/Icons/GFC/array string_32x32.tga
+art_media	.tga	1068	Resource/Icons/GFC/array string_16x16.tga
+art_media	.tga	4140	Resource/Icons/Dialog/warning.tga
+art_media	.tga	4140	Resource/Icons/Dialog/question.tga
+art_media	.tga	4140	Resource/Icons/Dialog/info.tga
+art_media	.tga	4140	Resource/Icons/Dialog/error.tga
+art_media	.tga	1068	Resource/Icons/Media/zoom_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/wave_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/wave_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/wand_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/video control_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/video control_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/tv_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/tv_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/transform_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/transform_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/track remove_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/track remove_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/track insert_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/track insert_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/tool screw_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/tool screw_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/tool hammer_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/tool hammer_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/time_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/time_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/ticks_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/ticks_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/text_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/text_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/stamp_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/sponge_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/sharpen_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/shapes_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/shapes_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/select_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/select_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/scripts_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/scripts_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/rulers_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/rulers_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/region_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/region_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/rectangle_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/polygon_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/polygon_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/point_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/picker_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/pencil_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/path_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/paragragh_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/paragragh_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/palettes_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/palettes_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/move_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/mode min_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/mode min_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/mode max_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/mode max_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/mode full_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/mode full_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/masks_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/mask_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/markers & regions_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/markers & regions_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/marker_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/marker_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/line_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/layers_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/layers_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/lasso_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/grid_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/grid_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/grid snap_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/grid snap_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/gradient_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/gide_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/gide_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/gide snap_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/gide snap_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/gide remove_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/gide remove_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/frames_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/frames_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/fill_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/eraser_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/eq3_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/eq3_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/eq2_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/eq2_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/eq1_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/eq1_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/drag_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/custom_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/colors_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/colors_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/circle_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw view_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw snapshot_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw select_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw preview_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw picker_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw number_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw new_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw mask_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw lock_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw list_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw link_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw layer_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw history_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw folder_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw duplicate_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw dialog_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw delete_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw default_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/bw book_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/brush_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/book_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/book_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/blur_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/audio options_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/arc_16x16.tga
+art_media	.tga	1068	Resource/Icons/Media/airbrush_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/actions_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/actions_16x16.tga
+art_media	.tga	4140	Resource/Icons/Media/scissors_32x32.tga
+art_media	.tga	1068	Resource/Icons/Media/scissors_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/undo_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/undo_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/save_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/save_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/save all_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/save all_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/redo_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/redo_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/paste_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/paste_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/open_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/open_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/new_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/new_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/info_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/info_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/help_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/help_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/delete_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/delete_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/cut_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/cut_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/copy_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/copy_16x16.tga
+art_media	.tga	4140	Resource/Icons/Application/console_32x32.tga
+art_media	.tga	1068	Resource/Icons/Application/console_16x16.tga
+art_media	.tga	1068	Resource/Icons/Application/application_16x16.tga
+art_media	.tga	4636	Resource/Icons/Civ4/file_32x32.tga
+art_media	.tga	1068	Resource/Icons/Civ4/file_16x16.tga
+art_media	.tga	1564	Resource/Icons/Civ4/buddy_remove.tga
+art_media	.tga	1564	Resource/Icons/Civ4/buddy_info.tga
+art_media	.tga	1564	Resource/Icons/Civ4/buddy_add.tga
+art_media	.tga	2140	Resource/Icons/Civ4/profile.tga
+art_media	.tga	2140	Resource/Icons/Civ4/kick.tga
+other	.thm	130946	Resource/Themes/Civ4/Civ4Theme_Window.thm
+other	.thm	14754	Resource/Themes/Civ4/Civ4Theme_Tree.thm
+other	.thm	6996	Resource/Themes/Civ4/Civ4Theme_ToolTip.thm
+other	.thm	98968	Resource/Themes/Civ4/Civ4Theme_Table.thm
+other	.thm	149853	Resource/Themes/Civ4/Civ4Theme_Tab.thm
+other	.thm	20491	Resource/Themes/Civ4/Civ4Theme_SplitPanel.thm
+other	.thm	42824	Resource/Themes/Civ4/Civ4Theme_Slider.thm
+other	.thm	4407	Resource/Themes/Civ4/Civ4Theme_SizeGrip.thm
+other	.thm	5428	Resource/Themes/Civ4/Civ4Theme_Separator.thm
+other	.thm	6997	Resource/Themes/Civ4/Civ4Theme_ScrollPanel.thm
+other	.thm	28505	Resource/Themes/Civ4/Civ4Theme_Scroll.thm
+other	.thm	16963	Resource/Themes/Civ4/Civ4Theme_Progress.thm
+other	.thm	16649	Resource/Themes/Civ4/Civ4Theme_Panel.thm
+other	.thm	30699	Resource/Themes/Civ4/Civ4Theme_Menu.thm
+other	.thm	6028	Resource/Themes/Civ4/Civ4Theme_Label.thm
+other	.thm	4306	Resource/Themes/Civ4/Civ4Theme_Image.thm
+other	.thm	79468	Resource/Themes/Civ4/Civ4Theme_HUD.thm
+other	.thm	47077	Resource/Themes/Civ4/Civ4Theme_Edit.thm
+other	.thm	173612	Resource/Themes/Civ4/Civ4Theme_Custom.thm
+other	.thm	23587	Resource/Themes/Civ4/Civ4Theme_Common.thm
+other	.thm	59240	Resource/Themes/Civ4/Civ4Theme_ComboBox.thm
+other	.thm	44322	Resource/Themes/Civ4/Civ4Theme_Button.thm
+other	.thm	17027	Resource/Themes/Civ4/Civ4Theme_Border.thm
+other	.thm	1650	Resource/Themes/Civ4/Civ4Theme.thm

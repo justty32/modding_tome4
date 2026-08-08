@@ -1,0 +1,1 @@
+-- Reserved for city defenders and citizens imported from Civ4 units.
